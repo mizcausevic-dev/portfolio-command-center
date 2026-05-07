@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Coverage View</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Aptos", "Avenir Next", "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 24%),
+          linear-gradient(180deg, #07111c 0%, #111827 100%);
+        color: #f8fafc;
+      }
+      .frame {
+        width: 1600px;
+        height: 900px;
+        padding: 42px;
+        box-sizing: border-box;
+      }
+      .card {
+        height: 100%;
+        padding: 32px;
+        border-radius: 32px;
+        background: rgba(11, 19, 32, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.16);
+      }
+      .eyebrow {
+        color: #67e8f9;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-size: 13px;
+      }
+      h1 {
+        margin: 8px 0 14px;
+        font-family: Georgia, serif;
+        font-size: 52px;
+      }
+      p {
+        color: #d1d5db;
+        max-width: 760px;
+        line-height: 1.7;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 24px;
+        margin-top: 24px;
+      }
+      .panel {
+        border-radius: 24px;
+        background: rgba(17, 24, 39, 0.92);
+        border: 1px solid rgba(148, 163, 184, 0.14);
+        padding: 22px;
+      }
+      .bars {
+        display: grid;
+        gap: 18px;
+        margin-top: 18px;
+      }
+      .row {
+        display: grid;
+        grid-template-columns: 150px 1fr 70px;
+        gap: 14px;
+        align-items: center;
+      }
+      .track {
+        height: 28px;
+        border-radius: 999px;
+        overflow: hidden;
+        background: rgba(30, 41, 59, 0.9);
+      }
+      .fill1 { height: 100%; width: 96%; background: linear-gradient(90deg, #34d399, #10b981); }
+      .fill2 { height: 100%; width: 88%; background: linear-gradient(90deg, #60a5fa, #38bdf8); }
+      .fill3 { height: 100%; width: 91%; background: linear-gradient(90deg, #f59e0b, #f97316); }
+      .fill4 { height: 100%; width: 84%; background: linear-gradient(90deg, #a78bfa, #8b5cf6); }
+      .note {
+        padding: 16px;
+        border-radius: 18px;
+        background: rgba(30, 41, 59, 0.72);
+        margin-bottom: 14px;
+      }
+      .note strong {
+        display: block;
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="card">
+        <div class="eyebrow">Coverage map</div>
+        <h1>The portfolio is strongest where strategy and systems meet.</h1>
+        <p>
+          This command view shows how the work clusters across revenue operations, platform governance, growth decisioning,
+          and security control layers, making the overall story easier to understand in one pass.
+        </p>
+        <div class="grid">
+          <div class="panel">
+            <div class="bars">
+              <div class="row"><span>Revenue Ops</span><div class="track"><div class="fill1"></div></div><strong>96</strong></div>
+              <div class="row"><span>Platform Ops</span><div class="track"><div class="fill2"></div></div><strong>88</strong></div>
+              <div class="row"><span>Growth Systems</span><div class="track"><div class="fill3"></div></div><strong>91</strong></div>
+              <div class="row"><span>Security</span><div class="track"><div class="fill4"></div></div><strong>84</strong></div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="note">
+              <strong>Revenue depth is now paired with strong frontend proof</strong>
+              AI assistant, forecasting, deal desk, attribution, and dashboard projects now create a credible commercial stack.
+            </div>
+            <div class="note">
+              <strong>Platform and governance work is no longer secondary</strong>
+              Incident command, cloud cost, content workflow, and SEO governance support a broader executive systems story.
+            </div>
+            <div class="note">
+              <strong>Security is moving from API logic to product surface</strong>
+              Identity governance now has both backend audit logic and a frontend command experience.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

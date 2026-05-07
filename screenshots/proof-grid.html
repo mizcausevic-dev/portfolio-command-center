@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Proof Grid</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Aptos", "Avenir Next", "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top right, rgba(16, 185, 129, 0.12), transparent 20%),
+          linear-gradient(180deg, #07111c 0%, #111827 100%);
+        color: #f8fafc;
+      }
+      .frame {
+        width: 1600px;
+        height: 900px;
+        padding: 42px;
+        box-sizing: border-box;
+      }
+      .card {
+        height: 100%;
+        padding: 32px;
+        border-radius: 32px;
+        background: rgba(11, 19, 32, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.16);
+      }
+      .eyebrow {
+        color: #86efac;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-size: 13px;
+      }
+      h1 {
+        margin: 8px 0 18px;
+        font-family: Georgia, serif;
+        font-size: 52px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin-top: 22px;
+      }
+      .project {
+        padding: 22px;
+        border-radius: 22px;
+        background: rgba(17, 24, 39, 0.92);
+        border: 1px solid rgba(148, 163, 184, 0.12);
+      }
+      .topline {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: center;
+      }
+      .topline span {
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(96, 165, 250, 0.12);
+        color: #bfdbfe;
+      }
+      .category {
+        color: #94a3b8;
+      }
+      p, small {
+        color: #d1d5db;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="card">
+        <div class="eyebrow">Flagship proof</div>
+        <h1>The command layer makes the individual repos read like one coherent system.</h1>
+        <div class="grid">
+          <div class="project">
+            <div class="topline"><strong>Revenue Ops AI Assistant</strong><span>Flagship</span></div>
+            <p class="category">AI + Revenue</p>
+            <p>Account briefs, pipeline summaries, campaign insight flows.</p>
+            <small>Shows modern AI decisioning tied directly to commercial systems.</small>
+          </div>
+          <div class="project">
+            <div class="topline"><strong>Executive Operations Dashboard</strong><span>Flagship</span></div>
+            <p class="category">Frontend + Strategy</p>
+            <p>Unified cross-domain view across operations, revenue, cost, and governance.</p>
+            <small>Demonstrates executive-grade product sense and strategic systems framing.</small>
+          </div>
+          <div class="project">
+            <div class="topline"><strong>Identity Command Center</strong><span>Strong</span></div>
+            <p class="category">Security + UX</p>
+            <p>Access posture, exception queue, remediation workflows.</p>
+            <small>Shows control-plane design beyond generic admin surfaces.</small>
+          </div>
+          <div class="project">
+            <div class="topline"><strong>Revenue Forecasting Workbench</strong><span>Strong</span></div>
+            <p class="category">Planning + Frontend</p>
+            <p>Commit quality, scenario planning, deal-risk visualization.</p>
+            <small>Turns commercial forecasting into operator-facing product logic.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
