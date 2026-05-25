@@ -207,14 +207,16 @@ body {
 }
 
 .note-list,
-.project-grid {
+.project-grid,
+.estate-grid {
   display: grid;
   gap: 16px;
 }
 
 .note-card,
 .project-card,
-.track-item {
+.track-item,
+.estate-card {
   padding: 18px;
   border-radius: 20px;
   background: rgba(17, 24, 39, 0.92);
@@ -262,6 +264,39 @@ body {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.estate-copy {
+  margin: 0 0 18px;
+  color: #d1d5db;
+  line-height: 1.7;
+}
+
+.estate-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.estate-card strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.estate-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.estate-card li {
+  margin-bottom: 10px;
+  color: #cbd5e1;
+}
+
+.estate-card a {
+  color: #93c5fd;
+}
+
+.estate-card a:hover {
+  color: #67e8f9;
+}
+
 .project-topline {
   display: flex;
   justify-content: space-between;
@@ -274,7 +309,8 @@ body {
   .first-grid,
   .second-grid,
   .signal-grid,
-  .project-grid {
+  .project-grid,
+  .estate-grid {
     grid-template-columns: 1fr;
   }
 }

@@ -226,6 +226,61 @@ function App() {
           ))}
         </div>
       </section>
+
+      <section className="panel estate-panel">
+        <div className="panel-heading">
+          <div>
+            <p className="panel-kicker">Estate map</p>
+            <h2>Follow the live Kinetic Gain network</h2>
+          </div>
+        </div>
+        <p className="estate-copy">
+          This page is intentionally crawlable. It connects the apex narrative, protocol surfaces, tooling, and recent
+          operator dashboards so buyers and search engines can trace the proof graph in plain HTML.
+        </p>
+        <div className="estate-grid">
+          <article className="estate-card">
+            <strong>Apex + hubs</strong>
+            <ul>
+              <li><a href="https://kineticgain.com/">kineticgain.com</a></li>
+              <li><a href="https://docs.kineticgain.com/">docs.kineticgain.com</a></li>
+              <li><a href="https://suite.kineticgain.com/">suite.kineticgain.com</a></li>
+              <li><a href="https://directory.kineticgain.com/">directory.kineticgain.com</a></li>
+              <li><a href="https://examples.kineticgain.com/">examples.kineticgain.com</a></li>
+            </ul>
+          </article>
+          <article className="estate-card">
+            <strong>Research + tooling</strong>
+            <ul>
+              <li><a href="https://pulse.kineticgain.com/">pulse.kineticgain.com</a></li>
+              <li><a href="https://walker.kineticgain.com/">walker.kineticgain.com</a></li>
+              <li><a href="https://bench.kineticgain.com/">bench.kineticgain.com</a></li>
+              <li><a href="https://observe.kineticgain.com/">observe.kineticgain.com</a></li>
+              <li><a href="https://mcp.kineticgain.com/">mcp.kineticgain.com</a></li>
+            </ul>
+          </article>
+          <article className="estate-card">
+            <strong>Commerce + field systems</strong>
+            <ul>
+              <li><a href="https://creators.kineticgain.com/">creators.kineticgain.com</a></li>
+              <li><a href="https://bookings.kineticgain.com/">bookings.kineticgain.com</a></li>
+              <li><a href="https://menus.kineticgain.com/">menus.kineticgain.com</a></li>
+              <li><a href="https://stores.kineticgain.com/">stores.kineticgain.com</a></li>
+              <li><a href="https://catalog.kineticgain.com/">catalog.kineticgain.com</a></li>
+            </ul>
+          </article>
+          <article className="estate-card">
+            <strong>Governance + compliance</strong>
+            <ul>
+              <li><a href="https://permits.kineticgain.com/">permits.kineticgain.com</a></li>
+              <li><a href="https://crops.kineticgain.com/">crops.kineticgain.com</a></li>
+              <li><a href="https://shipments.kineticgain.com/">shipments.kineticgain.com</a></li>
+              <li><a href="https://downtime.kineticgain.com/">downtime.kineticgain.com</a></li>
+              <li><a href="https://dispatch.kineticgain.com/">dispatch.kineticgain.com</a></li>
+            </ul>
+          </article>
+        </div>
+      </section>
     </div>
   );
 }
