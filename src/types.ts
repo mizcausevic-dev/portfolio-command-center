@@ -38,3 +38,10 @@ export type CommandNote = {
   owner: string;
   detail: string;
 };
+
+export type ToolkitLane = {
+  lane: string;
+  count: number;
+  summary: string;
+  repos: string[];
+};

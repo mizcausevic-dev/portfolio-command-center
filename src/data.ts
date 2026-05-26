@@ -4,14 +4,15 @@ import {
   OperatingTrack,
   PortfolioProject,
   Signal,
-  SystemDomain
+  SystemDomain,
+  ToolkitLane
 } from "./types";
 
 export const topSignals: Signal[] = [
-  { label: "Operating systems shipped", value: "12", delta: "Backend + frontend mix", tone: "positive" },
-  { label: "Executive visibility", value: "9 domains", delta: "Revenue to security", tone: "neutral" },
-  { label: "Workflow depth", value: "32 flows", delta: "Routing, forecasting, identity, content", tone: "positive" },
-  { label: "Portfolio readiness", value: "94", delta: "Case-study level polish", tone: "watch" }
+  { label: "Toolkit repos", value: "14", delta: "Across 5 implementation lanes", tone: "positive" },
+  { label: "Live properties", value: "22", delta: "Suite, Atlas, hubs, and operator surfaces", tone: "neutral" },
+  { label: "Protocol depth", value: "11 specs", delta: "Backed by real reference implementations", tone: "positive" },
+  { label: "Portfolio readiness", value: "96", delta: "Case-study level polish", tone: "watch" }
 ];
 
 export const domainCoverage: SystemDomain[] = [
@@ -30,31 +31,31 @@ export const healthTrend: HealthPoint[] = [
 
 export const portfolioProjects: PortfolioProject[] = [
   {
-    name: "Revenue Ops AI Assistant",
-    category: "AI + Revenue",
-    proof: "Account briefs, pipeline summaries, campaign insight flows",
-    impact: "Shows modern AI decision layer tied to commercial systems",
+    name: "MCP Registry Risk Scanner",
+    category: "MCP governance",
+    proof: "Manifest risk scoring for unpinned versions, transport posture, credential exposure, and OCI supply-chain drift",
+    impact: "Turns MCP server disclosure into something security and procurement teams can actually review",
     status: "Flagship"
   },
   {
-    name: "Executive Operations Dashboard",
-    category: "Frontend + Strategy",
-    proof: "Unified cross-domain view across operations, revenue, cost, and governance",
-    impact: "Demonstrates executive-grade product sense and systems framing",
+    name: "LLM Cost Span Exporter",
+    category: "GenAI observability",
+    proof: "Usage records normalized into OpenTelemetry GenAI spans with per-call cost attribution",
+    impact: "Connects model usage, observability, and finance posture in one portable telemetry surface",
     status: "Flagship"
   },
   {
-    name: "Identity Command Center",
-    category: "Security + UX",
-    proof: "Access posture, exception queue, remediation workflows",
-    impact: "Shows control-plane design beyond generic admin surfaces",
+    name: "Governance Disclosure Operator",
+    category: "K8s control planes",
+    proof: "Kubernetes CRD that publishes owned ConfigMaps for machine-readable governance disclosure at the edge",
+    impact: "Makes the /.well-known/ publishing pattern operational, not just theoretical",
     status: "Strong"
   },
   {
-    name: "Revenue Forecasting Workbench",
-    category: "Planning + Frontend",
-    proof: "Commit quality, scenario planning, deal-risk visualization",
-    impact: "Translates commercial forecasting into operator-facing product logic",
+    name: "RAG Evidence Graph",
+    category: "Evidence infrastructure",
+    proof: "Corpus-level citation graph with phantom and never-cited detection for retrieval-backed systems",
+    impact: "Shows evidence integrity beyond a single answer and ties directly into AI Evidence Format thinking",
     status: "Strong"
   }
 ];
@@ -68,18 +69,51 @@ export const operatingTracks: OperatingTrack[] = [
 
 export const commandNotes: CommandNote[] = [
   {
-    title: "Frontend layer now matches backend depth",
+    title: "Toolkit layer is now visible, not implied",
     owner: "Portfolio strategy",
-    detail: "Command-center, deal-desk, attribution, forecasting, and identity UIs now prove product execution, not just APIs."
+    detail: "The new MCP, telemetry, Kubernetes, adapter, and evidence repos give the public portfolio a real developer-tooling spine underneath the customer-facing surfaces."
   },
   {
-    title: "Portfolio reads like one operating model",
+    title: "Reference implementations close the suite loop",
     owner: "GitHub positioning",
-    detail: "The project mix now supports a coherent story across growth systems, platform architecture, security, and executive decisioning."
+    detail: "Tool Cards, Agent Cards, AI Evidence, and /.well-known/ distribution now point to concrete implementation repos rather than staying purely normative."
   },
   {
-    title: "Next leverage point is richer case-study cross-linking",
-    owner: "Content strategy",
-    detail: "When mizcausevic.com project pages are live, badge and README links should route to owned long-form project narratives."
+    title: "SEO now depends on crawlable estate stitching",
+    owner: "Discovery layer",
+    detail: "Apex, docs, examples, pulse, portfolio, and the newer operator surfaces need explicit cross-linking so Search Console sees one maintained network instead of isolated launches."
+  }
+];
+
+export const toolkitLanes: ToolkitLane[] = [
+  {
+    lane: "MCP governance",
+    count: 3,
+    summary: "Manifest scanning, disclosure generation, and tool-surface drift detection for MCP servers.",
+    repos: ["mcp-registry-risk-scanner", "mcp-tool-card-generator", "mcp-tools-diff"]
+  },
+  {
+    lane: "GenAI observability",
+    count: 3,
+    summary: "Canonical usage records, per-call cost spans, and trace-linked retrieval evidence integrity.",
+    repos: ["agent-trace-normalizer", "llm-cost-span-exporter", "rag-evidence-trace-linker"]
+  },
+  {
+    lane: "K8s control planes",
+    count: 3,
+    summary: "Kubernetes operators for disclosure publishing, budget posture, and scheduled governance audits.",
+    repos: ["governance-disclosure-operator", "llm-cost-budget-operator", "scheduled-audit-operator"]
+  },
+  {
+    lane: "Agent-runtime adapters",
+    count: 2,
+    summary: "Adapters that project Kinetic Gain declarations into OpenAI, Anthropic, Gemini, and Vercel-friendly runtime shapes.",
+    repos: ["agent-tool-adapters", "agent-card-runtime-adapters"]
+  },
+  {
+    lane: "Knowledge graph + evidence",
+    count: 2,
+    summary: "Corpus-level citation graphs and /.well-known/ aggregation for evidence and disclosure discovery.",
+    repos: ["rag-evidence-graph", "wellknown-index-aggregator"]
   }
 ];

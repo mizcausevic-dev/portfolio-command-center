@@ -13,6 +13,6 @@ describe("App", () => {
 
   it("renders a flagship project card", () => {
     render(<App />);
-    expect(screen.getByText(/revenue ops ai assistant/i)).toBeInTheDocument();
+    expect(screen.getByText(/mcp registry risk scanner/i)).toBeInTheDocument();
   });
 });

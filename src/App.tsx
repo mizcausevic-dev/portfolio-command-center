@@ -19,6 +19,7 @@ import {
   healthTrend,
   operatingTracks,
   portfolioProjects,
+  toolkitLanes,
   topSignals
 } from "./data";
 
@@ -222,6 +223,28 @@ function App() {
               <p className="project-category">{project.category}</p>
               <p>{project.proof}</p>
               <small>{project.impact}</small>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="panel project-panel">
+        <div className="panel-heading">
+          <div>
+            <p className="panel-kicker">Developer toolkit</p>
+            <h2>Five implementation lanes now back the public suite and atlas surfaces</h2>
+          </div>
+        </div>
+        <div className="project-grid">
+          {toolkitLanes.map((lane) => (
+            <article key={lane.lane} className="project-card">
+              <div className="project-topline">
+                <strong>{lane.lane}</strong>
+                <span>{lane.count} repos</span>
+              </div>
+              <p className="project-category">Composable implementation lane</p>
+              <p>{lane.summary}</p>
+              <small>{lane.repos.join(" · ")}</small>
             </article>
           ))}
         </div>
