@@ -140,7 +140,7 @@ const languageColorOverrides: Record<string, string> = {
   "Jupyter Notebook": "#ff7f3f",
   Rust: "#f1b58e",
   Go: "#58d1ff",
-  HTML: "#ff6a3d",
+  HTML: "#ff4d8d",
   Java: "#ff855f",
   Other: "#74819f"
 };

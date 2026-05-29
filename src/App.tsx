@@ -162,6 +162,26 @@ function App() {
     return true;
   };
 
+  const activeAtlasSummary = activeLanguageConnection
+    ? {
+        title: `${activeLanguageConnection.language} · ${activeLanguageConnection.repoCount} repos`,
+        body: activeLanguageConnection.sampleRepos.map((repo) => repo.slug).join(" · "),
+        pills: activeLanguageConnection.verticals
+      }
+    : activeVerticalConnection
+      ? {
+          title: `${activeVerticalConnection.vertical} · ${activeVerticalConnection.repoCount} repos`,
+          body: activeVerticalConnection.sampleRepos
+            .map((repo) => `${repo.slug} (${repo.subdomain})`)
+            .join(" · "),
+          pills: activeVerticalConnection.platforms
+        }
+      : {
+          title: "Click a language or vertical to filter the full catalog",
+          body: "Both atlas panels now read from the same live repo dataset, so counts and cards stay aligned.",
+          pills: ["language filter", "vertical filter", "live GitHub sync"]
+        };
+
   return (
     <main className="page-shell">
       <section className="hero-shell">
@@ -235,18 +255,16 @@ function App() {
           <div className="atlas-heading">
             <div>
               <h2>Language atlas</h2>
-              <p>{portfolioSnapshot.languageCount} languages across the public portfolio. Click a bar to filter.</p>
+              <p>{portfolioSnapshot.languageCount} languages. Click to filter.</p>
             </div>
             <span className="atlas-badge">Repos by primary language</span>
           </div>
 
-          <div className="language-list">
+          <div className="language-chip-grid">
             {languageAtlas.map((entry) => (
               <button
                 key={entry.language}
-                className={`language-row ${
-                  activeLanguage === entry.language ? "language-row-active" : ""
-                }`}
+                className={`language-chip ${activeLanguage === entry.language ? "language-chip-active" : ""}`}
                 type="button"
                 aria-pressed={activeLanguage === entry.language}
                 onMouseEnter={() => setHoveredLanguage(entry.language)}
@@ -256,44 +274,23 @@ function App() {
                   setLanguage((current) => (current === entry.language ? "all languages" : entry.language));
                 }}
               >
-                <span className="language-label">{entry.language}</span>
-                <div className="language-bar-shell" aria-hidden="true">
-                  <div
-                    className="language-bar-fill"
+                <div className="language-chip-head">
+                  <span className="language-chip-label">
+                    <i style={{ background: entry.color }} />
+                    {entry.language}
+                  </span>
+                  <strong>{entry.repos}</strong>
+                </div>
+                <div className="language-chip-meter" aria-hidden="true">
+                  <span
                     style={{
                       width: `${(entry.repos / maxLanguageRepos) * 100}%`,
                       background: entry.color
                     }}
                   />
                 </div>
-                <span className="language-value">{entry.repos}</span>
               </button>
             ))}
-          </div>
-
-          <div className={`atlas-context ${activeLanguageConnection ? "atlas-context-live" : ""}`}>
-            {activeLanguageConnection ? (
-              <>
-                <p className="atlas-context-title">
-                  {activeLanguageConnection.language} connects to {activeLanguageConnection.repoCount} public repos
-                </p>
-                <p className="atlas-context-copy">
-                  {activeLanguageConnection.sampleRepos.map((repo) => repo.slug).join(" · ")}
-                </p>
-                <div className="atlas-context-pills">
-                  {activeLanguageConnection.verticals.map((entry) => (
-                    <span key={entry}>{entry}</span>
-                  ))}
-                </div>
-              </>
-            ) : (
-              <>
-                <p className="atlas-context-title">Hover or click a language to trace its build lane</p>
-                <p className="atlas-context-copy">
-                  The repo grid below will highlight matching systems and clicking locks the language filter.
-                </p>
-              </>
-            )}
           </div>
         </article>
 
@@ -301,7 +298,7 @@ function App() {
           <div className="atlas-heading">
             <div>
               <h2>Industry atlas</h2>
-              <p>Verticals represented across the portfolio. Bubble size is repo count.</p>
+              <p>Verticals represented across the portfolio.</p>
             </div>
             <span className="atlas-badge">{portfolioSnapshot.verticalCount} verticals</span>
           </div>
@@ -325,34 +322,17 @@ function App() {
               </button>
             ))}
           </div>
-
-          <div className={`atlas-context ${activeVerticalConnection ? "atlas-context-live" : ""}`}>
-            {activeVerticalConnection ? (
-              <>
-                <p className="atlas-context-title">
-                  {activeVerticalConnection.vertical} currently maps to {activeVerticalConnection.repoCount} public repos
-                </p>
-                <p className="atlas-context-copy">
-                  {activeVerticalConnection.sampleRepos
-                    .map((repo) => `${repo.slug} (${repo.subdomain})`)
-                    .join(" · ")}
-                </p>
-                <div className="atlas-context-pills">
-                  {activeVerticalConnection.platforms.map((entry) => (
-                    <span key={entry}>{entry}</span>
-                  ))}
-                </div>
-              </>
-            ) : (
-              <>
-                <p className="atlas-context-title">Hover or click a vertical to trace its operator surfaces</p>
-                <p className="atlas-context-copy">
-                  Biotech, diagnostics, insurance, nonprofit, and the cloud/admin lanes all resolve into the repo grid.
-                </p>
-              </>
-            )}
-          </div>
         </article>
+      </section>
+
+      <section className="atlas-inspector">
+        <p className="atlas-context-title">{activeAtlasSummary.title}</p>
+        <p className="atlas-context-copy">{activeAtlasSummary.body}</p>
+        <div className="atlas-context-pills">
+          {activeAtlasSummary.pills.map((entry) => (
+            <span key={entry}>{entry}</span>
+          ))}
+        </div>
       </section>
 
       <section className="section-shell repo-shell">
