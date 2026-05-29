@@ -247,9 +247,10 @@ function App() {
                 aria-pressed={activeLanguage === entry.language}
                 onMouseEnter={() => setHoveredLanguage(entry.language)}
                 onMouseLeave={() => setHoveredLanguage(null)}
-                onClick={() =>
-                  setLanguage((current) => (current === entry.language ? "all languages" : entry.language))
-                }
+                onClick={() => {
+                  setVertical("all verticals");
+                  setLanguage((current) => (current === entry.language ? "all languages" : entry.language));
+                }}
               >
                 <span className="language-label">{entry.language}</span>
                 <div className="language-bar-shell" aria-hidden="true">
@@ -310,9 +311,10 @@ function App() {
                 aria-pressed={activeVertical === entry.vertical}
                 onMouseEnter={() => setHoveredVertical(entry.vertical)}
                 onMouseLeave={() => setHoveredVertical(null)}
-                onClick={() =>
-                  setVertical((current) => (current === entry.vertical ? "all verticals" : entry.vertical))
-                }
+                onClick={() => {
+                  setLanguage("all languages");
+                  setVertical((current) => (current === entry.vertical ? "all verticals" : entry.vertical));
+                }}
               >
                 <span>{entry.vertical}</span>
                 <strong>{entry.repos}</strong>
