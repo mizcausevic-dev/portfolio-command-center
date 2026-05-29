@@ -28,22 +28,10 @@ body {
   padding: 40px 28px 64px;
 }
 
-.hero,
 .signal-grid,
 .content-grid,
 .project-panel {
   margin-bottom: 28px;
-}
-
-.hero {
-  display: grid;
-  gap: 28px;
-  grid-template-columns: 1.1fr 0.9fr;
-  padding: 36px;
-  border-radius: 34px;
-  border: 1px solid rgba(148, 163, 184, 0.16);
-  background: rgba(11, 19, 32, 0.88);
-  box-shadow: 0 30px 72px rgba(2, 8, 23, 0.34);
 }
 
 .eyebrow,
@@ -53,71 +41,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.22em;
   font-size: 0.78rem;
-}
-
-.hero h1 {
-  margin: 0;
-  font-family: "Iowan Old Style", "Georgia", serif;
-  font-size: clamp(2.9rem, 4vw, 4.9rem);
-  line-height: 1.03;
-  max-width: 12ch;
-}
-
-.hero-text {
-  max-width: 62ch;
-  color: #d1d5db;
-  font-size: 1.05rem;
-  line-height: 1.75;
-}
-
-.hero-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.hero-links span,
-.project-topline span {
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: rgba(96, 165, 250, 0.12);
-  color: #bfdbfe;
-  font-size: 0.92rem;
-}
-
-.hero-map {
-  display: grid;
-  gap: 18px;
-  padding: 20px;
-  border-radius: 26px;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(11, 19, 32, 0.84));
-}
-
-.map-node {
-  padding: 16px 18px;
-  border-radius: 18px;
-  border: 1px solid rgba(148, 163, 184, 0.14);
-  background: rgba(17, 24, 39, 0.92);
-}
-
-.map-node.strong {
-  background: rgba(14, 116, 144, 0.22);
-  border-color: rgba(34, 211, 238, 0.32);
-  font-weight: 700;
-}
-
-.map-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.map-footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  color: #94a3b8;
-  font-size: 0.92rem;
 }
 
 .signal-grid {
@@ -268,8 +191,13 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
+.atlas-shell {
+  margin-bottom: 28px;
+}
+
 .atlas-panel {
   min-height: 100%;
+  padding: 30px;
 }
 
 .panel-badge {
@@ -287,6 +215,7 @@ body {
   margin: 0 0 20px;
   color: #d1d5db;
   line-height: 1.75;
+  max-width: 46ch;
 }
 
 .language-list {
@@ -350,6 +279,14 @@ body {
   color: #c4b5fd;
 }
 
+.project-topline span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(96, 165, 250, 0.12);
+  color: #bfdbfe;
+  font-size: 0.92rem;
+}
+
 .estate-copy {
   margin: 0 0 18px;
   color: #d1d5db;
@@ -391,7 +328,6 @@ body {
 }
 
 @media (max-width: 1100px) {
-  .hero,
   .first-grid,
   .second-grid,
   .atlas-grid,
@@ -416,15 +352,6 @@ body {
   .project-topline,
   .track-item {
     display: block;
-  }
-
-  .panel-badge {
-    display: inline-block;
-    margin-top: 10px;
-  }
-
-  .hero-map .map-grid {
-    grid-template-columns: 1fr;
   }
 
   .language-row {

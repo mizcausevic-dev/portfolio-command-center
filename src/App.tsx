@@ -36,39 +36,60 @@ function App() {
 
   return (
     <div className="page-shell">
-      <header className="hero">
-        <div className="hero-copy">
-          <p className="eyebrow">Portfolio Command Center</p>
-          <h1>One flagship surface for the systems, workflows, and decisions this portfolio proves.</h1>
-          <p className="hero-text">
-            This command center turns the broader GitHub portfolio into an executive operating view across revenue,
-            platform, growth, and security systems. It is built to feel like a strategic control layer, not a gallery.
+      <section className="content-grid atlas-grid atlas-shell">
+        <article className="panel atlas-panel">
+          <div className="panel-heading">
+            <div>
+              <p className="panel-kicker">Language atlas</p>
+              <h2>24 languages across the public portfolio</h2>
+            </div>
+            <span className="panel-badge">Repos by primary language</span>
+          </div>
+          <p className="atlas-copy">
+            The newer wave is now visible here too. Click a bar in the live build to filter the grid by primary
+            language.
           </p>
-          <div className="hero-links">
-            <span>Revenue</span>
-            <span>Platform</span>
-            <span>Growth</span>
-            <span>Security</span>
+          <div className="language-list">
+            {languageAtlas.map((entry) => (
+              <div key={entry.language} className="language-row">
+                <span className="language-label">{entry.language}</span>
+                <div className="language-bar-shell" aria-hidden="true">
+                  <div
+                    className="language-bar-fill"
+                    style={{
+                      width: `${(entry.repos / maxLanguageRepos) * 100}%`,
+                      background: entry.color
+                    }}
+                  />
+                </div>
+                <span className="language-value">{entry.repos}</span>
+              </div>
+            ))}
           </div>
-        </div>
+        </article>
 
-        <div className="hero-map">
-          <div className="map-node strong">Decision Layer</div>
-          <div className="map-grid">
-            <div className="map-node">Forecasting</div>
-            <div className="map-node">Attribution</div>
-            <div className="map-node">Identity</div>
-            <div className="map-node">Content Ops</div>
-            <div className="map-node">Cloud Cost</div>
-            <div className="map-node">Incident Command</div>
+        <article className="panel atlas-panel">
+          <div className="panel-heading">
+            <div>
+              <p className="panel-kicker">Industry atlas</p>
+              <h2>16 verticals represented across the portfolio</h2>
+            </div>
+            <span className="panel-badge">16 verticals</span>
           </div>
-          <div className="map-footer">
-            <span>Integrated execution</span>
-            <span>Executive visibility</span>
-            <span>Operator-grade workflows</span>
+          <p className="atlas-copy">
+            Biotech and diagnostics are now mapped into the estate alongside the newer nonprofit, insurance, and
+            publishing lanes.
+          </p>
+          <div className="vertical-chip-grid">
+            {industryAtlas.map((entry) => (
+              <div key={entry.vertical} className="vertical-chip">
+                <span>{entry.vertical}</span>
+                <strong>{entry.repos}</strong>
+              </div>
+            ))}
           </div>
-        </div>
-      </header>
+        </article>
+      </section>
 
       <section className="signal-grid" aria-label="Top-level portfolio signals">
         {topSignals.map((signal) => (
@@ -252,61 +273,6 @@ function App() {
             </article>
           ))}
         </div>
-      </section>
-
-      <section className="content-grid atlas-grid">
-        <article className="panel atlas-panel">
-          <div className="panel-heading">
-            <div>
-              <p className="panel-kicker">Language atlas</p>
-              <h2>24 languages across the public portfolio</h2>
-            </div>
-            <span className="panel-badge">Repos by primary language</span>
-          </div>
-          <p className="atlas-copy">
-            The newer wave is now visible here too: stronger C#, Julia, R, Shell, CSS, and PHP proof alongside the
-            TypeScript-heavy operator surface core.
-          </p>
-          <div className="language-list">
-            {languageAtlas.map((entry) => (
-              <div key={entry.language} className="language-row">
-                <span className="language-label">{entry.language}</span>
-                <div className="language-bar-shell" aria-hidden="true">
-                  <div
-                    className="language-bar-fill"
-                    style={{
-                      width: `${(entry.repos / maxLanguageRepos) * 100}%`,
-                      background: entry.color
-                    }}
-                  />
-                </div>
-                <span className="language-value">{entry.repos}</span>
-              </div>
-            ))}
-          </div>
-        </article>
-
-        <article className="panel atlas-panel">
-          <div className="panel-heading">
-            <div>
-              <p className="panel-kicker">Industry atlas</p>
-              <h2>16 verticals represented across the portfolio</h2>
-            </div>
-            <span className="panel-badge">Vertical clusters</span>
-          </div>
-          <p className="atlas-copy">
-            Biotech and diagnostics are now part of the mapped estate, alongside the newer nonprofit, insurance, and
-            publishing lanes.
-          </p>
-          <div className="vertical-chip-grid">
-            {industryAtlas.map((entry) => (
-              <div key={entry.vertical} className="vertical-chip">
-                <span>{entry.vertical}</span>
-                <strong>{entry.repos}</strong>
-              </div>
-            ))}
-          </div>
-        </article>
       </section>
 
       <section className="panel estate-panel">

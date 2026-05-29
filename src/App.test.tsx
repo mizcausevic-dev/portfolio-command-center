@@ -2,11 +2,11 @@ import { render, screen } from "@testing-library/react";
 import App from "./App";
 
 describe("App", () => {
-  it("renders the hero heading", () => {
+  it("renders the atlas heading", () => {
     render(<App />);
     expect(
       screen.getByRole("heading", {
-        name: /one flagship surface for the systems, workflows, and decisions this portfolio proves/i
+        name: /24 languages across the public portfolio/i
       })
     ).toBeInTheDocument();
   });
