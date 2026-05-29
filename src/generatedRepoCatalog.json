@@ -1,5 +1,81 @@
 [
   {
+    "name": "Fda Samd Classification Board",
+    "slug": "fda-samd-classification-board",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "HealthTech",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Hash-chained, append-only record schema + reference verifier for an AI/ML medical device's FDA SaMD classification lifecycle — pre-submission through 510(k)/De Novo/PMA, PCCP per FDA Dec 2024 final, post-market modifications, 21 CFR §820 QMS evidence refs. Healthcare-readiness scaffolding, not certification.",
+    "topics": [
+      "21-cfr-820",
+      "510k",
+      "ai-governance",
+      "ai-safety",
+      "de-novo",
+      "fda"
+    ]
+  },
+  {
+    "name": "Clinical Bias Cohort Coverage Lab",
+    "slug": "clinical-bias-cohort-coverage-lab",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "HealthTech",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Profile of evidence-bundle-spec scoped to pre-market and post-deployment bias / equity-coverage evidence for clinical AI/ML devices. Names the OMB SPD 15 + Section 1557 protected-class taxonomy, Fitzpatrick + sub-cohort dimensions, performance + equity metrics, and decision-document conventions. Healthcare-readiness scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "bias",
+      "clinical-ai",
+      "equity",
+      "evidence-bundle"
+    ]
+  },
+  {
+    "name": "Medical Adverse Event Incident Card",
+    "slug": "medical-adverse-event-incident-card",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "HealthTech",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Healthcare-specific profile of the AI Incident Card. Maps severity/type fields onto FDA MedWatch (21 CFR §803), EU MDR vigilance (Articles 87–89), IMDRF AE Terminology, and a CTCAE-aligned 5-grade clinical severity scale. Healthcare-readiness scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "eu-mdr",
+      "fda",
+      "healthtech",
+      "imdrf"
+    ]
+  },
+  {
+    "name": "Portfolio Command Center",
+    "slug": "portfolio-command-center",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
+    "topics": [
+      "command-center",
+      "executive-dashboard",
+      "frontend",
+      "growth-systems",
+      "platform-engineering",
+      "react"
+    ]
+  },
+  {
     "name": "Well Known Walker Web",
     "slug": "well-known-walker-web",
     "url": "https://walker.kineticgain.com",
@@ -345,25 +421,6 @@
     "subdomain": "agents.kineticgain.com",
     "description": "Landing site for the Agent Cards spec. Live at agents.kineticgain.com.",
     "topics": []
-  },
-  {
-    "name": "Portfolio Command Center",
-    "slug": "portfolio-command-center",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "IAM / Security",
-    "language": "TypeScript",
-    "freshness": "24h",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
-    "topics": [
-      "command-center",
-      "executive-dashboard",
-      "frontend",
-      "growth-systems",
-      "platform-engineering",
-      "react"
-    ]
   },
   {
     "name": "Intune App Protection Lab",
@@ -900,7 +957,7 @@
     "platform": "Frontend Showcase",
     "vertical": "PropTech / Real Estate",
     "language": "HTML",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "style.kineticgain.com",
     "description": "CSS-first operator surface for brand governance, approved tokens, pattern approvals, and release-safe style posture.",
     "topics": [
@@ -919,7 +976,7 @@
     "platform": "Decision Intelligence",
     "vertical": "HealthTech",
     "language": "PHP",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "members.kineticgain.com",
     "description": "WordPress control plane for member onboarding, lifecycle consent capture, preference evidence, and release-safe audience journey posture.",
     "topics": [
@@ -938,7 +995,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Revenue Operations",
     "language": "Julia",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "yield.kineticgain.com",
     "description": "Julia operator surface for publishing and commerce yield forecasting, inventory planning, and shortfall posture.",
     "topics": [
