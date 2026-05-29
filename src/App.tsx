@@ -32,6 +32,8 @@ function App() {
   const [vertical, setVertical] = useState("all verticals");
   const [language, setLanguage] = useState("all languages");
   const [freshness, setFreshness] = useState("any freshness");
+  const [hoveredVertical, setHoveredVertical] = useState<string | null>(null);
+  const [hoveredLanguage, setHoveredLanguage] = useState<string | null>(null);
 
   const deferredQuery = useDeferredValue(query);
 
@@ -107,6 +109,53 @@ function App() {
     ];
 
     return [...new Set(parts.map((part) => `#${part}`))].slice(0, 3);
+  };
+
+  const activeVertical = hoveredVertical ?? (vertical !== "all verticals" ? vertical : null);
+  const activeLanguage = hoveredLanguage ?? (language !== "all languages" ? language : null);
+
+  const verticalConnections = useMemo(() => {
+    return industryAtlas.map((entry) => {
+      const matches = repoCatalog.filter((repo) => repo.vertical === entry.vertical);
+      return {
+        ...entry,
+        repoCount: matches.length,
+        sampleRepos: matches.slice(0, 3),
+        platforms: [...new Set(matches.map((repo) => repo.platform))].slice(0, 2)
+      };
+    });
+  }, []);
+
+  const languageConnections = useMemo(() => {
+    return languageAtlas.map((entry) => {
+      const matches = repoCatalog.filter((repo) => repo.language === entry.language);
+      return {
+        ...entry,
+        repoCount: matches.length,
+        sampleRepos: matches.slice(0, 3),
+        verticals: [...new Set(matches.map((repo) => repo.vertical))].slice(0, 2)
+      };
+    });
+  }, []);
+
+  const activeVerticalConnection = activeVertical
+    ? verticalConnections.find((entry) => entry.vertical === activeVertical) ?? null
+    : null;
+
+  const activeLanguageConnection = activeLanguage
+    ? languageConnections.find((entry) => entry.language === activeLanguage) ?? null
+    : null;
+
+  const isRepoHighlighted = (entry: (typeof repoCatalog)[number]) => {
+    if (activeVertical && entry.vertical !== activeVertical) {
+      return false;
+    }
+
+    if (activeLanguage && entry.language !== activeLanguage) {
+      return false;
+    }
+
+    return true;
   };
 
   return (
@@ -189,7 +238,19 @@ function App() {
 
           <div className="language-list">
             {languageAtlas.map((entry) => (
-              <div key={entry.language} className="language-row">
+              <button
+                key={entry.language}
+                className={`language-row ${
+                  activeLanguage === entry.language ? "language-row-active" : ""
+                }`}
+                type="button"
+                aria-pressed={activeLanguage === entry.language}
+                onMouseEnter={() => setHoveredLanguage(entry.language)}
+                onMouseLeave={() => setHoveredLanguage(null)}
+                onClick={() =>
+                  setLanguage((current) => (current === entry.language ? "all languages" : entry.language))
+                }
+              >
                 <span className="language-label">{entry.language}</span>
                 <div className="language-bar-shell" aria-hidden="true">
                   <div
@@ -201,8 +262,33 @@ function App() {
                   />
                 </div>
                 <span className="language-value">{entry.repos}</span>
-              </div>
+              </button>
             ))}
+          </div>
+
+          <div className={`atlas-context ${activeLanguageConnection ? "atlas-context-live" : ""}`}>
+            {activeLanguageConnection ? (
+              <>
+                <p className="atlas-context-title">
+                  {activeLanguageConnection.language} connects to {activeLanguageConnection.repoCount} mapped builds
+                </p>
+                <p className="atlas-context-copy">
+                  {activeLanguageConnection.sampleRepos.map((repo) => repo.slug).join(" · ")}
+                </p>
+                <div className="atlas-context-pills">
+                  {activeLanguageConnection.verticals.map((entry) => (
+                    <span key={entry}>{entry}</span>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <>
+                <p className="atlas-context-title">Hover or click a language to trace its build lane</p>
+                <p className="atlas-context-copy">
+                  The repo grid below will highlight matching systems and clicking locks the language filter.
+                </p>
+              </>
+            )}
           </div>
         </article>
 
@@ -217,11 +303,48 @@ function App() {
 
           <div className="vertical-chip-grid">
             {industryAtlas.map((entry) => (
-              <button key={entry.vertical} className="vertical-chip" type="button">
+              <button
+                key={entry.vertical}
+                className={`vertical-chip ${activeVertical === entry.vertical ? "vertical-chip-active" : ""}`}
+                type="button"
+                aria-pressed={activeVertical === entry.vertical}
+                onMouseEnter={() => setHoveredVertical(entry.vertical)}
+                onMouseLeave={() => setHoveredVertical(null)}
+                onClick={() =>
+                  setVertical((current) => (current === entry.vertical ? "all verticals" : entry.vertical))
+                }
+              >
                 <span>{entry.vertical}</span>
                 <strong>{entry.repos}</strong>
               </button>
             ))}
+          </div>
+
+          <div className={`atlas-context ${activeVerticalConnection ? "atlas-context-live" : ""}`}>
+            {activeVerticalConnection ? (
+              <>
+                <p className="atlas-context-title">
+                  {activeVerticalConnection.vertical} currently maps to {activeVerticalConnection.repoCount} surfaced builds
+                </p>
+                <p className="atlas-context-copy">
+                  {activeVerticalConnection.sampleRepos
+                    .map((repo) => `${repo.slug} (${repo.subdomain})`)
+                    .join(" · ")}
+                </p>
+                <div className="atlas-context-pills">
+                  {activeVerticalConnection.platforms.map((entry) => (
+                    <span key={entry}>{entry}</span>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <>
+                <p className="atlas-context-title">Hover or click a vertical to trace its operator surfaces</p>
+                <p className="atlas-context-copy">
+                  Biotech, diagnostics, insurance, nonprofit, and the cloud/admin lanes all resolve into the repo grid.
+                </p>
+              </>
+            )}
           </div>
         </article>
       </section>
@@ -285,7 +408,12 @@ function App() {
 
         <div className="repo-grid">
           {filteredRepos.map((entry) => (
-            <article key={entry.slug} className={`repo-card tone-${getRepoTone(entry.vertical)}`}>
+            <article
+              key={entry.slug}
+              className={`repo-card tone-${getRepoTone(entry.vertical)} ${
+                isRepoHighlighted(entry) ? "repo-card-highlighted" : "repo-card-muted"
+              }`}
+            >
               <div className="repo-head">
                 <a href={entry.url}>{entry.slug}</a>
                 <span className="repo-open" aria-hidden="true">

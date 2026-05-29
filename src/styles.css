@@ -375,6 +375,26 @@ select {
   grid-template-columns: 168px minmax(0, 1fr) 44px;
   gap: 14px;
   align-items: center;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.language-row:hover,
+.language-row-active {
+  background: rgba(18, 27, 49, 0.9);
+  border-color: rgba(214, 221, 255, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 }
 
 .language-label,
@@ -395,6 +415,7 @@ select {
 .language-bar-fill {
   height: 100%;
   border-radius: 999px;
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.08);
 }
 
 .vertical-chip-grid {
@@ -412,7 +433,20 @@ select {
   border: 1px solid rgba(108, 113, 255, 0.42);
   background: rgba(54, 63, 142, 0.22);
   color: #d9ddff;
-  cursor: default;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
+}
+
+.vertical-chip:hover,
+.vertical-chip-active {
+  transform: translateY(-2px);
+  border-color: rgba(131, 154, 255, 0.58);
+  background: rgba(65, 77, 180, 0.28);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 .vertical-chip span,
@@ -431,6 +465,63 @@ select {
   border-radius: 999px;
   background: rgba(15, 21, 38, 0.85);
   color: #c7b7ff;
+}
+
+.atlas-context {
+  margin-top: 20px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(214, 221, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(12, 18, 34, 0.88), rgba(11, 17, 32, 0.76));
+  min-height: 108px;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.atlas-context-live {
+  border-color: rgba(67, 209, 255, 0.18);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(67, 209, 255, 0.08), transparent 34%),
+    linear-gradient(180deg, rgba(12, 18, 34, 0.94), rgba(11, 17, 32, 0.82));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.atlas-context-title {
+  margin: 0;
+  color: var(--text);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+.atlas-context-copy {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+.atlas-context-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.atlas-context-pills span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(214, 221, 255, 0.06);
+  border: 1px solid rgba(214, 221, 255, 0.08);
+  color: #dbe3ff;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
 }
 
 .repo-shell {
@@ -545,6 +636,15 @@ select {
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.04),
     0 20px 44px rgba(0, 0, 0, 0.24);
+}
+
+.repo-card-highlighted {
+  opacity: 1;
+}
+
+.repo-card-muted {
+  opacity: 0.42;
+  filter: saturate(0.78);
 }
 
 .repo-card.tone-bert::before {
