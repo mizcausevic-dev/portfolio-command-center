@@ -1,49 +1,20 @@
-export type Signal = {
+export type SnapshotStat = {
   label: string;
   value: string;
-  delta: string;
-  tone: "positive" | "watch" | "neutral";
 };
 
-export type SystemDomain = {
-  domain: string;
-  coverage: number;
-  confidence: number;
-  motion: string;
-};
-
-export type HealthPoint = {
-  month: string;
-  revenue: number;
-  platform: number;
-  growth: number;
-};
-
-export type PortfolioProject = {
+export type NamedPlatformRepo = {
   name: string;
-  category: string;
-  proof: string;
-  impact: string;
-  status: string;
+  url: string;
 };
 
-export type OperatingTrack = {
-  track: string;
-  value: number;
-  color: string;
-};
-
-export type CommandNote = {
-  title: string;
-  owner: string;
-  detail: string;
-};
-
-export type ToolkitLane = {
-  lane: string;
+export type NamedPlatform = {
+  name: string;
   count: number;
-  summary: string;
-  repos: string[];
+  description: string;
+  repos: NamedPlatformRepo[];
+  footer: string;
+  tone: "bert" | "cyan" | "plum" | "amber" | "rose";
 };
 
 export type LanguageAtlasEntry = {
@@ -55,4 +26,16 @@ export type LanguageAtlasEntry = {
 export type IndustryVerticalEntry = {
   vertical: string;
   repos: number;
+};
+
+export type RepoEntry = {
+  name: string;
+  slug: string;
+  url: string;
+  platform: string;
+  vertical: string;
+  language: string;
+  freshness: "24h" | "7d" | "30d";
+  subdomain: string;
+  description: string;
 };

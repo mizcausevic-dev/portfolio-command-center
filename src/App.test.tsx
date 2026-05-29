@@ -2,24 +2,23 @@ import { render, screen } from "@testing-library/react";
 import App from "./App";
 
 describe("App", () => {
-  it("renders the atlas heading", () => {
+  it("renders the constellation hero", () => {
     render(<App />);
-    expect(
-      screen.getByRole("heading", {
-        name: /24 languages across the public portfolio/i
-      })
-    ).toBeInTheDocument();
+    expect(screen.getByText(/portfolio constellation/i)).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /one engineer\./i })).toBeInTheDocument();
   });
 
-  it("renders a flagship project card", () => {
+  it("renders named platforms and atlas sections", () => {
     render(<App />);
-    expect(screen.getByText(/mcp registry risk scanner/i)).toBeInTheDocument();
+    expect(screen.getByText(/^Named platforms$/i)).toBeInTheDocument();
+    expect(screen.getByText(/^Language atlas$/i)).toBeInTheDocument();
+    expect(screen.getByText(/^Industry atlas$/i)).toBeInTheDocument();
   });
 
-  it("renders the refreshed atlas entries", () => {
+  it("renders the refreshed biotech and polyglot entries", () => {
     render(<App />);
-    expect(screen.getByRole("heading", { name: /24 languages across the public portfolio/i })).toBeInTheDocument();
-    expect(screen.getByText(/biotech \/ diagnostics/i)).toBeInTheDocument();
-    expect(screen.getByText(/shell \/ bash/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/biotech \/ diagnostics/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/shell \/ bash/i).length).toBeGreaterThan(0);
+    expect(screen.getByText(/diagnostics\.kineticgain\.com/i)).toBeInTheDocument();
   });
 });

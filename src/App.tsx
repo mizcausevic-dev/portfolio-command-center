@@ -1,54 +1,155 @@
+import { useDeferredValue, useMemo, useState } from "react";
 import {
-  Area,
-  AreaChart,
-  Bar,
-  BarChart,
-  CartesianGrid,
-  Cell,
-  Line,
-  Pie,
-  PieChart,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis
-} from "recharts";
-import {
-  commandNotes,
-  domainCoverage,
-  healthTrend,
   industryAtlas,
   languageAtlas,
-  operatingTracks,
-  portfolioProjects,
-  toolkitLanes,
-  topSignals
+  namedPlatforms,
+  portfolioSnapshot,
+  repoCatalog
 } from "./data";
 
-const signalTone = {
-  positive: "signal-card positive",
-  watch: "signal-card watch",
-  neutral: "signal-card neutral"
-} as const;
-
 function App() {
+  const [query, setQuery] = useState("");
+  const [platform, setPlatform] = useState("all platforms");
+  const [vertical, setVertical] = useState("all verticals");
+  const [language, setLanguage] = useState("all languages");
+  const [freshness, setFreshness] = useState("any freshness");
+
+  const deferredQuery = useDeferredValue(query);
+
   const maxLanguageRepos = Math.max(...languageAtlas.map((entry) => entry.repos));
 
+  const platformOptions = useMemo(
+    () => ["all platforms", ...namedPlatforms.map((entry) => entry.name)],
+    []
+  );
+
+  const verticalOptions = useMemo(
+    () => ["all verticals", ...industryAtlas.map((entry) => entry.vertical)],
+    []
+  );
+
+  const languageOptions = useMemo(
+    () => ["all languages", ...languageAtlas.map((entry) => entry.language)],
+    []
+  );
+
+  const filteredRepos = useMemo(() => {
+    const needle = deferredQuery.trim().toLowerCase();
+
+    return repoCatalog.filter((entry) => {
+      if (platform !== "all platforms" && entry.platform !== platform) {
+        return false;
+      }
+
+      if (vertical !== "all verticals" && entry.vertical !== vertical) {
+        return false;
+      }
+
+      if (language !== "all languages" && entry.language !== language) {
+        return false;
+      }
+
+      if (freshness !== "any freshness" && entry.freshness !== freshness) {
+        return false;
+      }
+
+      if (!needle) {
+        return true;
+      }
+
+      const haystack = [
+        entry.name,
+        entry.slug,
+        entry.description,
+        entry.platform,
+        entry.vertical,
+        entry.language
+      ]
+        .join(" ")
+        .toLowerCase();
+
+      return haystack.includes(needle);
+    });
+  }, [deferredQuery, freshness, language, platform, vertical]);
+
   return (
-    <div className="page-shell">
-      <section className="content-grid atlas-grid atlas-shell">
-        <article className="panel atlas-panel">
-          <div className="panel-heading">
-            <div>
-              <p className="panel-kicker">Language atlas</p>
-              <h2>24 languages across the public portfolio</h2>
-            </div>
-            <span className="panel-badge">Repos by primary language</span>
-          </div>
-          <p className="atlas-copy">
-            The newer wave is now visible here too. Click a bar in the live build to filter the grid by primary
-            language.
+    <main className="page-shell">
+      <section className="hero-shell">
+        <div className="hero-copy">
+          <p className="snapshot-pill">{portfolioSnapshot.snapshotLabel}</p>
+          <h1>
+            <span>One engineer.</span>
+            <span className="accent-bert">{portfolioSnapshot.totalRepos} public repos.</span>
+            <span>
+              <span className="accent-bert">{portfolioSnapshot.languageCount} languages.</span>{" "}
+              <span className="accent-plum">{portfolioSnapshot.platformCount} named platforms.</span>
+            </span>
+          </h1>
+          <p className="hero-lede">
+            A live map of every public project at{" "}
+            <a href="https://github.com/mizcausevic-dev">github.com/mizcausevic-dev</a>, classified into the named
+            platforms that organise the work and the industry verticals it covers.
           </p>
+          <div className="hero-actions">
+            <a className="primary-action" href="https://github.com/mizcausevic-dev">
+              github.com/mizcausevic-dev
+            </a>
+            <a className="secondary-action" href="https://kineticgain.com/">
+              kineticgain.com
+            </a>
+          </div>
+        </div>
+
+        <div className="hero-stats">
+          {portfolioSnapshot.stats.map((entry) => (
+            <article key={entry.label} className="stat-card">
+              <strong>{entry.value}</strong>
+              <span>{entry.label}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-shell">
+        <div className="section-heading">
+          <h2>Named platforms</h2>
+          <p>
+            The repos grouped into the platforms that organise the work. Order is by where the named cluster sits in
+            the architecture, not by repo count.
+          </p>
+        </div>
+        <div className="platform-grid">
+          {namedPlatforms.map((entry) => (
+            <article key={entry.name} className={`platform-card tone-${entry.tone}`}>
+              <div className="platform-card-head">
+                <h3>{entry.name}</h3>
+                <strong>{entry.count}</strong>
+              </div>
+              <p className="platform-description">{entry.description}</p>
+              <div className="platform-repo-list">
+                {entry.repos.map((repo) => (
+                  <a key={repo.name} href={repo.url} className="platform-repo-pill">
+                    <span>{repo.name}</span>
+                    <span className="repo-arrow">↗</span>
+                  </a>
+                ))}
+              </div>
+              <p className="platform-footer">{entry.footer}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="atlas-row">
+        <article className="atlas-panel">
+          <div className="atlas-heading">
+            <div>
+              <h2>Language atlas</h2>
+              <p>{portfolioSnapshot.languageCount} languages across the public portfolio. Click a bar to filter.</p>
+            </div>
+            <span className="atlas-badge">Repos by primary language</span>
+          </div>
+
           <div className="language-list">
             {languageAtlas.map((entry) => (
               <div key={entry.language} className="language-row">
@@ -68,278 +169,102 @@ function App() {
           </div>
         </article>
 
-        <article className="panel atlas-panel">
-          <div className="panel-heading">
+        <article className="atlas-panel">
+          <div className="atlas-heading">
             <div>
-              <p className="panel-kicker">Industry atlas</p>
-              <h2>16 verticals represented across the portfolio</h2>
+              <h2>Industry atlas</h2>
+              <p>Verticals represented across the portfolio. Bubble size is repo count.</p>
             </div>
-            <span className="panel-badge">16 verticals</span>
+            <span className="atlas-badge">{portfolioSnapshot.verticalCount} verticals</span>
           </div>
-          <p className="atlas-copy">
-            Biotech and diagnostics are now mapped into the estate alongside the newer nonprofit, insurance, and
-            publishing lanes.
-          </p>
+
           <div className="vertical-chip-grid">
             {industryAtlas.map((entry) => (
-              <div key={entry.vertical} className="vertical-chip">
+              <button key={entry.vertical} className="vertical-chip" type="button">
                 <span>{entry.vertical}</span>
                 <strong>{entry.repos}</strong>
-              </div>
+              </button>
             ))}
           </div>
         </article>
       </section>
 
-      <section className="signal-grid" aria-label="Top-level portfolio signals">
-        {topSignals.map((signal) => (
-          <article key={signal.label} className={signalTone[signal.tone]}>
-            <p>{signal.label}</p>
-            <strong>{signal.value}</strong>
-            <span>{signal.delta}</span>
-          </article>
-        ))}
-      </section>
+      <section className="section-shell repo-shell">
+        <div className="section-heading">
+          <h2>Every repo</h2>
+          <p>
+            Filterable atlas of the mapped public portfolio. Search by name, description, platform, vertical,
+            language, or freshness window.
+          </p>
+        </div>
 
-      <section className="content-grid first-grid">
-        <article className="panel chart-panel">
-          <div className="panel-heading">
-            <div>
-              <p className="panel-kicker">System health</p>
-              <h2>Domain maturity across revenue, platform, and growth systems</h2>
-            </div>
-          </div>
-          <div className="chart-frame">
-            <ResponsiveContainer width="100%" height={320}>
-              <AreaChart data={healthTrend}>
-                <defs>
-                  <linearGradient id="rev" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#34d399" stopOpacity={0.45} />
-                    <stop offset="95%" stopColor="#34d399" stopOpacity={0} />
-                  </linearGradient>
-                  <linearGradient id="plat" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#60a5fa" stopOpacity={0.42} />
-                    <stop offset="95%" stopColor="#60a5fa" stopOpacity={0} />
-                  </linearGradient>
-                </defs>
-                <CartesianGrid stroke="rgba(148, 163, 184, 0.16)" vertical={false} />
-                <XAxis dataKey="month" stroke="#94a3b8" tickLine={false} axisLine={false} />
-                <YAxis stroke="#94a3b8" tickLine={false} axisLine={false} />
-                <Tooltip
-                  contentStyle={{
-                    background: "#101826",
-                    border: "1px solid rgba(148,163,184,0.16)",
-                    borderRadius: "18px"
-                  }}
-                />
-                <Area type="monotone" dataKey="revenue" stroke="#34d399" fill="url(#rev)" strokeWidth={3} />
-                <Area type="monotone" dataKey="platform" stroke="#60a5fa" fill="url(#plat)" strokeWidth={3} />
-                <Line type="monotone" dataKey="growth" stroke="#f59e0b" strokeWidth={3} />
-              </AreaChart>
-            </ResponsiveContainer>
-          </div>
-        </article>
+        <div className="filter-bar">
+          <label className="search-shell">
+            <span className="search-icon">⌕</span>
+            <input
+              aria-label="Search repos"
+              type="search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="search repos by name, description, topic..."
+            />
+          </label>
 
-        <article className="panel list-panel">
-          <div className="panel-heading">
-            <div>
-              <p className="panel-kicker">Command notes</p>
-              <h2>What changed as the portfolio matured</h2>
-            </div>
-          </div>
-          <div className="note-list">
-            {commandNotes.map((note) => (
-              <article key={note.title} className="note-card">
-                <strong>{note.title}</strong>
-                <span>{note.owner}</span>
-                <p>{note.detail}</p>
-              </article>
+          <select aria-label="Filter by platform" value={platform} onChange={(event) => setPlatform(event.target.value)}>
+            {platformOptions.map((entry) => (
+              <option key={entry} value={entry}>
+                {entry}
+              </option>
             ))}
-          </div>
-        </article>
-      </section>
+          </select>
 
-      <section className="content-grid second-grid">
-        <article className="panel chart-panel">
-          <div className="panel-heading">
-            <div>
-              <p className="panel-kicker">Coverage map</p>
-              <h2>Where the portfolio is deepest today</h2>
-            </div>
-          </div>
-          <div className="chart-frame compact">
-            <ResponsiveContainer width="100%" height={290}>
-              <BarChart data={domainCoverage} layout="vertical" margin={{ left: 18, right: 16 }}>
-                <CartesianGrid stroke="rgba(148, 163, 184, 0.16)" horizontal={false} />
-                <XAxis type="number" stroke="#94a3b8" tickLine={false} axisLine={false} />
-                <YAxis type="category" dataKey="domain" width={110} stroke="#94a3b8" tickLine={false} axisLine={false} />
-                <Tooltip
-                  contentStyle={{
-                    background: "#101826",
-                    border: "1px solid rgba(148,163,184,0.16)",
-                    borderRadius: "18px"
-                  }}
-                />
-                <Bar dataKey="coverage" fill="#60a5fa" radius={[0, 12, 12, 0]} />
-                <Bar dataKey="confidence" fill="#34d399" radius={[0, 12, 12, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        </article>
-
-        <article className="panel chart-panel">
-          <div className="panel-heading">
-            <div>
-              <p className="panel-kicker">Operating mix</p>
-              <h2>How the work distributes across the portfolio</h2>
-            </div>
-          </div>
-          <div className="chart-frame compact">
-            <ResponsiveContainer width="100%" height={290}>
-              <PieChart>
-                <Pie
-                  data={operatingTracks}
-                  dataKey="value"
-                  nameKey="track"
-                  innerRadius={72}
-                  outerRadius={110}
-                  paddingAngle={4}
-                >
-                  {operatingTracks.map((item) => (
-                    <Cell key={item.track} fill={item.color} />
-                  ))}
-                </Pie>
-                <Tooltip
-                  contentStyle={{
-                    background: "#101826",
-                    border: "1px solid rgba(148,163,184,0.16)",
-                    borderRadius: "18px"
-                  }}
-                />
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
-          <div className="track-legend">
-            {operatingTracks.map((item) => (
-              <div key={item.track} className="track-item">
-                <span className="swatch" style={{ background: item.color }} />
-                <strong>{item.track}</strong>
-                <small>{item.value}%</small>
-              </div>
+          <select aria-label="Filter by vertical" value={vertical} onChange={(event) => setVertical(event.target.value)}>
+            {verticalOptions.map((entry) => (
+              <option key={entry} value={entry}>
+                {entry}
+              </option>
             ))}
-          </div>
-        </article>
-      </section>
+          </select>
 
-      <section className="panel project-panel">
-        <div className="panel-heading">
-          <div>
-            <p className="panel-kicker">Flagship proof</p>
-            <h2>The projects currently carrying the story</h2>
-          </div>
-        </div>
-        <div className="project-grid">
-          {portfolioProjects.map((project) => (
-            <article key={project.name} className="project-card">
-              <div className="project-topline">
-                <strong>{project.name}</strong>
-                <span>{project.status}</span>
-              </div>
-              <p className="project-category">{project.category}</p>
-              <p>{project.proof}</p>
-              <small>{project.impact}</small>
-            </article>
-          ))}
-        </div>
-      </section>
+          <select aria-label="Filter by language" value={language} onChange={(event) => setLanguage(event.target.value)}>
+            {languageOptions.map((entry) => (
+              <option key={entry} value={entry}>
+                {entry}
+              </option>
+            ))}
+          </select>
 
-      <section className="panel project-panel">
-        <div className="panel-heading">
-          <div>
-            <p className="panel-kicker">Developer toolkit</p>
-            <h2>Five implementation lanes now back the public suite and atlas surfaces</h2>
-          </div>
+          <select aria-label="Filter by freshness" value={freshness} onChange={(event) => setFreshness(event.target.value)}>
+            <option>any freshness</option>
+            <option>24h</option>
+            <option>7d</option>
+            <option>30d</option>
+          </select>
         </div>
-        <div className="project-grid">
-          {toolkitLanes.map((lane) => (
-            <article key={lane.lane} className="project-card">
-              <div className="project-topline">
-                <strong>{lane.lane}</strong>
-                <span>{lane.count} repos</span>
-              </div>
-              <p className="project-category">Composable implementation lane</p>
-              <p>{lane.summary}</p>
-              <small>{lane.repos.join(" · ")}</small>
-            </article>
-          ))}
-        </div>
-      </section>
 
-      <section className="panel estate-panel">
-        <div className="panel-heading">
-          <div>
-            <p className="panel-kicker">Estate map</p>
-            <h2>Follow the live Kinetic Gain network</h2>
-          </div>
-        </div>
-        <p className="estate-copy">
-          This page is intentionally crawlable. It connects the apex narrative, protocol surfaces, tooling, and recent
-          operator dashboards so buyers and search engines can trace the proof graph in plain HTML.
+        <p className="results-copy">
+          showing {filteredRepos.length} of {repoCatalog.length} mapped repos
         </p>
-        <div className="estate-grid">
-          <article className="estate-card">
-            <strong>Apex + hubs</strong>
-            <ul>
-              <li><a href="https://kineticgain.com/">kineticgain.com</a></li>
-              <li><a href="https://docs.kineticgain.com/">docs.kineticgain.com</a></li>
-              <li><a href="https://suite.kineticgain.com/">suite.kineticgain.com</a></li>
-              <li><a href="https://directory.kineticgain.com/">directory.kineticgain.com</a></li>
-              <li><a href="https://examples.kineticgain.com/">examples.kineticgain.com</a></li>
-            </ul>
-          </article>
-          <article className="estate-card">
-            <strong>Research + tooling</strong>
-            <ul>
-              <li><a href="https://pulse.kineticgain.com/">pulse.kineticgain.com</a></li>
-              <li><a href="https://walker.kineticgain.com/">walker.kineticgain.com</a></li>
-              <li><a href="https://bench.kineticgain.com/">bench.kineticgain.com</a></li>
-              <li><a href="https://observe.kineticgain.com/">observe.kineticgain.com</a></li>
-              <li><a href="https://mcp.kineticgain.com/">mcp.kineticgain.com</a></li>
-            </ul>
-          </article>
-          <article className="estate-card">
-            <strong>Commerce + field systems</strong>
-            <ul>
-              <li><a href="https://creators.kineticgain.com/">creators.kineticgain.com</a></li>
-              <li><a href="https://bookings.kineticgain.com/">bookings.kineticgain.com</a></li>
-              <li><a href="https://menus.kineticgain.com/">menus.kineticgain.com</a></li>
-              <li><a href="https://stores.kineticgain.com/">stores.kineticgain.com</a></li>
-              <li><a href="https://catalog.kineticgain.com/">catalog.kineticgain.com</a></li>
-            </ul>
-          </article>
-          <article className="estate-card">
-            <strong>Governance + compliance</strong>
-            <ul>
-              <li><a href="https://permits.kineticgain.com/">permits.kineticgain.com</a></li>
-              <li><a href="https://crops.kineticgain.com/">crops.kineticgain.com</a></li>
-              <li><a href="https://shipments.kineticgain.com/">shipments.kineticgain.com</a></li>
-              <li><a href="https://downtime.kineticgain.com/">downtime.kineticgain.com</a></li>
-              <li><a href="https://dispatch.kineticgain.com/">dispatch.kineticgain.com</a></li>
-            </ul>
-          </article>
-          <article className="estate-card">
-            <strong>Biotech + donor intelligence</strong>
-            <ul>
-              <li><a href="https://diagnostics.kineticgain.com/">diagnostics.kineticgain.com</a></li>
-              <li><a href="https://trials.kineticgain.com/">trials.kineticgain.com</a></li>
-              <li><a href="https://care.kineticgain.com/">care.kineticgain.com</a></li>
-              <li><a href="https://donors.kineticgain.com/">donors.kineticgain.com</a></li>
-              <li><a href="https://backup.kineticgain.com/">backup.kineticgain.com</a></li>
-            </ul>
-          </article>
+
+        <div className="repo-grid">
+          {filteredRepos.map((entry) => (
+            <article key={entry.slug} className="repo-card">
+              <div className="repo-head">
+                <a href={entry.url}>{entry.slug}</a>
+                <span>{entry.language}</span>
+              </div>
+              <p className="repo-platform">{entry.platform}</p>
+              <p className="repo-description">{entry.description}</p>
+              <div className="repo-tags">
+                <span>{entry.vertical}</span>
+                <span>{entry.freshness}</span>
+                <span>{entry.subdomain}</span>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
-    </div>
+    </main>
   );
 }
 
