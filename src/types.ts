@@ -45,3 +45,14 @@ export type ToolkitLane = {
   summary: string;
   repos: string[];
 };
+
+export type LanguageAtlasEntry = {
+  language: string;
+  repos: number;
+  color: string;
+};
+
+export type IndustryVerticalEntry = {
+  vertical: string;
+  repos: number;
+};

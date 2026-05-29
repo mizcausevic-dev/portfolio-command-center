@@ -1,6 +1,8 @@
 import {
   CommandNote,
   HealthPoint,
+  IndustryVerticalEntry,
+  LanguageAtlasEntry,
   OperatingTrack,
   PortfolioProject,
   Signal,
@@ -10,7 +12,7 @@ import {
 
 export const topSignals: Signal[] = [
   { label: "Toolkit repos", value: "14", delta: "Across 5 implementation lanes", tone: "positive" },
-  { label: "Live properties", value: "22", delta: "Suite, Atlas, hubs, and operator surfaces", tone: "neutral" },
+  { label: "Live properties", value: "60+", delta: "Suite, Atlas, hubs, and operator surfaces", tone: "neutral" },
   { label: "Protocol depth", value: "11 specs", delta: "Backed by real reference implementations", tone: "positive" },
   { label: "Portfolio readiness", value: "96", delta: "Case-study level polish", tone: "watch" }
 ];
@@ -116,4 +118,40 @@ export const toolkitLanes: ToolkitLane[] = [
     summary: "Corpus-level citation graphs and /.well-known/ aggregation for evidence and disclosure discovery.",
     repos: ["rag-evidence-graph", "wellknown-index-aggregator"]
   }
+];
+
+export const languageAtlas: LanguageAtlasEntry[] = [
+  { language: "TypeScript", repos: 222, color: "#60a5fa" },
+  { language: "Python", repos: 46, color: "#f97316" },
+  { language: "PHP", repos: 17, color: "#38bdf8" },
+  { language: "JavaScript", repos: 11, color: "#facc15" },
+  { language: "C#", repos: 6, color: "#a78bfa" },
+  { language: "Julia", repos: 5, color: "#8b5cf6" },
+  { language: "R", repos: 4, color: "#3b82f6" },
+  { language: "Kotlin", repos: 3, color: "#fb7185" },
+  { language: "Shell / Bash", repos: 3, color: "#22c55e" },
+  { language: "Dart", repos: 2, color: "#0ea5e9" },
+  { language: "HCL", repos: 2, color: "#6366f1" },
+  { language: "CSS", repos: 2, color: "#06b6d4" },
+  { language: "Zig", repos: 1, color: "#f59e0b" },
+  { language: "Jupyter Notebook", repos: 1, color: "#f97316" }
+];
+
+export const industryAtlas: IndustryVerticalEntry[] = [
+  { vertical: "AI Platform", repos: 123 },
+  { vertical: "Compliance / Governance", repos: 90 },
+  { vertical: "Platform Engineering", repos: 79 },
+  { vertical: "Revenue Operations", repos: 50 },
+  { vertical: "IAM / Security", repos: 31 },
+  { vertical: "FinTech", repos: 16 },
+  { vertical: "Data Engineering", repos: 15 },
+  { vertical: "EdTech", repos: 8 },
+  { vertical: "HealthTech", repos: 7 },
+  { vertical: "Biotech / Diagnostics", repos: 2 },
+  { vertical: "Insurance / InsurTech", repos: 3 },
+  { vertical: "Nonprofit / Foundation Ops", repos: 2 },
+  { vertical: "Media / Publishing", repos: 2 },
+  { vertical: "PropTech / Real Estate", repos: 3 },
+  { vertical: "Aerospace / Drones", repos: 3 },
+  { vertical: "Robotics", repos: 1 }
 ];

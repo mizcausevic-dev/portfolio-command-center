@@ -15,4 +15,11 @@ describe("App", () => {
     render(<App />);
     expect(screen.getByText(/mcp registry risk scanner/i)).toBeInTheDocument();
   });
+
+  it("renders the refreshed atlas entries", () => {
+    render(<App />);
+    expect(screen.getByRole("heading", { name: /24 languages across the public portfolio/i })).toBeInTheDocument();
+    expect(screen.getByText(/biotech \/ diagnostics/i)).toBeInTheDocument();
+    expect(screen.getByText(/shell \/ bash/i)).toBeInTheDocument();
+  });
 });

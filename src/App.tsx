@@ -17,6 +17,8 @@ import {
   commandNotes,
   domainCoverage,
   healthTrend,
+  industryAtlas,
+  languageAtlas,
   operatingTracks,
   portfolioProjects,
   toolkitLanes,
@@ -30,6 +32,8 @@ const signalTone = {
 } as const;
 
 function App() {
+  const maxLanguageRepos = Math.max(...languageAtlas.map((entry) => entry.repos));
+
   return (
     <div className="page-shell">
       <header className="hero">
@@ -250,6 +254,61 @@ function App() {
         </div>
       </section>
 
+      <section className="content-grid atlas-grid">
+        <article className="panel atlas-panel">
+          <div className="panel-heading">
+            <div>
+              <p className="panel-kicker">Language atlas</p>
+              <h2>24 languages across the public portfolio</h2>
+            </div>
+            <span className="panel-badge">Repos by primary language</span>
+          </div>
+          <p className="atlas-copy">
+            The newer wave is now visible here too: stronger C#, Julia, R, Shell, CSS, and PHP proof alongside the
+            TypeScript-heavy operator surface core.
+          </p>
+          <div className="language-list">
+            {languageAtlas.map((entry) => (
+              <div key={entry.language} className="language-row">
+                <span className="language-label">{entry.language}</span>
+                <div className="language-bar-shell" aria-hidden="true">
+                  <div
+                    className="language-bar-fill"
+                    style={{
+                      width: `${(entry.repos / maxLanguageRepos) * 100}%`,
+                      background: entry.color
+                    }}
+                  />
+                </div>
+                <span className="language-value">{entry.repos}</span>
+              </div>
+            ))}
+          </div>
+        </article>
+
+        <article className="panel atlas-panel">
+          <div className="panel-heading">
+            <div>
+              <p className="panel-kicker">Industry atlas</p>
+              <h2>16 verticals represented across the portfolio</h2>
+            </div>
+            <span className="panel-badge">Vertical clusters</span>
+          </div>
+          <p className="atlas-copy">
+            Biotech and diagnostics are now part of the mapped estate, alongside the newer nonprofit, insurance, and
+            publishing lanes.
+          </p>
+          <div className="vertical-chip-grid">
+            {industryAtlas.map((entry) => (
+              <div key={entry.vertical} className="vertical-chip">
+                <span>{entry.vertical}</span>
+                <strong>{entry.repos}</strong>
+              </div>
+            ))}
+          </div>
+        </article>
+      </section>
+
       <section className="panel estate-panel">
         <div className="panel-heading">
           <div>
@@ -300,6 +359,16 @@ function App() {
               <li><a href="https://shipments.kineticgain.com/">shipments.kineticgain.com</a></li>
               <li><a href="https://downtime.kineticgain.com/">downtime.kineticgain.com</a></li>
               <li><a href="https://dispatch.kineticgain.com/">dispatch.kineticgain.com</a></li>
+            </ul>
+          </article>
+          <article className="estate-card">
+            <strong>Biotech + donor intelligence</strong>
+            <ul>
+              <li><a href="https://diagnostics.kineticgain.com/">diagnostics.kineticgain.com</a></li>
+              <li><a href="https://trials.kineticgain.com/">trials.kineticgain.com</a></li>
+              <li><a href="https://care.kineticgain.com/">care.kineticgain.com</a></li>
+              <li><a href="https://donors.kineticgain.com/">donors.kineticgain.com</a></li>
+              <li><a href="https://backup.kineticgain.com/">backup.kineticgain.com</a></li>
             </ul>
           </article>
         </div>
