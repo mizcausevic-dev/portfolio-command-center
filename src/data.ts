@@ -298,6 +298,17 @@ export const repoCatalog: RepoEntry[] = [
     description: "Purview retention case posture, eDiscovery readiness, and disposition evidence."
   },
   {
+    name: "Intune App Protection Lab",
+    slug: "intune-app-protection-lab",
+    url: "https://protect.kineticgain.com/",
+    platform: "Frontend Showcase",
+    vertical: "IAM / Security",
+    language: "TypeScript",
+    freshness: "24h",
+    subdomain: "protect.kineticgain.com",
+    description: "Operator surface for Microsoft Intune app protection, BYOD scope, policy gaps, and enforcement posture."
+  },
+  {
     name: "Defender Exposure Ops Center",
     slug: "defender-exposure-ops-center",
     url: "https://defender.kineticgain.com/",
