@@ -35,7 +35,8 @@ export type RepoEntry = {
   platform: string;
   vertical: string;
   language: string;
-  freshness: "24h" | "7d" | "30d";
+  freshness: "24h" | "7d" | "30d" | "older";
   subdomain: string;
   description: string;
+  topics?: string[];
 };

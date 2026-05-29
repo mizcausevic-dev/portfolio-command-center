@@ -102,6 +102,10 @@ function App() {
   const getRepoTone = (verticalName: string) => toneByVertical[verticalName] ?? "bert";
 
   const deriveKeywords = (entry: (typeof repoCatalog)[number]) => {
+    if (entry.topics && entry.topics.length > 0) {
+      return entry.topics.slice(0, 3).map((topic) => `#${topic}`);
+    }
+
     const parts = [
       entry.vertical.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
       entry.platform.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
@@ -271,7 +275,7 @@ function App() {
             {activeLanguageConnection ? (
               <>
                 <p className="atlas-context-title">
-                  {activeLanguageConnection.language} connects to {activeLanguageConnection.repoCount} mapped builds
+                  {activeLanguageConnection.language} connects to {activeLanguageConnection.repoCount} public repos
                 </p>
                 <p className="atlas-context-copy">
                   {activeLanguageConnection.sampleRepos.map((repo) => repo.slug).join(" · ")}
@@ -326,7 +330,7 @@ function App() {
             {activeVerticalConnection ? (
               <>
                 <p className="atlas-context-title">
-                  {activeVerticalConnection.vertical} currently maps to {activeVerticalConnection.repoCount} surfaced builds
+                  {activeVerticalConnection.vertical} currently maps to {activeVerticalConnection.repoCount} public repos
                 </p>
                 <p className="atlas-context-copy">
                   {activeVerticalConnection.sampleRepos
@@ -355,7 +359,7 @@ function App() {
         <div className="section-heading">
           <h2>Every repo</h2>
           <p>
-            Filterable atlas of every mapped public repo. Search by name / description / topic, or drill into a
+            Filterable atlas of every public repo. Search by name / description / topic, or drill into a
             single platform, vertical, language, or freshness window.
           </p>
         </div>
@@ -401,6 +405,7 @@ function App() {
             <option>24h</option>
             <option>7d</option>
             <option>30d</option>
+            <option>older</option>
           </select>
         </div>
 

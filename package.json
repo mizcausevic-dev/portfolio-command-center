@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "test": "vitest run"
+    "test": "vitest run",
+    "sync:catalog": "node scripts/sync-repo-catalog.mjs"
   },
   "dependencies": {
     "react": "^19.0.0",

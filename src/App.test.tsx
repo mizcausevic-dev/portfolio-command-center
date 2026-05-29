@@ -1,5 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import App from "./App";
+import { repoCatalog } from "./data";
 
 describe("App", () => {
   it("renders the constellation hero", () => {
@@ -64,5 +65,20 @@ describe("App", () => {
     expect(screen.getByDisplayValue(/^kotlin$/i)).toBeInTheDocument();
     expect(screen.getByDisplayValue(/all verticals/i)).toBeInTheDocument();
     expect(screen.getAllByText(/field-audit-mobile/i).length).toBeGreaterThan(0);
+  });
+
+  it("language atlas counts resolve against the same repo catalog as the grid", () => {
+    render(<App />);
+
+    const expectedPython = repoCatalog.filter((repo) => repo.language === "Python").length;
+    fireEvent.click(screen.getByRole("button", { name: /python/i }));
+    expect(screen.getByDisplayValue(/^python$/i)).toBeInTheDocument();
+    expect(screen.getByText(new RegExp(`showing ${expectedPython} of ${repoCatalog.length} repos`, "i"))).toBeInTheDocument();
+
+    const expectedPhp = repoCatalog.filter((repo) => repo.language === "PHP").length;
+    fireEvent.click(screen.getByRole("button", { name: /python/i }));
+    fireEvent.click(screen.getByRole("button", { name: /php/i }));
+    expect(screen.getByDisplayValue(/^php$/i)).toBeInTheDocument();
+    expect(screen.getByText(new RegExp(`showing ${expectedPhp} of ${repoCatalog.length} repos`, "i"))).toBeInTheDocument();
   });
 });
