@@ -7,6 +7,25 @@ import {
   repoCatalog
 } from "./data";
 
+const toneByVertical: Record<string, string> = {
+  "AI Platform": "cyan",
+  "Compliance / Governance": "rose",
+  "Platform Engineering": "bert",
+  "Revenue Operations": "cyan",
+  "IAM / Security": "bert",
+  FinTech: "amber",
+  "Data Engineering": "plum",
+  EdTech: "plum",
+  HealthTech: "rose",
+  "Biotech / Diagnostics": "rose",
+  "Insurance / InsurTech": "amber",
+  "Nonprofit / Foundation Ops": "plum",
+  "Media / Publishing": "rose",
+  "PropTech / Real Estate": "cyan",
+  "Aerospace / Drones": "cyan",
+  Robotics: "plum"
+};
+
 function App() {
   const [query, setQuery] = useState("");
   const [platform, setPlatform] = useState("all platforms");
@@ -30,6 +49,12 @@ function App() {
 
   const languageOptions = useMemo(
     () => ["all languages", ...languageAtlas.map((entry) => entry.language)],
+    []
+  );
+
+  const languageColorMap = useMemo(
+    () =>
+      Object.fromEntries(languageAtlas.map((entry) => [entry.language, entry.color])) as Record<string, string>,
     []
   );
 
@@ -71,6 +96,18 @@ function App() {
       return haystack.includes(needle);
     });
   }, [deferredQuery, freshness, language, platform, vertical]);
+
+  const getRepoTone = (verticalName: string) => toneByVertical[verticalName] ?? "bert";
+
+  const deriveKeywords = (entry: (typeof repoCatalog)[number]) => {
+    const parts = [
+      entry.vertical.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+      entry.platform.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+      entry.language.toLowerCase().replace(/[^a-z0-9]+/g, "-")
+    ];
+
+    return [...new Set(parts.map((part) => `#${part}`))].slice(0, 3);
+  };
 
   return (
     <main className="page-shell">
@@ -193,8 +230,8 @@ function App() {
         <div className="section-heading">
           <h2>Every repo</h2>
           <p>
-            Filterable atlas of the mapped public portfolio. Search by name, description, platform, vertical,
-            language, or freshness window.
+            Filterable atlas of every mapped public repo. Search by name / description / topic, or drill into a
+            single platform, vertical, language, or freshness window.
           </p>
         </div>
 
@@ -243,22 +280,41 @@ function App() {
         </div>
 
         <p className="results-copy">
-          showing {filteredRepos.length} of {repoCatalog.length} mapped repos
+          showing {filteredRepos.length} of {repoCatalog.length} repos
         </p>
 
         <div className="repo-grid">
           {filteredRepos.map((entry) => (
-            <article key={entry.slug} className="repo-card">
+            <article key={entry.slug} className={`repo-card tone-${getRepoTone(entry.vertical)}`}>
               <div className="repo-head">
                 <a href={entry.url}>{entry.slug}</a>
-                <span>{entry.language}</span>
+                <span className="repo-open" aria-hidden="true">
+                  ↗
+                </span>
               </div>
               <p className="repo-platform">{entry.platform}</p>
               <p className="repo-description">{entry.description}</p>
+
+              <div className="repo-pill-row">
+                <span className={`repo-pill repo-pill-${getRepoTone(entry.vertical)}`}>{entry.vertical}</span>
+                <span className="repo-pill repo-pill-muted">{entry.freshness}</span>
+                <span className="repo-pill repo-pill-muted">{entry.subdomain}</span>
+              </div>
+
+              <div className="repo-hashtags">
+                {deriveKeywords(entry).map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
+              </div>
+
+              <div className="repo-divider" />
+
               <div className="repo-tags">
-                <span>{entry.vertical}</span>
-                <span>{entry.freshness}</span>
-                <span>{entry.subdomain}</span>
+                <span className="repo-language">
+                  <i style={{ background: languageColorMap[entry.language] ?? "#ffffff" }} />
+                  {entry.language}
+                </span>
+                <span className="repo-age">{entry.freshness}</span>
               </div>
             </article>
           ))}
