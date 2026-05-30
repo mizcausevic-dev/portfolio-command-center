@@ -88,7 +88,12 @@ const verticalOverrides = {
   "mortgage-applicant-bias-coverage-lab": "PropTech / Real Estate",
   "mortgage-decision-record-audit-stream": "PropTech / Real Estate",
   "state-real-estate-ai-disclosure-tracker": "PropTech / Real Estate",
-  "insurance-decision-record-audit-stream": "Insurance / InsurTech"
+  "insurance-decision-record-audit-stream": "Insurance / InsurTech",
+  "state-insurance-ai-disclosure-tracker": "Insurance / InsurTech",
+  "naic-ai-bulletin-readiness-evidence-bundle": "Insurance / InsurTech",
+  "insurance-applicant-bias-coverage-lab": "Insurance / InsurTech",
+  "unfair-discrimination-incident-card-profile": "Insurance / InsurTech",
+  "policyholder-data-vault-contract-profile": "Insurance / InsurTech"
 };
 
 function fetchRepos() {
