@@ -1,5 +1,89 @@
 [
   {
+    "name": "Kinetic Gain Suite Landing",
+    "slug": "kinetic-gain-suite-landing",
+    "url": "https://suite.kineticgain.com/",
+    "platform": "Landing Sites",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Canonical front-door landing for the Kinetic Gain Protocol Suite. 10 open governance specs across 2 regulated verticals. Deploys to suite.kineticgain.com.",
+    "topics": []
+  },
+  {
+    "name": "Kg Suite Vertical Comparator",
+    "slug": "kg-suite-vertical-comparator",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Platform Engineering",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Cross-vertical comparison tool. Generates AEO-friendly Markdown + JSON tables of SAME canonical shapes vs DIFFERENT per-vertical design contributions across 6 vertical 6-packs (36 sibling spec repos). Plus per-artifact compare CLI. Companion to kg-suite-vertical-router.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "cli",
+      "comparison",
+      "cross-vertical",
+      "decision-card"
+    ]
+  },
+  {
+    "name": "Tenant Maintenance Escalation Console",
+    "slug": "tenant-maintenance-escalation-console",
+    "url": "https://tenant.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "PropTech / Real Estate",
+    "language": "PHP",
+    "freshness": "24h",
+    "subdomain": "tenant.kineticgain.com",
+    "description": "Operator surface for tenant maintenance queues, vendor escalation, SLA posture, and service-safe property operations.",
+    "topics": [
+      "compliance",
+      "operator-surface",
+      "php",
+      "proptech",
+      "sla",
+      "vendor-escalation"
+    ]
+  },
+  {
+    "name": "Mizcausevic Dev",
+    "slug": "mizcausevic-dev",
+    "url": "https://mizcausevic.com/skills/",
+    "platform": "Landing Sites",
+    "vertical": "IAM / Security",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "mizcausevic.com",
+    "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
+    "topics": [
+      "enterprise-software",
+      "fullstack-development"
+    ]
+  },
+  {
+    "name": "Portfolio Command Center",
+    "slug": "portfolio-command-center",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
+    "topics": [
+      "command-center",
+      "executive-dashboard",
+      "frontend",
+      "growth-systems",
+      "platform-engineering",
+      "react"
+    ]
+  },
+  {
     "name": "Kg Suite Vertical Router",
     "slug": "kg-suite-vertical-router",
     "url": "https://suite.kineticgain.com",
@@ -48,40 +132,6 @@
     "subdomain": "kineticgain.com",
     "description": "Source of truth for https://kineticgain.com/. Five managed apex files, per-file FTP deploy on push to main, safe co-existence with twenty-two subdomain directories on the Hostinger root.",
     "topics": []
-  },
-  {
-    "name": "Mizcausevic Dev",
-    "slug": "mizcausevic-dev",
-    "url": "https://mizcausevic.com/skills/",
-    "platform": "Landing Sites",
-    "vertical": "IAM / Security",
-    "language": "Other",
-    "freshness": "24h",
-    "subdomain": "mizcausevic.com",
-    "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
-    "topics": [
-      "enterprise-software",
-      "fullstack-development"
-    ]
-  },
-  {
-    "name": "Portfolio Command Center",
-    "slug": "portfolio-command-center",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "IAM / Security",
-    "language": "TypeScript",
-    "freshness": "24h",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
-    "topics": [
-      "command-center",
-      "executive-dashboard",
-      "frontend",
-      "growth-systems",
-      "platform-engineering",
-      "react"
-    ]
   },
   {
     "name": "Financial Customer Data Vault Contract Profile",
@@ -1260,18 +1310,6 @@
     ]
   },
   {
-    "name": "Kinetic Gain Suite Landing",
-    "slug": "kinetic-gain-suite-landing",
-    "url": "https://suite.kineticgain.com/",
-    "platform": "Landing Sites",
-    "vertical": "Compliance / Governance",
-    "language": "HTML",
-    "freshness": "24h",
-    "subdomain": "suite.kineticgain.com",
-    "description": "Canonical front-door landing for the Kinetic Gain Protocol Suite. 10 open governance specs across 2 regulated verticals. Deploys to suite.kineticgain.com.",
-    "topics": []
-  },
-  {
     "name": "Assay Release Readiness Board",
     "slug": "assay-release-readiness-board",
     "url": "https://assay.kineticgain.com/",
@@ -1335,7 +1373,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "IAM / Security",
     "language": "Go",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "suite.kineticgain.com",
     "description": "Single-binary JWT validator + AI Procurement Decision Card v0.3 reveal-role enforcement gate. Verifies JWTs against JWKS, asks the buyer's signed Decision Card whether the principal's role may reveal the requested field, and emits hash-chained audit-stream events. First Go binary in the Kinetic Gain Protocol Suite.",
     "topics": [

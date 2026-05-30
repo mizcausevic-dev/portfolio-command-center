@@ -107,7 +107,8 @@ const verticalOverrides = {
   "financial-applicant-bias-coverage-lab": "FinTech",
   "financial-ai-incident-card-profile": "FinTech",
   "financial-customer-data-vault-contract-profile": "FinTech",
-  "kg-suite-vertical-router": "Platform Engineering"
+  "kg-suite-vertical-router": "Platform Engineering",
+  "kg-suite-vertical-comparator": "Platform Engineering"
 };
 
 function fetchRepos() {
