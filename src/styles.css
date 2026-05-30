@@ -156,6 +156,12 @@ select {
   color: var(--text);
 }
 
+.primary-action:hover,
+.secondary-action:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -535,6 +541,44 @@ select {
   font-size: 11px;
 }
 
+.portfolio-footer {
+  margin-top: 26px;
+  padding: 22px 24px 10px;
+  border-top: 1px solid rgba(214, 221, 255, 0.1);
+}
+
+.portfolio-footer-top {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.portfolio-footer-top a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid rgba(214, 221, 255, 0.12);
+  background: rgba(14, 20, 34, 0.82);
+  color: var(--text);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
+}
+
+.portfolio-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  color: var(--muted2);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+
 .repo-shell {
   padding-bottom: 28px;
   background:
@@ -865,6 +909,10 @@ select {
   .atlas-heading,
   .platform-card-head,
   .repo-head {
+    flex-direction: column;
+  }
+
+  .portfolio-footer-bottom {
     flex-direction: column;
   }
 }
