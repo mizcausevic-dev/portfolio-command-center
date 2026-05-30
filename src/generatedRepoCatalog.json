@@ -1,5 +1,191 @@
 [
   {
+    "name": "State Ai Disclosure State Tracker",
+    "slug": "state-ai-disclosure-state-tracker",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "EdTech",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Hash-chained per-state lifecycle record + reference verifier for EdTech AI products navigating 50 state student-data-privacy + state-AI-policy regimes (IL SOPPA, CA AB 1584+AB 2876, TX HB 18, NY ED Law 2-d, VA ChAIPA, CO SB 196, etc.). EdTech-readiness scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "coppa",
+      "edtech",
+      "ferpa",
+      "kinetic-gain-protocol-suite",
+      "state-law"
+    ]
+  },
+  {
+    "name": "Lease Obligation Risk Board",
+    "slug": "lease-obligation-risk-board",
+    "url": "https://lease.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "PropTech / Real Estate",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "lease.kineticgain.com",
+    "description": "Operator surface for lease obligations, renewal blockers, landlord packet readiness, and property-safe review posture.",
+    "topics": [
+      "embedded-analytics",
+      "operator-surface",
+      "platform-engineering",
+      "proptech",
+      "real-estate",
+      "renewal-ops"
+    ]
+  },
+  {
+    "name": "Student Data Access Audit Stream",
+    "slug": "student-data-access-audit-stream",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "EdTech",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Hash-chained event schema + reference verifier for AI tool reads of student records. Bridges CEDS + Ed-Fi semantics to the Kinetic Gain audit-stream. Enforces tokenization, FERPA §99.32 logging consistency, COPPA school-as-agent invariants, Decision Card refs. EdTech-readiness scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "audit-stream",
+      "ceds",
+      "coppa",
+      "ed-fi",
+      "edtech"
+    ]
+  },
+  {
+    "name": "Student Cohort Bias Coverage Lab",
+    "slug": "student-cohort-bias-coverage-lab",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "EdTech",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Profile of evidence-bundle-spec scoped to EdTech AI bias/equity-coverage evidence. ESSA accountability subgroups (race per OMB SPD 15, EL, economically disadvantaged, IDEA/504, migrant, Title IX gender) + EdTech additional dimensions (foster, homeless, EL WIDA proficiency, primary home language). EdTech-readiness scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "bias",
+      "edtech",
+      "equity",
+      "essa"
+    ]
+  },
+  {
+    "name": "Ferpa Readiness Evidence Bundle",
+    "slug": "ferpa-readiness-evidence-bundle",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "EdTech",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Profile of evidence-bundle-spec scoped to FERPA's 8 obligation families: annual notification (§99.7), school-official exception (§99.31), directory info (§99.37), consent (§99.30), records of disclosure (§99.32), amendment (§99.21), breach response, vendor procurement controls. EdTech-readiness scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "compliance",
+      "edtech",
+      "evidence-bundle",
+      "ferpa",
+      "kinetic-gain-protocol-suite"
+    ]
+  },
+  {
+    "name": "Ai Student Record Incident Card Profile",
+    "slug": "ai-student-record-incident-card-profile",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "EdTech",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "EdTech-specific profile of the AI Incident Card. Maps severity/type fields onto FERPA (34 CFR Part 99), COPPA (16 CFR §312 2025), IDEA+Section 504, Title VI/IX/504 civil-rights, per-state breach-notification, and a 5-grade instructional-impact severity scale. EdTech-readiness scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "coppa",
+      "edtech",
+      "ferpa",
+      "idea"
+    ]
+  },
+  {
+    "name": "Pii Student Vault Contract Profile",
+    "slug": "pii-student-vault-contract-profile",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "EdTech",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "EdTech-specific profile of the AI Procurement Decision Card v0.3 vault contract. Names FERPA's 7 PII categories (34 CFR §99.3) + COPPA's 10 PI categories (16 CFR §312.2, 2025 refresh) as concrete data_vault_targets exemplars + per-category retention rules. Four-doctrine consent_basis_taxonomy. EdTech-readiness scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "ai-procurement-decision-card",
+      "coppa",
+      "decision-card-profile",
+      "edtech",
+      "ferpa"
+    ]
+  },
+  {
+    "name": "Grant Compliance Evidence Desk",
+    "slug": "grant-compliance-evidence-desk",
+    "url": "https://grants.kineticgain.com/",
+    "platform": "Decision Intelligence",
+    "vertical": "Nonprofit / Foundation Ops",
+    "language": "Python",
+    "freshness": "24h",
+    "subdomain": "grants.kineticgain.com",
+    "description": "Nonprofit operator surface for grant evidence, reporting posture, and deliverable readiness.",
+    "topics": [
+      "compliance",
+      "evidence-ledger",
+      "grants",
+      "nonprofit",
+      "platform-engineering",
+      "python"
+    ]
+  },
+  {
+    "name": "Mizcausevic Dev",
+    "slug": "mizcausevic-dev",
+    "url": "https://mizcausevic.com/skills/",
+    "platform": "Landing Sites",
+    "vertical": "IAM / Security",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "mizcausevic.com",
+    "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
+    "topics": [
+      "enterprise-software",
+      "fullstack-development"
+    ]
+  },
+  {
+    "name": "Portfolio Command Center",
+    "slug": "portfolio-command-center",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
+    "topics": [
+      "command-center",
+      "executive-dashboard",
+      "frontend",
+      "growth-systems",
+      "platform-engineering",
+      "react"
+    ]
+  },
+  {
     "name": "Fda Samd Classification Board",
     "slug": "fda-samd-classification-board",
     "url": "https://suite.kineticgain.com",
@@ -54,25 +240,6 @@
       "fda",
       "healthtech",
       "imdrf"
-    ]
-  },
-  {
-    "name": "Portfolio Command Center",
-    "slug": "portfolio-command-center",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "IAM / Security",
-    "language": "TypeScript",
-    "freshness": "24h",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
-    "topics": [
-      "command-center",
-      "executive-dashboard",
-      "frontend",
-      "growth-systems",
-      "platform-engineering",
-      "react"
     ]
   },
   {
@@ -554,21 +721,6 @@
     "topics": []
   },
   {
-    "name": "Mizcausevic Dev",
-    "slug": "mizcausevic-dev",
-    "url": "https://mizcausevic.com/skills/",
-    "platform": "Landing Sites",
-    "vertical": "IAM / Security",
-    "language": "Other",
-    "freshness": "24h",
-    "subdomain": "mizcausevic.com",
-    "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
-    "topics": [
-      "enterprise-software",
-      "fullstack-development"
-    ]
-  },
-  {
     "name": "Assay Release Readiness Board",
     "slug": "assay-release-readiness-board",
     "url": "https://assay.kineticgain.com/",
@@ -812,7 +964,7 @@
     "platform": "Platform Reliability Stack",
     "vertical": "Platform Engineering",
     "language": "Shell / Bash",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "runbook.kineticgain.com",
     "description": "Bash-native incident turnover operator surface for owner gaps, SLA drift, and evidence-complete handoffs.",
     "topics": [
@@ -831,7 +983,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Compliance / Governance",
     "language": "JavaScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "pulse.kineticgain.com",
     "description": "Crawl + aggregate engine behind the AI Procurement Pulse. Probes 895 vendor domains for 11 Kinetic Gain Protocol Suite docs. v0.4 per-spec discriminator kills SPA catchall false positives. KG dogfood verified=11/11 ed25519.",
     "topics": [
@@ -850,7 +1002,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "AI Platform",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "mizcausevic-dev.github.io",
     "description": "Unified visualizer for the five Kinetic Gain Protocol Suite specs. Paste any JSON document; the visualizer auto-detects the spec from its *_version field and renders the appropriate view. React 19 + Vite + Tailwind.",
     "topics": [
@@ -869,7 +1021,7 @@
     "platform": "Platform Reliability Stack",
     "vertical": "Platform Engineering",
     "language": "Shell / Bash",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "release.kineticgain.com",
     "description": "Bash-native platform release operator surface for launch blockers, rollback posture, and freeze windows.",
     "topics": [
@@ -888,7 +1040,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Biotech / Diagnostics",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "kineticgain.com",
     "description": "React + TypeScript control room for third-party risk reviews, policy exceptions, remediation sequencing, and renewal-pressure visibility.",
     "topics": [
@@ -907,7 +1059,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "AI Platform",
     "language": "Other",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "suite.kineticgain.com",
     "description": "Open JSON spec for the buyer-side artifact in AI procurement. Records the outcome of a procurement review of vendor declarations. Eleventh spec in the Kinetic Gain Protocol Suite.",
     "topics": []
@@ -919,7 +1071,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Insurance / InsurTech",
     "language": "R",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "loss.kineticgain.com",
     "description": "Base-R insurance operator surface for claims trend drift, reserve adequacy, and reopen posture.",
     "topics": [
@@ -938,7 +1090,7 @@
     "platform": "MCP Servers",
     "vertical": "Compliance / Governance",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Unified MCP server exposing all 5 Kinetic Gain Protocol Suite specs as tools (18 total across AEO, Prompt Provenance, Agent Cards, AI Evidence, MCP Tool Cards). One Claude Desktop config entry. Companion to kinetic-gain-visualizer.",
     "topics": [

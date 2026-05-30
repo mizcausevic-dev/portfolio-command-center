@@ -78,7 +78,10 @@ const verticalOverrides = {
   "release-readiness-shell-kit": "Platform Engineering",
   "ibm-watsonx-governance-bridge": "AI Platform",
   "genesys-cx-disclosure-board": "Revenue Operations",
-  "intune-app-protection-lab": "IAM / Security"
+  "intune-app-protection-lab": "IAM / Security",
+  "pii-student-vault-contract-profile": "EdTech",
+  "ferpa-readiness-evidence-bundle": "EdTech",
+  "student-cohort-bias-coverage-lab": "EdTech"
 };
 
 function fetchRepos() {
