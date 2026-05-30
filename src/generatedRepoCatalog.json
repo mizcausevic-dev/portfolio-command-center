@@ -1,21 +1,135 @@
 [
   {
-    "name": "State Ai Disclosure State Tracker",
-    "slug": "state-ai-disclosure-state-tracker",
+    "name": "State Real Estate Ai Disclosure Tracker",
+    "slug": "state-real-estate-ai-disclosure-tracker",
     "url": "https://suite.kineticgain.com",
     "platform": "Kinetic Gain Protocol Suite",
-    "vertical": "EdTech",
+    "vertical": "PropTech / Real Estate",
     "language": "JavaScript",
     "freshness": "24h",
     "subdomain": "suite.kineticgain.com",
-    "description": "Hash-chained per-state lifecycle record + reference verifier for EdTech AI products navigating 50 state student-data-privacy + state-AI-policy regimes (IL SOPPA, CA AB 1584+AB 2876, TX HB 18, NY ED Law 2-d, VA ChAIPA, CO SB 196, etc.). EdTech-readiness scaffolding, not certification.",
+    "description": "PropTech Operator: per-state lifecycle ledger of US state real-estate / mortgage / appraisal / tenant-screening AI-disclosure laws. 10-state lifecycle + state-machine + schema-enforced effective/sunset/supersedes invariants. Seed: CA SB 942, CO SB 24-205, IL HB 3773, NY S 1169, TX HB 1709.",
+    "topics": [
+      "ai-disclosure",
+      "ai-governance",
+      "ai-safety",
+      "ecoa",
+      "fair-housing",
+      "fair-lending"
+    ]
+  },
+  {
+    "name": "Payment Reconciliation Exception Desk",
+    "slug": "payment-reconciliation-exception-desk",
+    "url": "https://payments.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "FinTech",
+    "language": "C#",
+    "freshness": "24h",
+    "subdomain": "payments.kineticgain.com",
+    "description": "Operator surface for payment reconciliation exceptions, settlement blockers, close-safe packet readiness, and finance-safe review posture.",
+    "topics": [
+      "aspnet-core",
+      "csharp",
+      "finance-operations",
+      "fintech",
+      "operator-surface",
+      "payments"
+    ]
+  },
+  {
+    "name": "Mortgage Decision Record Audit Stream",
+    "slug": "mortgage-decision-record-audit-stream",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "PropTech / Real Estate",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "PropTech audit-stream Operator surface. Per-mortgage-application AI-tool-access events hash-chained for ECOA Reg B + RESPA + HMDA + GLBA Safeguards + CFPB UDAAP + Fair Housing recordkeeping. MISMO/URLA-bridged. human_underwriter_required invariant. JSON Schema + Node verifier.",
     "topics": [
       "ai-governance",
-      "coppa",
-      "edtech",
-      "ferpa",
-      "kinetic-gain-protocol-suite",
-      "state-law"
+      "ai-safety",
+      "audit-stream",
+      "ecoa",
+      "glba",
+      "hash-chain"
+    ]
+  },
+  {
+    "name": "Mortgage Applicant Bias Coverage Lab",
+    "slug": "mortgage-applicant-bias-coverage-lab",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "PropTech / Real Estate",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Profile of evidence-bundle-spec scoped to AI mortgage / appraisal / pricing tool bias coverage. ECOA Reg B + Fair Housing Act protected classes + mortgage dimensions (LTV/DTI bands, MSA, census tract, majority-minority-tract flag). EEOC four-fifths-rule canonical threshold. PropTech-readiness scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "bias",
+      "ecoa",
+      "equity",
+      "evidence-bundle"
+    ]
+  },
+  {
+    "name": "Respa Readiness Evidence Bundle",
+    "slug": "respa-readiness-evidence-bundle",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "PropTech / Real Estate",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Profile of evidence-bundle-spec scoped to RESPA + TILA-RESPA Integrated Disclosure (TRID) + Section 8 anti-kickback + escrow + ECOA Reg B + HMDA + Fair Housing + GLBA Safeguards + AI vendor procurement. 10 obligation families. PropTech-readiness scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "ecoa",
+      "evidence-bundle",
+      "fair-lending",
+      "glba",
+      "hmda"
+    ]
+  },
+  {
+    "name": "Title Chain Evidence Incident Card Profile",
+    "slug": "title-chain-evidence-incident-card-profile",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "PropTech / Real Estate",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "PropTech-specific profile of the AI Incident Card. Maps severity/type fields onto CFPB UDAAP, ECOA Reg B (12 CFR 1002), Fair Housing Act, RESPA Section 8, title-chain integrity (ALTA), state real-estate regulator notification + a 5-grade transaction-impact severity scale. PropTech-readiness scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "alta",
+      "cfpb",
+      "ecoa",
+      "fair-housing"
+    ]
+  },
+  {
+    "name": "Mls Data Access Vault Contract Profile",
+    "slug": "mls-data-access-vault-contract-profile",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "PropTech / Real Estate",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "PropTech-specific profile of the AI Procurement Decision Card v0.3 vault contract. Names RESPA (12 CFR 1024), ECOA Reg B (12 CFR 1002), Fair Housing Act, HMDA, GLBA, MLS NAR + 2024 Settlement PII categories + 7-doctrine consent_basis_taxonomy. PropTech-readiness scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "decision-card-profile",
+      "ecoa",
+      "fair-housing",
+      "glba",
+      "hmda"
     ]
   },
   {
@@ -35,6 +149,59 @@
       "proptech",
       "real-estate",
       "renewal-ops"
+    ]
+  },
+  {
+    "name": "Mizcausevic Dev",
+    "slug": "mizcausevic-dev",
+    "url": "https://mizcausevic.com/skills/",
+    "platform": "Landing Sites",
+    "vertical": "IAM / Security",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "mizcausevic.com",
+    "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
+    "topics": [
+      "enterprise-software",
+      "fullstack-development"
+    ]
+  },
+  {
+    "name": "Portfolio Command Center",
+    "slug": "portfolio-command-center",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
+    "topics": [
+      "command-center",
+      "executive-dashboard",
+      "frontend",
+      "growth-systems",
+      "platform-engineering",
+      "react"
+    ]
+  },
+  {
+    "name": "State Ai Disclosure State Tracker",
+    "slug": "state-ai-disclosure-state-tracker",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "EdTech",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Hash-chained per-state lifecycle record + reference verifier for EdTech AI products navigating 50 state student-data-privacy + state-AI-policy regimes (IL SOPPA, CA AB 1584+AB 2876, TX HB 18, NY ED Law 2-d, VA ChAIPA, CO SB 196, etc.). EdTech-readiness scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "coppa",
+      "edtech",
+      "ferpa",
+      "kinetic-gain-protocol-suite",
+      "state-law"
     ]
   },
   {
@@ -149,40 +316,6 @@
       "nonprofit",
       "platform-engineering",
       "python"
-    ]
-  },
-  {
-    "name": "Mizcausevic Dev",
-    "slug": "mizcausevic-dev",
-    "url": "https://mizcausevic.com/skills/",
-    "platform": "Landing Sites",
-    "vertical": "IAM / Security",
-    "language": "Other",
-    "freshness": "24h",
-    "subdomain": "mizcausevic.com",
-    "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
-    "topics": [
-      "enterprise-software",
-      "fullstack-development"
-    ]
-  },
-  {
-    "name": "Portfolio Command Center",
-    "slug": "portfolio-command-center",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "IAM / Security",
-    "language": "TypeScript",
-    "freshness": "24h",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
-    "topics": [
-      "command-center",
-      "executive-dashboard",
-      "frontend",
-      "growth-systems",
-      "platform-engineering",
-      "react"
     ]
   },
   {
@@ -878,7 +1011,7 @@
     "platform": "Platform Reliability Stack",
     "vertical": "Platform Engineering",
     "language": "Shell / Bash",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "backup.kineticgain.com",
     "description": "Bash-native operator surface for backup drills, restore timing, and recovery evidence posture.",
     "topics": [
@@ -896,7 +1029,7 @@
     "platform": "Frontend Showcase",
     "vertical": "HealthTech",
     "language": "HTML",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Career one-pager. Director of Web Engineering, Platform Architecture, B2B SaaS Technologist.",
     "topics": []
@@ -908,7 +1041,7 @@
     "platform": "MCP Servers",
     "vertical": "EdTech",
     "language": "Other",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "mizcausevic-dev.github.io",
     "description": "Kinetic Gain Protocol Suite — eight open JSON specs for the answer-engine and agent era. Five core (AEO, Prompt Provenance, Agent Cards, AI Evidence, MCP Tool Cards) plus the EdTech trio (Tutor Cards, Student AI Disclosure, Classroom AI AUP). One MCP server, one visualizer, three live properties.",
     "topics": [
@@ -927,7 +1060,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Insurance / InsurTech",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "sveska.studio",
     "description": "Studio-grade, local-first notepad PWA. CodeMirror rich editor with inline screenshot paste, Markdown/checklist/canvas modes, slash commands, streaming AI, glossary engine, pricing scaffold. 281 tests, accessibility-audited. Live at sveska.studio",
     "topics": [
@@ -946,7 +1079,7 @@
     "platform": "Platform Reliability Stack",
     "vertical": "HealthTech",
     "language": "R",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "care.kineticgain.com",
     "description": "Base-R healthcare operator surface for care-pathway variation, LOS drift, readmission pressure, and follow-up reliability.",
     "topics": [

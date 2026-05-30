@@ -81,7 +81,13 @@ const verticalOverrides = {
   "intune-app-protection-lab": "IAM / Security",
   "pii-student-vault-contract-profile": "EdTech",
   "ferpa-readiness-evidence-bundle": "EdTech",
-  "student-cohort-bias-coverage-lab": "EdTech"
+  "student-cohort-bias-coverage-lab": "EdTech",
+  "mls-data-access-vault-contract-profile": "PropTech / Real Estate",
+  "title-chain-evidence-incident-card-profile": "PropTech / Real Estate",
+  "respa-readiness-evidence-bundle": "PropTech / Real Estate",
+  "mortgage-applicant-bias-coverage-lab": "PropTech / Real Estate",
+  "mortgage-decision-record-audit-stream": "PropTech / Real Estate",
+  "state-real-estate-ai-disclosure-tracker": "PropTech / Real Estate"
 };
 
 function fetchRepos() {
