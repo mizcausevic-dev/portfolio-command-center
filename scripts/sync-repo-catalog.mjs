@@ -87,7 +87,8 @@ const verticalOverrides = {
   "respa-readiness-evidence-bundle": "PropTech / Real Estate",
   "mortgage-applicant-bias-coverage-lab": "PropTech / Real Estate",
   "mortgage-decision-record-audit-stream": "PropTech / Real Estate",
-  "state-real-estate-ai-disclosure-tracker": "PropTech / Real Estate"
+  "state-real-estate-ai-disclosure-tracker": "PropTech / Real Estate",
+  "insurance-decision-record-audit-stream": "Insurance / InsurTech"
 };
 
 function fetchRepos() {
