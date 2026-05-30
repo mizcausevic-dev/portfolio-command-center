@@ -1,21 +1,135 @@
 [
   {
-    "name": "Kg Suite Fleet Dashboard",
-    "slug": "kg-suite-fleet-dashboard",
-    "url": "https://mizcausevic-dev.github.io/kg-suite-fleet-dashboard/",
+    "name": "Citizen Data Vault Contract Profile",
+    "slug": "citizen-data-vault-contract-profile",
+    "url": "https://suite.kineticgain.com",
     "platform": "Kinetic Gain Protocol Suite",
-    "vertical": "Platform Engineering",
-    "language": "CSS",
+    "vertical": "GovTech / Public Sector AI",
+    "language": "Other",
     "freshness": "24h",
-    "subdomain": "mizcausevic-dev.github.io",
-    "description": "Single-file static HTML operator dashboard for the Kinetic Gain Protocol Suite. Posture across 6 vertical 6-packs = 36 sibling spec repos × 5 cross-cutting invariants. No framework, no build step. GitHub Pages-deployable. Companion to kg-suite-vertical-router + kg-suite-vertical-comparator.",
+    "subdomain": "suite.kineticgain.com",
+    "description": "GovTech AI Procurement Decision Card v0.3 vault contract profile. 15 government-data categories incl. classified + CUI clearance-gated + FOIA exemption tagging + LEP routing. REQUIRED ai_use_case_inventory_block (OMB M-24-10 Sec.3(a) encoded in Decision Card). 6 categories default NOT a model input.",
     "topics": [
       "ai-governance",
       "ai-safety",
-      "cross-vertical",
-      "dark-theme",
-      "fleet-dashboard",
-      "github-pages"
+      "decision-card",
+      "fedramp",
+      "foia",
+      "govtech"
+    ]
+  },
+  {
+    "name": "Government Ai Incident Card Profile",
+    "slug": "government-ai-incident-card-profile",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "GovTech / Public Sector AI",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "GovTech AI Incident Card profile. 18 event types (most extensive of any vertical) + 4-tier severity + 10 regulator-referral pathways with evaluation-state tracking. Covers OMB M-24-10 + agency civil rights + GAO + OIG + Section 508 + ADA Title II + FedRAMP + congressional + Federal AI Use Case Inventory correction.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "federal-ai",
+      "gao",
+      "govtech",
+      "incident-card"
+    ]
+  },
+  {
+    "name": "Government Applicant Bias Coverage Lab",
+    "slug": "government-applicant-bias-coverage-lab",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "GovTech / Public Sector AI",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Profile of evidence-bundle-spec scoped to federal/state/local government AI bias coverage. OMB M-24-10 Sec.5(d) + Title VI + ADA Title II + Section 1557 + OFCCP-equivalent + EEOC four-fifths. GovTech-unique LEP dimension + accessibility-pathway-impairment + agency-civil-rights-finding statuses.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "bias",
+      "equity",
+      "evidence-bundle",
+      "govtech"
+    ]
+  },
+  {
+    "name": "Program Outcome Proof Ledger",
+    "slug": "program-outcome-proof-ledger",
+    "url": "https://outcomes.kineticgain.com/",
+    "platform": "Decision Intelligence",
+    "vertical": "Nonprofit / Foundation Ops",
+    "language": "Python",
+    "freshness": "24h",
+    "subdomain": "outcomes.kineticgain.com",
+    "description": "Operator surface for nonprofit program outcome proof, board packets, evaluator narrative, and delivery posture.",
+    "topics": [
+      "board-reporting",
+      "evidence-ledger",
+      "foundation-ops",
+      "impact-reporting",
+      "nonprofit",
+      "operator-surface"
+    ]
+  },
+  {
+    "name": "Omb M24 10 Readiness Evidence Bundle",
+    "slug": "omb-m24-10-readiness-evidence-bundle",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "GovTech / Public Sector AI",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Profile of evidence-bundle-spec scoped to OMB M-24-10 (Mar 2024) readiness across 8 obligation families: ai-governance + Federal AI Use Case Inventory + rights-impacting minimum practices + safety-impacting minimum practices + OMB M-24-18 AI procurement + Section 508 + Privacy Act/FOIA + NIST AI RMF. GovTech scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "evidence-bundle",
+      "federal-ai",
+      "govtech",
+      "kinetic-gain-protocol-suite"
+    ]
+  },
+  {
+    "name": "State Government Ai Disclosure Tracker",
+    "slug": "state-government-ai-disclosure-tracker",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "GovTech / Public Sector AI",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "GovTech Operator: per-jurisdiction ledger of US federal EOs + OMB memos + state government AI laws + local AI ordinances. Distinct from regulator-side trackers — covers government's OWN AI use rules. Seed: OMB M-24-10, EO 14110 (rescinded), CT Public Act 23-16, NYC AI Action Plan.",
+    "topics": [
+      "ai-disclosure",
+      "ai-governance",
+      "ai-safety",
+      "executive-orders",
+      "govtech",
+      "kinetic-gain-protocol-suite"
+    ]
+  },
+  {
+    "name": "Government Decision Record Audit Stream",
+    "slug": "government-decision-record-audit-stream",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "GovTech / Public Sector AI",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "GovTech audit-stream Operator: per-federal/state/local AI decision-record events hash-chained for OMB M-24-10 + OMB M-24-18 + AI Bill of Rights + Section 508 + Privacy Act + FOIA + NIST AI RMF + EO 14110/14179 evidence. Three invariants: human-agency-officer + Federal AI Use Case Inventory + classification-clearance.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "audit-stream",
+      "fedramp",
+      "govtech",
+      "hash-chain"
     ]
   },
   {
@@ -50,6 +164,25 @@
       "growth-systems",
       "platform-engineering",
       "react"
+    ]
+  },
+  {
+    "name": "Kg Suite Fleet Dashboard",
+    "slug": "kg-suite-fleet-dashboard",
+    "url": "https://mizcausevic-dev.github.io/kg-suite-fleet-dashboard/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Platform Engineering",
+    "language": "CSS",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Single-file static HTML operator dashboard for the Kinetic Gain Protocol Suite. Posture across 6 vertical 6-packs = 36 sibling spec repos × 5 cross-cutting invariants. No framework, no build step. GitHub Pages-deployable. Companion to kg-suite-vertical-router + kg-suite-vertical-comparator.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "cross-vertical",
+      "dark-theme",
+      "fleet-dashboard",
+      "github-pages"
     ]
   },
   {
@@ -1335,7 +1468,7 @@
     "platform": "Platform Reliability Stack",
     "vertical": "Biotech / Diagnostics",
     "language": "C#",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "assay.kineticgain.com",
     "description": "Biotech / diagnostics operator surface for assay release packets, calibration freshness, variance review, and QA signoff.",
     "topics": [

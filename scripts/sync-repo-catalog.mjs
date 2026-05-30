@@ -36,6 +36,7 @@ const VERTICAL_ORDER = [
   "Media / Publishing",
   "PropTech / Real Estate",
   "HR Tech / Employment AI",
+  "GovTech / Public Sector AI",
   "Aerospace / Drones",
   "Robotics"
 ];
@@ -109,7 +110,13 @@ const verticalOverrides = {
   "financial-customer-data-vault-contract-profile": "FinTech",
   "kg-suite-vertical-router": "Platform Engineering",
   "kg-suite-vertical-comparator": "Platform Engineering",
-  "kg-suite-fleet-dashboard": "Platform Engineering"
+  "kg-suite-fleet-dashboard": "Platform Engineering",
+  "government-decision-record-audit-stream": "GovTech / Public Sector AI",
+  "state-government-ai-disclosure-tracker": "GovTech / Public Sector AI",
+  "omb-m24-10-readiness-evidence-bundle": "GovTech / Public Sector AI",
+  "government-applicant-bias-coverage-lab": "GovTech / Public Sector AI",
+  "government-ai-incident-card-profile": "GovTech / Public Sector AI",
+  "citizen-data-vault-contract-profile": "GovTech / Public Sector AI"
 };
 
 function fetchRepos() {
