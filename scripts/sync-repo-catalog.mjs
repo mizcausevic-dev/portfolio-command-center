@@ -108,7 +108,8 @@ const verticalOverrides = {
   "financial-ai-incident-card-profile": "FinTech",
   "financial-customer-data-vault-contract-profile": "FinTech",
   "kg-suite-vertical-router": "Platform Engineering",
-  "kg-suite-vertical-comparator": "Platform Engineering"
+  "kg-suite-vertical-comparator": "Platform Engineering",
+  "kg-suite-fleet-dashboard": "Platform Engineering"
 };
 
 function fetchRepos() {

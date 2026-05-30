@@ -1,5 +1,58 @@
 [
   {
+    "name": "Kg Suite Fleet Dashboard",
+    "slug": "kg-suite-fleet-dashboard",
+    "url": "https://mizcausevic-dev.github.io/kg-suite-fleet-dashboard/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Platform Engineering",
+    "language": "CSS",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Single-file static HTML operator dashboard for the Kinetic Gain Protocol Suite. Posture across 6 vertical 6-packs = 36 sibling spec repos × 5 cross-cutting invariants. No framework, no build step. GitHub Pages-deployable. Companion to kg-suite-vertical-router + kg-suite-vertical-comparator.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "cross-vertical",
+      "dark-theme",
+      "fleet-dashboard",
+      "github-pages"
+    ]
+  },
+  {
+    "name": "Mizcausevic Dev",
+    "slug": "mizcausevic-dev",
+    "url": "https://mizcausevic.com/skills/",
+    "platform": "Landing Sites",
+    "vertical": "IAM / Security",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "mizcausevic.com",
+    "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
+    "topics": [
+      "enterprise-software",
+      "fullstack-development"
+    ]
+  },
+  {
+    "name": "Portfolio Command Center",
+    "slug": "portfolio-command-center",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
+    "topics": [
+      "command-center",
+      "executive-dashboard",
+      "frontend",
+      "growth-systems",
+      "platform-engineering",
+      "react"
+    ]
+  },
+  {
     "name": "Kinetic Gain Suite Landing",
     "slug": "kinetic-gain-suite-landing",
     "url": "https://suite.kineticgain.com/",
@@ -47,40 +100,6 @@
       "proptech",
       "sla",
       "vendor-escalation"
-    ]
-  },
-  {
-    "name": "Mizcausevic Dev",
-    "slug": "mizcausevic-dev",
-    "url": "https://mizcausevic.com/skills/",
-    "platform": "Landing Sites",
-    "vertical": "IAM / Security",
-    "language": "Other",
-    "freshness": "24h",
-    "subdomain": "mizcausevic.com",
-    "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
-    "topics": [
-      "enterprise-software",
-      "fullstack-development"
-    ]
-  },
-  {
-    "name": "Portfolio Command Center",
-    "slug": "portfolio-command-center",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "IAM / Security",
-    "language": "TypeScript",
-    "freshness": "24h",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
-    "topics": [
-      "command-center",
-      "executive-dashboard",
-      "frontend",
-      "growth-systems",
-      "platform-engineering",
-      "react"
     ]
   },
   {
@@ -1335,7 +1354,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Aerospace / Drones",
     "language": "Go",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "suite.kineticgain.com",
     "description": "Single-binary security-headers auditor. Grades a domain (or a list of them) against an opinionated HSTS/CSP/COOP/COEP/Permissions-Policy rubric and emits either a terminal scorecard or JSON. CLI + HTTP-service modes. Third Go binary in the Kinetic Gain Protocol Suite.",
     "topics": [
@@ -1354,7 +1373,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HealthTech",
     "language": "Go",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "suite.kineticgain.com",
     "description": "Single-binary UTM event ingest + attribution service. Consent-gated persistence with the same granted/denied/unknown vocabulary as klaviyo-flow-consent-audit; hash-chained audit-stream events on every ingest and drop; REST aggregation by source/medium/campaign/surface + funnel rollup. Second Go binary in the Suite.",
     "topics": [
