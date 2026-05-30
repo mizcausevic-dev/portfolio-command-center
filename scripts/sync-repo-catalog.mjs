@@ -35,6 +35,7 @@ const VERTICAL_ORDER = [
   "Nonprofit / Foundation Ops",
   "Media / Publishing",
   "PropTech / Real Estate",
+  "HR Tech / Employment AI",
   "Aerospace / Drones",
   "Robotics"
 ];
@@ -93,7 +94,13 @@ const verticalOverrides = {
   "naic-ai-bulletin-readiness-evidence-bundle": "Insurance / InsurTech",
   "insurance-applicant-bias-coverage-lab": "Insurance / InsurTech",
   "unfair-discrimination-incident-card-profile": "Insurance / InsurTech",
-  "policyholder-data-vault-contract-profile": "Insurance / InsurTech"
+  "policyholder-data-vault-contract-profile": "Insurance / InsurTech",
+  "employment-decision-record-audit-stream": "HR Tech / Employment AI",
+  "state-employment-ai-disclosure-tracker": "HR Tech / Employment AI",
+  "eeoc-readiness-evidence-bundle": "HR Tech / Employment AI",
+  "employment-candidate-bias-coverage-lab": "HR Tech / Employment AI",
+  "employment-ai-incident-card-profile": "HR Tech / Employment AI",
+  "candidate-data-vault-contract-profile": "HR Tech / Employment AI"
 };
 
 function fetchRepos() {

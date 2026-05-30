@@ -1,5 +1,184 @@
 [
   {
+    "name": "Candidate Data Vault Contract Profile",
+    "slug": "candidate-data-vault-contract-profile",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "HR Tech / Employment AI",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "HR Tech AI Procurement Decision Card v0.3 vault-contract profile naming 19 candidate-data categories + 7-doctrine consent_basis + 9 protection levels + ADA accommodation pathway 5-flag block + 7 vendor due-diligence artifacts. 6 categories default NOT a model input (biometric, credit, social, protected-class, accommodation, ADA-medical).",
+    "topics": [
+      "ada",
+      "ai-governance",
+      "ai-safety",
+      "decision-card",
+      "eeoc",
+      "employment"
+    ]
+  },
+  {
+    "name": "Employment Ai Incident Card Profile",
+    "slug": "employment-ai-incident-card-profile",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "HR Tech / Employment AI",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "HR Tech AI Incident Card profile. 13 event types + 4-tier severity + 7 regulator-referral pathways with evaluation-state tracking. Covers EEOC + ADA + NYC LL 144 audit-failure + IL 820 ILCS 42 + MD HB 1202 + CO SB 24-205 + OFCCP + class-action filings.",
+    "topics": [
+      "ada",
+      "ai-governance",
+      "ai-safety",
+      "eeoc",
+      "employment",
+      "hr-tech"
+    ]
+  },
+  {
+    "name": "Employment Candidate Bias Coverage Lab",
+    "slug": "employment-candidate-bias-coverage-lab",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "HR Tech / Employment AI",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Profile of evidence-bundle-spec scoped to AI employment-tool bias coverage. NYC LL 144 annual-bias-audit + EEOC AI Guidance + UGESP four-fifths-rule + 2-SD test + Bostock + ADA accommodation-pathway-impairment. HR Tech scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "bias",
+      "eeoc",
+      "employment",
+      "equity"
+    ]
+  },
+  {
+    "name": "Eeoc Readiness Evidence Bundle",
+    "slug": "eeoc-readiness-evidence-bundle",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "HR Tech / Employment AI",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Profile of evidence-bundle-spec scoped to EEOC AI Guidance (May 2023) readiness across 6 obligation families: title-vii-disparate-impact + ada-accommodation + adea-age-fairness + gina-genetic-info-prohibition + eeoc-recordkeeping + ofccp-federal-contractor. HR Tech scaffolding, not certification.",
+    "topics": [
+      "ada",
+      "ai-governance",
+      "ai-safety",
+      "eeoc",
+      "employment",
+      "evidence-bundle"
+    ]
+  },
+  {
+    "name": "State Employment Ai Disclosure Tracker",
+    "slug": "state-employment-ai-disclosure-tracker",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "HR Tech / Employment AI",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "HR Tech Operator: per-jurisdiction lifecycle ledger of US state + local employment-AI laws. First Suite tracker supporting sub-state jurisdictions (US-XX-CITY pattern). Seed: NYC LL 144, IL 820 ILCS 42 + HB 3773, MD HB 1202, CA AB 331, CO SB 24-205.",
+    "topics": [
+      "ai-disclosure",
+      "ai-governance",
+      "ai-safety",
+      "eeoc",
+      "employment",
+      "hr-tech"
+    ]
+  },
+  {
+    "name": "Employment Decision Record Audit Stream",
+    "slug": "employment-decision-record-audit-stream",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "HR Tech / Employment AI",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "HR Tech audit-stream Operator: per-hiring / promotion / performance / termination AI tool access events hash-chained for EEOC + ADA + Title VII + ADEA + GINA + OFCCP + NYC LL 144 + IL AI Video Interview Act + MD HB 1202 evidence. Workday/UKG/Greenhouse-bridged. Two invariants: human-hiring-decision + NYC LL 144 candidate-notice.",
+    "topics": [
+      "ada",
+      "ai-governance",
+      "ai-safety",
+      "audit-stream",
+      "eeoc",
+      "employment"
+    ]
+  },
+  {
+    "name": "Robot Fleet Exception Board",
+    "slug": "robot-fleet-exception-board",
+    "url": "https://robots.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "Robotics",
+    "language": "C#",
+    "freshness": "24h",
+    "subdomain": "robots.kineticgain.com",
+    "description": "Operator surface for robot fleet failures, override packets, redeploy posture, and mission-safe review routing.",
+    "topics": [
+      "aspnet-core",
+      "autonomy",
+      "csharp",
+      "fleet-operations",
+      "mission-operations",
+      "operator-surface"
+    ]
+  },
+  {
+    "name": "Kineticgain Com Apex",
+    "slug": "kineticgain-com-apex",
+    "url": "https://kineticgain.com/",
+    "platform": "Landing Sites",
+    "vertical": "AI Platform",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "kineticgain.com",
+    "description": "Source of truth for https://kineticgain.com/. Five managed apex files, per-file FTP deploy on push to main, safe co-existence with twenty-two subdomain directories on the Hostinger root.",
+    "topics": []
+  },
+  {
+    "name": "Mizcausevic Dev",
+    "slug": "mizcausevic-dev",
+    "url": "https://mizcausevic.com/skills/",
+    "platform": "Landing Sites",
+    "vertical": "IAM / Security",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "mizcausevic.com",
+    "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
+    "topics": [
+      "enterprise-software",
+      "fullstack-development"
+    ]
+  },
+  {
+    "name": "Portfolio Command Center",
+    "slug": "portfolio-command-center",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
+    "topics": [
+      "command-center",
+      "executive-dashboard",
+      "frontend",
+      "growth-systems",
+      "platform-engineering",
+      "react"
+    ]
+  },
+  {
     "name": "Policyholder Data Vault Contract Profile",
     "slug": "policyholder-data-vault-contract-profile",
     "url": "https://suite.kineticgain.com",
@@ -114,40 +293,6 @@
     ]
   },
   {
-    "name": "Mizcausevic Dev",
-    "slug": "mizcausevic-dev",
-    "url": "https://mizcausevic.com/skills/",
-    "platform": "Landing Sites",
-    "vertical": "IAM / Security",
-    "language": "Other",
-    "freshness": "24h",
-    "subdomain": "mizcausevic.com",
-    "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
-    "topics": [
-      "enterprise-software",
-      "fullstack-development"
-    ]
-  },
-  {
-    "name": "Portfolio Command Center",
-    "slug": "portfolio-command-center",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "IAM / Security",
-    "language": "TypeScript",
-    "freshness": "24h",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
-    "topics": [
-      "command-center",
-      "executive-dashboard",
-      "frontend",
-      "growth-systems",
-      "platform-engineering",
-      "react"
-    ]
-  },
-  {
     "name": "Insurance Decision Record Audit Stream",
     "slug": "insurance-decision-record-audit-stream",
     "url": "https://suite.kineticgain.com",
@@ -165,18 +310,6 @@
       "hash-chain",
       "insurance"
     ]
-  },
-  {
-    "name": "Kineticgain Com Apex",
-    "slug": "kineticgain-com-apex",
-    "url": "https://kineticgain.com/",
-    "platform": "Landing Sites",
-    "vertical": "AI Platform",
-    "language": "HTML",
-    "freshness": "24h",
-    "subdomain": "kineticgain.com",
-    "description": "Source of truth for https://kineticgain.com/. Five managed apex files, per-file FTP deploy on push to main, safe co-existence with twenty-two subdomain directories on the Hostinger root.",
-    "topics": []
   },
   {
     "name": "State Real Estate Ai Disclosure Tracker",
@@ -1050,7 +1183,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HealthTech",
     "language": "Other",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "suite.kineticgain.com",
     "description": "Profile of evidence-bundle-spec scoped to the HIPAA Security Rule. Names the 18 standards across Administrative, Physical, and Technical safeguards plus expected evidence items per implementation specification. ed25519-signed, audit-stream-emitted. HIPAA-readiness scaffolding, not certification.",
     "topics": [
@@ -1069,7 +1202,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HealthTech",
     "language": "JavaScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "suite.kineticgain.com",
     "description": "FHIR-aware append-only ledger of which AI tool read which patient resource. Bridges HL7 FHIR AuditEvent to the Kinetic Gain Protocol Suite hash-chained audit-stream — one verifiable record of AI access across the EHR, the RAG index, and Decision-Card-governed surfaces.",
     "topics": [
@@ -1088,7 +1221,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HealthTech",
     "language": "Other",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "suite.kineticgain.com",
     "description": "Healthcare-specific profile of the AI Procurement Decision Card v0.3 vault contract — names HIPAA's 18 Safe Harbor identifier categories as concrete data_vault_targets exemplars + per-category default retention_envelope rules. HIPAA-readiness scaffolding, not certification.",
     "topics": [
