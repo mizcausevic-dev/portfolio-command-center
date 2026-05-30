@@ -106,7 +106,8 @@ const verticalOverrides = {
   "cfpb-readiness-evidence-bundle": "FinTech",
   "financial-applicant-bias-coverage-lab": "FinTech",
   "financial-ai-incident-card-profile": "FinTech",
-  "financial-customer-data-vault-contract-profile": "FinTech"
+  "financial-customer-data-vault-contract-profile": "FinTech",
+  "kg-suite-vertical-router": "Platform Engineering"
 };
 
 function fetchRepos() {
