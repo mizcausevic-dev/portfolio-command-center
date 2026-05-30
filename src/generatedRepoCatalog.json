@@ -1,5 +1,196 @@
 [
   {
+    "name": "Treasury Liquidity Signal Lab",
+    "slug": "treasury-liquidity-signal-lab",
+    "url": "https://github.com/mizcausevic-dev/treasury-liquidity-signal-lab",
+    "platform": "Frontend Showcase",
+    "vertical": "FinTech",
+    "language": "Julia",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Julia operator surface for treasury liquidity, settlement buffers, funding pressure, and close-safe finance posture.",
+    "topics": []
+  },
+  {
+    "name": "Financial Customer Data Vault Contract Profile",
+    "slug": "financial-customer-data-vault-contract-profile",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "FinTech",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "FinTech AI Procurement Decision Card v0.3 vault contract profile. 17 financial-data categories + 10-doctrine consent_basis + 10 protection levels + 8 vendor due-diligence artifacts. Section 1071 demographic + ECOA protected-class default NOT a model input. Section 1033 portability window in retention envelope.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "cfpb",
+      "decision-card",
+      "fintech",
+      "glba"
+    ]
+  },
+  {
+    "name": "Financial Ai Incident Card Profile",
+    "slug": "financial-ai-incident-card-profile",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "FinTech",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "FinTech AI Incident Card profile. 15 event types + 4-tier severity + 9 regulator-referral pathways with evaluation-state tracking. Covers CFPB + FCRA + UDAAP + OCC/FRB/FDIC MRA + Section 1071 + BSA/AML + FinCEN + state banking-regulator + class-action filings.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "bsa-aml",
+      "cfpb",
+      "fair-lending",
+      "fcra"
+    ]
+  },
+  {
+    "name": "Financial Applicant Bias Coverage Lab",
+    "slug": "financial-applicant-bias-coverage-lab",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "FinTech",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Profile of evidence-bundle-spec scoped to AI financial-services bias coverage. ECOA Reg B + CFPB Section 1071 + CFPB UDAAP + OCC/FRB/FDIC joint AI + four-fifths-rule + business-necessity-defended + redlining-pattern-flagged. FinTech scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "bias",
+      "cfpb",
+      "ecoa",
+      "evidence-bundle"
+    ]
+  },
+  {
+    "name": "Cfpb Readiness Evidence Bundle",
+    "slug": "cfpb-readiness-evidence-bundle",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "FinTech",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Profile of evidence-bundle-spec scoped to CFPB + OCC + FRB + FDIC readiness across 8 obligation families: model-risk-management + ECOA Reg B + FCRA Reg V + GLBA Safeguards + BSA/AML + Section 1071 + Section 1033 + CFPB UDAAP. FinTech scaffolding, not certification.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "cfpb",
+      "ecoa",
+      "evidence-bundle",
+      "fcra"
+    ]
+  },
+  {
+    "name": "State Financial Ai Disclosure Tracker",
+    "slug": "state-financial-ai-disclosure-tracker",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "FinTech",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "FinTech Operator: per-state lifecycle ledger of US state banking-regulator regs + state-AG enforcement + state statutes + NMLS-coordinated reqs. First Suite tracker supporting multi-regulation per state (statute + implementing regulation as parallel lifecycle streams). Seed: NY Part 500, CA CCFPL+DFPI 10 CCR, CO SB 24-205, IL HB 3773, TX HB 1709.",
+    "topics": [
+      "ai-disclosure",
+      "ai-governance",
+      "ai-safety",
+      "banking",
+      "cfpb",
+      "ecoa"
+    ]
+  },
+  {
+    "name": "Financial Decision Record Audit Stream",
+    "slug": "financial-decision-record-audit-stream",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "FinTech",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "FinTech audit-stream Operator: per-consumer-credit / deposit / payment / fraud / AML / robo-advisor / Section-1071-small-business AI tool events hash-chained for CFPB + OCC + FRB + FDIC + ECOA + FCRA + GLBA + BSA-AML evidence. Two invariants: human-credit-officer + FCRA permissible-purpose. Excludes mortgage + insurance.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "audit-stream",
+      "cfpb",
+      "ecoa",
+      "fcra"
+    ]
+  },
+  {
+    "name": "Lab Instrument Change Audit",
+    "slug": "lab-instrument-change-audit",
+    "url": "https://instruments.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "Biotech / Diagnostics",
+    "language": "C#",
+    "freshness": "24h",
+    "subdomain": "instruments.kineticgain.com",
+    "description": "Operator surface for lab instrument changes, calibration drift, firmware review, and audit-safe attestation posture.",
+    "topics": [
+      "aspnet-core",
+      "biotech",
+      "calibration",
+      "csharp",
+      "diagnostics",
+      "firmware"
+    ]
+  },
+  {
+    "name": "Kineticgain Com Apex",
+    "slug": "kineticgain-com-apex",
+    "url": "https://kineticgain.com/",
+    "platform": "Landing Sites",
+    "vertical": "AI Platform",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "kineticgain.com",
+    "description": "Source of truth for https://kineticgain.com/. Five managed apex files, per-file FTP deploy on push to main, safe co-existence with twenty-two subdomain directories on the Hostinger root.",
+    "topics": []
+  },
+  {
+    "name": "Mizcausevic Dev",
+    "slug": "mizcausevic-dev",
+    "url": "https://mizcausevic.com/skills/",
+    "platform": "Landing Sites",
+    "vertical": "IAM / Security",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "mizcausevic.com",
+    "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
+    "topics": [
+      "enterprise-software",
+      "fullstack-development"
+    ]
+  },
+  {
+    "name": "Portfolio Command Center",
+    "slug": "portfolio-command-center",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
+    "topics": [
+      "command-center",
+      "executive-dashboard",
+      "frontend",
+      "growth-systems",
+      "platform-engineering",
+      "react"
+    ]
+  },
+  {
     "name": "Candidate Data Vault Contract Profile",
     "slug": "candidate-data-vault-contract-profile",
     "url": "https://suite.kineticgain.com",
@@ -130,52 +321,6 @@
       "fleet-operations",
       "mission-operations",
       "operator-surface"
-    ]
-  },
-  {
-    "name": "Kineticgain Com Apex",
-    "slug": "kineticgain-com-apex",
-    "url": "https://kineticgain.com/",
-    "platform": "Landing Sites",
-    "vertical": "AI Platform",
-    "language": "HTML",
-    "freshness": "24h",
-    "subdomain": "kineticgain.com",
-    "description": "Source of truth for https://kineticgain.com/. Five managed apex files, per-file FTP deploy on push to main, safe co-existence with twenty-two subdomain directories on the Hostinger root.",
-    "topics": []
-  },
-  {
-    "name": "Mizcausevic Dev",
-    "slug": "mizcausevic-dev",
-    "url": "https://mizcausevic.com/skills/",
-    "platform": "Landing Sites",
-    "vertical": "IAM / Security",
-    "language": "Other",
-    "freshness": "24h",
-    "subdomain": "mizcausevic.com",
-    "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
-    "topics": [
-      "enterprise-software",
-      "fullstack-development"
-    ]
-  },
-  {
-    "name": "Portfolio Command Center",
-    "slug": "portfolio-command-center",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "IAM / Security",
-    "language": "TypeScript",
-    "freshness": "24h",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
-    "topics": [
-      "command-center",
-      "executive-dashboard",
-      "frontend",
-      "growth-systems",
-      "platform-engineering",
-      "react"
     ]
   },
   {

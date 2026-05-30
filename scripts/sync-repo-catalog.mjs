@@ -100,7 +100,13 @@ const verticalOverrides = {
   "eeoc-readiness-evidence-bundle": "HR Tech / Employment AI",
   "employment-candidate-bias-coverage-lab": "HR Tech / Employment AI",
   "employment-ai-incident-card-profile": "HR Tech / Employment AI",
-  "candidate-data-vault-contract-profile": "HR Tech / Employment AI"
+  "candidate-data-vault-contract-profile": "HR Tech / Employment AI",
+  "financial-decision-record-audit-stream": "FinTech",
+  "state-financial-ai-disclosure-tracker": "FinTech",
+  "cfpb-readiness-evidence-bundle": "FinTech",
+  "financial-applicant-bias-coverage-lab": "FinTech",
+  "financial-ai-incident-card-profile": "FinTech",
+  "financial-customer-data-vault-contract-profile": "FinTech"
 };
 
 function fetchRepos() {
