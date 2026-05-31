@@ -40,6 +40,8 @@ const toneByVertical: Record<string, string> = {
   "Nonprofit / Foundation Ops": "plum",
   "Media / Publishing": "rose",
   "PropTech / Real Estate": "cyan",
+  "HR Tech / Employment AI": "plum",
+  "GovTech / Public Sector AI": "bert",
   "Aerospace / Drones": "cyan",
   Robotics: "plum"
 };

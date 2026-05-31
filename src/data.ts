@@ -162,6 +162,8 @@ const verticalOrder = [
   "Nonprofit / Foundation Ops",
   "Media / Publishing",
   "PropTech / Real Estate",
+  "HR Tech / Employment AI",
+  "GovTech / Public Sector AI",
   "Aerospace / Drones",
   "Robotics"
 ] as const;

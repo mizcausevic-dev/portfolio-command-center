@@ -1,5 +1,1181 @@
 [
   {
+    "name": "Clinical Event Narrative Review Board",
+    "slug": "clinical-event-narrative-review-board",
+    "url": "https://narrative.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "Biotech / Diagnostics",
+    "language": "C#",
+    "freshness": "24h",
+    "subdomain": "narrative.kineticgain.com",
+    "description": "Operator surface for biotech clinical-event narratives, triage gaps, physician-review posture, and submission-safe packet readiness.",
+    "topics": [
+      "aspnet-core",
+      "biotech",
+      "csharp",
+      "diagnostics",
+      "medical-review",
+      "pharmacovigilance"
+    ]
+  },
+  {
+    "name": "Mizcausevic Dev",
+    "slug": "mizcausevic-dev",
+    "url": "https://mizcausevic.com/skills/",
+    "platform": "Landing Sites",
+    "vertical": "IAM / Security",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "mizcausevic.com",
+    "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
+    "topics": [
+      "enterprise-software",
+      "fullstack-development"
+    ]
+  },
+  {
+    "name": "Kinetic Gain Suite Landing",
+    "slug": "kinetic-gain-suite-landing",
+    "url": "https://suite.kineticgain.com/",
+    "platform": "Landing Sites",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Canonical front-door landing for the Kinetic Gain Protocol Suite. 10 open governance specs across 2 regulated verticals. Deploys to suite.kineticgain.com.",
+    "topics": []
+  },
+  {
+    "name": "Kg Suite Vertical Comparator",
+    "slug": "kg-suite-vertical-comparator",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Platform Engineering",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Cross-vertical comparison tool. Generates AEO-friendly Markdown + JSON tables of SAME canonical shapes vs DIFFERENT per-vertical design contributions across 6 vertical 6-packs (36 sibling spec repos). Plus per-artifact compare CLI. Companion to kg-suite-vertical-router.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "cli",
+      "comparison",
+      "cross-vertical",
+      "decision-card"
+    ]
+  },
+  {
+    "name": "Kg Suite Fleet Dashboard",
+    "slug": "kg-suite-fleet-dashboard",
+    "url": "https://mizcausevic-dev.github.io/kg-suite-fleet-dashboard/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Platform Engineering",
+    "language": "CSS",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Single-file static HTML operator dashboard for the Kinetic Gain Protocol Suite. Posture across 6 vertical 6-packs = 36 sibling spec repos × 5 cross-cutting invariants. No framework, no build step. GitHub Pages-deployable. Companion to kg-suite-vertical-router + kg-suite-vertical-comparator.",
+    "topics": [
+      "ai-governance",
+      "ai-safety",
+      "cross-vertical",
+      "dark-theme",
+      "fleet-dashboard",
+      "github-pages"
+    ]
+  },
+  {
+    "name": "Cui Data Vault Contract Profile",
+    "slug": "cui-data-vault-contract-profile",
+    "url": "https://suite.kineticgain.com/verticals/defensetech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Compliance / Governance",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "DefenseTech Decision Card vault contract: FIRST Suite vault contract with 3 orthogonal typed policy axes (CUI categorization × export-control status × foreign-person restriction). resolvePolicy() intersects all 3 axes at runtime. Cross-binding centerpiece of the DefenseTech 6-pack.",
+    "topics": [
+      "classified",
+      "cui",
+      "decision-card",
+      "defensetech",
+      "ear",
+      "itar"
+    ]
+  },
+  {
+    "name": "Defense Ai Incident Card Profile",
+    "slug": "defense-ai-incident-card-profile",
+    "url": "https://suite.kineticgain.com/verticals/defensetech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "AI Platform",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "DefenseTech Incident Card profile: publishable AI-incident record for DIB contractors covering DFARS 72-hour cyber incidents, CUI spillage, ITAR/EAR export-control violations, foreign-person access breaches, CMMC POA&M failures, NISPOM insider threats. 22 event types — largest Incident Card profile in the Suite.",
+    "topics": [
+      "defensetech",
+      "incident-card",
+      "kinetic-gain-protocol-suite",
+      "nispom-insider-threat",
+      "classified-environment-ai",
+      "cmmc-poam"
+    ]
+  },
+  {
+    "name": "Defense Contractor Bias Coverage Lab",
+    "slug": "defense-contractor-bias-coverage-lab",
+    "url": "https://suite.kineticgain.com/verticals/defensetech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "IAM / Security",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "DefenseTech bias-coverage: population-level AI bias scaffolding across DIB workforce decisions — VEVRAA + Section 503 + Title VII OFCCP + EO 11246 + ADEA + EPA + EO 12968 + 32 CFR 147 + NISPOM insider threat + SBA SB/SDB/VOSB sub-contractor flow-down. 15 dimensions × 8 metric kinds.",
+    "topics": [
+      "bias-coverage",
+      "defensetech",
+      "dib",
+      "equal-pay",
+      "kinetic-gain-protocol-suite",
+      "ofccp"
+    ]
+  },
+  {
+    "name": "Pharmacovigilance Signal Router",
+    "slug": "pharmacovigilance-signal-router",
+    "url": "https://safety.kineticgain.com/",
+    "platform": "Decision Intelligence",
+    "vertical": "Biotech / Diagnostics",
+    "language": "C#",
+    "freshness": "24h",
+    "subdomain": "safety.kineticgain.com",
+    "description": "Operator surface for biotech pharmacovigilance signals, case-routing gaps, aggregate reporting evidence, and committee-safe review posture.",
+    "topics": [
+      "adverse-events",
+      "aspnet-core",
+      "biotech",
+      "csharp",
+      "diagnostics",
+      "drug-safety"
+    ]
+  },
+  {
+    "name": "Cmmc L2 L3 Readiness Evidence Bundle",
+    "slug": "cmmc-l2-l3-readiness-evidence-bundle",
+    "url": "https://suite.kineticgain.com/verticals/defensetech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Compliance / Governance",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "DefenseTech evidence-bundle: CMMC 2.0 L2/L3 readiness scaffolding under DFARS 252.204-7012/7019/7020/7021 + NIST SP 800-171 r2 + NIST SP 800-172 + SPRS scoring. 18 control families × 48 evidence kinds.",
+    "topics": [
+      "c3pao",
+      "cmmc",
+      "cmmc-2-0",
+      "defensetech",
+      "dfars",
+      "evidence-bundle"
+    ]
+  },
+  {
+    "name": "Dod Cmmc Disclosure Tracker",
+    "slug": "dod-cmmc-disclosure-tracker",
+    "url": "https://suite.kineticgain.com/verticals/defensetech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "IAM / Security",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "DefenseTech state-tracker: lifecycle snapshot of 10 federal authorities regulating DIB AI / cybersecurity / export-control / CUI — DoD CIO, Cyber AB, DIBCAC, DDTC, BIS, NIST, GSA, DCMA, DCSA, NARA-ISOO. 8 distinct enforcement modes, most diverse state-tracker in the Suite.",
+    "topics": [
+      "bis",
+      "cmmc",
+      "cui",
+      "dcsa",
+      "ddtc",
+      "defensetech"
+    ]
+  },
+  {
+    "name": "Gxp Change Control Board",
+    "slug": "gxp-change-control-board",
+    "url": "https://gxp.kineticgain.com/",
+    "platform": "Platform Reliability Stack",
+    "vertical": "Biotech / Diagnostics",
+    "language": "C#",
+    "freshness": "24h",
+    "subdomain": "gxp.kineticgain.com",
+    "description": "C# biotech operator surface for GxP change control, validation evidence gaps, and release-safe cutover posture.",
+    "topics": [
+      "biotech",
+      "change-control",
+      "csharp",
+      "diagnostics",
+      "gxp",
+      "quality-systems"
+    ]
+  },
+  {
+    "name": "Defense Decision Record Audit Stream",
+    "slug": "defense-decision-record-audit-stream",
+    "url": "https://suite.kineticgain.com/verticals/defensetech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Insurance / InsurTech",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "DefenseTech audit-stream Operator: per-defense-AI-decision events hash-chained for DFARS 252.204-7012 + CMMC 2.0 + NIST 800-171/172 + ITAR + EAR + DoDI 5230.24 + NISPOM + False Claims Act. First Suite vertical with 3-axis taxonomy (CUI tier + export control + foreign-person restriction).",
+    "topics": [
+      "audit-stream",
+      "cmmc",
+      "cui",
+      "defensetech",
+      "dfars",
+      "ear"
+    ]
+  },
+  {
+    "name": "Grid Asset Data Vault Contract Profile",
+    "slug": "grid-asset-data-vault-contract-profile",
+    "url": "https://suite.kineticgain.com/verticals/energytech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "HealthTech",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "EnergyTech Decision Card vault contract profile: 20 grid-asset data categories × 5-tier BES categorization × 3-code OT/IT boundary × 12 protection levels (7 EnergyTech-unique). bes_cyber_system_categorization + ot_it_boundary as cross-repo binding enums with audit-stream + incident card. 5 unique runtime invariants.",
+    "topics": [
+      "bcsi",
+      "bes-cyber-system",
+      "data-diode",
+      "decision-card",
+      "energytech",
+      "kinetic-gain-protocol-suite"
+    ]
+  },
+  {
+    "name": "Specimen Chain Of Custody Console",
+    "slug": "specimen-chain-of-custody-console",
+    "url": "https://specimen.kineticgain.com/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Biotech / Diagnostics",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "specimen.kineticgain.com",
+    "description": "TypeScript biotech operator surface for specimen custody, labeling integrity, cold-chain posture, and release blockers.",
+    "topics": [
+      "biotech",
+      "chain-of-custody",
+      "diagnostics",
+      "lab-operations",
+      "typescript",
+      "pathology-logistics"
+    ]
+  },
+  {
+    "name": "Grid Operations Incident Card Profile",
+    "slug": "grid-operations-incident-card-profile",
+    "url": "https://suite.kineticgain.com/verticals/energytech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "HealthTech",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "EnergyTech AI Incident Card: 20 event types (most extensive in Suite) covering CIP-008 reportable + regulatory-clock meta-violations (1-hour + 12-hour) + NERC reliability + FERC market integrity + EJ pattern + critical-medical-equipment + PSPS + OT-IT boundary + cascading outage + BCSI exposure. 12 referral pathways. ed25519 REQUIRED.",
+    "topics": [
+      "bes-cyber-system",
+      "ed25519",
+      "energytech",
+      "environmental-justice",
+      "incident-card",
+      "kinetic-gain-protocol-suite"
+    ]
+  },
+  {
+    "name": "Grid Operator Bias Coverage Lab",
+    "slug": "grid-operator-bias-coverage-lab",
+    "url": "https://suite.kineticgain.com/verticals/energytech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Compliance / Governance",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "EnergyTech bias Evidence Bundle: population-level equity in essential service delivery (NOT individual decisioning). Load shed allocation + outage restoration + DR + EV charging + rate design + low-income programs. EPA EJSCREEN + Justice40 + state DAC designations. 3 EnergyTech-unique pattern detectors.",
+    "topics": [
+      "bias-coverage",
+      "disparate-impact",
+      "energytech",
+      "environmental-justice",
+      "evidence-bundle",
+      "kinetic-gain-protocol-suite"
+    ]
+  },
+  {
+    "name": "Batch Deviation Capa Ledger",
+    "slug": "batch-deviation-capa-ledger",
+    "url": "https://capa.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "Biotech / Diagnostics",
+    "language": "C#",
+    "freshness": "24h",
+    "subdomain": "capa.kineticgain.com",
+    "description": "C# biotech operator surface for batch deviations, CAPA routing, effectiveness checks, and disposition posture.",
+    "topics": [
+      "aspnet-core",
+      "batch-release",
+      "biotech",
+      "capa",
+      "csharp",
+      "diagnostics"
+    ]
+  },
+  {
+    "name": "Nerc Cip Readiness Evidence Bundle",
+    "slug": "nerc-cip-readiness-evidence-bundle",
+    "url": "https://suite.kineticgain.com/verticals/energytech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "IAM / Security",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "EnergyTech compliance Evidence Bundle profile: NERC CIP-002 through CIP-014 + TSA SD-2021-02C + DOE EO 14028 + FERC Order 2222 + state PUC prudency review. 12 obligation families × 53 required evidence kinds — largest Suite evidence bundle (reflects energy's multi-layered regulatory scope).",
+    "topics": [
+      "ai-governance",
+      "bes-cyber-system",
+      "energytech",
+      "evidence-bundle",
+      "kinetic-gain-protocol-suite",
+      "nerc-cip"
+    ]
+  },
+  {
+    "name": "State Puc Ai Disclosure Tracker",
+    "slug": "state-puc-ai-disclosure-tracker",
+    "url": "https://suite.kineticgain.com/verticals/energytech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "IAM / Security",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "EnergyTech jurisdiction-spanning lifecycle tracker: state PUC AI rules + FERC orders + NERC standards + DOE/TSA/EPA + ISO/RTO BPMs. 10 jurisdictions seeded across state PUC (CA/NY/TX/MA/IL/WA) + federal/standards/ISO (FERC Order 2222, NERC CIP-013-3, TSA SD-2021-02C, CAISO BPM).",
+    "topics": [
+      "ai-disclosure",
+      "energytech",
+      "ferc",
+      "iso-rto",
+      "kinetic-gain-protocol-suite",
+      "lifecycle-tracker"
+    ]
+  },
+  {
+    "name": "Merchant Risk Review Console",
+    "slug": "merchant-risk-review-console",
+    "url": "https://merchant.kineticgain.com/",
+    "platform": "Agent Operations Suite",
+    "vertical": "FinTech",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "merchant.kineticgain.com",
+    "description": "Operator surface for FinTech merchant risk review, chargeback pressure, reserve coverage, KYB drift, payout throttle risk, and review backlog.",
+    "topics": [
+      "chargebacks",
+      "fintech",
+      "kyc",
+      "merchant-risk",
+      "payments",
+      "platform-engineering"
+    ]
+  },
+  {
+    "name": "Grid Decision Record Audit Stream",
+    "slug": "grid-decision-record-audit-stream",
+    "url": "https://suite.kineticgain.com/verticals/energytech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Data Engineering",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "EnergyTech audit-stream Operator: per-grid-operations AI-decision events hash-chained for NERC CIP + FERC + TSA Security Directives + state PUC + DOE EO 14028 evidence. Every event carries bes_cyber_system_categorization + ot_it_boundary. First Suite verifier with regulatory wall-clock invariant (CIP-008 1-hour reporting window).",
+    "topics": [
+      "audit-stream",
+      "critical-infrastructure-protection",
+      "ferc",
+      "grid-operations",
+      "hash-chained-audit",
+      "kinetic-gain-protocol-suite"
+    ]
+  },
+  {
+    "name": "Kyc Refresh Case Router",
+    "slug": "kyc-refresh-case-router",
+    "url": "https://kyc.kineticgain.com/",
+    "platform": "Decision Intelligence",
+    "vertical": "FinTech",
+    "language": "PHP",
+    "freshness": "24h",
+    "subdomain": "kyc.kineticgain.com",
+    "description": "WordPress and FinTech operator surface for KYC refresh routing, beneficial-owner drift, review evidence, and account-safe remediation posture.",
+    "topics": [
+      "aml",
+      "beneficial-ownership",
+      "compliance-operations",
+      "fintech",
+      "kyc",
+      "php"
+    ]
+  },
+  {
+    "name": "Matter Decision Record Audit Stream",
+    "slug": "matter-decision-record-audit-stream",
+    "url": "https://suite.kineticgain.com/verticals/legaltech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Compliance / Governance",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "LegalTech audit-stream Operator: per-matter privileged decision-record events hash-chained for ABA Model Rule 1.1c8 + 1.6 + 3.3 + 5.3 + state-bar opinions + attorney-client privilege + work-product doctrine. Every event carries privilege_tier — LegalTech-unique design innovation.",
+    "topics": [
+      "ai-disclosure",
+      "ai-governance",
+      "anti-hallucination",
+      "attorney-client-privilege",
+      "audit-stream",
+      "decision-card"
+    ]
+  },
+  {
+    "name": "Matter Decision Record Audit Stream Reference",
+    "slug": "matter-decision-record-audit-stream-reference",
+    "url": "https://suite.kineticgain.com/verticals/legaltech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Compliance / Governance",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Node.js reference implementation of the matter-decision-record-audit-stream spec (LegalTech 6-pack #1). Proves the spec's three orthogonal invariants are MUTUALLY achievable end-to-end (privilege-tier consistency + engagement-letter binding + citation-validation-before-production-ready). Second ref impl in the Suite. AGPL-3.0.",
+    "topics": [
+      "aba-model-rules",
+      "agplv3",
+      "anti-hallucination",
+      "attorney-client-privilege",
+      "audit-stream",
+      "kinetic-gain-protocol-suite"
+    ]
+  },
+  {
+    "name": "Portfolio Constellation",
+    "slug": "portfolio-constellation",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "AI Platform",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "Live visual atlas of every public repo at github.com/mizcausevic-dev — 190+ repos across 20+ languages, classified into named platforms and industry verticals. Auto-refreshed every 6 hours via gh api. Deploys to portfolio.kineticgain.com.",
+    "topics": [
+      "data-viz",
+      "kinetic-gain",
+      "portfolio",
+      "react",
+      "recharts",
+      "typescript"
+    ]
+  },
+  {
+    "name": "Human Override Readiness Console",
+    "slug": "human-override-readiness-console",
+    "url": "https://override.kineticgain.com/",
+    "platform": "Agent Operations Suite",
+    "vertical": "Robotics",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "override.kineticgain.com",
+    "description": "Operator surface for robotics human-override readiness, supervisor coverage, intervention drills, telemetry blind zones, and handoff-safe remediation posture.",
+    "topics": [
+      "autonomy",
+      "fleet-ops",
+      "industrial-automation",
+      "operator-surface",
+      "robotics",
+      "telemetry"
+    ]
+  },
+  {
+    "name": "Sensor Health Drift Monitor",
+    "slug": "sensor-health-drift-monitor",
+    "url": "https://sensor.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "Robotics",
+    "language": "Rust",
+    "freshness": "24h",
+    "subdomain": "sensor.kineticgain.com",
+    "description": "Rust robotics operator surface for sensor drift, calibration freshness, blind-zone pressure, and override-safe fleet posture.",
+    "topics": [
+      "autonomy",
+      "fleet-ops",
+      "industrial-automation",
+      "operator-surface",
+      "robotics",
+      "rust"
+    ]
+  },
+  {
+    "name": "Kinetic Gain Embedded",
+    "slug": "kinetic-gain-embedded",
+    "url": "https://kineticgain.com/embedded/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Data Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "kineticgain.com",
+    "description": "Drop-in audit-stream + Decision Card vault contract SDK for B2B SaaS. Emit hash-chained Suite-compliant audit events, enforce vault contracts before AI tools touch sensitive data, validate Decision Cards. TypeScript-first, dual ESM/CJS, zero runtime deps. Apache-2.0.",
+    "topics": [
+      "ai-disclosure",
+      "ai-governance",
+      "apache-2",
+      "audit-stream",
+      "decision-card",
+      "ed25519"
+    ]
+  },
+  {
+    "name": "Attorney Client Data Vault Contract Profile",
+    "slug": "attorney-client-data-vault-contract-profile",
+    "url": "https://suite.kineticgain.com/verticals/legaltech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Compliance / Governance",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "LegalTech Decision Card vault contract profile: 18 attorney-client data categories × 8-value privilege_tier taxonomy × 10 protection levels. Drives resource.privilege_tier on the sibling matter-decision-record-audit-stream. 4 LegalTech-unique runtime invariants incl cross-matter-firewall + opposing-party-quarantine.",
+    "topics": [
+      "ai-procurement",
+      "attorney-client-privilege",
+      "decision-card",
+      "kinetic-gain-protocol-suite",
+      "legaltech",
+      "privilege-tier"
+    ]
+  },
+  {
+    "name": "Campaign Appeal Fatigue Monitor",
+    "slug": "campaign-appeal-fatigue-monitor",
+    "url": "https://appeals.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "Nonprofit / Foundation Ops",
+    "language": "Julia",
+    "freshness": "24h",
+    "subdomain": "appeals.kineticgain.com",
+    "description": "Operator surface for donor appeal cadence, fatigue pressure, and stewardship-safe outreach posture.",
+    "topics": [
+      "donor-stewardship",
+      "foundation-ops",
+      "fundraising",
+      "julia",
+      "nonprofit",
+      "operator-surface"
+    ]
+  },
+  {
+    "name": "Legal Ai Incident Card Profile",
+    "slug": "legal-ai-incident-card-profile",
+    "url": "https://suite.kineticgain.com/verticals/legaltech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Compliance / Governance",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "LegalTech AI Incident Card profile: 18 event types covering privilege breaches, work-product violations, court-sanctioned hallucinations (Mata v. Avianca), conflict-check bypasses, UPL, vendor training-data violations. 6-code privilege_waiver_risk_taxonomy. ed25519 signature REQUIRED.",
+    "topics": [
+      "ai-governance",
+      "attorney-client-privilege",
+      "ed25519",
+      "incident-card",
+      "kinetic-gain-protocol-suite",
+      "legaltech"
+    ]
+  },
+  {
+    "name": "Legal Applicant Bias Coverage Lab",
+    "slug": "legal-applicant-bias-coverage-lab",
+    "url": "https://suite.kineticgain.com/verticals/legaltech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "IAM / Security",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "LegalTech bias coverage Evidence Bundle: jury selection (Batson), sentencing (post-COMPAS), immigration triage, public defender caseload, eDiscovery TAR. Anchored to Title VI + Sixth Amendment + Batson + ABA Criminal Justice Standards. 8 subgroups × 11 coverage statuses incl LegalTech-unique compas-cautionary + batson-pattern flags.",
+    "topics": [
+      "ai-disclosure",
+      "ai-governance",
+      "evidence-bundle",
+      "fairness-metrics",
+      "kinetic-gain-protocol-suite",
+      "legaltech"
+    ]
+  },
+  {
+    "name": "Building Access Audit Ledger",
+    "slug": "building-access-audit-ledger",
+    "url": "https://accesslog.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "PropTech / Real Estate",
+    "language": "C#",
+    "freshness": "24h",
+    "subdomain": "accesslog.kineticgain.com",
+    "description": "Operator surface for building access events, credential control gaps, controller drift, revocation pressure, and audit posture.",
+    "topics": [
+      "aspnet",
+      "audit-ledger",
+      "csharp",
+      "facilities-operations",
+      "platform-engineering",
+      "proptech"
+    ]
+  },
+  {
+    "name": "Aba Rule 1 6 Readiness Evidence Bundle",
+    "slug": "aba-rule-1-6-readiness-evidence-bundle",
+    "url": "https://suite.kineticgain.com/verticals/legaltech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Compliance / Governance",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "LegalTech compliance Evidence Bundle profile: ABA Model Rules 1.1c8 + 1.6 + 1.6(c) + 1.7 + 1.9 + 3.3 + 5.3 + 5.5, plus attorney-client privilege preservation, plus work-product doctrine preservation. 8 obligation families × 35 required evidence kinds. State bar overlay across CA/NY/FL/DC/PA/TX/IL.",
+    "topics": [
+      "aba-model-rules",
+      "ai-disclosure",
+      "ai-governance",
+      "attorney-client-privilege",
+      "compliance-readiness",
+      "evidence-bundle"
+    ]
+  },
+  {
+    "name": "State Bar Ai Disclosure Tracker",
+    "slug": "state-bar-ai-disclosure-tracker",
+    "url": "https://suite.kineticgain.com/verticals/legaltech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Compliance / Governance",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "LegalTech state bar lifecycle tracker: ABA + state bar + state supreme court + federal court standing orders that govern licensed-attorney AI use. 9 jurisdictions seeded (ABA, CA, NY-COSAC, FL, DC, PA, TX, IL, SDNY incl. Mata v. Avianca). Covers attorneys' OWN AI use ethics.",
+    "topics": [
+      "aba-model-rules",
+      "ai-disclosure",
+      "ai-governance",
+      "kinetic-gain-protocol-suite",
+      "legaltech",
+      "lifecycle-tracker"
+    ]
+  },
+  {
+    "name": "Treasury Liquidity Signal Lab",
+    "slug": "treasury-liquidity-signal-lab",
+    "url": "https://treasury.kineticgain.com/",
+    "platform": "Decision Intelligence",
+    "vertical": "FinTech",
+    "language": "Julia",
+    "freshness": "24h",
+    "subdomain": "treasury.kineticgain.com",
+    "description": "Julia operator surface for treasury liquidity, settlement buffers, funding pressure, and close-safe finance posture.",
+    "topics": [
+      "cash-management",
+      "finance-operations",
+      "fintech",
+      "julia",
+      "liquidity-management",
+      "operator-surface"
+    ]
+  },
+  {
+    "name": "Lab Instrument Change Audit",
+    "slug": "lab-instrument-change-audit",
+    "url": "https://instruments.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "Biotech / Diagnostics",
+    "language": "C#",
+    "freshness": "24h",
+    "subdomain": "instruments.kineticgain.com",
+    "description": "Operator surface for lab instrument changes, calibration drift, firmware review, and audit-safe attestation posture.",
+    "topics": [
+      "aspnet-core",
+      "biotech",
+      "calibration",
+      "csharp",
+      "diagnostics",
+      "firmware"
+    ]
+  },
+  {
+    "name": "Lease Obligation Risk Board",
+    "slug": "lease-obligation-risk-board",
+    "url": "https://lease.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "PropTech / Real Estate",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "lease.kineticgain.com",
+    "description": "Operator surface for lease obligations, renewal blockers, landlord packet readiness, and property-safe review posture.",
+    "topics": [
+      "embedded-analytics",
+      "operator-surface",
+      "platform-engineering",
+      "proptech",
+      "real-estate",
+      "renewal-ops"
+    ]
+  },
+  {
+    "name": "Donor Stewardship Ops Console",
+    "slug": "donor-stewardship-ops-console",
+    "url": "https://stewardship.kineticgain.com/",
+    "platform": "Decision Intelligence",
+    "vertical": "Nonprofit / Foundation Ops",
+    "language": "PHP",
+    "freshness": "24h",
+    "subdomain": "stewardship.kineticgain.com",
+    "description": "Operator surface for donor stewardship, pledge posture, acknowledgment evidence, and nonprofit follow-up discipline.",
+    "topics": [
+      "evidence-ledger",
+      "nonprofit",
+      "operator-surface",
+      "php",
+      "platform-engineering",
+      "pledge-management"
+    ]
+  },
+  {
+    "name": "Release Readiness Shell Kit",
+    "slug": "release-readiness-shell-kit",
+    "url": "https://release.kineticgain.com/",
+    "platform": "Platform Reliability Stack",
+    "vertical": "Platform Engineering",
+    "language": "Shell / Bash",
+    "freshness": "24h",
+    "subdomain": "release.kineticgain.com",
+    "description": "Bash-native platform release operator surface for launch blockers, rollback posture, and freeze windows.",
+    "topics": [
+      "change-management",
+      "kinetic-gain",
+      "platform-engineering",
+      "release-engineering",
+      "rollback",
+      "runbooks"
+    ]
+  },
+  {
+    "name": "Incident Handoff Runbook Kit",
+    "slug": "incident-handoff-runbook-kit",
+    "url": "https://runbook.kineticgain.com/",
+    "platform": "Platform Reliability Stack",
+    "vertical": "Platform Engineering",
+    "language": "Shell / Bash",
+    "freshness": "24h",
+    "subdomain": "runbook.kineticgain.com",
+    "description": "Bash-native incident turnover operator surface for owner gaps, SLA drift, and evidence-complete handoffs.",
+    "topics": [
+      "handoff",
+      "incident-management",
+      "kinetic-gain",
+      "platform-engineering",
+      "runbooks",
+      "shell"
+    ]
+  },
+  {
+    "name": "Backup Restore Drill Runner",
+    "slug": "backup-restore-drill-runner",
+    "url": "https://backup.kineticgain.com/",
+    "platform": "Platform Reliability Stack",
+    "vertical": "Platform Engineering",
+    "language": "Shell / Bash",
+    "freshness": "24h",
+    "subdomain": "backup.kineticgain.com",
+    "description": "Bash-native operator surface for backup drills, restore timing, and recovery evidence posture.",
+    "topics": [
+      "backup",
+      "bash",
+      "disaster-recovery",
+      "kinetic-gain",
+      "operator-surface"
+    ]
+  },
+  {
+    "name": "Donor Cohort Risk Lab R",
+    "slug": "donor-cohort-risk-lab-r",
+    "url": "https://donors.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "Nonprofit / Foundation Ops",
+    "language": "R",
+    "freshness": "24h",
+    "subdomain": "donors.kineticgain.com",
+    "description": "Base-R nonprofit operator surface for donor retention drift, upgrade pressure, and stewardship gaps.",
+    "topics": [
+      "fundraising",
+      "kinetic-gain",
+      "nonprofit",
+      "operator-surface",
+      "r"
+    ]
+  },
+  {
+    "name": "Care Variation Analysis Notebook R",
+    "slug": "care-variation-analysis-notebook-r",
+    "url": "https://care.kineticgain.com/",
+    "platform": "Platform Reliability Stack",
+    "vertical": "HealthTech",
+    "language": "R",
+    "freshness": "24h",
+    "subdomain": "care.kineticgain.com",
+    "description": "Base-R healthcare operator surface for care-pathway variation, LOS drift, readmission pressure, and follow-up reliability.",
+    "topics": [
+      "analytics",
+      "healthcare",
+      "kinetic-gain",
+      "operator-surface",
+      "r"
+    ]
+  },
+  {
+    "name": "Claims Loss Trend Lab R",
+    "slug": "claims-loss-trend-lab-r",
+    "url": "https://loss.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "Insurance / InsurTech",
+    "language": "R",
+    "freshness": "24h",
+    "subdomain": "loss.kineticgain.com",
+    "description": "Base-R insurance operator surface for claims trend drift, reserve adequacy, and reopen posture.",
+    "topics": [
+      "analytics",
+      "claims",
+      "insurance",
+      "insurtech",
+      "kinetic-gain",
+      "r"
+    ]
+  },
+  {
+    "name": "Yield Forecast Studio",
+    "slug": "yield-forecast-studio",
+    "url": "https://yield.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "Revenue Operations",
+    "language": "Julia",
+    "freshness": "24h",
+    "subdomain": "yield.kineticgain.com",
+    "description": "Julia operator surface for publishing and commerce yield forecasting, inventory planning, and shortfall posture.",
+    "topics": [
+      "ecommerce",
+      "forecasting",
+      "julia",
+      "kinetic-gain",
+      "publishing",
+      "revenue-operations"
+    ]
+  },
+  {
+    "name": "Capacity Optimizer Jl",
+    "slug": "capacity-optimizer-jl",
+    "url": "https://capacity.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "AI Platform",
+    "language": "Julia",
+    "freshness": "24h",
+    "subdomain": "capacity.kineticgain.com",
+    "description": "Julia optimization surface for constrained capacity planning, lane allocation, and recovery posture.",
+    "topics": [
+      "agpl",
+      "capacity-planning",
+      "julia",
+      "kinetic-gain",
+      "operator-dashboard",
+      "optimization"
+    ]
+  },
+  {
+    "name": "Wordpress Regulatory Disclosure Kit",
+    "slug": "wordpress-regulatory-disclosure-kit",
+    "url": "https://kineticgain.com/",
+    "platform": "Decision Intelligence",
+    "vertical": "Insurance / InsurTech",
+    "language": "PHP",
+    "freshness": "24h",
+    "subdomain": "kineticgain.com",
+    "description": "WordPress disclosure control plane for regulated copy, schema-aligned service disclaimers, approval evidence, and review-safe publication posture.",
+    "topics": [
+      "compliance",
+      "disclosures",
+      "governance",
+      "php",
+      "seo",
+      "wordpress"
+    ]
+  },
+  {
+    "name": "Tenant Maintenance Escalation Console",
+    "slug": "tenant-maintenance-escalation-console",
+    "url": "https://tenant.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "PropTech / Real Estate",
+    "language": "PHP",
+    "freshness": "24h",
+    "subdomain": "tenant.kineticgain.com",
+    "description": "Operator surface for tenant maintenance queues, vendor escalation, SLA posture, and service-safe property operations.",
+    "topics": [
+      "compliance",
+      "operator-surface",
+      "php",
+      "proptech",
+      "sla",
+      "vendor-escalation"
+    ]
+  },
+  {
+    "name": "Wordpress Member Journey Consent Kit",
+    "slug": "wordpress-member-journey-consent-kit",
+    "url": "https://members.kineticgain.com/",
+    "platform": "Decision Intelligence",
+    "vertical": "HealthTech",
+    "language": "PHP",
+    "freshness": "24h",
+    "subdomain": "members.kineticgain.com",
+    "description": "WordPress control plane for member onboarding, lifecycle consent capture, preference evidence, and release-safe audience journey posture.",
+    "topics": [
+      "consent",
+      "kinetic-gain",
+      "lifecycle",
+      "membership",
+      "php",
+      "wordpress"
+    ]
+  },
+  {
+    "name": "Store Ops Incident Board",
+    "slug": "store-ops-incident-board",
+    "url": "https://stores.kineticgain.com",
+    "platform": "Frontend Showcase",
+    "vertical": "Compliance / Governance",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "stores.kineticgain.com",
+    "description": "TypeScript control plane for store incidents, SLA blockers, recovery posture, and buyer-safe restaurant operations.",
+    "topics": [
+      "governance",
+      "incident-management",
+      "operator-surface",
+      "restaurant-tech",
+      "store-operations",
+      "typescript"
+    ]
+  },
+  {
+    "name": "Rights Window Release Planner",
+    "slug": "rights-window-release-planner",
+    "url": "https://rights.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "PropTech / Real Estate",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "rights.kineticgain.com",
+    "description": "Media/publishing operator surface for rights windows, clearance blockers, and release-safe launch posture.",
+    "topics": [
+      "content-operations",
+      "release-planning",
+      "rights-management",
+      "typescript",
+      "media-publishing",
+      "publishing-ops"
+    ]
+  },
+  {
+    "name": "Permit Package Readiness Hub",
+    "slug": "permit-package-readiness-hub",
+    "url": "https://permits.kineticgain.com/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Aerospace / Drones",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "permits.kineticgain.com",
+    "description": "TypeScript control plane for permit packages, readiness blockers, inspection posture, and construction-safe submission operations.",
+    "topics": [
+      "construction-tech",
+      "revops",
+      "typescript",
+      "workflow-automation",
+      "field-operations",
+      "permitting"
+    ]
+  },
+  {
+    "name": "Menu Availability Sync Engine",
+    "slug": "menu-availability-sync-engine",
+    "url": "https://menus.kineticgain.com",
+    "platform": "Frontend Showcase",
+    "vertical": "Compliance / Governance",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "menus.kineticgain.com",
+    "description": "TypeScript control plane for menu availability, sync blockers, channel posture, and buyer-safe restaurant commerce operations.",
+    "topics": [
+      "availability",
+      "governance",
+      "operator-surface",
+      "restaurant-tech",
+      "typescript",
+      "food-commerce"
+    ]
+  },
+  {
+    "name": "Editorial Standards Approval Desk",
+    "slug": "editorial-standards-approval-desk",
+    "url": "https://editorial.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "Compliance / Governance",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "editorial.kineticgain.com",
+    "description": "Media/publishing operator surface for editorial standards routing, copy-policy blockers, and approval-safe launch posture.",
+    "topics": [
+      "approval-workflows",
+      "brand-standards",
+      "content-governance",
+      "editorial-operations",
+      "media-publishing",
+      "typescript"
+    ]
+  },
+  {
+    "name": "Crop Compliance Observation Ledger",
+    "slug": "crop-compliance-observation-ledger",
+    "url": "https://crops.kineticgain.com",
+    "platform": "Decision Intelligence",
+    "vertical": "Compliance / Governance",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "crops.kineticgain.com",
+    "description": "TypeScript control plane for crop observations, evidence blockers, field posture, and buyer-safe agri compliance operations.",
+    "topics": [
+      "agritech",
+      "audit-readiness",
+      "compliance",
+      "governance",
+      "operator-surface",
+      "typescript"
+    ]
+  },
+  {
+    "name": "Booking Disruption Command Center",
+    "slug": "booking-disruption-command-center",
+    "url": "https://kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "Revenue Operations",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "kineticgain.com",
+    "description": "TypeScript command center for booking disruptions, recovery blockers, guest communication posture, and hospitality-grade service restoration operations.",
+    "topics": [
+      "command-center",
+      "hospitality-tech",
+      "revops",
+      "travel-tech",
+      "typescript",
+      "webops"
+    ]
+  },
+  {
+    "name": "Creator Partnership Deal Desk",
+    "slug": "creator-partnership-deal-desk",
+    "url": "https://kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "Revenue Operations",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "kineticgain.com",
+    "description": "Creator operator surface for partnership changes, obligation blockers, and launch-safe collaboration.",
+    "topics": [
+      "creator-economy",
+      "deal-desk",
+      "growth",
+      "partnerships",
+      "social",
+      "typescript"
+    ]
+  },
+  {
+    "name": "Kineticgain Com Apex",
+    "slug": "kineticgain-com-apex",
+    "url": "https://kineticgain.com/",
+    "platform": "Landing Sites",
+    "vertical": "AI Platform",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "kineticgain.com",
+    "description": "Source of truth for https://kineticgain.com/. Five managed apex files, per-file FTP deploy on push to main, safe co-existence with twenty-two subdomain directories on the Hostinger root.",
+    "topics": []
+  },
+  {
+    "name": "Portfolio Command Center",
+    "slug": "portfolio-command-center",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
+    "topics": [
+      "command-center",
+      "executive-dashboard",
+      "frontend",
+      "growth-systems",
+      "platform-engineering",
+      "react"
+    ]
+  },
+  {
+    "name": "Fhir Resource Access Audit",
+    "slug": "fhir-resource-access-audit",
+    "url": "https://suite.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "HealthTech",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "FHIR-aware append-only ledger of which AI tool read which patient resource. Bridges HL7 FHIR AuditEvent to the Kinetic Gain Protocol Suite hash-chained audit-stream — one verifiable record of AI access across the EHR, the RAG index, and Decision-Card-governed surfaces.",
+    "topics": [
+      "ai-governance",
+      "audit-event",
+      "audit-stream",
+      "ehr",
+      "fhir",
+      "healthtech"
+    ]
+  },
+  {
+    "name": "Fhir Resource Access Audit Reference",
+    "slug": "fhir-resource-access-audit-reference",
+    "url": "https://suite.kineticgain.com/verticals/healthtech/",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "HealthTech",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Node.js reference implementation of the fhir-resource-access-audit spec: HAPI FHIR R4 → HIPAA Safe-Harbor vault contract → hash-chained Suite audit-stream → self-verifies against the spec's own JSON Schema. Proves the spec is implementable end-to-end. AGPL-3.0.",
+    "topics": [
+      "agplv3",
+      "ai-disclosure",
+      "ai-governance",
+      "audit-stream",
+      "decision-card",
+      "fhir"
+    ]
+  },
+  {
     "name": "Citizen Data Vault Contract Profile",
     "slug": "citizen-data-vault-contract-profile",
     "url": "https://suite.kineticgain.com",
@@ -133,109 +1309,6 @@
     ]
   },
   {
-    "name": "Mizcausevic Dev",
-    "slug": "mizcausevic-dev",
-    "url": "https://mizcausevic.com/skills/",
-    "platform": "Landing Sites",
-    "vertical": "IAM / Security",
-    "language": "Other",
-    "freshness": "24h",
-    "subdomain": "mizcausevic.com",
-    "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
-    "topics": [
-      "enterprise-software",
-      "fullstack-development"
-    ]
-  },
-  {
-    "name": "Portfolio Command Center",
-    "slug": "portfolio-command-center",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "IAM / Security",
-    "language": "TypeScript",
-    "freshness": "24h",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
-    "topics": [
-      "command-center",
-      "executive-dashboard",
-      "frontend",
-      "growth-systems",
-      "platform-engineering",
-      "react"
-    ]
-  },
-  {
-    "name": "Kg Suite Fleet Dashboard",
-    "slug": "kg-suite-fleet-dashboard",
-    "url": "https://mizcausevic-dev.github.io/kg-suite-fleet-dashboard/",
-    "platform": "Kinetic Gain Protocol Suite",
-    "vertical": "Platform Engineering",
-    "language": "CSS",
-    "freshness": "24h",
-    "subdomain": "mizcausevic-dev.github.io",
-    "description": "Single-file static HTML operator dashboard for the Kinetic Gain Protocol Suite. Posture across 6 vertical 6-packs = 36 sibling spec repos × 5 cross-cutting invariants. No framework, no build step. GitHub Pages-deployable. Companion to kg-suite-vertical-router + kg-suite-vertical-comparator.",
-    "topics": [
-      "ai-governance",
-      "ai-safety",
-      "cross-vertical",
-      "dark-theme",
-      "fleet-dashboard",
-      "github-pages"
-    ]
-  },
-  {
-    "name": "Kinetic Gain Suite Landing",
-    "slug": "kinetic-gain-suite-landing",
-    "url": "https://suite.kineticgain.com/",
-    "platform": "Landing Sites",
-    "vertical": "Compliance / Governance",
-    "language": "HTML",
-    "freshness": "24h",
-    "subdomain": "suite.kineticgain.com",
-    "description": "Canonical front-door landing for the Kinetic Gain Protocol Suite. 10 open governance specs across 2 regulated verticals. Deploys to suite.kineticgain.com.",
-    "topics": []
-  },
-  {
-    "name": "Kg Suite Vertical Comparator",
-    "slug": "kg-suite-vertical-comparator",
-    "url": "https://suite.kineticgain.com",
-    "platform": "Kinetic Gain Protocol Suite",
-    "vertical": "Platform Engineering",
-    "language": "JavaScript",
-    "freshness": "24h",
-    "subdomain": "suite.kineticgain.com",
-    "description": "Cross-vertical comparison tool. Generates AEO-friendly Markdown + JSON tables of SAME canonical shapes vs DIFFERENT per-vertical design contributions across 6 vertical 6-packs (36 sibling spec repos). Plus per-artifact compare CLI. Companion to kg-suite-vertical-router.",
-    "topics": [
-      "ai-governance",
-      "ai-safety",
-      "cli",
-      "comparison",
-      "cross-vertical",
-      "decision-card"
-    ]
-  },
-  {
-    "name": "Tenant Maintenance Escalation Console",
-    "slug": "tenant-maintenance-escalation-console",
-    "url": "https://tenant.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "PropTech / Real Estate",
-    "language": "PHP",
-    "freshness": "24h",
-    "subdomain": "tenant.kineticgain.com",
-    "description": "Operator surface for tenant maintenance queues, vendor escalation, SLA posture, and service-safe property operations.",
-    "topics": [
-      "compliance",
-      "operator-surface",
-      "php",
-      "proptech",
-      "sla",
-      "vendor-escalation"
-    ]
-  },
-  {
     "name": "Kg Suite Vertical Router",
     "slug": "kg-suite-vertical-router",
     "url": "https://suite.kineticgain.com",
@@ -253,37 +1326,6 @@
       "evidence-bundle",
       "github-action"
     ]
-  },
-  {
-    "name": "Treasury Liquidity Signal Lab",
-    "slug": "treasury-liquidity-signal-lab",
-    "url": "https://treasury.kineticgain.com/",
-    "platform": "Decision Intelligence",
-    "vertical": "FinTech",
-    "language": "Julia",
-    "freshness": "24h",
-    "subdomain": "treasury.kineticgain.com",
-    "description": "Julia operator surface for treasury liquidity, settlement buffers, funding pressure, and close-safe finance posture.",
-    "topics": [
-      "cash-management",
-      "finance-operations",
-      "fintech",
-      "julia",
-      "liquidity-management",
-      "operator-surface"
-    ]
-  },
-  {
-    "name": "Kineticgain Com Apex",
-    "slug": "kineticgain-com-apex",
-    "url": "https://kineticgain.com/",
-    "platform": "Landing Sites",
-    "vertical": "AI Platform",
-    "language": "HTML",
-    "freshness": "24h",
-    "subdomain": "kineticgain.com",
-    "description": "Source of truth for https://kineticgain.com/. Five managed apex files, per-file FTP deploy on push to main, safe co-existence with twenty-two subdomain directories on the Hostinger root.",
-    "topics": []
   },
   {
     "name": "Financial Customer Data Vault Contract Profile",
@@ -397,25 +1439,6 @@
       "cfpb",
       "ecoa",
       "fcra"
-    ]
-  },
-  {
-    "name": "Lab Instrument Change Audit",
-    "slug": "lab-instrument-change-audit",
-    "url": "https://instruments.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "Biotech / Diagnostics",
-    "language": "C#",
-    "freshness": "24h",
-    "subdomain": "instruments.kineticgain.com",
-    "description": "Operator surface for lab instrument changes, calibration drift, firmware review, and audit-safe attestation posture.",
-    "topics": [
-      "aspnet-core",
-      "biotech",
-      "calibration",
-      "csharp",
-      "diagnostics",
-      "firmware"
     ]
   },
   {
@@ -609,25 +1632,6 @@
     ]
   },
   {
-    "name": "Portfolio Constellation",
-    "slug": "portfolio-constellation",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "AI Platform",
-    "language": "TypeScript",
-    "freshness": "24h",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "Live visual atlas of every public repo at github.com/mizcausevic-dev — 190+ repos across 20+ languages, classified into named platforms and industry verticals. Auto-refreshed every 6 hours via gh api. Deploys to portfolio.kineticgain.com.",
-    "topics": [
-      "data-viz",
-      "kinetic-gain",
-      "portfolio",
-      "react",
-      "recharts",
-      "typescript"
-    ]
-  },
-  {
     "name": "Naic Ai Bulletin Readiness Evidence Bundle",
     "slug": "naic-ai-bulletin-readiness-evidence-bundle",
     "url": "https://suite.kineticgain.com",
@@ -818,25 +1822,6 @@
     ]
   },
   {
-    "name": "Lease Obligation Risk Board",
-    "slug": "lease-obligation-risk-board",
-    "url": "https://lease.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "PropTech / Real Estate",
-    "language": "TypeScript",
-    "freshness": "24h",
-    "subdomain": "lease.kineticgain.com",
-    "description": "Operator surface for lease obligations, renewal blockers, landlord packet readiness, and property-safe review posture.",
-    "topics": [
-      "embedded-analytics",
-      "operator-surface",
-      "platform-engineering",
-      "proptech",
-      "real-estate",
-      "renewal-ops"
-    ]
-  },
-  {
     "name": "State Ai Disclosure State Tracker",
     "slug": "state-ai-disclosure-state-tracker",
     "url": "https://suite.kineticgain.com",
@@ -938,7 +1923,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "EdTech",
     "language": "Other",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "suite.kineticgain.com",
     "description": "EdTech-specific profile of the AI Procurement Decision Card v0.3 vault contract. Names FERPA's 7 PII categories (34 CFR §99.3) + COPPA's 10 PI categories (16 CFR §312.2, 2025 refresh) as concrete data_vault_targets exemplars + per-category retention rules. Four-doctrine consent_basis_taxonomy. EdTech-readiness scaffolding, not certification.",
     "topics": [
@@ -957,7 +1942,7 @@
     "platform": "Decision Intelligence",
     "vertical": "Nonprofit / Foundation Ops",
     "language": "Python",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "grants.kineticgain.com",
     "description": "Nonprofit operator surface for grant evidence, reporting posture, and deliverable readiness.",
     "topics": [
@@ -976,7 +1961,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HealthTech",
     "language": "JavaScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "suite.kineticgain.com",
     "description": "Hash-chained, append-only record schema + reference verifier for an AI/ML medical device's FDA SaMD classification lifecycle — pre-submission through 510(k)/De Novo/PMA, PCCP per FDA Dec 2024 final, post-market modifications, 21 CFR §820 QMS evidence refs. Healthcare-readiness scaffolding, not certification.",
     "topics": [
@@ -995,7 +1980,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HealthTech",
     "language": "Other",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "suite.kineticgain.com",
     "description": "Profile of evidence-bundle-spec scoped to pre-market and post-deployment bias / equity-coverage evidence for clinical AI/ML devices. Names the OMB SPD 15 + Section 1557 protected-class taxonomy, Fitzpatrick + sub-cohort dimensions, performance + equity metrics, and decision-document conventions. Healthcare-readiness scaffolding, not certification.",
     "topics": [
@@ -1014,7 +1999,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HealthTech",
     "language": "Other",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "suite.kineticgain.com",
     "description": "Healthcare-specific profile of the AI Incident Card. Maps severity/type fields onto FDA MedWatch (21 CFR §803), EU MDR vigilance (Articles 87–89), IMDRF AE Terminology, and a CTCAE-aligned 5-grade clinical severity scale. Healthcare-readiness scaffolding, not certification.",
     "topics": [
@@ -1033,7 +2018,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Compliance / Governance",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "walker.kineticgain.com",
     "description": "well-known-walker — paste any domain, see every Kinetic Gain disclosure it publishes. Live at walker.kineticgain.com. Client-side React + TS.",
     "topics": []
@@ -1045,7 +2030,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "EdTech",
     "language": "CSS",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "student.kineticgain.com",
     "description": "Landing site for the Student AI Disclosure spec. Live at student.kineticgain.com.",
     "topics": []
@@ -1057,7 +2042,7 @@
     "platform": "Agent Operations Suite",
     "vertical": "IAM / Security",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "rag.kineticgain.com",
     "description": "Live governance dashboard for RAG Sentinel. Hallucination detection, source freshness, citation quality, drift monitoring for enterprise RAG systems.",
     "topics": [
@@ -1076,7 +2061,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "AI Platform",
     "language": "CSS",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "prompts.kineticgain.com",
     "description": "Landing site for the Prompt Provenance spec. Live at prompts.kineticgain.com.",
     "topics": []
@@ -1088,7 +2073,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "AI Platform",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "bench.kineticgain.com",
     "description": "Visual web harness for prompt-injection-bench. Paste a JSONL transcript, see a procurement-grade pass-rate report. Live at bench.kineticgain.com. Client-side React + TS.",
     "topics": [
@@ -1107,7 +2092,7 @@
     "platform": "Decision Intelligence",
     "vertical": "Data Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "pricing.kineticgain.com",
     "description": "React + TypeScript studio for packaging tests, elasticity readouts, rollout guardrails, and executive pricing decision support.",
     "topics": [
@@ -1125,7 +2110,7 @@
     "platform": "MCP Servers",
     "vertical": "AI Platform",
     "language": "CSS",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "toolcards.kineticgain.com",
     "description": "Landing site for the MCP Tool Card spec. Live at toolcards.kineticgain.com.",
     "topics": []
@@ -1137,7 +2122,7 @@
     "platform": "MCP Servers",
     "vertical": "IAM / Security",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "mcp.kineticgain.com",
     "description": "Live governance dashboard for MCP Sentinel. Real-time-shaped UX showing MCP server oversight: tool surface scans, schema drift, PII isolation, posture scoring.",
     "topics": [
@@ -1156,7 +2141,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Aerospace / Drones",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "console.kineticgain.com",
     "description": "Mission-control operator console for the Kinetic Gain Protocol Suite — interactive topology mesh, configurable SRE operator dashboard, audit-stream visualization, PDF export. Deploys to console.kineticgain.com.",
     "topics": [
@@ -1175,7 +2160,7 @@
     "platform": "Landing Sites",
     "vertical": "AI Platform",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "examples.kineticgain.com",
     "description": "Examples gallery for the Kinetic Gain Protocol Suite. Pick a spec, see its canonical example. Live at examples.kineticgain.com.",
     "topics": []
@@ -1187,7 +2172,7 @@
     "platform": "Landing Sites",
     "vertical": "AI Platform",
     "language": "CSS",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "docs.kineticgain.com",
     "description": "Quickstart hub for the Kinetic Gain Protocol Suite. Per-role guides + canonical /.well-known/ path map. Live at docs.kineticgain.com.",
     "topics": []
@@ -1199,7 +2184,7 @@
     "platform": "Frontend Showcase",
     "vertical": "AI Platform",
     "language": "CSS",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "directory.kineticgain.com",
     "description": "Curated directory of vendors publishing Kinetic Gain Protocol Suite documents at well-known URLs. Live at directory.kineticgain.com. Submit via PR.",
     "topics": []
@@ -1211,7 +2196,7 @@
     "platform": "Decision Intelligence",
     "vertical": "Compliance / Governance",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "governance.kineticgain.com",
     "description": "Live procurement-reviewer-grade dashboard for the Kinetic Gain audit-stream spine. Tails SSE governance events, renders per-producer rolling counters, walks the hash chain, cites NIST AI RMF per event kind. Deploys to governance.kineticgain.com.",
     "topics": [
@@ -1230,7 +2215,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Revenue Operations",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "growth.kineticgain.com",
     "description": "React + TypeScript flagship control room that unifies revenue, growth, AI operations, workflow execution, and governance visibility.",
     "topics": [
@@ -1249,7 +2234,7 @@
     "platform": "Frontend Showcase",
     "vertical": "AI Platform",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "gv.kineticgain.com",
     "description": "Premium GitHub profile intelligence. Live at gv.kineticgain.com",
     "topics": [
@@ -1268,7 +2253,7 @@
     "platform": "Decision Intelligence",
     "vertical": "Revenue Operations",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "briefing.kineticgain.com",
     "description": "React + TypeScript flagship for translating revenue, growth, risk, AI, and operational signals into premium executive briefings.",
     "topics": [
@@ -1287,7 +2272,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HealthTech",
     "language": "CSS",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "clinical.kineticgain.com",
     "description": "Landing site for the Clinical AI Disclosure spec (HealthTech vertical extension to the Kinetic Gain Protocol Suite). Deploys to clinical.kineticgain.com via Hostinger FTP.",
     "topics": []
@@ -1299,7 +2284,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "EdTech",
     "language": "CSS",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "aup.kineticgain.com",
     "description": "Landing site for the Classroom AI AUP spec. Live at aup.kineticgain.com.",
     "topics": []
@@ -1311,7 +2296,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "EdTech",
     "language": "CSS",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "tutor.kineticgain.com",
     "description": "Landing page for the AI Tutor Card spec (EdTech extension to the Kinetic Gain Protocol Suite). Deploys to tutor.kineticgain.com via Hostinger FTP.",
     "topics": [
@@ -1325,7 +2310,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "AI Platform",
     "language": "CSS",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "incidents.kineticgain.com",
     "description": "Landing site for the AI Incident Card spec. Live at incidents.kineticgain.com.",
     "topics": []
@@ -1337,7 +2322,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Compliance / Governance",
     "language": "CSS",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "evidence.kineticgain.com",
     "description": "Landing site for the AI Evidence Format spec. Live at evidence.kineticgain.com.",
     "topics": []
@@ -1349,7 +2334,7 @@
     "platform": "Agent Operations Suite",
     "vertical": "Platform Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "observe.kineticgain.com",
     "description": "Operator console for AI agent fleets. Runs, traces, cost budgets, regression detection, SLA scoring. Datadog-shaped layer between agent platforms and SRE/SecOps teams.",
     "topics": [
@@ -1368,7 +2353,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "AI Platform",
     "language": "CSS",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "agents.kineticgain.com",
     "description": "Landing site for the Agent Cards spec. Live at agents.kineticgain.com.",
     "topics": []
@@ -1380,7 +2365,7 @@
     "platform": "Frontend Showcase",
     "vertical": "IAM / Security",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "protect.kineticgain.com",
     "description": "Operator surface for Microsoft Intune app protection, BYOD scope, policy gaps, and enforcement posture.",
     "topics": [
@@ -1399,7 +2384,7 @@
     "platform": "Decision Intelligence",
     "vertical": "AI Platform",
     "language": "HTML",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "validator.kineticgain.com",
     "description": "Single-file static validator for Kinetic Gain Protocol Suite JSON. Paste any Suite document, get a procurement-grade validation report in the browser. Deploys to validator.kineticgain.com.",
     "topics": []
@@ -1411,7 +2396,7 @@
     "platform": "AEO Reference Stack",
     "vertical": "Insurance / InsurTech",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "mizcausevic-dev.github.io",
     "description": "Interactive web visualizer for AEO Protocol declarations. Paste any /.well-known/aeo.json and see entity, authority, claims, and citation preferences rendered as a clean card layout. React 19 + Vite + Tailwind. Live on GitHub Pages.",
     "topics": [
@@ -1430,7 +2415,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Compliance / Governance",
     "language": "CSS",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "decisions.kineticgain.com",
     "description": "Landing site for the AI Procurement Decision Card spec (Kinetic Gain Protocol Suite #11). Static HTML, deploys to decisions.kineticgain.com.",
     "topics": [
@@ -1449,7 +2434,7 @@
     "platform": "Landing Sites",
     "vertical": "Compliance / Governance",
     "language": "HTML",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "pulse.kineticgain.com",
     "description": "AI Procurement Pulse — a quarterly research publication measuring vendor AI governance disclosure. Issue #0 (methodology) live at pulse.kineticgain.com; Issue #1 with real crawl data ships Q3 2026.",
     "topics": [
@@ -1557,25 +2542,6 @@
     ]
   },
   {
-    "name": "Fhir Resource Access Audit",
-    "slug": "fhir-resource-access-audit",
-    "url": "https://suite.kineticgain.com",
-    "platform": "Kinetic Gain Protocol Suite",
-    "vertical": "HealthTech",
-    "language": "JavaScript",
-    "freshness": "7d",
-    "subdomain": "suite.kineticgain.com",
-    "description": "FHIR-aware append-only ledger of which AI tool read which patient resource. Bridges HL7 FHIR AuditEvent to the Kinetic Gain Protocol Suite hash-chained audit-stream — one verifiable record of AI access across the EHR, the RAG index, and Decision-Card-governed surfaces.",
-    "topics": [
-      "ai-governance",
-      "audit-event",
-      "audit-stream",
-      "ehr",
-      "fhir",
-      "healthtech"
-    ]
-  },
-  {
     "name": "Phi Vault Contract Profile",
     "slug": "phi-vault-contract-profile",
     "url": "https://suite.kineticgain.com",
@@ -1592,42 +2558,6 @@
       "healthtech",
       "hipaa",
       "kinetic-gain-protocol-suite"
-    ]
-  },
-  {
-    "name": "Donor Cohort Risk Lab R",
-    "slug": "donor-cohort-risk-lab-r",
-    "url": "https://donors.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "Nonprofit / Foundation Ops",
-    "language": "R",
-    "freshness": "7d",
-    "subdomain": "donors.kineticgain.com",
-    "description": "Base-R nonprofit operator surface for donor retention drift, upgrade pressure, and stewardship gaps.",
-    "topics": [
-      "fundraising",
-      "kinetic-gain",
-      "nonprofit",
-      "operator-surface",
-      "r"
-    ]
-  },
-  {
-    "name": "Backup Restore Drill Runner",
-    "slug": "backup-restore-drill-runner",
-    "url": "https://backup.kineticgain.com/",
-    "platform": "Platform Reliability Stack",
-    "vertical": "Platform Engineering",
-    "language": "Shell / Bash",
-    "freshness": "7d",
-    "subdomain": "backup.kineticgain.com",
-    "description": "Bash-native operator surface for backup drills, restore timing, and recovery evidence posture.",
-    "topics": [
-      "backup",
-      "bash",
-      "disaster-recovery",
-      "kinetic-gain",
-      "operator-surface"
     ]
   },
   {
@@ -1681,43 +2611,6 @@
     ]
   },
   {
-    "name": "Care Variation Analysis Notebook R",
-    "slug": "care-variation-analysis-notebook-r",
-    "url": "https://care.kineticgain.com/",
-    "platform": "Platform Reliability Stack",
-    "vertical": "HealthTech",
-    "language": "R",
-    "freshness": "7d",
-    "subdomain": "care.kineticgain.com",
-    "description": "Base-R healthcare operator surface for care-pathway variation, LOS drift, readmission pressure, and follow-up reliability.",
-    "topics": [
-      "analytics",
-      "healthcare",
-      "kinetic-gain",
-      "operator-surface",
-      "r"
-    ]
-  },
-  {
-    "name": "Incident Handoff Runbook Kit",
-    "slug": "incident-handoff-runbook-kit",
-    "url": "https://runbook.kineticgain.com/",
-    "platform": "Platform Reliability Stack",
-    "vertical": "Platform Engineering",
-    "language": "Shell / Bash",
-    "freshness": "7d",
-    "subdomain": "runbook.kineticgain.com",
-    "description": "Bash-native incident turnover operator surface for owner gaps, SLA drift, and evidence-complete handoffs.",
-    "topics": [
-      "handoff",
-      "incident-management",
-      "kinetic-gain",
-      "platform-engineering",
-      "runbooks",
-      "shell"
-    ]
-  },
-  {
     "name": "Procurement Pulse Engine",
     "slug": "procurement-pulse-engine",
     "url": "https://pulse.kineticgain.com/",
@@ -1756,25 +2649,6 @@
     ]
   },
   {
-    "name": "Release Readiness Shell Kit",
-    "slug": "release-readiness-shell-kit",
-    "url": "https://release.kineticgain.com/",
-    "platform": "Platform Reliability Stack",
-    "vertical": "Platform Engineering",
-    "language": "Shell / Bash",
-    "freshness": "7d",
-    "subdomain": "release.kineticgain.com",
-    "description": "Bash-native platform release operator surface for launch blockers, rollback posture, and freeze windows.",
-    "topics": [
-      "change-management",
-      "kinetic-gain",
-      "platform-engineering",
-      "release-engineering",
-      "rollback",
-      "runbooks"
-    ]
-  },
-  {
     "name": "Vendor Risk Operations Center",
     "slug": "vendor-risk-operations-center",
     "url": "https://kineticgain.com/",
@@ -1804,25 +2678,6 @@
     "subdomain": "suite.kineticgain.com",
     "description": "Open JSON spec for the buyer-side artifact in AI procurement. Records the outcome of a procurement review of vendor declarations. Eleventh spec in the Kinetic Gain Protocol Suite.",
     "topics": []
-  },
-  {
-    "name": "Claims Loss Trend Lab R",
-    "slug": "claims-loss-trend-lab-r",
-    "url": "https://loss.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "Insurance / InsurTech",
-    "language": "R",
-    "freshness": "7d",
-    "subdomain": "loss.kineticgain.com",
-    "description": "Base-R insurance operator surface for claims trend drift, reserve adequacy, and reopen posture.",
-    "topics": [
-      "analytics",
-      "claims",
-      "insurance",
-      "insurtech",
-      "kinetic-gain",
-      "r"
-    ]
   },
   {
     "name": "Mcp Kinetic Gain",
@@ -1860,44 +2715,6 @@
       "kinetic-gain",
       "styleguide",
       "templates"
-    ]
-  },
-  {
-    "name": "Wordpress Member Journey Consent Kit",
-    "slug": "wordpress-member-journey-consent-kit",
-    "url": "https://members.kineticgain.com/",
-    "platform": "Decision Intelligence",
-    "vertical": "HealthTech",
-    "language": "PHP",
-    "freshness": "7d",
-    "subdomain": "members.kineticgain.com",
-    "description": "WordPress control plane for member onboarding, lifecycle consent capture, preference evidence, and release-safe audience journey posture.",
-    "topics": [
-      "consent",
-      "kinetic-gain",
-      "lifecycle",
-      "membership",
-      "php",
-      "wordpress"
-    ]
-  },
-  {
-    "name": "Yield Forecast Studio",
-    "slug": "yield-forecast-studio",
-    "url": "https://yield.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "Revenue Operations",
-    "language": "Julia",
-    "freshness": "7d",
-    "subdomain": "yield.kineticgain.com",
-    "description": "Julia operator surface for publishing and commerce yield forecasting, inventory planning, and shortfall posture.",
-    "topics": [
-      "ecommerce",
-      "forecasting",
-      "julia",
-      "kinetic-gain",
-      "publishing",
-      "revenue-operations"
     ]
   },
   {
@@ -2171,7 +2988,7 @@
     "slug": "employee-ai-acceptable-use-board",
     "url": "https://policy.kineticgain.com/",
     "platform": "Decision Intelligence",
-    "vertical": "Biotech / Diagnostics",
+    "vertical": "HR Tech / Employment AI",
     "language": "TypeScript",
     "freshness": "7d",
     "subdomain": "policy.kineticgain.com",
@@ -2281,25 +3098,6 @@
     ]
   },
   {
-    "name": "Wordpress Regulatory Disclosure Kit",
-    "slug": "wordpress-regulatory-disclosure-kit",
-    "url": "https://kineticgain.com/",
-    "platform": "Decision Intelligence",
-    "vertical": "Insurance / InsurTech",
-    "language": "PHP",
-    "freshness": "7d",
-    "subdomain": "kineticgain.com",
-    "description": "WordPress disclosure control plane for regulated copy, schema-aligned service disclaimers, approval evidence, and review-safe publication posture.",
-    "topics": [
-      "compliance",
-      "disclosures",
-      "governance",
-      "php",
-      "seo",
-      "wordpress"
-    ]
-  },
-  {
     "name": "Field Audit Mobile",
     "slug": "field-audit-mobile",
     "url": "https://kineticgain.com/",
@@ -2395,25 +3193,6 @@
     ]
   },
   {
-    "name": "Rights Window Release Planner",
-    "slug": "rights-window-release-planner",
-    "url": "https://rights.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "PropTech / Real Estate",
-    "language": "TypeScript",
-    "freshness": "7d",
-    "subdomain": "rights.kineticgain.com",
-    "description": "Media/publishing operator surface for rights windows, clearance blockers, and release-safe launch posture.",
-    "topics": [
-      "content-operations",
-      "release-planning",
-      "rights-management",
-      "typescript",
-      "media-publishing",
-      "publishing-ops"
-    ]
-  },
-  {
     "name": "Trial Protocol Deviation Monitor",
     "slug": "trial-protocol-deviation-monitor",
     "url": "https://trials.kineticgain.com/",
@@ -2449,25 +3228,6 @@
       "research-compliance",
       "typescript",
       "policy-disclosure"
-    ]
-  },
-  {
-    "name": "Editorial Standards Approval Desk",
-    "slug": "editorial-standards-approval-desk",
-    "url": "https://editorial.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "Compliance / Governance",
-    "language": "TypeScript",
-    "freshness": "7d",
-    "subdomain": "editorial.kineticgain.com",
-    "description": "Media/publishing operator surface for editorial standards routing, copy-policy blockers, and approval-safe launch posture.",
-    "topics": [
-      "approval-workflows",
-      "brand-standards",
-      "content-governance",
-      "editorial-operations",
-      "media-publishing",
-      "typescript"
     ]
   },
   {
@@ -2756,25 +3516,6 @@
     ]
   },
   {
-    "name": "Store Ops Incident Board",
-    "slug": "store-ops-incident-board",
-    "url": "https://stores.kineticgain.com",
-    "platform": "Frontend Showcase",
-    "vertical": "Compliance / Governance",
-    "language": "TypeScript",
-    "freshness": "7d",
-    "subdomain": "stores.kineticgain.com",
-    "description": "TypeScript control plane for store incidents, SLA blockers, recovery posture, and buyer-safe restaurant operations.",
-    "topics": [
-      "governance",
-      "incident-management",
-      "operator-surface",
-      "restaurant-tech",
-      "store-operations",
-      "typescript"
-    ]
-  },
-  {
     "name": "Shipment Exception Command Center",
     "slug": "shipment-exception-command-center",
     "url": "https://kineticgain.com/",
@@ -2851,25 +3592,6 @@
     ]
   },
   {
-    "name": "Permit Package Readiness Hub",
-    "slug": "permit-package-readiness-hub",
-    "url": "https://permits.kineticgain.com/",
-    "platform": "Kinetic Gain Protocol Suite",
-    "vertical": "Aerospace / Drones",
-    "language": "TypeScript",
-    "freshness": "7d",
-    "subdomain": "permits.kineticgain.com",
-    "description": "TypeScript control plane for permit packages, readiness blockers, inspection posture, and construction-safe submission operations.",
-    "topics": [
-      "construction-tech",
-      "revops",
-      "typescript",
-      "workflow-automation",
-      "field-operations",
-      "permitting"
-    ]
-  },
-  {
     "name": "Patient Consent Audit Stream",
     "slug": "patient-consent-audit-stream",
     "url": "https://kineticgain.com/",
@@ -2908,25 +3630,6 @@
     ]
   },
   {
-    "name": "Menu Availability Sync Engine",
-    "slug": "menu-availability-sync-engine",
-    "url": "https://menus.kineticgain.com",
-    "platform": "Frontend Showcase",
-    "vertical": "Compliance / Governance",
-    "language": "TypeScript",
-    "freshness": "7d",
-    "subdomain": "menus.kineticgain.com",
-    "description": "TypeScript control plane for menu availability, sync blockers, channel posture, and buyer-safe restaurant commerce operations.",
-    "topics": [
-      "availability",
-      "governance",
-      "operator-surface",
-      "restaurant-tech",
-      "typescript",
-      "food-commerce"
-    ]
-  },
-  {
     "name": "Gov Comment Ingestor",
     "slug": "gov-comment-ingestor",
     "url": "https://kineticgain.com/",
@@ -2961,44 +3664,6 @@
       "operations",
       "reliability",
       "transportation",
-      "typescript"
-    ]
-  },
-  {
-    "name": "Crop Compliance Observation Ledger",
-    "slug": "crop-compliance-observation-ledger",
-    "url": "https://crops.kineticgain.com",
-    "platform": "Decision Intelligence",
-    "vertical": "Compliance / Governance",
-    "language": "TypeScript",
-    "freshness": "7d",
-    "subdomain": "crops.kineticgain.com",
-    "description": "TypeScript control plane for crop observations, evidence blockers, field posture, and buyer-safe agri compliance operations.",
-    "topics": [
-      "agritech",
-      "audit-readiness",
-      "compliance",
-      "governance",
-      "operator-surface",
-      "typescript"
-    ]
-  },
-  {
-    "name": "Creator Partnership Deal Desk",
-    "slug": "creator-partnership-deal-desk",
-    "url": "https://kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "Revenue Operations",
-    "language": "TypeScript",
-    "freshness": "7d",
-    "subdomain": "kineticgain.com",
-    "description": "Creator operator surface for partnership changes, obligation blockers, and launch-safe collaboration.",
-    "topics": [
-      "creator-economy",
-      "deal-desk",
-      "growth",
-      "partnerships",
-      "social",
       "typescript"
     ]
   },
@@ -3076,25 +3741,6 @@
       "revops",
       "taxonomy",
       "typescript"
-    ]
-  },
-  {
-    "name": "Booking Disruption Command Center",
-    "slug": "booking-disruption-command-center",
-    "url": "https://kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "Revenue Operations",
-    "language": "TypeScript",
-    "freshness": "7d",
-    "subdomain": "kineticgain.com",
-    "description": "TypeScript command center for booking disruptions, recovery blockers, guest communication posture, and hospitality-grade service restoration operations.",
-    "topics": [
-      "command-center",
-      "hospitality-tech",
-      "revops",
-      "travel-tech",
-      "typescript",
-      "webops"
     ]
   },
   {
@@ -4024,25 +4670,6 @@
       "kinetic-gain",
       "mobile-workflows",
       "operator-console"
-    ]
-  },
-  {
-    "name": "Capacity Optimizer Jl",
-    "slug": "capacity-optimizer-jl",
-    "url": "https://capacity.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "AI Platform",
-    "language": "Julia",
-    "freshness": "7d",
-    "subdomain": "capacity.kineticgain.com",
-    "description": "Julia optimization surface for constrained capacity planning, lane allocation, and recovery posture.",
-    "topics": [
-      "agpl",
-      "capacity-planning",
-      "julia",
-      "kinetic-gain",
-      "operator-dashboard",
-      "optimization"
     ]
   },
   {
@@ -5648,7 +6275,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Revenue Operations",
     "language": "TypeScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "kineticgain.com",
     "description": "AI publishing control plane for enforcing tone integrity, factual posture, PII stripping, and approval readiness across AI-generated marketing content.",
     "topics": [
@@ -5667,7 +6294,7 @@
     "platform": "AEO Reference Stack",
     "vertical": "Insurance / InsurTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "github.com",
     "description": "AEO Protocol v0.1 draft. A well-known JSON document at /.well-known/aeo.json that lets entities declare authoritative claims, citation preferences, and audit hooks for answer engines. Spec + JSON Schema + Person/Organization/Product examples.",
     "topics": [
@@ -5686,7 +6313,7 @@
     "platform": "Agent Operations Suite",
     "vertical": "Compliance / Governance",
     "language": "TypeScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "mizcausevic.com",
     "description": "Governance-as-code engine for AI platforms. Define policies in YAML, map to compliance standards (SOC 2, EU AI Act, ISO 27001, PCI-DSS, GDPR, HIPAA, NIST), evaluate decisions, run dry-runs to estimate blast radius, produce audit-ready ledgers. Third piece of the AI Platform Engineering trilogy.",
     "topics": [
@@ -5705,7 +6332,7 @@
     "platform": "Frontend Showcase",
     "vertical": "IAM / Security",
     "language": "TypeScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "kineticgain.com",
     "description": "Infrastructure-as-code control plane for scalable SaaS marketing environments, promotion posture, and revenue-safe delivery.",
     "topics": [
@@ -5724,7 +6351,7 @@
     "platform": "Frontend Showcase",
     "vertical": "PropTech / Real Estate",
     "language": "TypeScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "kineticgain.com",
     "description": "Content validation control plane for CMS and markdown release safety, metadata policy, and broken-link gating.",
     "topics": [
@@ -5743,7 +6370,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Data Engineering",
     "language": "Python",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "kineticgain.com",
     "description": "Turn a data contract into enforceable, cross-dialect DDL (CHECK/NOT NULL/UNIQUE/PK/FK) for Postgres, MySQL, Snowflake, BigQuery — plus a contract-vs-schema violation checker. Cross-ecosystem hook #5 of the Kinetic Gain portfolio.",
     "topics": [
@@ -5762,7 +6389,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Compliance / Governance",
     "language": "PHP",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "kineticgain.com",
     "description": "Tamper-evident, MySQL-backed governance audit log for WordPress. SHA-256 hash chain (audit-stream-py compatible), one-click verify, optional forwarding to the Kinetic Gain audit-stream spine. GPL-2.0.",
     "topics": [
@@ -5781,7 +6408,7 @@
     "platform": "MCP Servers",
     "vertical": "Aerospace / Drones",
     "language": "Python",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "kineticgain.com",
     "description": "Azure Function that gates Azure OpenAI calls through deny-trumps-allow PolicyBundles derived from AI Procurement Decision Cards, emitting tool_invocation_* to audit-stream-py. The Azure-native sibling of mcp-permission-broker. Bicep IaC included.",
     "topics": [
