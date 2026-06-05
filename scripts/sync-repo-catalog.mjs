@@ -52,6 +52,7 @@ const platformOverrides = {
 };
 
 const homepageOverrides = {
+  "gcp-billing-anomaly-router": "https://gcp.kineticgain.com/",
   "portfolio-command-center": "https://portfolio.kineticgain.com/",
   "kineticgain-com-apex": "https://kineticgain.com/",
   "kinetic-gain-docs-hub": "https://docs.kineticgain.com/",
@@ -77,6 +78,10 @@ const verticalOverrides = {
   "klaviyo-flow-consent-audit": "Revenue Operations",
   "vwo-experiment-governance-mirror": "Revenue Operations",
   "martech-experiment-evidence-stack": "Revenue Operations",
+  "gcp-billing-anomaly-router": "Platform Engineering",
+  "gcp-vpc-service-controls-perimeter": "Platform Engineering",
+  "snowflake-cost-governance-studio": "Data Engineering",
+  "tableau-permission-audit-lab": "Data Engineering",
   "camunda-process-governance": "Platform Engineering",
   "backup-restore-drill-runner": "Platform Engineering",
   "incident-handoff-runbook-kit": "Platform Engineering",
@@ -138,6 +143,11 @@ const verticalOverrides = {
   "government-ai-incident-card-profile": "GovTech / Public Sector AI",
   "citizen-data-vault-contract-profile": "GovTech / Public Sector AI"
 };
+
+const genericHomepageValues = new Set([
+  "https://kineticgain.com",
+  "https://kineticgain.com/"
+]);
 
 function fetchRepos() {
   const raw = execFileSync(
@@ -365,16 +375,23 @@ function inferVertical(repo, topics, homepage) {
 }
 
 function cleanHomepage(repo) {
-  const explicit = homepageOverrides[repo.name] ?? (repo.homepageUrl || "").trim();
+  if (homepageOverrides[repo.name]) {
+    return homepageOverrides[repo.name];
+  }
 
-  if (explicit) {
+  const explicit = (repo.homepageUrl || "").trim();
+
+  if (explicit && !genericHomepageValues.has(explicit)) {
     return explicit;
   }
 
   const description = repo.description ?? "";
   const directMatch = description.match(/https?:\/\/[^\s)]+/i);
   if (directMatch) {
-    return directMatch[0].replace(/[.)]+$/, "");
+    const candidate = directMatch[0].replace(/[.)]+$/, "");
+    if (!genericHomepageValues.has(candidate)) {
+      return candidate;
+    }
   }
 
   const domainMatch = description.match(/\b([a-z0-9-]+\.kineticgain\.com)\b/i);
