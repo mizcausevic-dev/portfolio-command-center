@@ -147,7 +147,9 @@ function fetchRepos() {
       "list",
       "mizcausevic-dev",
       "--limit",
-      "500",
+      "1000",
+      "--visibility",
+      "public",
       "--json",
       "name,description,homepageUrl,primaryLanguage,pushedAt,url,repositoryTopics,isArchived"
     ],
@@ -396,9 +398,67 @@ function inferSubdomain(homepage, githubUrl) {
 }
 
 function titleCaseRepo(name) {
+  const displayOverrides = {
+    aeo: "AEO",
+    ai: "AI",
+    api: "API",
+    aws: "AWS",
+    bigquery: "BigQuery",
+    bpm: "BPM",
+    bpmn: "BPMN",
+    cfpb: "CFPB",
+    cli: "CLI",
+    cms: "CMS",
+    css: "CSS",
+    cui: "CUI",
+    cyberark: "CyberArk",
+    dbt: "dbt",
+    dna: "DNA",
+    dpo: "DPO",
+    dto: "DTO",
+    eeoc: "EEOC",
+    eu: "EU",
+    ferpa: "FERPA",
+    finops: "FinOps",
+    fintech: "FinTech",
+    gcp: "GCP",
+    geo: "GEO",
+    github: "GitHub",
+    govtech: "GovTech",
+    graphql: "GraphQL",
+    gtm: "GTM",
+    gxp: "GxP",
+    html: "HTML",
+    iam: "IAM",
+    ibm: "IBM",
+    llm: "LLM",
+    mcp: "MCP",
+    mls: "MLS",
+    naic: "NAIC",
+    okta: "Okta",
+    os: "OS",
+    php: "PHP",
+    pii: "PII",
+    poam: "POA&M",
+    powerbi: "Power BI",
+    qc: "QC",
+    rag: "RAG",
+    respa: "RESPA",
+    roi: "ROI",
+    sdk: "SDK",
+    seo: "SEO",
+    slo: "SLO",
+    sql: "SQL",
+    sso: "SSO",
+    ukg: "UKG",
+    url: "URL",
+    vwo: "VWO",
+    wp: "WP"
+  };
+
   return name
     .split("-")
-    .map((part) => (part ? part[0].toUpperCase() + part.slice(1) : part))
+    .map((part) => displayOverrides[part.toLowerCase()] ?? (part ? part[0].toUpperCase() + part.slice(1) : part))
     .join(" ");
 }
 

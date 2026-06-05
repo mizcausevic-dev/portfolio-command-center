@@ -551,7 +551,10 @@ function App() {
         </div>
         <div className="portfolio-footer-bottom">
           <span>Portfolio Constellation · live GitHub-synced repo atlas</span>
-          <span>Product tags surface operator work across IBM, CyberArk, Camunda, UKG, Azure, and adjacent platform lanes.</span>
+          <span>
+            Product tags surface operator work across GCP, CyberArk, Camunda, Klaviyo, IBM, Snowflake, Genesys, Okta,
+            Power BI, Tableau, VWO, and adjacent platform lanes.
+          </span>
         </div>
       </footer>
     </main>
