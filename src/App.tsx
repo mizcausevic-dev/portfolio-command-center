@@ -78,6 +78,15 @@ function topProductTags(entries: (typeof repoCatalog), limit: number) {
     .map(([tag]) => tag);
 }
 
+function productSignalCounts(entries: typeof repoCatalog) {
+  return PRODUCT_TAG_RULES.map((rule) => ({
+    tag: rule.tag,
+    count: entries.filter((entry) => inferProductTags(entry).includes(rule.tag)).length
+  }))
+    .filter((entry) => entry.count > 0)
+    .sort((left, right) => right.count - left.count || left.tag.localeCompare(right.tag));
+}
+
 function App() {
   const [query, setQuery] = useState("");
   const [platform, setPlatform] = useState("all platforms");
@@ -105,6 +114,8 @@ function App() {
     () => ["all languages", ...languageAtlas.map((entry) => entry.language)],
     []
   );
+
+  const platformCompanySignals = useMemo(() => productSignalCounts(repoCatalog), []);
 
   const languageColorMap = useMemo(
     () =>
@@ -363,9 +374,14 @@ function App() {
           <div className="atlas-heading">
             <div>
               <h2>Industry atlas</h2>
-              <p>Verticals represented across the portfolio.</p>
+              <p>
+                Verticals plus platform and company signals represented across the portfolio. Click any item to filter
+                the repo grid.
+              </p>
             </div>
-            <span className="atlas-badge">{portfolioSnapshot.verticalCount} verticals</span>
+            <span className="atlas-badge">
+              {portfolioSnapshot.verticalCount} verticals · {platformCompanySignals.length} signals
+            </span>
           </div>
 
           <div className="vertical-chip-grid">
@@ -386,6 +402,32 @@ function App() {
                 <strong>{entry.repos}</strong>
               </button>
             ))}
+          </div>
+
+          <div className="signal-block">
+            <div className="signal-heading">
+              <span>Platform and company signals</span>
+              <strong>{platformCompanySignals.length}</strong>
+            </div>
+            <div className="signal-chip-grid">
+              {platformCompanySignals.map((entry) => (
+                <button
+                  key={entry.tag}
+                  className="signal-chip"
+                  type="button"
+                  aria-label={`${entry.tag} signal, ${entry.count} repos`}
+                  onClick={() => {
+                    setLanguage("all languages");
+                    setVertical("all verticals");
+                    setPlatform("all platforms");
+                    setQuery(entry.tag);
+                  }}
+                >
+                  <span>{entry.tag}</span>
+                  <strong>{entry.count}</strong>
+                </button>
+              ))}
+            </div>
           </div>
         </article>
       </section>

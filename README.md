@@ -13,7 +13,7 @@
 | **Frontend Stack** | React 19 + Vite + TypeScript |
 | **Domain** | Executive operations, portfolio systems orchestration |
 | **Audience** | Hiring managers, consulting buyers, executive stakeholders |
-| **Signal Areas** | Revenue systems · platform governance · growth workflows · security controls |
+| **Signal Areas** | Language atlas · industry atlas · platform/company signals · revenue systems · platform governance · security controls |
 | **Portfolio Role** | Flagship frontend that ties the broader repo ecosystem together |
 | **Validation** | Vitest + Testing Library |
 
@@ -21,7 +21,7 @@
 
 ## Executive Summary
 
-Portfolio Command Center is a flagship frontend project built to unify the broader GitHub portfolio into one coherent command surface. Instead of leaving each repository to speak alone, it frames the full body of work as one decision system across revenue, platform, growth, and security operations.
+Portfolio Command Center is a flagship frontend project built to unify the broader GitHub portfolio into one coherent command surface. Instead of leaving each repository to speak alone, it frames the full body of work as one decision system across revenue, platform, growth, security operations, languages, industry verticals, and recognizable platform/company signals.
 
 It is designed to make the portfolio feel less like a set of artifacts and more like an executive operating model.
 
@@ -38,6 +38,8 @@ Strong portfolios often lose force because each project is isolated. Hiring mana
 This command center turns the portfolio into a coordinated frontend surface for:
 
 - cross-domain maturity visibility
+- language and industry atlas exploration
+- platform and company signal filtering
 - flagship project positioning
 - operating-model storytelling
 - executive-grade systems framing
@@ -57,9 +59,11 @@ Static TypeScript data model
 React application shell
     |
     +--> command-layer hero
-    +--> system maturity charts
-    +--> operating mix view
-    +--> flagship project proof grid
+    +--> named platform cards
+    +--> language atlas
+    +--> industry atlas
+    +--> platform and company signal chips
+    +--> filterable repo grid
     +--> strategic command notes
 ```
 
@@ -67,9 +71,9 @@ React application shell
 
 1. The viewer lands on a single command-layer framing of the portfolio.
 2. Signal cards quantify scope, readiness, and domain breadth.
-3. Health and coverage charts show where the portfolio is deepest.
-4. Flagship project cards connect individual repos to the broader operating model.
-5. Command notes explain how the portfolio has matured strategically.
+3. Language and industry atlas panels show where the portfolio is deepest.
+4. Platform and company signal chips expose recognizable buyer/search terms.
+5. The repo grid lets viewers drill into a platform, vertical, language, freshness window, or signal.
 
 ---
 

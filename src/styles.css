@@ -495,6 +495,85 @@ select {
   color: #c7b7ff;
 }
 
+.signal-block {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(214, 221, 255, 0.08);
+}
+
+.signal-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.signal-heading strong {
+  display: inline-flex;
+  min-width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(73, 220, 177, 0.12);
+  color: var(--bert);
+}
+
+.signal-chip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.signal-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 50px;
+  padding: 10px 12px;
+  border: 1px solid rgba(214, 221, 255, 0.08);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--text);
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.signal-chip:hover,
+.signal-chip:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(73, 220, 177, 0.46);
+  background: rgba(73, 220, 177, 0.1);
+  outline: none;
+}
+
+.signal-chip span,
+.signal-chip strong {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
+}
+
+.signal-chip strong {
+  display: inline-flex;
+  min-width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(214, 221, 255, 0.08);
+  color: var(--muted);
+}
+
 .atlas-inspector {
   margin: -8px 0 34px;
   padding: 18px 20px;
@@ -886,6 +965,10 @@ select {
   .language-chip-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .signal-chip-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 920px) {
@@ -903,6 +986,10 @@ select {
   }
 
   .language-chip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .signal-chip-grid {
     grid-template-columns: 1fr;
   }
 

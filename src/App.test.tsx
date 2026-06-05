@@ -14,6 +14,7 @@ describe("App", () => {
     expect(screen.getByText(/^Named platforms$/i)).toBeInTheDocument();
     expect(screen.getByText(/^Language atlas$/i)).toBeInTheDocument();
     expect(screen.getByText(/^Industry atlas$/i)).toBeInTheDocument();
+    expect(screen.getByText(/^Platform and company signals$/i)).toBeInTheDocument();
   });
 
   it("renders the refreshed biotech and polyglot entries", () => {
@@ -80,5 +81,15 @@ describe("App", () => {
     fireEvent.click(screen.getByRole("button", { name: /php/i }));
     expect(screen.getByDisplayValue(/^php$/i)).toBeInTheDocument();
     expect(screen.getByText(new RegExp(`showing ${expectedPhp} of ${repoCatalog.length} repos`, "i"))).toBeInTheDocument();
+  });
+
+  it("platform and company signal chips drive the same repo grid search", () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: /gcp signal/i }));
+    expect(screen.getByLabelText(/search repos/i)).toHaveValue("GCP");
+    expect(screen.getByDisplayValue(/all verticals/i)).toBeInTheDocument();
+    expect(screen.getByDisplayValue(/all platforms/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/gcp/i).length).toBeGreaterThan(0);
   });
 });
