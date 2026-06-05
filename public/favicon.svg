@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Kinetic Gain">
+  <rect width="64" height="64" rx="15" fill="#0D0F12"/>
+  <g transform="translate(10 22.79) scale(0.25581)">
+    <rect x="0" y="0" width="14" height="72" fill="#475B6B"/>
+    <polygon points="32,0 83,0 77,18 26,18" fill="#F5F2EB"/>
+    <polygon points="32,27 127,27 121,45 26,45" fill="#F5F2EB"/>
+    <polygon points="32,54 172,54 166,72 26,72" fill="#F5F2EB"/>
+  </g>
+</svg>
