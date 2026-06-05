@@ -45,7 +45,8 @@ jobs:
           chmod 700 ~/.ssh
           printf '%s\n' "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/hostinger_deploy_key
           chmod 600 ~/.ssh/hostinger_deploy_key
-          ssh-keyscan -p "${SSH_PORT}" "${SSH_HOST}" >> ~/.ssh/known_hosts
+          printf '%s\n' "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          test -s ~/.ssh/known_hosts
 
       - name: Upload build to staging
         shell: bash
