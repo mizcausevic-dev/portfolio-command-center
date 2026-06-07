@@ -1,5 +1,423 @@
 [
   {
+    "name": "GCP Snowflake Platform Spend Waterfall",
+    "slug": "gcp-snowflake-platform-spend-waterfall",
+    "url": "https://mizcausevic-dev.github.io/gcp-snowflake-platform-spend-waterfall/",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "Data Engineering",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Platform spend waterfall that separates GCP service pressure from Snowflake warehouse burn.",
+    "topics": [
+      "bigquery",
+      "cost-optimization",
+      "data-governance",
+      "finops",
+      "gcp",
+      "google-cloud"
+    ]
+  },
+  {
+    "name": "GCP Snowflake Lineage Risk Reconciler",
+    "slug": "gcp-snowflake-lineage-risk-reconciler",
+    "url": "https://mizcausevic-dev.github.io/gcp-snowflake-lineage-risk-reconciler/",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "Data Engineering",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Lineage risk reconciler for GCP data products, Snowflake shares, and board-safe data provenance.",
+    "topics": [
+      "bigquery",
+      "cost-optimization",
+      "data-governance",
+      "finops",
+      "gcp",
+      "google-cloud"
+    ]
+  },
+  {
+    "name": "GCP Snowflake Data Egress Cost Guardrail",
+    "slug": "gcp-snowflake-data-egress-cost-guardrail",
+    "url": "https://mizcausevic-dev.github.io/gcp-snowflake-data-egress-cost-guardrail/",
+    "platform": "Decision Intelligence",
+    "vertical": "Data Engineering",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Data egress cost guardrail for GCP, BigQuery, and Snowflake movement-risk decisions.",
+    "topics": [
+      "bigquery",
+      "cost-optimization",
+      "data-governance",
+      "finops",
+      "gcp",
+      "google-cloud"
+    ]
+  },
+  {
+    "name": "Camunda IBM Workflow Automation ROI Pack",
+    "slug": "camunda-ibm-workflow-automation-roi-pack",
+    "url": "https://mizcausevic-dev.github.io/camunda-ibm-workflow-automation-roi-pack/",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "Compliance / Governance",
+    "language": "Java",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Workflow automation ROI pack for Camunda orchestration opportunities across IBM modernization lanes.",
+    "topics": [
+      "bpmn",
+      "camunda",
+      "ibm",
+      "kinetic-gain",
+      "mainframe",
+      "process-mining"
+    ]
+  },
+  {
+    "name": "Camunda IBM Sla Breach Causality Router",
+    "slug": "camunda-ibm-sla-breach-causality-router",
+    "url": "https://mizcausevic-dev.github.io/camunda-ibm-sla-breach-causality-router/",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "Compliance / Governance",
+    "language": "Java",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "SLA breach causality router across Camunda process timers and IBM workload bottlenecks.",
+    "topics": [
+      "bpmn",
+      "camunda",
+      "ibm",
+      "kinetic-gain",
+      "mainframe",
+      "process-mining"
+    ]
+  },
+  {
+    "name": "Camunda IBM Exception To Change Risk Map",
+    "slug": "camunda-ibm-exception-to-change-risk-map",
+    "url": "https://mizcausevic-dev.github.io/camunda-ibm-exception-to-change-risk-map/",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "Compliance / Governance",
+    "language": "Java",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Exception-to-change risk map for Camunda incidents and IBM change-window exposure.",
+    "topics": [
+      "bpmn",
+      "camunda",
+      "ibm",
+      "kinetic-gain",
+      "mainframe",
+      "process-mining"
+    ]
+  },
+  {
+    "name": "Camunda IBM Mainframe Handoff Ledger",
+    "slug": "camunda-ibm-mainframe-handoff-ledger",
+    "url": "https://mizcausevic-dev.github.io/camunda-ibm-mainframe-handoff-ledger/",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "Compliance / Governance",
+    "language": "Java",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Mainframe handoff ledger connecting IBM batch dependencies to Camunda exception routing.",
+    "topics": [
+      "bpmn",
+      "camunda",
+      "ibm",
+      "kinetic-gain",
+      "mainframe",
+      "process-mining"
+    ]
+  },
+  {
+    "name": "Camunda IBM Process Modernization Board",
+    "slug": "camunda-ibm-process-modernization-board",
+    "url": "https://mizcausevic-dev.github.io/camunda-ibm-process-modernization-board/",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "Biotech / Diagnostics",
+    "language": "Java",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Process modernization board for Camunda workflows, IBM estate handoffs, and investment sequencing.",
+    "topics": [
+      "bpmn",
+      "camunda",
+      "ibm",
+      "kinetic-gain",
+      "mainframe",
+      "process-mining"
+    ]
+  },
+  {
+    "name": "Okta UKG Identity Cost Avoidance Brief",
+    "slug": "okta-ukg-identity-cost-avoidance-brief",
+    "url": "https://mizcausevic-dev.github.io/okta-ukg-identity-cost-avoidance-brief/",
+    "platform": "Decision Intelligence",
+    "vertical": "IAM / Security",
+    "language": "C#",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Identity cost avoidance brief for stale Okta apps, UKG inactive workers, and license-reduction decisions.",
+    "topics": [
+      "access-review",
+      "iam",
+      "identity-governance",
+      "kinetic-gain",
+      "okta",
+      "ukg"
+    ]
+  },
+  {
+    "name": "Okta UKG Privilege Exception Router",
+    "slug": "okta-ukg-privilege-exception-router",
+    "url": "https://mizcausevic-dev.github.io/okta-ukg-privilege-exception-router/",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "IAM / Security",
+    "language": "C#",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Privilege exception router for Okta elevated access tied to UKG workforce status.",
+    "topics": [
+      "access-review",
+      "iam",
+      "identity-governance",
+      "kinetic-gain",
+      "okta",
+      "ukg"
+    ]
+  },
+  {
+    "name": "Okta UKG Manager Attestation Ledger",
+    "slug": "okta-ukg-manager-attestation-ledger",
+    "url": "https://mizcausevic-dev.github.io/okta-ukg-manager-attestation-ledger/",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "Data Engineering",
+    "language": "C#",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Manager attestation ledger tying Okta access reviews to UKG reporting lines.",
+    "topics": [
+      "access-review",
+      "iam",
+      "identity-governance",
+      "kinetic-gain",
+      "okta",
+      "ukg"
+    ]
+  },
+  {
+    "name": "Okta UKG Workforce Role Risk Map",
+    "slug": "okta-ukg-workforce-role-risk-map",
+    "url": "https://mizcausevic-dev.github.io/okta-ukg-workforce-role-risk-map/",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "IAM / Security",
+    "language": "C#",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Workforce role risk map for Okta role assignments, UKG job codes, and manager-safe attestations.",
+    "topics": [
+      "access-review",
+      "iam",
+      "identity-governance",
+      "kinetic-gain",
+      "okta",
+      "ukg"
+    ]
+  },
+  {
+    "name": "Okta UKG Termination Lag Auditor",
+    "slug": "okta-ukg-termination-lag-auditor",
+    "url": "https://mizcausevic-dev.github.io/okta-ukg-termination-lag-auditor/",
+    "platform": "Decision Intelligence",
+    "vertical": "IAM / Security",
+    "language": "C#",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Termination lag auditor that exposes delayed Okta deactivation from UKG lifecycle evidence.",
+    "topics": [
+      "access-review",
+      "iam",
+      "identity-governance",
+      "kinetic-gain",
+      "okta",
+      "ukg"
+    ]
+  },
+  {
+    "name": "Okta UKG Provisioning Drift Board",
+    "slug": "okta-ukg-provisioning-drift-board",
+    "url": "https://mizcausevic-dev.github.io/okta-ukg-provisioning-drift-board/",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "IAM / Security",
+    "language": "C#",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Provisioning drift board for Okta app access and UKG worker-state mismatches.",
+    "topics": [
+      "access-review",
+      "iam",
+      "identity-governance",
+      "kinetic-gain",
+      "okta",
+      "ukg"
+    ]
+  },
+  {
+    "name": "Okta UKG Lifecycle Access Reconciler",
+    "slug": "okta-ukg-lifecycle-access-reconciler",
+    "url": "https://mizcausevic-dev.github.io/okta-ukg-lifecycle-access-reconciler/",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "IAM / Security",
+    "language": "C#",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Lifecycle access reconciler for UKG workforce events, Okta entitlement drift, and termination-risk cleanup.",
+    "topics": [
+      "access-review",
+      "iam",
+      "identity-governance",
+      "kinetic-gain",
+      "okta",
+      "ukg"
+    ]
+  },
+  {
+    "name": "VWO Tableau Power BI Decision Evidence Room",
+    "slug": "vwo-tableau-powerbi-decision-evidence-room",
+    "url": "https://mizcausevic-dev.github.io/vwo-tableau-powerbi-decision-evidence-room/",
+    "platform": "Decision Intelligence",
+    "vertical": "Data Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Decision evidence room for VWO, Tableau, and Power BI proof packets before board-facing readouts.",
+    "topics": [
+      "analytics-governance",
+      "board-metrics",
+      "experimentation",
+      "kinetic-gain",
+      "power-bi",
+      "powerbi"
+    ]
+  },
+  {
+    "name": "VWO Tableau Power BI Experiment Cost Leak Ledger",
+    "slug": "vwo-tableau-powerbi-experiment-cost-leak-ledger",
+    "url": "https://mizcausevic-dev.github.io/vwo-tableau-powerbi-experiment-cost-leak-ledger/",
+    "platform": "Frontend Showcase",
+    "vertical": "Data Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Experiment cost-leak ledger for VWO test waste, dashboard drift, and executive analytics follow-through.",
+    "topics": [
+      "analytics-governance",
+      "board-metrics",
+      "experimentation",
+      "kinetic-gain",
+      "power-bi",
+      "powerbi"
+    ]
+  },
+  {
+    "name": "VWO Tableau Power BI Campaign Risk Waterfall",
+    "slug": "vwo-tableau-powerbi-campaign-risk-waterfall",
+    "url": "https://mizcausevic-dev.github.io/vwo-tableau-powerbi-campaign-risk-waterfall/",
+    "platform": "Frontend Showcase",
+    "vertical": "Data Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Campaign risk waterfall for VWO rollout risk, Tableau source trust, and Power BI revenue exposure.",
+    "topics": [
+      "analytics-governance",
+      "board-metrics",
+      "experimentation",
+      "kinetic-gain",
+      "power-bi",
+      "powerbi"
+    ]
+  },
+  {
+    "name": "VWO Tableau Power BI Executive Readout Pack",
+    "slug": "vwo-tableau-powerbi-executive-readout-pack",
+    "url": "https://mizcausevic-dev.github.io/vwo-tableau-powerbi-executive-readout-pack/",
+    "platform": "Decision Intelligence",
+    "vertical": "Data Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Executive readout pack that turns VWO experiments into Tableau and Power BI decision evidence.",
+    "topics": [
+      "analytics-governance",
+      "board-metrics",
+      "experimentation",
+      "kinetic-gain",
+      "power-bi",
+      "powerbi"
+    ]
+  },
+  {
+    "name": "VWO Tableau Power BI Holdout Lift Auditor",
+    "slug": "vwo-tableau-powerbi-holdout-lift-auditor",
+    "url": "https://mizcausevic-dev.github.io/vwo-tableau-powerbi-holdout-lift-auditor/",
+    "platform": "Frontend Showcase",
+    "vertical": "Data Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Holdout lift auditor for validating VWO treatment integrity against Tableau and Power BI readouts.",
+    "topics": [
+      "analytics-governance",
+      "board-metrics",
+      "experimentation",
+      "kinetic-gain",
+      "power-bi",
+      "powerbi"
+    ]
+  },
+  {
+    "name": "VWO Tableau Power BI Metric Impact Reconciler",
+    "slug": "vwo-tableau-powerbi-metric-impact-reconciler",
+    "url": "https://mizcausevic-dev.github.io/vwo-tableau-powerbi-metric-impact-reconciler/",
+    "platform": "Frontend Showcase",
+    "vertical": "Data Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Metric impact reconciler that ties VWO lift to Tableau-certified sources and Power BI board KPIs.",
+    "topics": [
+      "analytics-governance",
+      "board-metrics",
+      "experimentation",
+      "kinetic-gain",
+      "power-bi",
+      "powerbi"
+    ]
+  },
+  {
+    "name": "VWO Tableau Power BI Experiment Trust Board",
+    "slug": "vwo-tableau-powerbi-experiment-trust-board",
+    "url": "https://mizcausevic-dev.github.io/vwo-tableau-powerbi-experiment-trust-board/",
+    "platform": "Decision Intelligence",
+    "vertical": "Data Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Experiment trust board for VWO decisions, Tableau lineage, and Power BI executive metric confidence.",
+    "topics": [
+      "analytics-governance",
+      "board-metrics",
+      "experimentation",
+      "kinetic-gain",
+      "power-bi",
+      "powerbi"
+    ]
+  },
+  {
     "name": "Portfolio Command Center",
     "slug": "portfolio-command-center",
     "url": "https://portfolio.kineticgain.com/",
@@ -350,7 +768,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Platform Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -7709,7 +8127,7 @@
     "platform": "Frontend Showcase",
     "vertical": "PropTech / Real Estate",
     "language": "PHP",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "tenant.kineticgain.com",
     "description": "Operator surface for tenant maintenance queues, vendor escalation, SLA posture, and service-safe property operations.",
     "topics": [
@@ -7728,7 +8146,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Robotics",
     "language": "Rust",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "sensor.kineticgain.com",
     "description": "Rust robotics operator surface for sensor drift, calibration freshness, blind-zone pressure, and override-safe fleet posture.",
     "topics": [
@@ -7747,7 +8165,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Robotics",
     "language": "C#",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "robots.kineticgain.com",
     "description": "Operator surface for robot fleet failures, override packets, redeploy posture, and mission-safe review routing.",
     "topics": [
@@ -7766,7 +8184,7 @@
     "platform": "Platform Reliability Stack",
     "vertical": "Data Engineering",
     "language": "TypeScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "powerbi.kineticgain.com",
     "description": "Operator control plane for Power BI refresh reliability, gateway pressure, semantic-model drift, and stale report delivery risk.",
     "topics": [
@@ -7785,7 +8203,7 @@
     "platform": "Frontend Showcase",
     "vertical": "FinTech",
     "language": "C#",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "payments.kineticgain.com",
     "description": "Operator surface for payment reconciliation exceptions, settlement blockers, close-safe packet readiness, and finance-safe review posture.",
     "topics": [
@@ -7804,7 +8222,7 @@
     "platform": "Agent Operations Suite",
     "vertical": "FinTech",
     "language": "TypeScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "merchant.kineticgain.com",
     "description": "Operator surface for FinTech merchant risk review, chargeback pressure, reserve coverage, KYB drift, payout throttle risk, and review backlog.",
     "topics": [
@@ -7823,7 +8241,7 @@
     "platform": "Decision Intelligence",
     "vertical": "FinTech",
     "language": "PHP",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "kyc.kineticgain.com",
     "description": "WordPress and FinTech operator surface for KYC refresh routing, beneficial-owner drift, review evidence, and account-safe remediation posture.",
     "topics": [
@@ -7842,7 +8260,7 @@
     "platform": "Frontend Showcase",
     "vertical": "IAM / Security",
     "language": "TypeScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "protect.kineticgain.com",
     "description": "Operator surface for Microsoft Intune app protection, BYOD scope, policy gaps, and enforcement posture.",
     "topics": [
@@ -7861,7 +8279,7 @@
     "platform": "Decision Intelligence",
     "vertical": "Nonprofit / Foundation Ops",
     "language": "Python",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "grants.kineticgain.com",
     "description": "Nonprofit operator surface for grant evidence, reporting posture, and deliverable readiness.",
     "topics": [
@@ -7880,7 +8298,7 @@
     "platform": "Decision Intelligence",
     "vertical": "Nonprofit / Foundation Ops",
     "language": "PHP",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "stewardship.kineticgain.com",
     "description": "Operator surface for donor stewardship, pledge posture, acknowledgment evidence, and nonprofit follow-up discipline.",
     "topics": [
@@ -7899,7 +8317,7 @@
     "platform": "Frontend Showcase",
     "vertical": "PropTech / Real Estate",
     "language": "C#",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "accesslog.kineticgain.com",
     "description": "Operator surface for building access events, credential control gaps, controller drift, revocation pressure, and audit posture.",
     "topics": [
@@ -7918,7 +8336,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Compliance / Governance",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "AGPL-3.0 reference impl of GovTech audit-stream. THE FIRST Suite audit-stream with 3 orthogonal invariants: human-agency-officer + Federal AI Use Case Inventory entry + classification-clearance per E.O. 13526. Runs PRFSA × VendorG GovDecide v3.x trajectory end-to-end against mock federal vault + inventory.",
     "topics": [
@@ -7937,7 +8355,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "FinTech",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "AGPL-3.0 reference impl of FinTech audit-stream. 2 orthogonal invariants: FCRA §604 permissible-purpose on every credit-bureau pull + human-credit-officer on adverse recommendations (Reg B + FCRA §615 + CFPB Circular 2023-03). Runs Meridian × CreditMind v4.x trajectory end-to-end.",
     "topics": [
@@ -7956,7 +8374,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Compliance / Governance",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "AGPL-3.0 reference impl of HR Tech audit-stream. Only Suite audit-stream with TWO truly orthogonal candidate-protection invariants: human-hiring-decision (EEOC + Title VII) + NYC LL 144 candidate-notice with 14-day backward window. Runs MomentumHR × HireAssess v2.x end-to-end.",
     "topics": [
@@ -7975,7 +8393,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Aerospace / Drones",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "AGPL-3.0 reference impl of DefenseTech audit-stream + 3-axis vault contract. Runs Stratos Aerospace × VendorD GuardianAI 3.x trajectory end-to-end. Proves the design works: vault enforces 3-axis intersection, audit-stream satisfies CUI distribution-statement + ITAR us-person + DFARS 72-hour wall-clock invariants.",
     "topics": [
@@ -7994,7 +8412,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Insurance / InsurTech",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "DefenseTech audit-stream Operator: per-defense-AI-decision events hash-chained for DFARS 252.204-7012 + CMMC 2.0 + NIST 800-171/172 + ITAR + EAR + DoDI 5230.24 + NISPOM + False Claims Act. First Suite vertical with 3-axis taxonomy (CUI tier + export control + foreign-person restriction).",
     "topics": [
@@ -8013,7 +8431,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "IAM / Security",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "DefenseTech state-tracker: lifecycle snapshot of 10 federal authorities regulating DIB AI / cybersecurity / export-control / CUI — DoD CIO, Cyber AB, DIBCAC, DDTC, BIS, NIST, GSA, DCMA, DCSA, NARA-ISOO. 8 distinct enforcement modes, most diverse state-tracker in the Suite.",
     "topics": [
@@ -8032,7 +8450,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "IAM / Security",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "DefenseTech bias-coverage: population-level AI bias scaffolding across DIB workforce decisions — VEVRAA + Section 503 + Title VII OFCCP + EO 11246 + ADEA + EPA + EO 12968 + 32 CFR 147 + NISPOM insider threat + SBA SB/SDB/VOSB sub-contractor flow-down. 15 dimensions × 8 metric kinds.",
     "topics": [
@@ -8051,7 +8469,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "AI Platform",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "DefenseTech Incident Card profile: publishable AI-incident record for DIB contractors covering DFARS 72-hour cyber incidents, CUI spillage, ITAR/EAR export-control violations, foreign-person access breaches, CMMC POA&M failures, NISPOM insider threats. 22 event types — largest Incident Card profile in the Suite.",
     "topics": [
@@ -8070,7 +8488,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Compliance / Governance",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "DefenseTech Decision Card vault contract: FIRST Suite vault contract with 3 orthogonal typed policy axes (CUI categorization × export-control status × foreign-person restriction). resolvePolicy() intersects all 3 axes at runtime. Cross-binding centerpiece of the DefenseTech 6-pack.",
     "topics": [
@@ -8089,7 +8507,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Compliance / Governance",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "DefenseTech evidence-bundle: CMMC 2.0 L2/L3 readiness scaffolding under DFARS 252.204-7012/7019/7020/7021 + NIST SP 800-171 r2 + NIST SP 800-172 + SPRS scoring. 18 control families × 48 evidence kinds.",
     "topics": [
@@ -8108,7 +8526,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Compliance / Governance",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "AGPL-3.0 reference impl of EnergyTech audit-stream + 2-axis BES/OT-IT vault. Runs Continental Grid Operator × VendorE GridSense 6.x trajectory end-to-end. Anchors the FIRST Suite numeric regulatory wall-clock invariant (CIP-008 1-hour) in working code.",
     "topics": [
@@ -8127,7 +8545,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Data Engineering",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "EnergyTech audit-stream Operator: per-grid-operations AI-decision events hash-chained for NERC CIP + FERC + TSA Security Directives + state PUC + DOE EO 14028 evidence. Every event carries bes_cyber_system_categorization + ot_it_boundary. First Suite verifier with regulatory wall-clock invariant (CIP-008 1-hour reporting window).",
     "topics": [
@@ -8146,7 +8564,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "IAM / Security",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "EnergyTech jurisdiction-spanning lifecycle tracker: state PUC AI rules + FERC orders + NERC standards + DOE/TSA/EPA + ISO/RTO BPMs. 10 jurisdictions seeded across state PUC (CA/NY/TX/MA/IL/WA) + federal/standards/ISO (FERC Order 2222, NERC CIP-013-3, TSA SD-2021-02C, CAISO BPM).",
     "topics": [
@@ -8165,7 +8583,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Compliance / Governance",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "EnergyTech bias Evidence Bundle: population-level equity in essential service delivery (NOT individual decisioning). Load shed allocation + outage restoration + DR + EV charging + rate design + low-income programs. EPA EJSCREEN + Justice40 + state DAC designations. 3 EnergyTech-unique pattern detectors.",
     "topics": [
@@ -8184,7 +8602,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HealthTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "EnergyTech AI Incident Card: 20 event types (most extensive in Suite) covering CIP-008 reportable + regulatory-clock meta-violations (1-hour + 12-hour) + NERC reliability + FERC market integrity + EJ pattern + critical-medical-equipment + PSPS + OT-IT boundary + cascading outage + BCSI exposure. 12 referral pathways. ed25519 REQUIRED.",
     "topics": [
@@ -8203,7 +8621,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HealthTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "EnergyTech Decision Card vault contract profile: 20 grid-asset data categories × 5-tier BES categorization × 3-code OT/IT boundary × 12 protection levels (7 EnergyTech-unique). bes_cyber_system_categorization + ot_it_boundary as cross-repo binding enums with audit-stream + incident card. 5 unique runtime invariants.",
     "topics": [
@@ -8222,7 +8640,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "IAM / Security",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "EnergyTech compliance Evidence Bundle profile: NERC CIP-002 through CIP-014 + TSA SD-2021-02C + DOE EO 14028 + FERC Order 2222 + state PUC prudency review. 12 obligation families × 53 required evidence kinds — largest Suite evidence bundle (reflects energy's multi-layered regulatory scope).",
     "topics": [
@@ -8241,7 +8659,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Compliance / Governance",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "Node.js reference implementation of the matter-decision-record-audit-stream spec (LegalTech 6-pack #1). Proves the spec's three orthogonal invariants are MUTUALLY achievable end-to-end (privilege-tier consistency + engagement-letter binding + citation-validation-before-production-ready). Second ref impl in the Suite. AGPL-3.0.",
     "topics": [
@@ -8260,7 +8678,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Compliance / Governance",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "LegalTech audit-stream Operator: per-matter privileged decision-record events hash-chained for ABA Model Rule 1.1c8 + 1.6 + 3.3 + 5.3 + state-bar opinions + attorney-client privilege + work-product doctrine. Every event carries privilege_tier — LegalTech-unique design innovation.",
     "topics": [
@@ -8279,7 +8697,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Compliance / Governance",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "LegalTech state bar lifecycle tracker: ABA + state bar + state supreme court + federal court standing orders that govern licensed-attorney AI use. 9 jurisdictions seeded (ABA, CA, NY-COSAC, FL, DC, PA, TX, IL, SDNY incl. Mata v. Avianca). Covers attorneys' OWN AI use ethics.",
     "topics": [
@@ -8298,7 +8716,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "IAM / Security",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "LegalTech bias coverage Evidence Bundle: jury selection (Batson), sentencing (post-COMPAS), immigration triage, public defender caseload, eDiscovery TAR. Anchored to Title VI + Sixth Amendment + Batson + ABA Criminal Justice Standards. 8 subgroups × 11 coverage statuses incl LegalTech-unique compas-cautionary + batson-pattern flags.",
     "topics": [
@@ -8317,7 +8735,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Compliance / Governance",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "LegalTech AI Incident Card profile: 18 event types covering privilege breaches, work-product violations, court-sanctioned hallucinations (Mata v. Avianca), conflict-check bypasses, UPL, vendor training-data violations. 6-code privilege_waiver_risk_taxonomy. ed25519 signature REQUIRED.",
     "topics": [
@@ -8336,7 +8754,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Compliance / Governance",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "LegalTech Decision Card vault contract profile: 18 attorney-client data categories × 8-value privilege_tier taxonomy × 10 protection levels. Drives resource.privilege_tier on the sibling matter-decision-record-audit-stream. 4 LegalTech-unique runtime invariants incl cross-matter-firewall + opposing-party-quarantine.",
     "topics": [
@@ -8355,7 +8773,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Compliance / Governance",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "LegalTech compliance Evidence Bundle profile: ABA Model Rules 1.1c8 + 1.6 + 1.6(c) + 1.7 + 1.9 + 3.3 + 5.3 + 5.5, plus attorney-client privilege preservation, plus work-product doctrine preservation. 8 obligation families × 35 required evidence kinds. State bar overlay across CA/NY/FL/DC/PA/TX/IL.",
     "topics": [
@@ -8374,7 +8792,7 @@
     "platform": "Decision Intelligence",
     "vertical": "HealthTech",
     "language": "PHP",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "members.kineticgain.com",
     "description": "WordPress control plane for member onboarding, lifecycle consent capture, preference evidence, and release-safe audience journey posture.",
     "topics": [
