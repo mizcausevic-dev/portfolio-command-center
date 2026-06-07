@@ -114,5 +114,6 @@ jobs:
           html="$(curl -fsSL --retry 5 --retry-delay 3 "${LIVE_URL}")"
           asset="$(printf '%s' "${html}" | grep -oE '/assets/[^"]+\.js' | head -n 1)"
           test -n "${asset}"
-          curl -fsSL --retry 5 --retry-delay 3 "${LIVE_URL%/}${asset}" \
-            | grep -q 'gcp-bigquery-slot-commitment-advisor'
+          bundle="$(curl -fsSL --retry 5 --retry-delay 3 "${LIVE_URL%/}${asset}")"
+          printf '%s' "${bundle}" | grep -q 'gcp-bigquery-slot-commitment-advisor'
+          printf '%s' "${bundle}" | grep -q 'snowflake-query-credit-guardrail'

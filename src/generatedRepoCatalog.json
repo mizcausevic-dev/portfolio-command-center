@@ -1,21 +1,40 @@
 [
   {
-    "name": "GCP BigQuery Slot Commitment Advisor",
-    "slug": "gcp-bigquery-slot-commitment-advisor",
-    "url": "https://mizcausevic-dev.github.io/gcp-bigquery-slot-commitment-advisor/",
+    "name": "Snowflake Query Credit Guardrail",
+    "slug": "snowflake-query-credit-guardrail",
+    "url": "https://mizcausevic-dev.github.io/snowflake-query-credit-guardrail/",
     "platform": "Platform Reliability Stack",
-    "vertical": "Platform Engineering",
-    "language": "TypeScript",
+    "vertical": "Data Engineering",
+    "language": "Python",
     "freshness": "24h",
     "subdomain": "mizcausevic-dev.github.io",
-    "description": "Board-readable GCP BigQuery slot commitment advisor for reservation fit, idle-slot waste, on-demand exposure, and FinOps purchase sequencing.",
+    "description": "Offline Snowflake query credit guardrail for warehouse burn, cache misses, owner gaps, and remediation sequencing.",
     "topics": [
-      "bigquery",
-      "cloud-cost",
       "cost-governance",
+      "data-engineering",
       "finops",
-      "gcp",
-      "kinetic-gain"
+      "kinetic-gain",
+      "platform-engineering",
+      "query-history"
+    ]
+  },
+  {
+    "name": "Portfolio Constellation",
+    "slug": "portfolio-constellation",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "AI Platform",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "Live visual atlas of every public repo at github.com/mizcausevic-dev — 190+ repos across 20+ languages, classified into named platforms and industry verticals. Auto-refreshed every 6 hours via gh api. Deploys to portfolio.kineticgain.com.",
+    "topics": [
+      "data-viz",
+      "kinetic-gain",
+      "portfolio",
+      "react",
+      "recharts",
+      "typescript"
     ]
   },
   {
@@ -57,22 +76,22 @@
     ]
   },
   {
-    "name": "Portfolio Constellation",
-    "slug": "portfolio-constellation",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "AI Platform",
+    "name": "GCP BigQuery Slot Commitment Advisor",
+    "slug": "gcp-bigquery-slot-commitment-advisor",
+    "url": "https://mizcausevic-dev.github.io/gcp-bigquery-slot-commitment-advisor/",
+    "platform": "Platform Reliability Stack",
+    "vertical": "Platform Engineering",
     "language": "TypeScript",
     "freshness": "24h",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "Live visual atlas of every public repo at github.com/mizcausevic-dev — 190+ repos across 20+ languages, classified into named platforms and industry verticals. Auto-refreshed every 6 hours via gh api. Deploys to portfolio.kineticgain.com.",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Board-readable GCP BigQuery slot commitment advisor for reservation fit, idle-slot waste, on-demand exposure, and FinOps purchase sequencing.",
     "topics": [
-      "data-viz",
-      "kinetic-gain",
-      "portfolio",
-      "react",
-      "recharts",
-      "typescript"
+      "bigquery",
+      "cloud-cost",
+      "cost-governance",
+      "finops",
+      "gcp",
+      "kinetic-gain"
     ]
   },
   {
@@ -323,7 +342,7 @@
     "platform": "Landing Sites",
     "vertical": "Compliance / Governance",
     "language": "HTML",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "suite.kineticgain.com",
     "description": "Canonical front-door landing for the Kinetic Gain Protocol Suite. 10 open governance specs across 2 regulated verticals. Deploys to suite.kineticgain.com.",
     "topics": []
