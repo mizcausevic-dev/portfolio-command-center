@@ -43,6 +43,8 @@ const VERTICAL_ORDER = [
 
 const platformOverrides = {
   "portfolio-command-center": "Frontend Showcase",
+  "gcp-billing-anomaly-router": "Platform Reliability Stack",
+  "gcp-bigquery-slot-commitment-advisor": "Platform Reliability Stack",
   "kineticgain-com-apex": "Landing Sites",
   "kinetic-gain-docs-hub": "Landing Sites",
   "kinetic-gain-suite-landing": "Landing Sites",
@@ -80,6 +82,7 @@ const verticalOverrides = {
   "vwo-experiment-governance-mirror": "Revenue Operations",
   "martech-experiment-evidence-stack": "Revenue Operations",
   "gcp-billing-anomaly-router": "Platform Engineering",
+  "gcp-bigquery-slot-commitment-advisor": "Platform Engineering",
   "gcp-vpc-service-controls-perimeter": "Platform Engineering",
   "snowflake-cost-governance-studio": "Data Engineering",
   "tableau-permission-audit-lab": "Data Engineering",

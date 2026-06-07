@@ -1,5 +1,24 @@
 [
   {
+    "name": "GCP BigQuery Slot Commitment Advisor",
+    "slug": "gcp-bigquery-slot-commitment-advisor",
+    "url": "https://mizcausevic-dev.github.io/gcp-bigquery-slot-commitment-advisor/",
+    "platform": "Platform Reliability Stack",
+    "vertical": "Platform Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Board-readable GCP BigQuery slot commitment advisor for reservation fit, idle-slot waste, on-demand exposure, and FinOps purchase sequencing.",
+    "topics": [
+      "bigquery",
+      "cloud-cost",
+      "cost-governance",
+      "finops",
+      "gcp",
+      "kinetic-gain"
+    ]
+  },
+  {
     "name": "Watermark Stress Test",
     "slug": "watermark-stress-test",
     "url": "https://provenance-lab.kineticgain.com/",
@@ -19,6 +38,25 @@
     ]
   },
   {
+    "name": "Portfolio Command Center",
+    "slug": "portfolio-command-center",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
+    "topics": [
+      "command-center",
+      "executive-dashboard",
+      "frontend",
+      "growth-systems",
+      "platform-engineering",
+      "react"
+    ]
+  },
+  {
     "name": "Portfolio Constellation",
     "slug": "portfolio-constellation",
     "url": "https://portfolio.kineticgain.com/",
@@ -35,6 +73,25 @@
       "react",
       "recharts",
       "typescript"
+    ]
+  },
+  {
+    "name": "Approval Workflow Orchestrator",
+    "slug": "approval-workflow-orchestrator",
+    "url": "https://github.com/mizcausevic-dev/approval-workflow-orchestrator",
+    "platform": "Frontend Showcase",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "C# ASP.NET Core workflow backend for approval routing, SLA-aware escalation, policy exception review, and audit-history visibility.",
+    "topics": [
+      "aspnet-core",
+      "audit-trail",
+      "backend",
+      "csharp",
+      "dotnet",
+      "enterprise-software"
     ]
   },
   {
@@ -278,7 +335,7 @@
     "platform": "Kinetic Gain Implementation Stack",
     "vertical": "HealthTech",
     "language": "Python",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -290,7 +347,7 @@
     "platform": "Kinetic Gain Implementation Stack",
     "vertical": "Compliance / Governance",
     "language": "Python",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -302,7 +359,7 @@
     "platform": "Kinetic Gain Implementation Stack",
     "vertical": "FinTech",
     "language": "Python",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -314,7 +371,7 @@
     "platform": "Kinetic Gain Implementation Stack",
     "vertical": "Revenue Operations",
     "language": "Python",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -326,7 +383,7 @@
     "platform": "Kinetic Gain Implementation Stack",
     "vertical": "Data Engineering",
     "language": "Python",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -338,7 +395,7 @@
     "platform": "Frontend Showcase",
     "vertical": "AI Platform",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -350,7 +407,7 @@
     "platform": "Platform Reliability Stack",
     "vertical": "Platform Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -362,7 +419,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Platform Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -374,7 +431,7 @@
     "platform": "Frontend Showcase",
     "vertical": "PropTech / Real Estate",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "lease.kineticgain.com",
     "description": "Operator surface for lease obligations, renewal blockers, landlord packet readiness, and property-safe review posture.",
     "topics": [
@@ -393,7 +450,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Platform Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -405,7 +462,7 @@
     "platform": "Frontend Showcase",
     "vertical": "PropTech / Real Estate",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -417,7 +474,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Compliance / Governance",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -429,7 +486,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Aerospace / Drones",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -441,7 +498,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Revenue Operations",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -453,7 +510,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Platform Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -465,7 +522,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Platform Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -477,7 +534,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Data Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -489,7 +546,7 @@
     "platform": "Platform Reliability Stack",
     "vertical": "Platform Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -501,7 +558,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Platform Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -513,7 +570,7 @@
     "platform": "Decision Intelligence",
     "vertical": "HealthTech",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -525,7 +582,7 @@
     "platform": "Platform Reliability Stack",
     "vertical": "Platform Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -537,7 +594,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Nonprofit / Foundation Ops",
     "language": "Julia",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "appeals.kineticgain.com",
     "description": "Operator surface for donor appeal cadence, fatigue pressure, and stewardship-safe outreach posture.",
     "topics": [
@@ -572,7 +629,7 @@
     "name": "GCP Billing Anomaly Router",
     "slug": "gcp-billing-anomaly-router",
     "url": "https://gcp.kineticgain.com/",
-    "platform": "Frontend Showcase",
+    "platform": "Platform Reliability Stack",
     "vertical": "Platform Engineering",
     "language": "TypeScript",
     "freshness": "7d",
@@ -585,25 +642,6 @@
       "finops",
       "gcp",
       "typescript"
-    ]
-  },
-  {
-    "name": "Portfolio Command Center",
-    "slug": "portfolio-command-center",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "IAM / Security",
-    "language": "TypeScript",
-    "freshness": "7d",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
-    "topics": [
-      "command-center",
-      "executive-dashboard",
-      "frontend",
-      "growth-systems",
-      "platform-engineering",
-      "react"
     ]
   },
   {
@@ -8306,25 +8344,6 @@
       "membership",
       "php",
       "wordpress"
-    ]
-  },
-  {
-    "name": "Approval Workflow Orchestrator",
-    "slug": "approval-workflow-orchestrator",
-    "url": "https://github.com/mizcausevic-dev/approval-workflow-orchestrator",
-    "platform": "Frontend Showcase",
-    "vertical": "Compliance / Governance",
-    "language": "HTML",
-    "freshness": "7d",
-    "subdomain": "github.com",
-    "description": "C# ASP.NET Core workflow backend for approval routing, SLA-aware escalation, policy exception review, and audit-history visibility.",
-    "topics": [
-      "aspnet-core",
-      "audit-trail",
-      "backend",
-      "csharp",
-      "dotnet",
-      "enterprise-software"
     ]
   },
   {

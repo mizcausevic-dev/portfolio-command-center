@@ -115,4 +115,4 @@ jobs:
           asset="$(printf '%s' "${html}" | grep -oE '/assets/[^"]+\.js' | head -n 1)"
           test -n "${asset}"
           curl -fsSL --retry 5 --retry-delay 3 "${LIVE_URL%/}${asset}" \
-            | grep -q 'bigquery-query-risk-profiler'
+            | grep -q 'gcp-bigquery-slot-commitment-advisor'
