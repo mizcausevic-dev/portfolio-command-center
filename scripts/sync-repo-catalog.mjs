@@ -47,6 +47,7 @@ const platformOverrides = {
   "gcp-bigquery-slot-commitment-advisor": "Platform Reliability Stack",
   "snowflake-query-credit-guardrail": "Platform Reliability Stack",
   "ibm-watsonx-model-risk-register": "Decision Intelligence",
+  "okta-access-policy-drift-monitor": "Decision Intelligence",
   "kineticgain-com-apex": "Landing Sites",
   "kinetic-gain-docs-hub": "Landing Sites",
   "kinetic-gain-suite-landing": "Landing Sites",
@@ -58,6 +59,7 @@ const platformOverrides = {
 const homepageOverrides = {
   "gcp-billing-anomaly-router": "https://gcp.kineticgain.com/",
   "ibm-watsonx-model-risk-register": "https://mizcausevic-dev.github.io/ibm-watsonx-model-risk-register/",
+  "okta-access-policy-drift-monitor": "https://mizcausevic-dev.github.io/okta-access-policy-drift-monitor/",
   "portfolio-command-center": "https://portfolio.kineticgain.com/",
   "kineticgain-com-apex": "https://kineticgain.com/",
   "kinetic-gain-docs-hub": "https://docs.kineticgain.com/",
@@ -98,6 +100,7 @@ const verticalOverrides = {
   "ibm-watsonx-governance-bridge": "AI Platform",
   "genesys-cx-disclosure-board": "Revenue Operations",
   "intune-app-protection-lab": "IAM / Security",
+  "okta-access-policy-drift-monitor": "IAM / Security",
   "employee-ai-acceptable-use-board": "HR Tech / Employment AI",
   "payment-reconciliation-exception-desk": "FinTech",
   "merchant-risk-review-console": "FinTech",

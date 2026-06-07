@@ -118,3 +118,4 @@ jobs:
           printf '%s' "${bundle}" | grep -q 'gcp-bigquery-slot-commitment-advisor'
           printf '%s' "${bundle}" | grep -q 'snowflake-query-credit-guardrail'
           printf '%s' "${bundle}" | grep -q 'ibm-watsonx-model-risk-register'
+          printf '%s' "${bundle}" | grep -q 'okta-access-policy-drift-monitor'
