@@ -1,24 +1,5 @@
 [
   {
-    "name": "IBM Watsonx Model Risk Register",
-    "slug": "ibm-watsonx-model-risk-register",
-    "url": "https://mizcausevic-dev.github.io/ibm-watsonx-model-risk-register/",
-    "platform": "Decision Intelligence",
-    "vertical": "AI Platform",
-    "language": "JavaScript",
-    "freshness": "24h",
-    "subdomain": "mizcausevic-dev.github.io",
-    "description": "IBM watsonx Model Risk Register turns IBM watsonx signals into board-ready risk, savings, and investment decisions.",
-    "topics": [
-      "ai-governance",
-      "executive-intelligence",
-      "ibm-watsonx",
-      "kinetic-gain",
-      "risk-scoring",
-      "ibm"
-    ]
-  },
-  {
     "name": "Portfolio Command Center",
     "slug": "portfolio-command-center",
     "url": "https://portfolio.kineticgain.com/",
@@ -35,6 +16,25 @@
       "growth-systems",
       "platform-engineering",
       "react"
+    ]
+  },
+  {
+    "name": "IBM Watsonx Model Risk Register",
+    "slug": "ibm-watsonx-model-risk-register",
+    "url": "https://mizcausevic-dev.github.io/ibm-watsonx-model-risk-register/",
+    "platform": "Decision Intelligence",
+    "vertical": "AI Platform",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "IBM watsonx Model Risk Register turns IBM watsonx signals into board-ready risk, savings, and investment decisions.",
+    "topics": [
+      "ai-governance",
+      "executive-intelligence",
+      "ibm-watsonx",
+      "kinetic-gain",
+      "risk-scoring",
+      "ibm"
     ]
   },
   {
@@ -278,14 +278,21 @@
   {
     "name": "Okta Access Policy Drift Monitor",
     "slug": "okta-access-policy-drift-monitor",
-    "url": "https://github.com/mizcausevic-dev/okta-access-policy-drift-monitor",
-    "platform": "Frontend Showcase",
+    "url": "https://mizcausevic-dev.github.io/okta-access-policy-drift-monitor/",
+    "platform": "Decision Intelligence",
     "vertical": "IAM / Security",
     "language": "TypeScript",
     "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Public repo in the Kinetic Gain portfolio.",
-    "topics": []
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Board-readable Okta access policy drift monitor for MFA gaps, stale exceptions, privileged apps, and identity-risk remediation posture.",
+    "topics": [
+      "access-policy",
+      "iam",
+      "identity",
+      "identity-governance",
+      "kinetic-gain",
+      "mfa"
+    ]
   },
   {
     "name": "Genesys Contact Center Risk Router",
