@@ -119,3 +119,5 @@ jobs:
           printf '%s' "${bundle}" | grep -q 'snowflake-query-credit-guardrail'
           printf '%s' "${bundle}" | grep -q 'ibm-watsonx-model-risk-register'
           printf '%s' "${bundle}" | grep -q 'okta-access-policy-drift-monitor'
+          printf '%s' "${bundle}" | grep -q 'tableau-dashboard-lineage-auditor'
+          printf '%s' "${bundle}" | grep -q 'powerbi-board-metric-certifier'
