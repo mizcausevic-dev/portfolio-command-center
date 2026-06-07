@@ -254,26 +254,39 @@
   {
     "name": "Tableau Dashboard Lineage Auditor",
     "slug": "tableau-dashboard-lineage-auditor",
-    "url": "https://github.com/mizcausevic-dev/tableau-dashboard-lineage-auditor",
-    "platform": "Frontend Showcase",
+    "url": "https://mizcausevic-dev.github.io/tableau-dashboard-lineage-auditor/",
+    "platform": "Decision Intelligence",
     "vertical": "Data Engineering",
     "language": "TypeScript",
     "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Public repo in the Kinetic Gain portfolio.",
-    "topics": []
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Board-readable Tableau dashboard lineage auditor for workbook trust, certified sources, extract freshness, row-level security, and executive signoff.",
+    "topics": [
+      "analytics-governance",
+      "kinetic-gain",
+      "tableau",
+      "board-metrics",
+      "dashboard-lineage"
+    ]
   },
   {
     "name": "Power BI Board Metric Certifier",
     "slug": "powerbi-board-metric-certifier",
-    "url": "https://github.com/mizcausevic-dev/powerbi-board-metric-certifier",
-    "platform": "Frontend Showcase",
+    "url": "https://mizcausevic-dev.github.io/powerbi-board-metric-certifier/",
+    "platform": "Decision Intelligence",
     "vertical": "Data Engineering",
     "language": "TypeScript",
     "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Public repo in the Kinetic Gain portfolio.",
-    "topics": []
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Board-readable Power BI metric certifier for lineage completeness, refresh health, reconciliation, owner signoff, and executive dashboard trust.",
+    "topics": [
+      "analytics-governance",
+      "board-metrics",
+      "kinetic-gain",
+      "power-bi",
+      "powerbi",
+      "dashboard-certification"
+    ]
   },
   {
     "name": "Okta Access Policy Drift Monitor",
