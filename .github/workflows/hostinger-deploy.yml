@@ -49,6 +49,8 @@ jobs:
           test -s ~/.ssh/known_hosts
 
       - name: Upload build to staging
+        id: ssh_upload
+        continue-on-error: true
         shell: bash
         run: |
           set -euo pipefail
@@ -61,6 +63,8 @@ jobs:
             dist/ "${SSH_USER}@${SSH_HOST}:${release_dir}/"
 
       - name: Validate staging and swap live folder
+        id: ssh_swap
+        if: steps.ssh_upload.outcome == 'success'
         shell: bash
         run: |
           set -euo pipefail
@@ -85,9 +89,30 @@ jobs:
             fi
           "
 
+      - name: FTP fallback when SSH is unreachable
+        id: ftp_fallback
+        if: steps.ssh_upload.outcome == 'failure'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          protocol: ftps
+          port: 21
+          timeout: 90000
+          local-dir: ./dist/
+          server-dir: /portfolio/
+          dangerous-clean-slate: false
+          log-level: standard
+          exclude: |
+            **/.DS_Store
+
       - name: Verify live portfolio
         shell: bash
         run: |
           set -euo pipefail
-          curl -fsSL --retry 5 --retry-delay 3 "${LIVE_URL}" \
-            | grep -q '15 platform and company signals'
+          html="$(curl -fsSL --retry 5 --retry-delay 3 "${LIVE_URL}")"
+          asset="$(printf '%s' "${html}" | grep -oE '/assets/[^"]+\.js' | head -n 1)"
+          test -n "${asset}"
+          curl -fsSL --retry 5 --retry-delay 3 "${LIVE_URL%/}${asset}" \
+            | grep -q 'bigquery-query-risk-profiler'

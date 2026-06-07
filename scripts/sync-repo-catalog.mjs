@@ -210,6 +210,19 @@ function matchesAny(haystack, terms) {
   return terms.some((term) => haystack.includes(term));
 }
 
+function isKineticGainHost(value) {
+  if (!value) {
+    return false;
+  }
+
+  try {
+    const { hostname } = new URL(value);
+    return hostname === "kineticgain.com" || hostname.endsWith(".kineticgain.com");
+  } catch {
+    return false;
+  }
+}
+
 function inferPlatform(repo, homepage, topics, language) {
   if (platformOverrides[repo.name]) {
     return platformOverrides[repo.name];
@@ -314,7 +327,7 @@ function inferPlatform(repo, homepage, topics, language) {
   }
 
   if (
-    homepage.includes("kineticgain.com") ||
+    isKineticGainHost(homepage) ||
     matchesAny(combined, [
       "dashboard",
       "command center",
