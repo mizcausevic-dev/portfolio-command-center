@@ -1,5 +1,248 @@
 [
   {
+    "name": "Firstup Employee Incident Narrative Pack",
+    "slug": "firstup-employee-incident-narrative-pack",
+    "url": "https://mizcausevic-dev.github.io/firstup-employee-incident-narrative-pack/",
+    "platform": "Decision Intelligence",
+    "vertical": "Compliance / Governance",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "FirstUp employee incident narrative pack for internal comms evidence, action routing, and board-safe incident language.",
+    "topics": [
+      "employee-communications",
+      "firstup",
+      "incident-response",
+      "kinetic-gain",
+      "workforce-comms"
+    ]
+  },
+  {
+    "name": "Firstup Field Ops Message Reach Ledger",
+    "slug": "firstup-field-ops-message-reach-ledger",
+    "url": "https://mizcausevic-dev.github.io/firstup-field-ops-message-reach-ledger/",
+    "platform": "Frontend Showcase",
+    "vertical": "AI Platform",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "FirstUp field operations message reach ledger for frontline delivery proof and missed-audience remediation.",
+    "topics": [
+      "field-ops",
+      "firstup",
+      "kinetic-gain",
+      "workforce-comms",
+      "message-reach"
+    ]
+  },
+  {
+    "name": "Firstup Executive Comms Readiness Map",
+    "slug": "firstup-executive-comms-readiness-map",
+    "url": "https://mizcausevic-dev.github.io/firstup-executive-comms-readiness-map/",
+    "platform": "Agent Operations Suite",
+    "vertical": "AI Platform",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "FirstUp executive communications readiness map for audience coverage, delivery risk, and internal narrative discipline.",
+    "topics": [
+      "firstup",
+      "kinetic-gain",
+      "readiness",
+      "workforce-comms",
+      "executive-comms"
+    ]
+  },
+  {
+    "name": "Firstup Workforce Policy Attestation Board",
+    "slug": "firstup-workforce-policy-attestation-board",
+    "url": "https://mizcausevic-dev.github.io/firstup-workforce-policy-attestation-board/",
+    "platform": "Frontend Showcase",
+    "vertical": "Compliance / Governance",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "FirstUp workforce policy attestation board for message reach, acknowledgment proof, and board-ready policy adoption.",
+    "topics": [
+      "firstup",
+      "kinetic-gain",
+      "workforce-comms",
+      "employee-communications",
+      "policy-attestation"
+    ]
+  },
+  {
+    "name": "CyberArk Firstup Access Risk Comms Ledger",
+    "slug": "cyberark-firstup-access-risk-comms-ledger",
+    "url": "https://mizcausevic-dev.github.io/cyberark-firstup-access-risk-comms-ledger/",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "IAM / Security",
+    "language": "Python",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Access risk communications ledger linking CyberArk exception posture to FirstUp internal notification proof.",
+    "topics": [
+      "access-risk",
+      "cyberark",
+      "firstup",
+      "identity-governance",
+      "kinetic-gain",
+      "workforce-comms"
+    ]
+  },
+  {
+    "name": "CyberArk Firstup Privileged Change Briefing",
+    "slug": "cyberark-firstup-privileged-change-briefing",
+    "url": "https://mizcausevic-dev.github.io/cyberark-firstup-privileged-change-briefing/",
+    "platform": "Decision Intelligence",
+    "vertical": "Compliance / Governance",
+    "language": "Python",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Privileged change briefing for CyberArk access risk and FirstUp workforce communication evidence.",
+    "topics": [
+      "change-risk",
+      "cyberark",
+      "firstup",
+      "kinetic-gain",
+      "privileged-access",
+      "workforce-comms"
+    ]
+  },
+  {
+    "name": "Genesys Firstup Agent Readiness Broadcast",
+    "slug": "genesys-firstup-agent-readiness-broadcast",
+    "url": "https://mizcausevic-dev.github.io/genesys-firstup-agent-readiness-broadcast/",
+    "platform": "Agent Operations Suite",
+    "vertical": "Revenue Operations",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Agent readiness broadcast for Genesys contact-center changes and FirstUp frontline adoption evidence.",
+    "topics": [
+      "agent-readiness",
+      "contact-center",
+      "firstup",
+      "genesys",
+      "kinetic-gain",
+      "workforce-comms"
+    ]
+  },
+  {
+    "name": "Genesys Firstup Service Outage Briefing Room",
+    "slug": "genesys-firstup-service-outage-briefing-room",
+    "url": "https://mizcausevic-dev.github.io/genesys-firstup-service-outage-briefing-room/",
+    "platform": "Agent Operations Suite",
+    "vertical": "Revenue Operations",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Service outage briefing room tying Genesys demand spikes to FirstUp internal communication coverage.",
+    "topics": [
+      "executive-briefing",
+      "firstup",
+      "genesys",
+      "kinetic-gain",
+      "service-outage",
+      "workforce-comms"
+    ]
+  },
+  {
+    "name": "Genesys Firstup Incident Comms Bridge",
+    "slug": "genesys-firstup-incident-comms-bridge",
+    "url": "https://mizcausevic-dev.github.io/genesys-firstup-incident-comms-bridge/",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "Revenue Operations",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Incident communications bridge for Genesys service pressure and FirstUp workforce broadcast readiness.",
+    "topics": [
+      "contact-center",
+      "firstup",
+      "genesys",
+      "kinetic-gain",
+      "incident-comms",
+      "workforce-comms"
+    ]
+  },
+  {
+    "name": "Genesys Klaviyo Retention Escalation Router",
+    "slug": "genesys-klaviyo-retention-escalation-router",
+    "url": "https://mizcausevic-dev.github.io/genesys-klaviyo-retention-escalation-router/",
+    "platform": "Decision Intelligence",
+    "vertical": "Revenue Operations",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Retention escalation router for Genesys queue leakage, Klaviyo save journeys, and executive churn-risk evidence.",
+    "topics": [
+      "contact-center",
+      "escalation",
+      "genesys",
+      "kinetic-gain",
+      "klaviyo",
+      "retention"
+    ]
+  },
+  {
+    "name": "Genesys Klaviyo Contact Consent Ledger",
+    "slug": "genesys-klaviyo-contact-consent-ledger",
+    "url": "https://mizcausevic-dev.github.io/genesys-klaviyo-contact-consent-ledger/",
+    "platform": "Decision Intelligence",
+    "vertical": "HealthTech",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Contact consent ledger connecting Genesys conversation outcomes to Klaviyo lifecycle eligibility and suppression evidence.",
+    "topics": [
+      "consent",
+      "contact-center",
+      "genesys",
+      "kinetic-gain",
+      "klaviyo",
+      "retention"
+    ]
+  },
+  {
+    "name": "Genesys Klaviyo Customer Recovery Loop",
+    "slug": "genesys-klaviyo-customer-recovery-loop",
+    "url": "https://mizcausevic-dev.github.io/genesys-klaviyo-customer-recovery-loop/",
+    "platform": "Frontend Showcase",
+    "vertical": "Revenue Operations",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Genesys and Klaviyo customer recovery loop for contact-center escalations, lifecycle messages, and retention-safe follow-up.",
+    "topics": [
+      "contact-center",
+      "genesys",
+      "kinetic-gain",
+      "klaviyo",
+      "retention",
+      "customer-recovery"
+    ]
+  },
+  {
+    "name": "Portfolio Command Center",
+    "slug": "portfolio-command-center",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
+    "topics": [
+      "command-center",
+      "executive-dashboard",
+      "frontend",
+      "growth-systems",
+      "platform-engineering",
+      "react"
+    ]
+  },
+  {
     "name": "GCP Snowflake Platform Spend Waterfall",
     "slug": "gcp-snowflake-platform-spend-waterfall",
     "url": "https://mizcausevic-dev.github.io/gcp-snowflake-platform-spend-waterfall/",
@@ -418,25 +661,6 @@
     ]
   },
   {
-    "name": "Portfolio Command Center",
-    "slug": "portfolio-command-center",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "IAM / Security",
-    "language": "TypeScript",
-    "freshness": "24h",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
-    "topics": [
-      "command-center",
-      "executive-dashboard",
-      "frontend",
-      "growth-systems",
-      "platform-engineering",
-      "react"
-    ]
-  },
-  {
     "name": "IBM Watsonx Model Risk Register",
     "slug": "ibm-watsonx-model-risk-register",
     "url": "https://mizcausevic-dev.github.io/ibm-watsonx-model-risk-register/",
@@ -756,7 +980,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Platform Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -7939,7 +8163,7 @@
     "platform": "Decision Intelligence",
     "vertical": "Nonprofit / Foundation Ops",
     "language": "Python",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "outcomes.kineticgain.com",
     "description": "Operator surface for nonprofit program outcome proof, board packets, evaluator narrative, and delivery posture.",
     "topics": [
@@ -7958,7 +8182,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Nonprofit / Foundation Ops",
     "language": "R",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "donors.kineticgain.com",
     "description": "Base-R nonprofit operator surface for donor retention drift, upgrade pressure, and stewardship gaps.",
     "topics": [
@@ -7976,7 +8200,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Insurance / InsurTech",
     "language": "R",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "loss.kineticgain.com",
     "description": "Base-R insurance operator surface for claims trend drift, reserve adequacy, and reopen posture.",
     "topics": [
@@ -7995,7 +8219,7 @@
     "platform": "Platform Reliability Stack",
     "vertical": "HealthTech",
     "language": "R",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "care.kineticgain.com",
     "description": "Base-R healthcare operator surface for care-pathway variation, LOS drift, readmission pressure, and follow-up reliability.",
     "topics": [
@@ -8013,7 +8237,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Biotech / Diagnostics",
     "language": "TypeScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "specimen.kineticgain.com",
     "description": "TypeScript biotech operator surface for specimen custody, labeling integrity, cold-chain posture, and release blockers.",
     "topics": [
@@ -8032,7 +8256,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Biotech / Diagnostics",
     "language": "C#",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "instruments.kineticgain.com",
     "description": "Operator surface for lab instrument changes, calibration drift, firmware review, and audit-safe attestation posture.",
     "topics": [
@@ -8051,7 +8275,7 @@
     "platform": "Platform Reliability Stack",
     "vertical": "Biotech / Diagnostics",
     "language": "C#",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "gxp.kineticgain.com",
     "description": "C# biotech operator surface for GxP change control, validation evidence gaps, and release-safe cutover posture.",
     "topics": [
@@ -8070,7 +8294,7 @@
     "platform": "Platform Reliability Stack",
     "vertical": "Biotech / Diagnostics",
     "language": "C#",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "diagnostics.kineticgain.com",
     "description": "C# diagnostics QC evidence routing operator surface for biotech release-readiness workflows.",
     "topics": [
@@ -8089,7 +8313,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Biotech / Diagnostics",
     "language": "C#",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "capa.kineticgain.com",
     "description": "C# biotech operator surface for batch deviations, CAPA routing, effectiveness checks, and disposition posture.",
     "topics": [
@@ -8108,7 +8332,7 @@
     "platform": "Platform Reliability Stack",
     "vertical": "Biotech / Diagnostics",
     "language": "C#",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "assay.kineticgain.com",
     "description": "Biotech / diagnostics operator surface for assay release packets, calibration freshness, variance review, and QA signoff.",
     "topics": [
