@@ -1,560 +1,21 @@
 [
   {
-    "name": "Portfolio Command Center",
-    "slug": "portfolio-command-center",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "IAM / Security",
+    "name": "Watermark Stress Test",
+    "slug": "watermark-stress-test",
+    "url": "https://provenance-lab.kineticgain.com/",
+    "platform": "Agent Operations Suite",
+    "vertical": "EdTech",
     "language": "TypeScript",
     "freshness": "24h",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
-    "topics": [
-      "command-center",
-      "executive-dashboard",
-      "frontend",
-      "growth-systems",
-      "platform-engineering",
-      "react"
-    ]
-  },
-  {
-    "name": "VWO Guardrail Decision Ledger",
-    "slug": "vwo-guardrail-decision-ledger",
-    "url": "https://github.com/mizcausevic-dev/vwo-guardrail-decision-ledger",
-    "platform": "Decision Intelligence",
-    "vertical": "Revenue Operations",
-    "language": "JavaScript",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "VWO Guardrail Decision Ledger turns VWO signals into board-ready risk, savings, and investment decisions.",
-    "topics": [
-      "executive-intelligence",
-      "experiment-governance",
-      "kinetic-gain",
-      "risk-scoring",
-      "vwo"
-    ]
-  },
-  {
-    "name": "Tableau Certified Source Ledger",
-    "slug": "tableau-certified-source-ledger",
-    "url": "https://github.com/mizcausevic-dev/tableau-certified-source-ledger",
-    "platform": "Decision Intelligence",
-    "vertical": "Data Engineering",
-    "language": "JavaScript",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Tableau Certified Source Ledger turns Tableau signals into board-ready risk, savings, and investment decisions.",
-    "topics": [
-      "analytics-governance",
-      "executive-intelligence",
-      "kinetic-gain",
-      "risk-scoring",
-      "tableau"
-    ]
-  },
-  {
-    "name": "Power BI Executive Trust Monitor",
-    "slug": "powerbi-executive-trust-monitor",
-    "url": "https://github.com/mizcausevic-dev/powerbi-executive-trust-monitor",
-    "platform": "Decision Intelligence",
-    "vertical": "Data Engineering",
-    "language": "JavaScript",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Power BI Executive Trust Monitor turns Power BI signals into board-ready risk, savings, and investment decisions.",
-    "topics": [
-      "executive-intelligence",
-      "kinetic-gain",
-      "power-bi",
-      "risk-scoring",
-      "bi-trust-and-reporting"
-    ]
-  },
-  {
-    "name": "Okta App Sprawl Retirement Board",
-    "slug": "okta-app-sprawl-retirement-board",
-    "url": "https://github.com/mizcausevic-dev/okta-app-sprawl-retirement-board",
-    "platform": "Decision Intelligence",
-    "vertical": "IAM / Security",
-    "language": "JavaScript",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Okta App Sprawl Retirement Board turns Okta signals into board-ready risk, savings, and investment decisions.",
-    "topics": [
-      "executive-intelligence",
-      "kinetic-gain",
-      "okta",
-      "risk-scoring",
-      "identity-cost-and-risk"
-    ]
-  },
-  {
-    "name": "Genesys Queue Leakage Index",
-    "slug": "genesys-queue-leakage-index",
-    "url": "https://github.com/mizcausevic-dev/genesys-queue-leakage-index",
-    "platform": "Decision Intelligence",
-    "vertical": "Revenue Operations",
-    "language": "JavaScript",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Genesys Queue Leakage Index turns Genesys signals into board-ready risk, savings, and investment decisions.",
-    "topics": [
-      "cx-operations",
-      "executive-intelligence",
-      "genesys",
-      "kinetic-gain",
-      "risk-scoring"
-    ]
-  },
-  {
-    "name": "Snowflake Sharing Contract Auditor",
-    "slug": "snowflake-sharing-contract-auditor",
-    "url": "https://github.com/mizcausevic-dev/snowflake-sharing-contract-auditor",
-    "platform": "Decision Intelligence",
-    "vertical": "Data Engineering",
-    "language": "JavaScript",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Snowflake Sharing Contract Auditor turns Snowflake signals into board-ready risk, savings, and investment decisions.",
-    "topics": [
-      "executive-intelligence",
-      "kinetic-gain",
-      "risk-scoring",
-      "snowflake",
-      "data-sharing-governance"
-    ]
-  },
-  {
-    "name": "IBM Watsonx Model Risk Register",
-    "slug": "ibm-watsonx-model-risk-register",
-    "url": "https://github.com/mizcausevic-dev/ibm-watsonx-model-risk-register",
-    "platform": "Decision Intelligence",
-    "vertical": "Compliance / Governance",
-    "language": "JavaScript",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "IBM watsonx Model Risk Register turns IBM watsonx signals into board-ready risk, savings, and investment decisions.",
+    "subdomain": "provenance-lab.kineticgain.com",
+    "description": "Interactive teaching lab on why AI content watermarks are fragile — and the case for cryptographic content provenance (C2PA). Educational simulation; does not process real SynthID.",
     "topics": [
       "ai-governance",
-      "executive-intelligence",
-      "ibm-watsonx",
-      "kinetic-gain",
-      "risk-scoring"
-    ]
-  },
-  {
-    "name": "Klaviyo Deliverability Risk Router",
-    "slug": "klaviyo-deliverability-risk-router",
-    "url": "https://github.com/mizcausevic-dev/klaviyo-deliverability-risk-router",
-    "platform": "Decision Intelligence",
-    "vertical": "Revenue Operations",
-    "language": "JavaScript",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Klaviyo Deliverability Risk Router turns Klaviyo signals into board-ready risk, savings, and investment decisions.",
-    "topics": [
-      "executive-intelligence",
-      "kinetic-gain",
-      "klaviyo",
-      "risk-scoring",
-      "lifecycle-revenue-governance"
-    ]
-  },
-  {
-    "name": "Camunda Process ROI Brief",
-    "slug": "camunda-process-roi-brief",
-    "url": "https://github.com/mizcausevic-dev/camunda-process-roi-brief",
-    "platform": "Decision Intelligence",
-    "vertical": "Platform Engineering",
-    "language": "JavaScript",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Camunda Process ROI Brief turns Camunda signals into board-ready risk, savings, and investment decisions.",
-    "topics": [
-      "camunda",
-      "executive-intelligence",
-      "kinetic-gain",
-      "risk-scoring",
-      "workflow-automation-roi"
-    ]
-  },
-  {
-    "name": "CyberArk Safe Ownership Gap Mapper",
-    "slug": "cyberark-safe-ownership-gap-mapper",
-    "url": "https://github.com/mizcausevic-dev/cyberark-safe-ownership-gap-mapper",
-    "platform": "Decision Intelligence",
-    "vertical": "Compliance / Governance",
-    "language": "JavaScript",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "CyberArk Safe Ownership Gap Mapper turns CyberArk signals into board-ready risk, savings, and investment decisions.",
-    "topics": [
-      "cyberark",
-      "executive-intelligence",
-      "kinetic-gain",
-      "risk-scoring",
-      "privileged-access-governance"
-    ]
-  },
-  {
-    "name": "GCP Service Exception Posture",
-    "slug": "gcp-service-exception-posture",
-    "url": "https://github.com/mizcausevic-dev/gcp-service-exception-posture",
-    "platform": "Decision Intelligence",
-    "vertical": "Compliance / Governance",
-    "language": "JavaScript",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "GCP Service Exception Posture turns GCP signals into board-ready risk, savings, and investment decisions.",
-    "topics": [
-      "cloud-governance",
-      "executive-intelligence",
-      "gcp",
-      "kinetic-gain",
-      "risk-scoring"
-    ]
-  },
-  {
-    "name": "Incident Handoff Runbook Kit",
-    "slug": "incident-handoff-runbook-kit",
-    "url": "https://runbook.kineticgain.com/",
-    "platform": "Platform Reliability Stack",
-    "vertical": "Platform Engineering",
-    "language": "Shell / Bash",
-    "freshness": "24h",
-    "subdomain": "runbook.kineticgain.com",
-    "description": "Bash-native incident turnover operator surface for owner gaps, SLA drift, and evidence-complete handoffs.",
-    "topics": [
-      "handoff",
-      "incident-management",
-      "kinetic-gain",
-      "platform-engineering",
-      "runbooks",
-      "shell"
-    ]
-  },
-  {
-    "name": "Backup Restore Drill Runner",
-    "slug": "backup-restore-drill-runner",
-    "url": "https://backup.kineticgain.com/",
-    "platform": "Platform Reliability Stack",
-    "vertical": "Platform Engineering",
-    "language": "Shell / Bash",
-    "freshness": "24h",
-    "subdomain": "backup.kineticgain.com",
-    "description": "Bash-native operator surface for backup drills, restore timing, and recovery evidence posture.",
-    "topics": [
-      "backup",
-      "bash",
-      "disaster-recovery",
-      "kinetic-gain",
-      "operator-surface"
-    ]
-  },
-  {
-    "name": "Release Readiness Shell Kit",
-    "slug": "release-readiness-shell-kit",
-    "url": "https://release.kineticgain.com/",
-    "platform": "Platform Reliability Stack",
-    "vertical": "Platform Engineering",
-    "language": "Shell / Bash",
-    "freshness": "24h",
-    "subdomain": "release.kineticgain.com",
-    "description": "Bash-native platform release operator surface for launch blockers, rollback posture, and freeze windows.",
-    "topics": [
-      "change-management",
-      "kinetic-gain",
-      "platform-engineering",
-      "release-engineering",
-      "rollback",
-      "runbooks"
-    ]
-  },
-  {
-    "name": "Secret Rotation Scheduler",
-    "slug": "secret-rotation-scheduler",
-    "url": "https://github.com/mizcausevic-dev/secret-rotation-scheduler",
-    "platform": "Kinetic Gain Implementation Stack",
-    "vertical": "IAM / Security",
-    "language": "Python",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Ops-heavy automation for secret rotation windows, owner prompts, and stale-secret detection across enterprise credential stores. Practical SRE tooling for credential hygiene.",
-    "topics": [
-      "python",
-      "backend",
-      "credential-rotation",
-      "ops-automation",
-      "platform-engineering",
-      "secret-management"
-    ]
-  },
-  {
-    "name": "Embedding Drift Graph",
-    "slug": "embedding-drift-graph",
-    "url": "https://github.com/mizcausevic-dev/embedding-drift-graph",
-    "platform": "Agent Operations Suite",
-    "vertical": "Compliance / Governance",
-    "language": "Python",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Track how entity embeddings drift across encoder model versions. SQLite store + Strawberry GraphQL API. Cosine drift events computed automatically on every record. Reference impl for RAG/eval pipelines re-encoding their corpus.",
-    "topics": [
-      "ai-governance",
-      "drift-detection",
-      "embeddings",
-      "graphql",
-      "llm",
-      "numpy"
-    ]
-  },
-  {
-    "name": "AEO SDK Python",
-    "slug": "aeo-sdk-python",
-    "url": "https://github.com/mizcausevic-dev/aeo-sdk-python",
-    "platform": "AEO Reference Stack",
-    "vertical": "Compliance / Governance",
-    "language": "Python",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Python SDK for the AEO Protocol v0.1. Parse, build, validate, and fetch AEO declaration documents. Pydantic v2 + httpx. Loads canonical examples from aeo-protocol-spec.",
-    "topics": [
-      "aeo",
-      "ai-governance",
-      "answer-engine-optimization",
-      "httpx",
-      "kinetic-gain-protocol-suite",
-      "protocol-implementation"
-    ]
-  },
-  {
-    "name": "Error Budget Allocator",
-    "slug": "error-budget-allocator",
-    "url": "https://github.com/mizcausevic-dev/error-budget-allocator",
-    "platform": "Agent Operations Suite",
-    "vertical": "Platform Engineering",
-    "language": "Python",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Python service for allocating error-budget burn across services, dependencies, deploy windows, and operational ownership lanes.",
-    "topics": [
-      "backend",
-      "error-budget",
-      "fastapi",
-      "observability",
-      "platform-reliability",
-      "portfolio"
-    ]
-  },
-  {
-    "name": "CyberArk Access Review Sync",
-    "slug": "cyberark-access-review-sync",
-    "url": "https://github.com/mizcausevic-dev/cyberark-access-review-sync",
-    "platform": "Decision Intelligence",
-    "vertical": "IAM / Security",
-    "language": "Python",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Python integration for syncing CyberArk privileged-account metadata into access-review queues, stale-access findings, and approval-ready evidence payloads.",
-    "topics": [
-      "access-review",
-      "backend",
-      "cyberark",
-      "fastapi",
-      "governance",
-      "identity-governance"
-    ]
-  },
-  {
-    "name": "Sveska",
-    "slug": "sveska",
-    "url": "https://sveska.studio",
-    "platform": "Frontend Showcase",
-    "vertical": "Insurance / InsurTech",
-    "language": "TypeScript",
-    "freshness": "24h",
-    "subdomain": "sveska.studio",
-    "description": "Studio-grade, local-first notepad PWA. CodeMirror rich editor with inline screenshot paste, Markdown/checklist/canvas modes, slash commands, streaming AI, glossary engine, pricing scaffold. 281 tests, accessibility-audited. Live at sveska.studio",
-    "topics": [
-      "dexie",
-      "indexeddb",
-      "local-first",
-      "markdown",
-      "notepad",
-      "offline-first"
-    ]
-  },
-  {
-    "name": "Treasury Liquidity Signal Lab",
-    "slug": "treasury-liquidity-signal-lab",
-    "url": "https://treasury.kineticgain.com/",
-    "platform": "Decision Intelligence",
-    "vertical": "FinTech",
-    "language": "Julia",
-    "freshness": "24h",
-    "subdomain": "treasury.kineticgain.com",
-    "description": "Julia operator surface for treasury liquidity, settlement buffers, funding pressure, and close-safe finance posture.",
-    "topics": [
-      "cash-management",
-      "finance-operations",
-      "fintech",
-      "julia",
-      "liquidity-management",
-      "operator-surface"
-    ]
-  },
-  {
-    "name": "Yield Forecast Studio",
-    "slug": "yield-forecast-studio",
-    "url": "https://yield.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "Revenue Operations",
-    "language": "Julia",
-    "freshness": "24h",
-    "subdomain": "yield.kineticgain.com",
-    "description": "Julia operator surface for publishing and commerce yield forecasting, inventory planning, and shortfall posture.",
-    "topics": [
-      "ecommerce",
-      "forecasting",
-      "julia",
-      "kinetic-gain",
-      "publishing",
-      "revenue-operations"
-    ]
-  },
-  {
-    "name": "CyberArk Connector Observability Exporter",
-    "slug": "cyberark-connector-observability-exporter",
-    "url": "https://github.com/mizcausevic-dev/cyberark-connector-observability-exporter",
-    "platform": "Agent Operations Suite",
-    "vertical": "HealthTech",
-    "language": "Rust",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Rust exporter for CyberArk connector health, pool status, auth failures, latency, and Prometheus/OpenTelemetry observability pipelines.",
-    "topics": [
-      "axum",
-      "backend",
-      "cyberark",
-      "observability",
-      "opentelemetry",
-      "platform-reliability"
-    ]
-  },
-  {
-    "name": "Capacity Optimizer Jl",
-    "slug": "capacity-optimizer-jl",
-    "url": "https://capacity.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "AI Platform",
-    "language": "Julia",
-    "freshness": "24h",
-    "subdomain": "capacity.kineticgain.com",
-    "description": "Julia optimization surface for constrained capacity planning, lane allocation, and recovery posture.",
-    "topics": [
-      "agpl",
-      "capacity-planning",
-      "julia",
-      "kinetic-gain",
-      "operator-dashboard",
-      "optimization"
-    ]
-  },
-  {
-    "name": "Flutter Operator Console",
-    "slug": "flutter-operator-console",
-    "url": "https://flutter.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "HealthTech",
-    "language": "Dart",
-    "freshness": "24h",
-    "subdomain": "flutter.kineticgain.com",
-    "description": "Flutter web operator shell for queue health, offline packets, handoff proof, and mobile-safe Kinetic Gain workflows.",
-    "topics": [
-      "agpl",
-      "dart",
-      "flutter",
-      "kinetic-gain",
-      "mobile-workflows",
-      "operator-console"
-    ]
-  },
-  {
-    "name": "Dependency Drift Watch",
-    "slug": "dependency-drift-watch",
-    "url": "https://github.com/mizcausevic-dev/dependency-drift-watch",
-    "platform": "Platform Reliability Stack",
-    "vertical": "PropTech / Real Estate",
-    "language": "Rust",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "Rust Axum control plane for dependency drift, release lag, stale lockfiles, CVE pressure, and owner-lane review.",
-    "topics": [
-      "axum",
-      "backend",
-      "dependency-management",
-      "governance",
-      "platform-reliability",
-      "portfolio"
-    ]
-  },
-  {
-    "name": "Entitlement Request Portal API",
-    "slug": "entitlement-request-portal-api",
-    "url": "https://github.com/mizcausevic-dev/entitlement-request-portal-api",
-    "platform": "Kinetic Gain Implementation Stack",
-    "vertical": "IAM / Security",
-    "language": "PHP",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "PHP API for entitlement requests, approval routing, access review visibility, and audit-friendly identity governance workflows.",
-    "topics": [
-      "access-review",
-      "api",
-      "audit-trail",
-      "backend",
-      "entitlements",
-      "governance"
-    ]
-  },
-  {
-    "name": "Servicenow CyberArk Evidence Pipeline",
-    "slug": "servicenow-cyberark-evidence-pipeline",
-    "url": "https://github.com/mizcausevic-dev/servicenow-cyberark-evidence-pipeline",
-    "platform": "Decision Intelligence",
-    "vertical": "IAM / Security",
-    "language": "Python",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "FastAPI pipeline for packaging ServiceNow and CyberArk access-change evidence into audit-ready privileged-review artifacts.",
-    "topics": [
-      "audit",
-      "backend",
-      "cyberark",
-      "evidence-pipeline",
-      "fastapi",
-      "identity-governance"
-    ]
-  },
-  {
-    "name": "Campaign Appeal Fatigue Monitor",
-    "slug": "campaign-appeal-fatigue-monitor",
-    "url": "https://appeals.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "Nonprofit / Foundation Ops",
-    "language": "Julia",
-    "freshness": "24h",
-    "subdomain": "appeals.kineticgain.com",
-    "description": "Operator surface for donor appeal cadence, fatigue pressure, and stewardship-safe outreach posture.",
-    "topics": [
-      "donor-stewardship",
-      "foundation-ops",
-      "fundraising",
-      "julia",
-      "nonprofit",
-      "operator-surface"
+      "ai-provenance",
+      "ai-safety",
+      "c2pa",
+      "content-credentials",
+      "educational"
     ]
   },
   {
@@ -577,13 +38,1102 @@
     ]
   },
   {
+    "name": "Market Latency Budget Simulator",
+    "slug": "market-latency-budget-simulator",
+    "url": "https://mizcausevic-dev.github.io/market-latency-budget-simulator/",
+    "platform": "Platform Reliability Stack",
+    "vertical": "FinTech",
+    "language": "Python",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Rust and Python HFT latency-budget simulator for FinTech market paths, packet pressure, risk scoring, and board-readable exposure summaries.",
+    "topics": [
+      "fintech",
+      "hft",
+      "kinetic-gain",
+      "latency",
+      "python",
+      "risk-scoring"
+    ]
+  },
+  {
+    "name": "IBM Zos Batch Window Risk Console",
+    "slug": "ibm-zos-batch-window-risk-console",
+    "url": "https://mizcausevic-dev.github.io/ibm-zos-batch-window-risk-console/",
+    "platform": "Frontend Showcase",
+    "vertical": "Platform Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "IBM z/OS batch-window risk console for mainframe modernization, dependency windows, missed SLA exposure, and board-readable remediation.",
+    "topics": [
+      "ibm",
+      "kinetic-gain",
+      "mainframe",
+      "modernization",
+      "platform-engineering",
+      "zos"
+    ]
+  },
+  {
+    "name": "Klaviyo Retention Signal Router",
+    "slug": "klaviyo-retention-signal-router",
+    "url": "https://mizcausevic-dev.github.io/klaviyo-retention-signal-router/",
+    "platform": "Frontend Showcase",
+    "vertical": "Revenue Operations",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Klaviyo retention signal router for consent-safe lifecycle events, revenue recovery queues, campaign risk, and operator-ready next actions.",
+    "topics": [
+      "kinetic-gain",
+      "klaviyo",
+      "martech",
+      "retention",
+      "revenue-operations",
+      "revops"
+    ]
+  },
+  {
+    "name": "CyberArk Session Risk Console",
+    "slug": "cyberark-session-risk-console",
+    "url": "https://mizcausevic-dev.github.io/cyberark-session-risk-console/",
+    "platform": "Decision Intelligence",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "CyberArk session-risk console for privilege drift, checkout posture, high-risk access paths, and evidence-ready remediation routing.",
+    "topics": [
+      "cyberark",
+      "iam",
+      "kinetic-gain",
+      "operator-console",
+      "privileged-access",
+      "security"
+    ]
+  },
+  {
+    "name": "BigQuery Query Risk Profiler",
+    "slug": "bigquery-query-risk-profiler",
+    "url": "https://mizcausevic-dev.github.io/bigquery-query-risk-profiler/",
+    "platform": "Frontend Showcase",
+    "vertical": "Data Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Operator surface for BigQuery query risk, slot pressure, SQL cost exposure, and remediation routing across data engineering estates.",
+    "topics": [
+      "bigquery",
+      "cost-governance",
+      "data-engineering",
+      "kinetic-gain",
+      "operator-console",
+      "sql"
+    ]
+  },
+  {
+    "name": "Snowflake Cost Governance Console",
+    "slug": "snowflake-cost-governance-console",
+    "url": "https://github.com/mizcausevic-dev/snowflake-cost-governance-console",
+    "platform": "Frontend Showcase",
+    "vertical": "Data Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "VWO Experiment Integrity Ledger",
+    "slug": "vwo-experiment-integrity-ledger",
+    "url": "https://github.com/mizcausevic-dev/vwo-experiment-integrity-ledger",
+    "platform": "Frontend Showcase",
+    "vertical": "Revenue Operations",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Tableau Dashboard Lineage Auditor",
+    "slug": "tableau-dashboard-lineage-auditor",
+    "url": "https://github.com/mizcausevic-dev/tableau-dashboard-lineage-auditor",
+    "platform": "Frontend Showcase",
+    "vertical": "Data Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Power BI Board Metric Certifier",
+    "slug": "powerbi-board-metric-certifier",
+    "url": "https://github.com/mizcausevic-dev/powerbi-board-metric-certifier",
+    "platform": "Frontend Showcase",
+    "vertical": "Data Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Okta Access Policy Drift Monitor",
+    "slug": "okta-access-policy-drift-monitor",
+    "url": "https://github.com/mizcausevic-dev/okta-access-policy-drift-monitor",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Genesys Contact Center Risk Router",
+    "slug": "genesys-contact-center-risk-router",
+    "url": "https://github.com/mizcausevic-dev/genesys-contact-center-risk-router",
+    "platform": "Frontend Showcase",
+    "vertical": "Revenue Operations",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "IBM Mainframe Modernization Map",
+    "slug": "ibm-mainframe-modernization-map",
+    "url": "https://github.com/mizcausevic-dev/ibm-mainframe-modernization-map",
+    "platform": "Frontend Showcase",
+    "vertical": "AI Platform",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Camunda Process Exception Console",
+    "slug": "camunda-process-exception-console",
+    "url": "https://github.com/mizcausevic-dev/camunda-process-exception-console",
+    "platform": "Frontend Showcase",
+    "vertical": "Platform Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "CyberArk Privilege Drift Ledger",
+    "slug": "cyberark-privilege-drift-ledger",
+    "url": "https://github.com/mizcausevic-dev/cyberark-privilege-drift-ledger",
+    "platform": "Frontend Showcase",
+    "vertical": "Platform Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "AEO Visualizer",
+    "slug": "aeo-visualizer",
+    "url": "https://mizcausevic-dev.github.io/aeo-visualizer/",
+    "platform": "AEO Reference Stack",
+    "vertical": "Insurance / InsurTech",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "Interactive web visualizer for AEO Protocol declarations. Paste any /.well-known/aeo.json and see entity, authority, claims, and citation preferences rendered as a clean card layout. React 19 + Vite + Tailwind. Live on GitHub Pages.",
+    "topics": [
+      "aeo",
+      "aeo-protocol",
+      "github-pages",
+      "kinetic-gain-protocol-suite",
+      "react",
+      "tailwind"
+    ]
+  },
+  {
+    "name": "Kinetic Gain Suite Landing",
+    "slug": "kinetic-gain-suite-landing",
+    "url": "https://suite.kineticgain.com/",
+    "platform": "Landing Sites",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "suite.kineticgain.com",
+    "description": "Canonical front-door landing for the Kinetic Gain Protocol Suite. 10 open governance specs across 2 regulated verticals. Deploys to suite.kineticgain.com.",
+    "topics": []
+  },
+  {
+    "name": "Kotlin Patient Portal Readiness Ledger",
+    "slug": "kotlin-patient-portal-readiness-ledger",
+    "url": "https://github.com/mizcausevic-dev/kotlin-patient-portal-readiness-ledger",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "HealthTech",
+    "language": "Python",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Fortran Grid Load Forecast Auditor",
+    "slug": "fortran-grid-load-forecast-auditor",
+    "url": "https://github.com/mizcausevic-dev/fortran-grid-load-forecast-auditor",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "Compliance / Governance",
+    "language": "Python",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Haskell Payment Clearing Invariant Ledger",
+    "slug": "haskell-payment-clearing-invariant-ledger",
+    "url": "https://github.com/mizcausevic-dev/haskell-payment-clearing-invariant-ledger",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "FinTech",
+    "language": "Python",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Genesys Contact Center Escalation Ledger",
+    "slug": "genesys-contact-center-escalation-ledger",
+    "url": "https://github.com/mizcausevic-dev/genesys-contact-center-escalation-ledger",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "Revenue Operations",
+    "language": "Python",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Snowflake Credit Burn Variance Ledger",
+    "slug": "snowflake-credit-burn-variance-ledger",
+    "url": "https://github.com/mizcausevic-dev/snowflake-credit-burn-variance-ledger",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "Data Engineering",
+    "language": "Python",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "IBM Mainframe Change Risk Ledger",
+    "slug": "ibm-mainframe-change-risk-ledger",
+    "url": "https://github.com/mizcausevic-dev/ibm-mainframe-change-risk-ledger",
+    "platform": "Frontend Showcase",
+    "vertical": "AI Platform",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Camunda Process Exception Latency Ledger",
+    "slug": "camunda-process-exception-latency-ledger",
+    "url": "https://github.com/mizcausevic-dev/camunda-process-exception-latency-ledger",
+    "platform": "Platform Reliability Stack",
+    "vertical": "Platform Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "CyberArk Privileged Access Drift Ledger",
+    "slug": "cyberark-privileged-access-drift-ledger",
+    "url": "https://github.com/mizcausevic-dev/cyberark-privileged-access-drift-ledger",
+    "platform": "Frontend Showcase",
+    "vertical": "Platform Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Lease Obligation Risk Board",
+    "slug": "lease-obligation-risk-board",
+    "url": "https://lease.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "PropTech / Real Estate",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "lease.kineticgain.com",
+    "description": "Operator surface for lease obligations, renewal blockers, landlord packet readiness, and property-safe review posture.",
+    "topics": [
+      "embedded-analytics",
+      "operator-surface",
+      "platform-engineering",
+      "proptech",
+      "real-estate",
+      "renewal-ops"
+    ]
+  },
+  {
+    "name": "Travel Pricing Volatility Router",
+    "slug": "travel-pricing-volatility-router",
+    "url": "https://github.com/mizcausevic-dev/travel-pricing-volatility-router",
+    "platform": "Frontend Showcase",
+    "vertical": "Platform Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Proptech Valuation Drift Monitor",
+    "slug": "proptech-valuation-drift-monitor",
+    "url": "https://github.com/mizcausevic-dev/proptech-valuation-drift-monitor",
+    "platform": "Frontend Showcase",
+    "vertical": "PropTech / Real Estate",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Zk Governance Proof Ledger",
+    "slug": "zk-governance-proof-ledger",
+    "url": "https://github.com/mizcausevic-dev/zk-governance-proof-ledger",
+    "platform": "Frontend Showcase",
+    "vertical": "Compliance / Governance",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Aerospace Mission Readiness Board",
+    "slug": "aerospace-mission-readiness-board",
+    "url": "https://github.com/mizcausevic-dev/aerospace-mission-readiness-board",
+    "platform": "Frontend Showcase",
+    "vertical": "Aerospace / Drones",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Shopify Klaviyo Retention Ops",
+    "slug": "shopify-klaviyo-retention-ops",
+    "url": "https://github.com/mizcausevic-dev/shopify-klaviyo-retention-ops",
+    "platform": "Frontend Showcase",
+    "vertical": "Revenue Operations",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Grid Scada Risk Simulator",
+    "slug": "grid-scada-risk-simulator",
+    "url": "https://github.com/mizcausevic-dev/grid-scada-risk-simulator",
+    "platform": "Frontend Showcase",
+    "vertical": "Platform Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "GovTech Cobol Modernization Ledger",
+    "slug": "govtech-cobol-modernization-ledger",
+    "url": "https://github.com/mizcausevic-dev/govtech-cobol-modernization-ledger",
+    "platform": "Frontend Showcase",
+    "vertical": "Platform Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Spark Snowflake Lineage Auditor",
+    "slug": "spark-snowflake-lineage-auditor",
+    "url": "https://github.com/mizcausevic-dev/spark-snowflake-lineage-auditor",
+    "platform": "Frontend Showcase",
+    "vertical": "Data Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Telecom Routing Reliability Map",
+    "slug": "telecom-routing-reliability-map",
+    "url": "https://github.com/mizcausevic-dev/telecom-routing-reliability-map",
+    "platform": "Platform Reliability Stack",
+    "vertical": "Platform Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Fleet Safety Telemetry Console",
+    "slug": "fleet-safety-telemetry-console",
+    "url": "https://github.com/mizcausevic-dev/fleet-safety-telemetry-console",
+    "platform": "Frontend Showcase",
+    "vertical": "Platform Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Clinical AI Evidence Registry",
+    "slug": "clinical-ai-evidence-registry",
+    "url": "https://github.com/mizcausevic-dev/clinical-ai-evidence-registry",
+    "platform": "Decision Intelligence",
+    "vertical": "HealthTech",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Hft Latency Risk Ledger",
+    "slug": "hft-latency-risk-ledger",
+    "url": "https://github.com/mizcausevic-dev/hft-latency-risk-ledger",
+    "platform": "Platform Reliability Stack",
+    "vertical": "Platform Engineering",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Public repo in the Kinetic Gain portfolio.",
+    "topics": []
+  },
+  {
+    "name": "Campaign Appeal Fatigue Monitor",
+    "slug": "campaign-appeal-fatigue-monitor",
+    "url": "https://appeals.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "Nonprofit / Foundation Ops",
+    "language": "Julia",
+    "freshness": "24h",
+    "subdomain": "appeals.kineticgain.com",
+    "description": "Operator surface for donor appeal cadence, fatigue pressure, and stewardship-safe outreach posture.",
+    "topics": [
+      "donor-stewardship",
+      "foundation-ops",
+      "fundraising",
+      "julia",
+      "nonprofit",
+      "operator-surface"
+    ]
+  },
+  {
+    "name": "Intune Device Compliance Ops",
+    "slug": "intune-device-compliance-ops",
+    "url": "https://intune.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "7d",
+    "subdomain": "intune.kineticgain.com",
+    "description": "Operator control plane for Microsoft Intune device compliance, stale sync risk, BYOD posture, and endpoint remediation readiness.",
+    "topics": [
+      "azure",
+      "byod",
+      "device-compliance",
+      "intune",
+      "mdm",
+      "microsoft-365"
+    ]
+  },
+  {
+    "name": "GCP Billing Anomaly Router",
+    "slug": "gcp-billing-anomaly-router",
+    "url": "https://gcp.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "Platform Engineering",
+    "language": "TypeScript",
+    "freshness": "7d",
+    "subdomain": "gcp.kineticgain.com",
+    "description": "Operator surface for GCP billing anomalies, FinOps routing posture, budget breaches, export gaps, and remediation sequencing.",
+    "topics": [
+      "anomaly-detection",
+      "billing",
+      "cloud-cost",
+      "finops",
+      "gcp",
+      "typescript"
+    ]
+  },
+  {
+    "name": "Portfolio Command Center",
+    "slug": "portfolio-command-center",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "7d",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
+    "topics": [
+      "command-center",
+      "executive-dashboard",
+      "frontend",
+      "growth-systems",
+      "platform-engineering",
+      "react"
+    ]
+  },
+  {
+    "name": "VWO Guardrail Decision Ledger",
+    "slug": "vwo-guardrail-decision-ledger",
+    "url": "https://github.com/mizcausevic-dev/vwo-guardrail-decision-ledger",
+    "platform": "Decision Intelligence",
+    "vertical": "Revenue Operations",
+    "language": "JavaScript",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "VWO Guardrail Decision Ledger turns VWO signals into board-ready risk, savings, and investment decisions.",
+    "topics": [
+      "executive-intelligence",
+      "experiment-governance",
+      "kinetic-gain",
+      "risk-scoring",
+      "vwo"
+    ]
+  },
+  {
+    "name": "Tableau Certified Source Ledger",
+    "slug": "tableau-certified-source-ledger",
+    "url": "https://github.com/mizcausevic-dev/tableau-certified-source-ledger",
+    "platform": "Decision Intelligence",
+    "vertical": "Data Engineering",
+    "language": "JavaScript",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "Tableau Certified Source Ledger turns Tableau signals into board-ready risk, savings, and investment decisions.",
+    "topics": [
+      "analytics-governance",
+      "executive-intelligence",
+      "kinetic-gain",
+      "risk-scoring",
+      "tableau"
+    ]
+  },
+  {
+    "name": "Power BI Executive Trust Monitor",
+    "slug": "powerbi-executive-trust-monitor",
+    "url": "https://github.com/mizcausevic-dev/powerbi-executive-trust-monitor",
+    "platform": "Decision Intelligence",
+    "vertical": "Data Engineering",
+    "language": "JavaScript",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "Power BI Executive Trust Monitor turns Power BI signals into board-ready risk, savings, and investment decisions.",
+    "topics": [
+      "executive-intelligence",
+      "kinetic-gain",
+      "power-bi",
+      "risk-scoring",
+      "bi-trust-and-reporting"
+    ]
+  },
+  {
+    "name": "Okta App Sprawl Retirement Board",
+    "slug": "okta-app-sprawl-retirement-board",
+    "url": "https://github.com/mizcausevic-dev/okta-app-sprawl-retirement-board",
+    "platform": "Decision Intelligence",
+    "vertical": "IAM / Security",
+    "language": "JavaScript",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "Okta App Sprawl Retirement Board turns Okta signals into board-ready risk, savings, and investment decisions.",
+    "topics": [
+      "executive-intelligence",
+      "kinetic-gain",
+      "okta",
+      "risk-scoring",
+      "identity-cost-and-risk"
+    ]
+  },
+  {
+    "name": "Genesys Queue Leakage Index",
+    "slug": "genesys-queue-leakage-index",
+    "url": "https://github.com/mizcausevic-dev/genesys-queue-leakage-index",
+    "platform": "Decision Intelligence",
+    "vertical": "Revenue Operations",
+    "language": "JavaScript",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "Genesys Queue Leakage Index turns Genesys signals into board-ready risk, savings, and investment decisions.",
+    "topics": [
+      "cx-operations",
+      "executive-intelligence",
+      "genesys",
+      "kinetic-gain",
+      "risk-scoring"
+    ]
+  },
+  {
+    "name": "Snowflake Sharing Contract Auditor",
+    "slug": "snowflake-sharing-contract-auditor",
+    "url": "https://github.com/mizcausevic-dev/snowflake-sharing-contract-auditor",
+    "platform": "Decision Intelligence",
+    "vertical": "Data Engineering",
+    "language": "JavaScript",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "Snowflake Sharing Contract Auditor turns Snowflake signals into board-ready risk, savings, and investment decisions.",
+    "topics": [
+      "executive-intelligence",
+      "kinetic-gain",
+      "risk-scoring",
+      "snowflake",
+      "data-sharing-governance"
+    ]
+  },
+  {
+    "name": "IBM Watsonx Model Risk Register",
+    "slug": "ibm-watsonx-model-risk-register",
+    "url": "https://github.com/mizcausevic-dev/ibm-watsonx-model-risk-register",
+    "platform": "Decision Intelligence",
+    "vertical": "Compliance / Governance",
+    "language": "JavaScript",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "IBM watsonx Model Risk Register turns IBM watsonx signals into board-ready risk, savings, and investment decisions.",
+    "topics": [
+      "ai-governance",
+      "executive-intelligence",
+      "ibm-watsonx",
+      "kinetic-gain",
+      "risk-scoring"
+    ]
+  },
+  {
+    "name": "Klaviyo Deliverability Risk Router",
+    "slug": "klaviyo-deliverability-risk-router",
+    "url": "https://github.com/mizcausevic-dev/klaviyo-deliverability-risk-router",
+    "platform": "Decision Intelligence",
+    "vertical": "Revenue Operations",
+    "language": "JavaScript",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "Klaviyo Deliverability Risk Router turns Klaviyo signals into board-ready risk, savings, and investment decisions.",
+    "topics": [
+      "executive-intelligence",
+      "kinetic-gain",
+      "klaviyo",
+      "risk-scoring",
+      "lifecycle-revenue-governance"
+    ]
+  },
+  {
+    "name": "Camunda Process ROI Brief",
+    "slug": "camunda-process-roi-brief",
+    "url": "https://github.com/mizcausevic-dev/camunda-process-roi-brief",
+    "platform": "Decision Intelligence",
+    "vertical": "Platform Engineering",
+    "language": "JavaScript",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "Camunda Process ROI Brief turns Camunda signals into board-ready risk, savings, and investment decisions.",
+    "topics": [
+      "camunda",
+      "executive-intelligence",
+      "kinetic-gain",
+      "risk-scoring",
+      "workflow-automation-roi"
+    ]
+  },
+  {
+    "name": "CyberArk Safe Ownership Gap Mapper",
+    "slug": "cyberark-safe-ownership-gap-mapper",
+    "url": "https://github.com/mizcausevic-dev/cyberark-safe-ownership-gap-mapper",
+    "platform": "Decision Intelligence",
+    "vertical": "Compliance / Governance",
+    "language": "JavaScript",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "CyberArk Safe Ownership Gap Mapper turns CyberArk signals into board-ready risk, savings, and investment decisions.",
+    "topics": [
+      "cyberark",
+      "executive-intelligence",
+      "kinetic-gain",
+      "risk-scoring",
+      "privileged-access-governance"
+    ]
+  },
+  {
+    "name": "GCP Service Exception Posture",
+    "slug": "gcp-service-exception-posture",
+    "url": "https://github.com/mizcausevic-dev/gcp-service-exception-posture",
+    "platform": "Decision Intelligence",
+    "vertical": "Compliance / Governance",
+    "language": "JavaScript",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "GCP Service Exception Posture turns GCP signals into board-ready risk, savings, and investment decisions.",
+    "topics": [
+      "cloud-governance",
+      "executive-intelligence",
+      "gcp",
+      "kinetic-gain",
+      "risk-scoring"
+    ]
+  },
+  {
+    "name": "Incident Handoff Runbook Kit",
+    "slug": "incident-handoff-runbook-kit",
+    "url": "https://runbook.kineticgain.com/",
+    "platform": "Platform Reliability Stack",
+    "vertical": "Platform Engineering",
+    "language": "Shell / Bash",
+    "freshness": "7d",
+    "subdomain": "runbook.kineticgain.com",
+    "description": "Bash-native incident turnover operator surface for owner gaps, SLA drift, and evidence-complete handoffs.",
+    "topics": [
+      "handoff",
+      "incident-management",
+      "kinetic-gain",
+      "platform-engineering",
+      "runbooks",
+      "shell"
+    ]
+  },
+  {
+    "name": "Backup Restore Drill Runner",
+    "slug": "backup-restore-drill-runner",
+    "url": "https://backup.kineticgain.com/",
+    "platform": "Platform Reliability Stack",
+    "vertical": "Platform Engineering",
+    "language": "Shell / Bash",
+    "freshness": "7d",
+    "subdomain": "backup.kineticgain.com",
+    "description": "Bash-native operator surface for backup drills, restore timing, and recovery evidence posture.",
+    "topics": [
+      "backup",
+      "bash",
+      "disaster-recovery",
+      "kinetic-gain",
+      "operator-surface"
+    ]
+  },
+  {
+    "name": "Release Readiness Shell Kit",
+    "slug": "release-readiness-shell-kit",
+    "url": "https://release.kineticgain.com/",
+    "platform": "Platform Reliability Stack",
+    "vertical": "Platform Engineering",
+    "language": "Shell / Bash",
+    "freshness": "7d",
+    "subdomain": "release.kineticgain.com",
+    "description": "Bash-native platform release operator surface for launch blockers, rollback posture, and freeze windows.",
+    "topics": [
+      "change-management",
+      "kinetic-gain",
+      "platform-engineering",
+      "release-engineering",
+      "rollback",
+      "runbooks"
+    ]
+  },
+  {
+    "name": "Secret Rotation Scheduler",
+    "slug": "secret-rotation-scheduler",
+    "url": "https://github.com/mizcausevic-dev/secret-rotation-scheduler",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "IAM / Security",
+    "language": "Python",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "Ops-heavy automation for secret rotation windows, owner prompts, and stale-secret detection across enterprise credential stores. Practical SRE tooling for credential hygiene.",
+    "topics": [
+      "python",
+      "backend",
+      "credential-rotation",
+      "ops-automation",
+      "platform-engineering",
+      "secret-management"
+    ]
+  },
+  {
+    "name": "Embedding Drift Graph",
+    "slug": "embedding-drift-graph",
+    "url": "https://github.com/mizcausevic-dev/embedding-drift-graph",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "Python",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "Track how entity embeddings drift across encoder model versions. SQLite store + Strawberry GraphQL API. Cosine drift events computed automatically on every record. Reference impl for RAG/eval pipelines re-encoding their corpus.",
+    "topics": [
+      "ai-governance",
+      "drift-detection",
+      "embeddings",
+      "graphql",
+      "llm",
+      "numpy"
+    ]
+  },
+  {
+    "name": "AEO SDK Python",
+    "slug": "aeo-sdk-python",
+    "url": "https://github.com/mizcausevic-dev/aeo-sdk-python",
+    "platform": "AEO Reference Stack",
+    "vertical": "Compliance / Governance",
+    "language": "Python",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "Python SDK for the AEO Protocol v0.1. Parse, build, validate, and fetch AEO declaration documents. Pydantic v2 + httpx. Loads canonical examples from aeo-protocol-spec.",
+    "topics": [
+      "aeo",
+      "ai-governance",
+      "answer-engine-optimization",
+      "httpx",
+      "kinetic-gain-protocol-suite",
+      "protocol-implementation"
+    ]
+  },
+  {
+    "name": "Error Budget Allocator",
+    "slug": "error-budget-allocator",
+    "url": "https://github.com/mizcausevic-dev/error-budget-allocator",
+    "platform": "Agent Operations Suite",
+    "vertical": "Platform Engineering",
+    "language": "Python",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "Python service for allocating error-budget burn across services, dependencies, deploy windows, and operational ownership lanes.",
+    "topics": [
+      "backend",
+      "error-budget",
+      "fastapi",
+      "observability",
+      "platform-reliability",
+      "portfolio"
+    ]
+  },
+  {
+    "name": "CyberArk Access Review Sync",
+    "slug": "cyberark-access-review-sync",
+    "url": "https://github.com/mizcausevic-dev/cyberark-access-review-sync",
+    "platform": "Decision Intelligence",
+    "vertical": "IAM / Security",
+    "language": "Python",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "Python integration for syncing CyberArk privileged-account metadata into access-review queues, stale-access findings, and approval-ready evidence payloads.",
+    "topics": [
+      "access-review",
+      "backend",
+      "cyberark",
+      "fastapi",
+      "governance",
+      "identity-governance"
+    ]
+  },
+  {
+    "name": "Sveska",
+    "slug": "sveska",
+    "url": "https://sveska.studio",
+    "platform": "Frontend Showcase",
+    "vertical": "Insurance / InsurTech",
+    "language": "TypeScript",
+    "freshness": "7d",
+    "subdomain": "sveska.studio",
+    "description": "Studio-grade, local-first notepad PWA. CodeMirror rich editor with inline screenshot paste, Markdown/checklist/canvas modes, slash commands, streaming AI, glossary engine, pricing scaffold. 281 tests, accessibility-audited. Live at sveska.studio",
+    "topics": [
+      "dexie",
+      "indexeddb",
+      "local-first",
+      "markdown",
+      "notepad",
+      "offline-first"
+    ]
+  },
+  {
+    "name": "Treasury Liquidity Signal Lab",
+    "slug": "treasury-liquidity-signal-lab",
+    "url": "https://treasury.kineticgain.com/",
+    "platform": "Decision Intelligence",
+    "vertical": "FinTech",
+    "language": "Julia",
+    "freshness": "7d",
+    "subdomain": "treasury.kineticgain.com",
+    "description": "Julia operator surface for treasury liquidity, settlement buffers, funding pressure, and close-safe finance posture.",
+    "topics": [
+      "cash-management",
+      "finance-operations",
+      "fintech",
+      "julia",
+      "liquidity-management",
+      "operator-surface"
+    ]
+  },
+  {
+    "name": "Yield Forecast Studio",
+    "slug": "yield-forecast-studio",
+    "url": "https://yield.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "Revenue Operations",
+    "language": "Julia",
+    "freshness": "7d",
+    "subdomain": "yield.kineticgain.com",
+    "description": "Julia operator surface for publishing and commerce yield forecasting, inventory planning, and shortfall posture.",
+    "topics": [
+      "ecommerce",
+      "forecasting",
+      "julia",
+      "kinetic-gain",
+      "publishing",
+      "revenue-operations"
+    ]
+  },
+  {
+    "name": "CyberArk Connector Observability Exporter",
+    "slug": "cyberark-connector-observability-exporter",
+    "url": "https://github.com/mizcausevic-dev/cyberark-connector-observability-exporter",
+    "platform": "Agent Operations Suite",
+    "vertical": "HealthTech",
+    "language": "Rust",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "Rust exporter for CyberArk connector health, pool status, auth failures, latency, and Prometheus/OpenTelemetry observability pipelines.",
+    "topics": [
+      "axum",
+      "backend",
+      "cyberark",
+      "observability",
+      "opentelemetry",
+      "platform-reliability"
+    ]
+  },
+  {
+    "name": "Capacity Optimizer Jl",
+    "slug": "capacity-optimizer-jl",
+    "url": "https://capacity.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "AI Platform",
+    "language": "Julia",
+    "freshness": "7d",
+    "subdomain": "capacity.kineticgain.com",
+    "description": "Julia optimization surface for constrained capacity planning, lane allocation, and recovery posture.",
+    "topics": [
+      "agpl",
+      "capacity-planning",
+      "julia",
+      "kinetic-gain",
+      "operator-dashboard",
+      "optimization"
+    ]
+  },
+  {
+    "name": "Flutter Operator Console",
+    "slug": "flutter-operator-console",
+    "url": "https://flutter.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "HealthTech",
+    "language": "Dart",
+    "freshness": "7d",
+    "subdomain": "flutter.kineticgain.com",
+    "description": "Flutter web operator shell for queue health, offline packets, handoff proof, and mobile-safe Kinetic Gain workflows.",
+    "topics": [
+      "agpl",
+      "dart",
+      "flutter",
+      "kinetic-gain",
+      "mobile-workflows",
+      "operator-console"
+    ]
+  },
+  {
+    "name": "Dependency Drift Watch",
+    "slug": "dependency-drift-watch",
+    "url": "https://github.com/mizcausevic-dev/dependency-drift-watch",
+    "platform": "Platform Reliability Stack",
+    "vertical": "PropTech / Real Estate",
+    "language": "Rust",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "Rust Axum control plane for dependency drift, release lag, stale lockfiles, CVE pressure, and owner-lane review.",
+    "topics": [
+      "axum",
+      "backend",
+      "dependency-management",
+      "governance",
+      "platform-reliability",
+      "portfolio"
+    ]
+  },
+  {
+    "name": "Entitlement Request Portal API",
+    "slug": "entitlement-request-portal-api",
+    "url": "https://github.com/mizcausevic-dev/entitlement-request-portal-api",
+    "platform": "Kinetic Gain Implementation Stack",
+    "vertical": "IAM / Security",
+    "language": "PHP",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "PHP API for entitlement requests, approval routing, access review visibility, and audit-friendly identity governance workflows.",
+    "topics": [
+      "access-review",
+      "api",
+      "audit-trail",
+      "backend",
+      "entitlements",
+      "governance"
+    ]
+  },
+  {
+    "name": "Servicenow CyberArk Evidence Pipeline",
+    "slug": "servicenow-cyberark-evidence-pipeline",
+    "url": "https://github.com/mizcausevic-dev/servicenow-cyberark-evidence-pipeline",
+    "platform": "Decision Intelligence",
+    "vertical": "IAM / Security",
+    "language": "Python",
+    "freshness": "7d",
+    "subdomain": "github.com",
+    "description": "FastAPI pipeline for packaging ServiceNow and CyberArk access-change evidence into audit-ready privileged-review artifacts.",
+    "topics": [
+      "audit",
+      "backend",
+      "cyberark",
+      "evidence-pipeline",
+      "fastapi",
+      "identity-governance"
+    ]
+  },
+  {
     "name": "Partner Lead Distribution Engine",
     "slug": "partner-lead-distribution-engine",
     "url": "https://mizcausevic-dev.github.io/partner-lead-distribution-engine/",
     "platform": "Frontend Showcase",
     "vertical": "Revenue Operations",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "mizcausevic-dev.github.io",
     "description": "Kinetic Gain partner lead distribution engine for channel routing, capacity posture, SLA pressure, and attribution-aware revenue operations.",
     "topics": [
@@ -602,7 +1152,7 @@
     "platform": "Agent Operations Suite",
     "vertical": "PropTech / Real Estate",
     "language": "HTML",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "mizcausevic-dev.github.io",
     "description": "Kinetic Gain lead-routing command center for brokerage assignment logic, agent capacity, backup ownership, and speed-to-lead posture.",
     "topics": [
@@ -621,7 +1171,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Revenue Operations",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "revops.kineticgain.com",
     "description": "Kinetic Gain RevOps control plane for lead routing, CRM queue integrity, speed-to-lead posture, and revenue-system bottlenecks.",
     "topics": [
@@ -640,7 +1190,7 @@
     "platform": "Agent Operations Suite",
     "vertical": "Compliance / Governance",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "deflect.kineticgain.com",
     "description": "Kinetic Gain support-deflection surface for retrieval-grounded answers, escalation boundaries, knowledge freshness, and revenue-safe self-service.",
     "topics": [
@@ -659,7 +1209,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Platform Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "promptops.kineticgain.com",
     "description": "Board-ready Kinetic Gain surface for reusable GTM prompt operations across SEO, CRO, outbound, ICP messaging, and attribution workflows.",
     "topics": [
@@ -672,25 +1222,13 @@
     ]
   },
   {
-    "name": "Kinetic Gain Suite Landing",
-    "slug": "kinetic-gain-suite-landing",
-    "url": "https://suite.kineticgain.com/",
-    "platform": "Landing Sites",
-    "vertical": "Compliance / Governance",
-    "language": "HTML",
-    "freshness": "24h",
-    "subdomain": "suite.kineticgain.com",
-    "description": "Canonical front-door landing for the Kinetic Gain Protocol Suite. 10 open governance specs across 2 regulated verticals. Deploys to suite.kineticgain.com.",
-    "topics": []
-  },
-  {
     "name": "Mizcausevic Dev",
     "slug": "mizcausevic-dev",
     "url": "https://mizcausevic.com/skills/",
     "platform": "Landing Sites",
     "vertical": "IAM / Security",
     "language": "Other",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "mizcausevic.com",
     "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
     "topics": [
@@ -705,7 +1243,7 @@
     "platform": "Landing Sites",
     "vertical": "Compliance / Governance",
     "language": "HTML",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "pulse.kineticgain.com",
     "description": "AI Procurement Pulse — a quarterly research publication measuring vendor AI governance disclosure. Issue #0 (methodology) live at pulse.kineticgain.com; Issue #1 with real crawl data ships Q3 2026.",
     "topics": [
@@ -724,7 +1262,7 @@
     "platform": "Frontend Showcase",
     "vertical": "AI Platform",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "leads.kineticgain.com",
     "description": "Board-ready Kinetic Gain surface for scoring inbound leads using fit, behavior, attribution, and pipeline-priority signals.",
     "topics": [
@@ -743,7 +1281,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Compliance / Governance",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "brand.kineticgain.com",
     "description": "Board-ready Kinetic Gain surface for enforcing brand tone, factual posture, PII stripping, and approval readiness across AI-generated marketing content.",
     "topics": [
@@ -762,7 +1300,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Platform Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "iac.kineticgain.com",
     "description": "Board-ready Kinetic Gain surface for scalable SaaS marketing infrastructure, promotion flow, edge posture, and environment readiness.",
     "topics": [
@@ -781,7 +1319,7 @@
     "platform": "Frontend Showcase",
     "vertical": "PropTech / Real Estate",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "content.kineticgain.com",
     "description": "Board-ready Kinetic Gain surface for release-gating CMS and markdown content before broken links, metadata drift, or redirect gaps hit production.",
     "topics": [
@@ -800,7 +1338,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Revenue Operations",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "redirects.kineticgain.com",
     "description": "TypeScript control plane for large redirect maps, edge rewrites, campaign continuity, and migration-safe URL behavior.",
     "topics": [
@@ -819,7 +1357,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Platform Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "headless.kineticgain.com",
     "description": "Decoupled WordPress + Vue starter with WPGraphQL contracts, preview-safe rendering, and SEO-conscious delivery.",
     "topics": [
@@ -838,7 +1376,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Biotech / Diagnostics",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "React + TypeScript control room for third-party risk reviews, policy exceptions, remediation sequencing, and renewal-pressure visibility.",
     "topics": [
@@ -1049,25 +1587,6 @@
       "express",
       "gtm",
       "revops"
-    ]
-  },
-  {
-    "name": "Lease Obligation Risk Board",
-    "slug": "lease-obligation-risk-board",
-    "url": "https://lease.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "PropTech / Real Estate",
-    "language": "TypeScript",
-    "freshness": "7d",
-    "subdomain": "lease.kineticgain.com",
-    "description": "Operator surface for lease obligations, renewal blockers, landlord packet readiness, and property-safe review posture.",
-    "topics": [
-      "embedded-analytics",
-      "operator-surface",
-      "platform-engineering",
-      "proptech",
-      "real-estate",
-      "renewal-ops"
     ]
   },
   {
@@ -2528,25 +3047,6 @@
     ]
   },
   {
-    "name": "AEO Visualizer",
-    "slug": "aeo-visualizer",
-    "url": "https://mizcausevic-dev.github.io/aeo-visualizer/",
-    "platform": "AEO Reference Stack",
-    "vertical": "Insurance / InsurTech",
-    "language": "TypeScript",
-    "freshness": "7d",
-    "subdomain": "mizcausevic-dev.github.io",
-    "description": "Interactive web visualizer for AEO Protocol declarations. Paste any /.well-known/aeo.json and see entity, authority, claims, and citation preferences rendered as a clean card layout. React 19 + Vite + Tailwind. Live on GitHub Pages.",
-    "topics": [
-      "aeo",
-      "aeo-protocol",
-      "github-pages",
-      "kinetic-gain-protocol-suite",
-      "react",
-      "tailwind"
-    ]
-  },
-  {
     "name": "GCP Vpc Service Controls Perimeter",
     "slug": "gcp-vpc-service-controls-perimeter",
     "url": "https://vpcsc.kineticgain.com",
@@ -3134,25 +3634,6 @@
     ]
   },
   {
-    "name": "GCP Billing Anomaly Router",
-    "slug": "gcp-billing-anomaly-router",
-    "url": "https://gcp.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "Platform Engineering",
-    "language": "TypeScript",
-    "freshness": "7d",
-    "subdomain": "gcp.kineticgain.com",
-    "description": "Operator surface for GCP billing anomalies, FinOps routing posture, budget breaches, export gaps, and remediation sequencing.",
-    "topics": [
-      "anomaly-detection",
-      "billing",
-      "cloud-cost",
-      "finops",
-      "gcp",
-      "typescript"
-    ]
-  },
-  {
     "name": "Vendor Replacement Intelligence",
     "slug": "vendor-replacement-intelligence",
     "url": "https://replace.kineticgain.com/",
@@ -3245,25 +3726,6 @@
       "growth-engineering",
       "regtech",
       "evidence-lineage"
-    ]
-  },
-  {
-    "name": "Intune Device Compliance Ops",
-    "slug": "intune-device-compliance-ops",
-    "url": "https://intune.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "IAM / Security",
-    "language": "TypeScript",
-    "freshness": "7d",
-    "subdomain": "intune.kineticgain.com",
-    "description": "Operator control plane for Microsoft Intune device compliance, stale sync risk, BYOD posture, and endpoint remediation readiness.",
-    "topics": [
-      "azure",
-      "byod",
-      "device-compliance",
-      "intune",
-      "mdm",
-      "microsoft-365"
     ]
   },
   {
@@ -7872,7 +8334,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HealthTech",
     "language": "JavaScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "FHIR-aware append-only ledger of which AI tool read which patient resource. Bridges HL7 FHIR AuditEvent to the Kinetic Gain Protocol Suite hash-chained audit-stream — one verifiable record of AI access across the EHR, the RAG index, and Decision-Card-governed surfaces.",
     "topics": [
@@ -7891,7 +8353,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "GovTech / Public Sector AI",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "GovTech AI Procurement Decision Card v0.3 vault contract profile. 15 government-data categories incl. classified + CUI clearance-gated + FOIA exemption tagging + LEP routing. REQUIRED ai_use_case_inventory_block (OMB M-24-10 Sec.3(a) encoded in Decision Card). 6 categories default NOT a model input.",
     "topics": [
@@ -7910,7 +8372,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "GovTech / Public Sector AI",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "GovTech AI Incident Card profile. 18 event types (most extensive of any vertical) + 4-tier severity + 10 regulator-referral pathways with evaluation-state tracking. Covers OMB M-24-10 + agency civil rights + GAO + OIG + Section 508 + ADA Title II + FedRAMP + congressional + Federal AI Use Case Inventory correction.",
     "topics": [
@@ -7929,7 +8391,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "GovTech / Public Sector AI",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "Profile of evidence-bundle-spec scoped to federal/state/local government AI bias coverage. OMB M-24-10 Sec.5(d) + Title VI + ADA Title II + Section 1557 + OFCCP-equivalent + EEOC four-fifths. GovTech-unique LEP dimension + accessibility-pathway-impairment + agency-civil-rights-finding statuses.",
     "topics": [
@@ -7948,7 +8410,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "GovTech / Public Sector AI",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "Profile of evidence-bundle-spec scoped to OMB M-24-10 (Mar 2024) readiness across 8 obligation families: ai-governance + Federal AI Use Case Inventory + rights-impacting minimum practices + safety-impacting minimum practices + OMB M-24-18 AI procurement + Section 508 + Privacy Act/FOIA + NIST AI RMF. GovTech scaffolding, not certification.",
     "topics": [
@@ -7967,7 +8429,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "FinTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "FinTech AI Procurement Decision Card v0.3 vault contract profile. 17 financial-data categories + 10-doctrine consent_basis + 10 protection levels + 8 vendor due-diligence artifacts. Section 1071 demographic + ECOA protected-class default NOT a model input. Section 1033 portability window in retention envelope.",
     "topics": [
@@ -7986,7 +8448,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "FinTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "FinTech AI Incident Card profile. 15 event types + 4-tier severity + 9 regulator-referral pathways with evaluation-state tracking. Covers CFPB + FCRA + UDAAP + OCC/FRB/FDIC MRA + Section 1071 + BSA/AML + FinCEN + state banking-regulator + class-action filings.",
     "topics": [
@@ -8005,7 +8467,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "FinTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "Profile of evidence-bundle-spec scoped to AI financial-services bias coverage. ECOA Reg B + CFPB Section 1071 + CFPB UDAAP + OCC/FRB/FDIC joint AI + four-fifths-rule + business-necessity-defended + redlining-pattern-flagged. FinTech scaffolding, not certification.",
     "topics": [
@@ -8024,7 +8486,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "FinTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "Profile of evidence-bundle-spec scoped to CFPB + OCC + FRB + FDIC readiness across 8 obligation families: model-risk-management + ECOA Reg B + FCRA Reg V + GLBA Safeguards + BSA/AML + Section 1071 + Section 1033 + CFPB UDAAP. FinTech scaffolding, not certification.",
     "topics": [
@@ -8043,7 +8505,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HR Tech / Employment AI",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "HR Tech AI Procurement Decision Card v0.3 vault-contract profile naming 19 candidate-data categories + 7-doctrine consent_basis + 9 protection levels + ADA accommodation pathway 5-flag block + 7 vendor due-diligence artifacts. 6 categories default NOT a model input (biometric, credit, social, protected-class, accommodation, ADA-medical).",
     "topics": [
@@ -8062,7 +8524,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HR Tech / Employment AI",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "HR Tech AI Incident Card profile. 13 event types + 4-tier severity + 7 regulator-referral pathways with evaluation-state tracking. Covers EEOC + ADA + NYC LL 144 audit-failure + IL 820 ILCS 42 + MD HB 1202 + CO SB 24-205 + OFCCP + class-action filings.",
     "topics": [
@@ -8081,7 +8543,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HR Tech / Employment AI",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "Profile of evidence-bundle-spec scoped to AI employment-tool bias coverage. NYC LL 144 annual-bias-audit + EEOC AI Guidance + UGESP four-fifths-rule + 2-SD test + Bostock + ADA accommodation-pathway-impairment. HR Tech scaffolding, not certification.",
     "topics": [
@@ -8100,7 +8562,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HR Tech / Employment AI",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "Profile of evidence-bundle-spec scoped to EEOC AI Guidance (May 2023) readiness across 6 obligation families: title-vii-disparate-impact + ada-accommodation + adea-age-fairness + gina-genetic-info-prohibition + eeoc-recordkeeping + ofccp-federal-contractor. HR Tech scaffolding, not certification.",
     "topics": [
@@ -8119,7 +8581,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Insurance / InsurTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "InsurTech AI Procurement Decision Card v0.3 vault-contract profile naming 15 insurance-data categories (ACORD + external consumer data + media + protected-class data) + 7-doctrine consent_basis + 9 protection levels + 5 vendor due-diligence artifacts. CO SB 21-169 protected-class default = NOT a model input.",
     "topics": [
@@ -8138,7 +8600,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Insurance / InsurTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "InsurTech AI Incident Card profile. 10 event types + 4-tier severity scale + 6 regulator-referral pathways with evaluation-state tracking. Covers CO SB 21-169, NAIC AI Model Bulletin governance gaps, NY DFS Circular Letter 7 ECDIS defects, FCRA dispute patterns, state DOI exam findings.",
     "topics": [
@@ -8157,7 +8619,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Insurance / InsurTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "Profile of evidence-bundle-spec scoped to AI insurance bias coverage. CO SB 21-169 + NAIC AI Model Bulletin Sec.3 + NY DFS CL 7 + CA DOI 2022-5 + EEOC four-fifths-rule + actuarial-soundness defense. Adds the insurance-unique actuarial-soundness-defended coverage status. InsurTech scaffolding, not certification.",
     "topics": [
@@ -8176,7 +8638,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "Insurance / InsurTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "Profile of evidence-bundle-spec scoped to NAIC AI Model Bulletin (Nov 2023) readiness across 6 obligation families: governance + risk-management + third-party-ai + testing-validation + consumer-protection + state-doi-examination-readiness. NY DFS CL 7 + CO 3 CCR 702-10 overlays. InsurTech scaffolding, not certification.",
     "topics": [
@@ -8195,7 +8657,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "PropTech / Real Estate",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "Profile of evidence-bundle-spec scoped to AI mortgage / appraisal / pricing tool bias coverage. ECOA Reg B + Fair Housing Act protected classes + mortgage dimensions (LTV/DTI bands, MSA, census tract, majority-minority-tract flag). EEOC four-fifths-rule canonical threshold. PropTech-readiness scaffolding, not certification.",
     "topics": [
@@ -8214,7 +8676,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "PropTech / Real Estate",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "Profile of evidence-bundle-spec scoped to RESPA + TILA-RESPA Integrated Disclosure (TRID) + Section 8 anti-kickback + escrow + ECOA Reg B + HMDA + Fair Housing + GLBA Safeguards + AI vendor procurement. 10 obligation families. PropTech-readiness scaffolding, not certification.",
     "topics": [
@@ -8233,7 +8695,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "PropTech / Real Estate",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "PropTech-specific profile of the AI Incident Card. Maps severity/type fields onto CFPB UDAAP, ECOA Reg B (12 CFR 1002), Fair Housing Act, RESPA Section 8, title-chain integrity (ALTA), state real-estate regulator notification + a 5-grade transaction-impact severity scale. PropTech-readiness scaffolding, not certification.",
     "topics": [
@@ -8252,7 +8714,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "PropTech / Real Estate",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "PropTech-specific profile of the AI Procurement Decision Card v0.3 vault contract. Names RESPA (12 CFR 1024), ECOA Reg B (12 CFR 1002), Fair Housing Act, HMDA, GLBA, MLS NAR + 2024 Settlement PII categories + 7-doctrine consent_basis_taxonomy. PropTech-readiness scaffolding, not certification.",
     "topics": [
@@ -8271,7 +8733,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "EdTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "Profile of evidence-bundle-spec scoped to EdTech AI bias/equity-coverage evidence. ESSA accountability subgroups (race per OMB SPD 15, EL, economically disadvantaged, IDEA/504, migrant, Title IX gender) + EdTech additional dimensions (foster, homeless, EL WIDA proficiency, primary home language). EdTech-readiness scaffolding, not certification.",
     "topics": [
@@ -8290,7 +8752,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "EdTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "Profile of evidence-bundle-spec scoped to FERPA's 8 obligation families: annual notification (§99.7), school-official exception (§99.31), directory info (§99.37), consent (§99.30), records of disclosure (§99.32), amendment (§99.21), breach response, vendor procurement controls. EdTech-readiness scaffolding, not certification.",
     "topics": [
@@ -8309,7 +8771,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "EdTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "EdTech-specific profile of the AI Incident Card. Maps severity/type fields onto FERPA (34 CFR Part 99), COPPA (16 CFR §312 2025), IDEA+Section 504, Title VI/IX/504 civil-rights, per-state breach-notification, and a 5-grade instructional-impact severity scale. EdTech-readiness scaffolding, not certification.",
     "topics": [
@@ -8328,7 +8790,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "EdTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "EdTech-specific profile of the AI Procurement Decision Card v0.3 vault contract. Names FERPA's 7 PII categories (34 CFR §99.3) + COPPA's 10 PI categories (16 CFR §312.2, 2025 refresh) as concrete data_vault_targets exemplars + per-category retention rules. Four-doctrine consent_basis_taxonomy. EdTech-readiness scaffolding, not certification.",
     "topics": [
@@ -8347,7 +8809,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HealthTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "Profile of evidence-bundle-spec scoped to pre-market and post-deployment bias / equity-coverage evidence for clinical AI/ML devices. Names the OMB SPD 15 + Section 1557 protected-class taxonomy, Fitzpatrick + sub-cohort dimensions, performance + equity metrics, and decision-document conventions. Healthcare-readiness scaffolding, not certification.",
     "topics": [
@@ -8366,7 +8828,7 @@
     "platform": "Kinetic Gain Protocol Suite",
     "vertical": "HealthTech",
     "language": "Other",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "Healthcare-specific profile of the AI Incident Card. Maps severity/type fields onto FDA MedWatch (21 CFR §803), EU MDR vigilance (Articles 87–89), IMDRF AE Terminology, and a CTCAE-aligned 5-grade clinical severity scale. Healthcare-readiness scaffolding, not certification.",
     "topics": [

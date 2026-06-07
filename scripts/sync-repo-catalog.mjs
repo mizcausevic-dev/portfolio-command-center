@@ -76,6 +76,7 @@ const verticalOverrides = {
   "ukg-workforce-disclosure-mirror": "Revenue Operations",
   "firstup-employee-comm-audit": "Revenue Operations",
   "klaviyo-flow-consent-audit": "Revenue Operations",
+  "klaviyo-retention-signal-router": "Revenue Operations",
   "vwo-experiment-governance-mirror": "Revenue Operations",
   "martech-experiment-evidence-stack": "Revenue Operations",
   "gcp-billing-anomaly-router": "Platform Engineering",
