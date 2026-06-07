@@ -1,5 +1,43 @@
 [
   {
+    "name": "IBM Watsonx Model Risk Register",
+    "slug": "ibm-watsonx-model-risk-register",
+    "url": "https://mizcausevic-dev.github.io/ibm-watsonx-model-risk-register/",
+    "platform": "Decision Intelligence",
+    "vertical": "AI Platform",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "mizcausevic-dev.github.io",
+    "description": "IBM watsonx Model Risk Register turns IBM watsonx signals into board-ready risk, savings, and investment decisions.",
+    "topics": [
+      "ai-governance",
+      "executive-intelligence",
+      "ibm-watsonx",
+      "kinetic-gain",
+      "risk-scoring",
+      "ibm"
+    ]
+  },
+  {
+    "name": "Portfolio Command Center",
+    "slug": "portfolio-command-center",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
+    "topics": [
+      "command-center",
+      "executive-dashboard",
+      "frontend",
+      "growth-systems",
+      "platform-engineering",
+      "react"
+    ]
+  },
+  {
     "name": "Snowflake Query Credit Guardrail",
     "slug": "snowflake-query-credit-guardrail",
     "url": "https://mizcausevic-dev.github.io/snowflake-query-credit-guardrail/",
@@ -54,25 +92,6 @@
       "c2pa",
       "content-credentials",
       "educational"
-    ]
-  },
-  {
-    "name": "Portfolio Command Center",
-    "slug": "portfolio-command-center",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "IAM / Security",
-    "language": "TypeScript",
-    "freshness": "24h",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
-    "topics": [
-      "command-center",
-      "executive-dashboard",
-      "frontend",
-      "growth-systems",
-      "platform-engineering",
-      "react"
     ]
   },
   {
@@ -323,7 +342,7 @@
     "platform": "AEO Reference Stack",
     "vertical": "Insurance / InsurTech",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "mizcausevic-dev.github.io",
     "description": "Interactive web visualizer for AEO Protocol declarations. Paste any /.well-known/aeo.json and see entity, authority, claims, and citation preferences rendered as a clean card layout. React 19 + Vite + Tailwind. Live on GitHub Pages.",
     "topics": [
@@ -769,24 +788,6 @@
       "risk-scoring",
       "snowflake",
       "data-sharing-governance"
-    ]
-  },
-  {
-    "name": "IBM Watsonx Model Risk Register",
-    "slug": "ibm-watsonx-model-risk-register",
-    "url": "https://github.com/mizcausevic-dev/ibm-watsonx-model-risk-register",
-    "platform": "Decision Intelligence",
-    "vertical": "Compliance / Governance",
-    "language": "JavaScript",
-    "freshness": "7d",
-    "subdomain": "github.com",
-    "description": "IBM watsonx Model Risk Register turns IBM watsonx signals into board-ready risk, savings, and investment decisions.",
-    "topics": [
-      "ai-governance",
-      "executive-intelligence",
-      "ibm-watsonx",
-      "kinetic-gain",
-      "risk-scoring"
     ]
   },
   {

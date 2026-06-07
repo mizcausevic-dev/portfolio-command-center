@@ -117,3 +117,4 @@ jobs:
           bundle="$(curl -fsSL --retry 5 --retry-delay 3 "${LIVE_URL%/}${asset}")"
           printf '%s' "${bundle}" | grep -q 'gcp-bigquery-slot-commitment-advisor'
           printf '%s' "${bundle}" | grep -q 'snowflake-query-credit-guardrail'
+          printf '%s' "${bundle}" | grep -q 'ibm-watsonx-model-risk-register'
