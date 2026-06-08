@@ -1,5 +1,758 @@
 [
   {
+    "name": "Klaviyo Retention Signal Ledger",
+    "slug": "klaviyo-retention-signal-ledger",
+    "url": "https://github.com/mizcausevic-dev/klaviyo-retention-signal-ledger",
+    "platform": "Agent Operations Suite",
+    "vertical": "Revenue Operations",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Klaviyo platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "kinetic-gain",
+      "klaviyo",
+      "lifecycle-marketing",
+      "platform-signals",
+      "retention"
+    ]
+  },
+  {
+    "name": "Genesys Contact Center Risk Board",
+    "slug": "genesys-contact-center-risk-board",
+    "url": "https://github.com/mizcausevic-dev/genesys-contact-center-risk-board",
+    "platform": "Agent Operations Suite",
+    "vertical": "Revenue Operations",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Genesys platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "contact-center",
+      "cx",
+      "genesys",
+      "kinetic-gain",
+      "platform-signals"
+    ]
+  },
+  {
+    "name": "CyberArk Privilege Evidence Ledger",
+    "slug": "cyberark-privilege-evidence-ledger",
+    "url": "https://github.com/mizcausevic-dev/cyberark-privilege-evidence-ledger",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for CyberArk platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "cyberark",
+      "kinetic-gain",
+      "pam",
+      "platform-signals",
+      "privileged-access"
+    ]
+  },
+  {
+    "name": "GCP FinOps Remediation Console",
+    "slug": "gcp-finops-remediation-console",
+    "url": "https://github.com/mizcausevic-dev/gcp-finops-remediation-console",
+    "platform": "Agent Operations Suite",
+    "vertical": "Data Engineering",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for GCP platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "bigquery",
+      "company-signals",
+      "gcp",
+      "google-cloud",
+      "kinetic-gain",
+      "platform-signals"
+    ]
+  },
+  {
+    "name": "IBM Watsonx Governance Brief",
+    "slug": "ibm-watsonx-governance-brief",
+    "url": "https://github.com/mizcausevic-dev/ibm-watsonx-governance-brief",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for IBM platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "enterprise-ai",
+      "ibm",
+      "kinetic-gain",
+      "platform-signals",
+      "watsonx"
+    ]
+  },
+  {
+    "name": "Snowflake Data Cost Governance Board",
+    "slug": "snowflake-data-cost-governance-board",
+    "url": "https://github.com/mizcausevic-dev/snowflake-data-cost-governance-board",
+    "platform": "Agent Operations Suite",
+    "vertical": "Data Engineering",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Snowflake platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "data-platform",
+      "finops",
+      "kinetic-gain",
+      "platform-signals",
+      "snowflake"
+    ]
+  },
+  {
+    "name": "Camunda Process Control Ledger",
+    "slug": "camunda-process-control-ledger",
+    "url": "https://github.com/mizcausevic-dev/camunda-process-control-ledger",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Camunda platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "bpmn",
+      "camunda",
+      "company-signals",
+      "kinetic-gain",
+      "platform-signals",
+      "process-automation"
+    ]
+  },
+  {
+    "name": "Tableau Dashboard Governance Auditor",
+    "slug": "tableau-dashboard-governance-auditor",
+    "url": "https://github.com/mizcausevic-dev/tableau-dashboard-governance-auditor",
+    "platform": "Agent Operations Suite",
+    "vertical": "Data Engineering",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Tableau platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "business-intelligence",
+      "company-signals",
+      "dashboard-governance",
+      "kinetic-gain",
+      "platform-signals",
+      "tableau"
+    ]
+  },
+  {
+    "name": "Power BI Executive Metric Trust Pack",
+    "slug": "powerbi-executive-metric-trust-pack",
+    "url": "https://github.com/mizcausevic-dev/powerbi-executive-metric-trust-pack",
+    "platform": "Agent Operations Suite",
+    "vertical": "Data Engineering",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Power BI platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "business-intelligence",
+      "company-signals",
+      "kinetic-gain",
+      "platform-signals",
+      "power-bi",
+      "powerbi"
+    ]
+  },
+  {
+    "name": "Okta Access Drift Ledger",
+    "slug": "okta-access-drift-ledger",
+    "url": "https://github.com/mizcausevic-dev/okta-access-drift-ledger",
+    "platform": "Agent Operations Suite",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Okta platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "iam",
+      "kinetic-gain",
+      "okta",
+      "platform-signals",
+      "security"
+    ]
+  },
+  {
+    "name": "UKG Workforce Compliance Console",
+    "slug": "ukg-workforce-compliance-console",
+    "url": "https://github.com/mizcausevic-dev/ukg-workforce-compliance-console",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for UKG platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "compliance",
+      "kinetic-gain",
+      "platform-signals",
+      "ukg",
+      "workforce"
+    ]
+  },
+  {
+    "name": "VWO Experiment Risk Ledger",
+    "slug": "vwo-experiment-risk-ledger",
+    "url": "https://github.com/mizcausevic-dev/vwo-experiment-risk-ledger",
+    "platform": "Agent Operations Suite",
+    "vertical": "Revenue Operations",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for VWO platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "conversion",
+      "experimentation",
+      "kinetic-gain",
+      "platform-signals",
+      "vwo"
+    ]
+  },
+  {
+    "name": "Rippling Identity Hris Control Plane",
+    "slug": "rippling-identity-hris-control-plane",
+    "url": "https://github.com/mizcausevic-dev/rippling-identity-hris-control-plane",
+    "platform": "Agent Operations Suite",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Rippling platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "hris",
+      "identity",
+      "kinetic-gain",
+      "platform-signals",
+      "rippling"
+    ]
+  },
+  {
+    "name": "Workday Workforce Risk Ledger",
+    "slug": "workday-workforce-risk-ledger",
+    "url": "https://github.com/mizcausevic-dev/workday-workforce-risk-ledger",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Workday platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "hcm",
+      "kinetic-gain",
+      "platform-signals",
+      "workday",
+      "workforce"
+    ]
+  },
+  {
+    "name": "Zapier Automation Sprawl Auditor",
+    "slug": "zapier-automation-sprawl-auditor",
+    "url": "https://github.com/mizcausevic-dev/zapier-automation-sprawl-auditor",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Zapier platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "automation",
+      "company-signals",
+      "governance",
+      "kinetic-gain",
+      "platform-signals",
+      "zapier"
+    ]
+  },
+  {
+    "name": "Mulesoft Integration Risk Ledger",
+    "slug": "mulesoft-integration-risk-ledger",
+    "url": "https://github.com/mizcausevic-dev/mulesoft-integration-risk-ledger",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for MuleSoft platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "api-governance",
+      "company-signals",
+      "integration",
+      "kinetic-gain",
+      "mulesoft",
+      "platform-signals"
+    ]
+  },
+  {
+    "name": "Workato Automation Governance Map",
+    "slug": "workato-automation-governance-map",
+    "url": "https://github.com/mizcausevic-dev/workato-automation-governance-map",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Workato platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "automation",
+      "company-signals",
+      "integration",
+      "kinetic-gain",
+      "platform-signals",
+      "workato"
+    ]
+  },
+  {
+    "name": "Servicenow Change Risk Router",
+    "slug": "servicenow-change-risk-router",
+    "url": "https://github.com/mizcausevic-dev/servicenow-change-risk-router",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for ServiceNow platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "itsm",
+      "kinetic-gain",
+      "platform-signals",
+      "servicenow",
+      "workflow"
+    ]
+  },
+  {
+    "name": "Newrelic Service Health Map",
+    "slug": "newrelic-service-health-map",
+    "url": "https://github.com/mizcausevic-dev/newrelic-service-health-map",
+    "platform": "Agent Operations Suite",
+    "vertical": "HealthTech",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for New Relic platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "kinetic-gain",
+      "new-relic",
+      "newrelic",
+      "observability",
+      "platform-signals"
+    ]
+  },
+  {
+    "name": "Datadog Observability Incident Brief",
+    "slug": "datadog-observability-incident-brief",
+    "url": "https://github.com/mizcausevic-dev/datadog-observability-incident-brief",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Datadog platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "datadog",
+      "incidents",
+      "kinetic-gain",
+      "observability",
+      "platform-signals"
+    ]
+  },
+  {
+    "name": "Pulumi Cloud Change Ledger",
+    "slug": "pulumi-cloud-change-ledger",
+    "url": "https://github.com/mizcausevic-dev/pulumi-cloud-change-ledger",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Pulumi platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "cloud",
+      "company-signals",
+      "iac",
+      "kinetic-gain",
+      "platform-signals",
+      "pulumi"
+    ]
+  },
+  {
+    "name": "Terraform Iac Drift Register",
+    "slug": "terraform-iac-drift-register",
+    "url": "https://github.com/mizcausevic-dev/terraform-iac-drift-register",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Terraform platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "iac",
+      "kinetic-gain",
+      "platform-engineering",
+      "platform-signals",
+      "terraform"
+    ]
+  },
+  {
+    "name": "Gitlab Release Governance Console",
+    "slug": "gitlab-release-governance-console",
+    "url": "https://github.com/mizcausevic-dev/gitlab-release-governance-console",
+    "platform": "Agent Operations Suite",
+    "vertical": "PropTech / Real Estate",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for GitLab platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "delivery-governance",
+      "gitlab",
+      "kinetic-gain",
+      "platform-signals",
+      "release"
+    ]
+  },
+  {
+    "name": "GitHub Delivery Governance Board",
+    "slug": "github-delivery-governance-board",
+    "url": "https://github.com/mizcausevic-dev/github-delivery-governance-board",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for GitHub platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "delivery-governance",
+      "github",
+      "github-gitlab",
+      "kinetic-gain",
+      "platform-signals"
+    ]
+  },
+  {
+    "name": "Saviynt Access Certification Pack",
+    "slug": "saviynt-access-certification-pack",
+    "url": "https://github.com/mizcausevic-dev/saviynt-access-certification-pack",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Saviynt platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "access-certification",
+      "company-signals",
+      "iga",
+      "kinetic-gain",
+      "platform-signals",
+      "saviynt"
+    ]
+  },
+  {
+    "name": "Sailpoint Identity Governance Ledger",
+    "slug": "sailpoint-identity-governance-ledger",
+    "url": "https://github.com/mizcausevic-dev/sailpoint-identity-governance-ledger",
+    "platform": "Agent Operations Suite",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for SailPoint platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "identity-governance",
+      "iga",
+      "kinetic-gain",
+      "platform-signals",
+      "sailpoint"
+    ]
+  },
+  {
+    "name": "Wiz Exposure Remediation Board",
+    "slug": "wiz-exposure-remediation-board",
+    "url": "https://github.com/mizcausevic-dev/wiz-exposure-remediation-board",
+    "platform": "Agent Operations Suite",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Wiz platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "cloud-security",
+      "company-signals",
+      "kinetic-gain",
+      "platform-signals",
+      "remediation",
+      "wiz"
+    ]
+  },
+  {
+    "name": "Paloalto Cloud Policy Router",
+    "slug": "paloalto-cloud-policy-router",
+    "url": "https://github.com/mizcausevic-dev/paloalto-cloud-policy-router",
+    "platform": "Agent Operations Suite",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Palo Alto platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "cloud-security",
+      "company-signals",
+      "kinetic-gain",
+      "palo-alto",
+      "panw",
+      "platform-signals"
+    ]
+  },
+  {
+    "name": "Entra Access Evidence Ledger",
+    "slug": "entra-access-evidence-ledger",
+    "url": "https://github.com/mizcausevic-dev/entra-access-evidence-ledger",
+    "platform": "Agent Operations Suite",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Microsoft Entra ID platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "entra-id",
+      "iam",
+      "kinetic-gain",
+      "microsoft-entra",
+      "platform-signals"
+    ]
+  },
+  {
+    "name": "Sigma Bi Adoption Map",
+    "slug": "sigma-bi-adoption-map",
+    "url": "https://github.com/mizcausevic-dev/sigma-bi-adoption-map",
+    "platform": "Agent Operations Suite",
+    "vertical": "Data Engineering",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Sigma platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "analytics",
+      "business-intelligence",
+      "company-signals",
+      "kinetic-gain",
+      "platform-signals",
+      "sigma"
+    ]
+  },
+  {
+    "name": "Looker Semantic Trust Pack",
+    "slug": "looker-semantic-trust-pack",
+    "url": "https://github.com/mizcausevic-dev/looker-semantic-trust-pack",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Looker platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "business-intelligence",
+      "company-signals",
+      "kinetic-gain",
+      "looker",
+      "platform-signals",
+      "semantic-layer"
+    ]
+  },
+  {
+    "name": "Databricks Lakehouse Cost Ledger",
+    "slug": "databricks-lakehouse-cost-ledger",
+    "url": "https://github.com/mizcausevic-dev/databricks-lakehouse-cost-ledger",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Databricks platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "databricks",
+      "finops",
+      "kinetic-gain",
+      "lakehouse",
+      "platform-signals"
+    ]
+  },
+  {
+    "name": "dbt Model Governance Auditor",
+    "slug": "dbt-model-governance-auditor",
+    "url": "https://github.com/mizcausevic-dev/dbt-model-governance-auditor",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for dbt platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "data-engineering",
+      "dbt",
+      "governance",
+      "kinetic-gain",
+      "platform-signals"
+    ]
+  },
+  {
+    "name": "Churnzero Retention Risk Console",
+    "slug": "churnzero-retention-risk-console",
+    "url": "https://github.com/mizcausevic-dev/churnzero-retention-risk-console",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for ChurnZero platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "churnzero",
+      "company-signals",
+      "customer-success",
+      "kinetic-gain",
+      "platform-signals",
+      "retention"
+    ]
+  },
+  {
+    "name": "Gainsight Customer Health Signal Board",
+    "slug": "gainsight-customer-health-signal-board",
+    "url": "https://github.com/mizcausevic-dev/gainsight-customer-health-signal-board",
+    "platform": "Agent Operations Suite",
+    "vertical": "HealthTech",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Gainsight platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "customer-success",
+      "gainsight",
+      "kinetic-gain",
+      "platform-signals",
+      "retention"
+    ]
+  },
+  {
+    "name": "Hubspot Pipeline Hygiene Ledger",
+    "slug": "hubspot-pipeline-hygiene-ledger",
+    "url": "https://github.com/mizcausevic-dev/hubspot-pipeline-hygiene-ledger",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for HubSpot platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "automation",
+      "company-signals",
+      "crm",
+      "hubspot",
+      "kinetic-gain",
+      "platform-signals"
+    ]
+  },
+  {
+    "name": "Salesforce Revops Risk Board",
+    "slug": "salesforce-revops-risk-board",
+    "url": "https://github.com/mizcausevic-dev/salesforce-revops-risk-board",
+    "platform": "Agent Operations Suite",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Dedicated Kinetic Gain proof repo for Salesforce platform and company signal coverage. Synthetic board-ready evidence, CLI summary, static report, and CI gate.",
+    "topics": [
+      "company-signals",
+      "crm",
+      "governance",
+      "kinetic-gain",
+      "platform-signals",
+      "revops"
+    ]
+  },
+  {
+    "name": "Portfolio Command Center",
+    "slug": "portfolio-command-center",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
+    "topics": [
+      "command-center",
+      "executive-dashboard",
+      "frontend",
+      "growth-systems",
+      "platform-engineering",
+      "react"
+    ]
+  },
+  {
+    "name": "AI Evidence Format Landing",
+    "slug": "ai-evidence-format-landing",
+    "url": "https://evidence.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Compliance / Governance",
+    "language": "CSS",
+    "freshness": "24h",
+    "subdomain": "evidence.kineticgain.com",
+    "description": "Landing site for the AI Evidence Format spec. Live at evidence.kineticgain.com.",
+    "topics": []
+  },
+  {
+    "name": "AI Evidence Format Spec",
+    "slug": "ai-evidence-format-spec",
+    "url": "https://github.com/mizcausevic-dev/ai-evidence-format-spec",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Insurance / InsurTech",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "AI Evidence Format v0.1 draft. JSON document format for structured citations that travel with LLM-generated claims: source identity, span selector, retrieval confidence, freshness, content hash, declared synthesis role. Part of the Kinetic Gain Protocol Suite.",
+    "topics": [
+      "ai-citations",
+      "ai-governance",
+      "answer-engine",
+      "evidence",
+      "json-schema",
+      "kinetic-gain-protocol-suite"
+    ]
+  },
+  {
     "name": "Workforce Revenue Platform Risk Pack",
     "slug": "workforce-revenue-platform-risk-pack",
     "url": "https://github.com/mizcausevic-dev/workforce-revenue-platform-risk-pack",
@@ -461,37 +1214,6 @@
     ]
   },
   {
-    "name": "AI Evidence Format Landing",
-    "slug": "ai-evidence-format-landing",
-    "url": "https://evidence.kineticgain.com",
-    "platform": "Kinetic Gain Protocol Suite",
-    "vertical": "Compliance / Governance",
-    "language": "CSS",
-    "freshness": "24h",
-    "subdomain": "evidence.kineticgain.com",
-    "description": "Landing site for the AI Evidence Format spec. Live at evidence.kineticgain.com.",
-    "topics": []
-  },
-  {
-    "name": "Portfolio Command Center",
-    "slug": "portfolio-command-center",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "IAM / Security",
-    "language": "TypeScript",
-    "freshness": "24h",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
-    "topics": [
-      "command-center",
-      "executive-dashboard",
-      "frontend",
-      "growth-systems",
-      "platform-engineering",
-      "react"
-    ]
-  },
-  {
     "name": "Portfolio Constellation",
     "slug": "portfolio-constellation",
     "url": "https://portfolio.kineticgain.com/",
@@ -542,25 +1264,6 @@
     "topics": [
       "enterprise-software",
       "fullstack-development"
-    ]
-  },
-  {
-    "name": "AI Evidence Format Spec",
-    "slug": "ai-evidence-format-spec",
-    "url": "https://github.com/mizcausevic-dev/ai-evidence-format-spec",
-    "platform": "Kinetic Gain Protocol Suite",
-    "vertical": "Insurance / InsurTech",
-    "language": "Other",
-    "freshness": "24h",
-    "subdomain": "github.com",
-    "description": "AI Evidence Format v0.1 draft. JSON document format for structured citations that travel with LLM-generated claims: source identity, span selector, retrieval confidence, freshness, content hash, declared synthesis role. Part of the Kinetic Gain Protocol Suite.",
-    "topics": [
-      "ai-citations",
-      "ai-governance",
-      "answer-engine",
-      "evidence",
-      "json-schema",
-      "kinetic-gain-protocol-suite"
     ]
   },
   {
@@ -8624,7 +9327,7 @@
     "platform": "MCP Servers",
     "vertical": "IAM / Security",
     "language": "TypeScript",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "suite.kineticgain.com",
     "description": "Static security scanner for MCP server.json registry manifests — flags supply-chain, transport, credential, and data-egress risks before you install a server.",
     "topics": [
