@@ -95,6 +95,11 @@ function App() {
   const [freshness, setFreshness] = useState("any freshness");
   const [hoveredVertical, setHoveredVertical] = useState<string | null>(null);
   const [hoveredLanguage, setHoveredLanguage] = useState<string | null>(null);
+  const [showAllPlatforms, setShowAllPlatforms] = useState(false);
+  const [showAllLanguages, setShowAllLanguages] = useState(false);
+  const [showAllVerticals, setShowAllVerticals] = useState(false);
+  const [showAllSignals, setShowAllSignals] = useState(false);
+  const [showAllRepos, setShowAllRepos] = useState(false);
 
   const deferredQuery = useDeferredValue(query);
 
@@ -304,7 +309,7 @@ function App() {
             the architecture, not by repo count.
           </p>
         </div>
-        <div className="platform-grid">
+        <div className={`platform-grid ${showAllPlatforms ? "mobile-expanded" : ""}`}>
           {namedPlatforms.map((entry) => (
             <article key={entry.name} className={`platform-card tone-${entry.tone}`}>
               <div className="platform-card-head">
@@ -324,6 +329,9 @@ function App() {
             </article>
           ))}
         </div>
+        <button className="mobile-show-more" type="button" onClick={() => setShowAllPlatforms((current) => !current)}>
+          {showAllPlatforms ? "Show fewer platforms" : `Show all ${namedPlatforms.length} platforms`}
+        </button>
       </section>
 
       <section className="atlas-row">
@@ -336,7 +344,7 @@ function App() {
             <span className="atlas-badge">Repos by primary language</span>
           </div>
 
-          <div className="language-chip-grid">
+          <div className={`language-chip-grid ${showAllLanguages ? "mobile-expanded" : ""}`}>
             {languageAtlas.map((entry) => (
               <button
                 key={entry.language}
@@ -368,6 +376,9 @@ function App() {
               </button>
             ))}
           </div>
+          <button className="mobile-show-more" type="button" onClick={() => setShowAllLanguages((current) => !current)}>
+            {showAllLanguages ? "Show fewer languages" : `Show all ${languageAtlas.length} languages`}
+          </button>
         </article>
 
         <article className="atlas-panel">
@@ -384,7 +395,7 @@ function App() {
             </span>
           </div>
 
-          <div className="vertical-chip-grid">
+          <div className={`vertical-chip-grid ${showAllVerticals ? "mobile-expanded" : ""}`}>
             {industryAtlas.map((entry) => (
               <button
                 key={entry.vertical}
@@ -403,13 +414,16 @@ function App() {
               </button>
             ))}
           </div>
+          <button className="mobile-show-more" type="button" onClick={() => setShowAllVerticals((current) => !current)}>
+            {showAllVerticals ? "Show fewer verticals" : `Show all ${industryAtlas.length} verticals`}
+          </button>
 
           <div className="signal-block">
             <div className="signal-heading">
               <span>Platform and company signals</span>
               <strong>{platformCompanySignals.length}</strong>
             </div>
-            <div className="signal-chip-grid">
+            <div className={`signal-chip-grid ${showAllSignals ? "mobile-expanded" : ""}`}>
               {platformCompanySignals.map((entry) => (
                 <button
                   key={entry.tag}
@@ -428,6 +442,9 @@ function App() {
                 </button>
               ))}
             </div>
+            <button className="mobile-show-more" type="button" onClick={() => setShowAllSignals((current) => !current)}>
+              {showAllSignals ? "Show fewer signals" : `Show all ${platformCompanySignals.length} signals`}
+            </button>
           </div>
         </article>
       </section>
@@ -500,7 +517,7 @@ function App() {
           showing {filteredRepos.length} of {repoCatalog.length} repos
         </p>
 
-        <div className="repo-grid">
+        <div className={`repo-grid ${showAllRepos ? "mobile-expanded" : ""}`}>
           {filteredRepos.map((entry) => (
             <article
               key={entry.slug}
@@ -541,6 +558,9 @@ function App() {
             </article>
           ))}
         </div>
+        <button className="mobile-show-more repo-show-more" type="button" onClick={() => setShowAllRepos((current) => !current)}>
+          {showAllRepos ? "Show fewer repos" : `Show more repos (${filteredRepos.length})`}
+        </button>
       </section>
 
       <footer className="portfolio-footer">
