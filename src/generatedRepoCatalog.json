@@ -1,5 +1,569 @@
 [
   {
+    "name": "Workforce Revenue Platform Risk Pack",
+    "slug": "workforce-revenue-platform-risk-pack",
+    "url": "https://github.com/mizcausevic-dev/workforce-revenue-platform-risk-pack",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Signals: Salesforce, HubSpot, Gainsight, ChurnZero, dbt, Databricks, Looker, Sigma, Entra ID, Palo Alto, Wiz, SailPoint, Saviynt, GitHub-GitLab, Terraform, Pulumi, Datadog, New Relic, ServiceNow, Workato, MuleSoft, Zapier, Workday, Rippling.",
+    "topics": [
+      "churnzero",
+      "company-signals",
+      "databricks",
+      "datadog",
+      "dbt",
+      "entra-id"
+    ]
+  },
+  {
+    "name": "Integration Observability Governance Index",
+    "slug": "integration-observability-governance-index",
+    "url": "https://github.com/mizcausevic-dev/integration-observability-governance-index",
+    "platform": "Agent Operations Suite",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Signals: Salesforce, HubSpot, Gainsight, ChurnZero, dbt, Databricks, Looker, Sigma, Entra ID, Palo Alto, Wiz, SailPoint, Saviynt, GitHub-GitLab, Terraform, Pulumi, Datadog, New Relic, ServiceNow, Workato, MuleSoft, Zapier, Workday, Rippling.",
+    "topics": [
+      "churnzero",
+      "company-signals",
+      "databricks",
+      "datadog",
+      "dbt",
+      "entra-id"
+    ]
+  },
+  {
+    "name": "Crm IAM Bi Consolidation Brief",
+    "slug": "crm-iam-bi-consolidation-brief",
+    "url": "https://github.com/mizcausevic-dev/crm-iam-bi-consolidation-brief",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Signals: Salesforce, HubSpot, Gainsight, ChurnZero, dbt, Databricks, Looker, Sigma, Entra ID, Palo Alto, Wiz, SailPoint, Saviynt, GitHub-GitLab, Terraform, Pulumi, Datadog, New Relic, ServiceNow, Workato, MuleSoft, Zapier, Workday, Rippling.",
+    "topics": [
+      "churnzero",
+      "company-signals",
+      "databricks",
+      "datadog",
+      "dbt",
+      "entra-id"
+    ]
+  },
+  {
+    "name": "Compliance Toolchain Evidence Router",
+    "slug": "compliance-toolchain-evidence-router",
+    "url": "https://github.com/mizcausevic-dev/compliance-toolchain-evidence-router",
+    "platform": "Decision Intelligence",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Signals: Salesforce, HubSpot, Gainsight, ChurnZero, dbt, Databricks, Looker, Sigma, Entra ID, Palo Alto, Wiz, SailPoint, Saviynt, GitHub-GitLab, Terraform, Pulumi, Datadog, New Relic, ServiceNow, Workato, MuleSoft, Zapier, Workday, Rippling.",
+    "topics": [
+      "churnzero",
+      "company-signals",
+      "databricks",
+      "datadog",
+      "dbt",
+      "entra-id"
+    ]
+  },
+  {
+    "name": "Enterprise AI Platform Spend Map",
+    "slug": "enterprise-ai-platform-spend-map",
+    "url": "https://github.com/mizcausevic-dev/enterprise-ai-platform-spend-map",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Signals: Salesforce, HubSpot, Gainsight, ChurnZero, dbt, Databricks, Looker, Sigma, Entra ID, Palo Alto, Wiz, SailPoint, Saviynt, GitHub-GitLab, Terraform, Pulumi, Datadog, New Relic, ServiceNow, Workato, MuleSoft, Zapier, Workday, Rippling.",
+    "topics": [
+      "churnzero",
+      "company-signals",
+      "databricks",
+      "datadog",
+      "dbt",
+      "entra-id"
+    ]
+  },
+  {
+    "name": "Pe Portfolio Vendor Overlap Ledger",
+    "slug": "pe-portfolio-vendor-overlap-ledger",
+    "url": "https://github.com/mizcausevic-dev/pe-portfolio-vendor-overlap-ledger",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Signals: Salesforce, HubSpot, Gainsight, ChurnZero, dbt, Databricks, Looker, Sigma, Entra ID, Palo Alto, Wiz, SailPoint, Saviynt, GitHub-GitLab, Terraform, Pulumi, Datadog, New Relic, ServiceNow, Workato, MuleSoft, Zapier, Workday, Rippling.",
+    "topics": [
+      "churnzero",
+      "company-signals",
+      "databricks",
+      "datadog",
+      "dbt",
+      "entra-id"
+    ]
+  },
+  {
+    "name": "Revops Security Data Stack Scorecard",
+    "slug": "revops-security-data-stack-scorecard",
+    "url": "https://github.com/mizcausevic-dev/revops-security-data-stack-scorecard",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Signals: Salesforce, HubSpot, Gainsight, ChurnZero, dbt, Databricks, Looker, Sigma, Entra ID, Palo Alto, Wiz, SailPoint, Saviynt, GitHub-GitLab, Terraform, Pulumi, Datadog, New Relic, ServiceNow, Workato, MuleSoft, Zapier, Workday, Rippling.",
+    "topics": [
+      "churnzero",
+      "company-signals",
+      "databricks",
+      "datadog",
+      "dbt",
+      "entra-id"
+    ]
+  },
+  {
+    "name": "Board Platform Diligence Signal Pack",
+    "slug": "board-platform-diligence-signal-pack",
+    "url": "https://github.com/mizcausevic-dev/board-platform-diligence-signal-pack",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Signals: Salesforce, HubSpot, Gainsight, ChurnZero, dbt, Databricks, Looker, Sigma, Entra ID, Palo Alto, Wiz, SailPoint, Saviynt, GitHub-GitLab, Terraform, Pulumi, Datadog, New Relic, ServiceNow, Workato, MuleSoft, Zapier, Workday, Rippling.",
+    "topics": [
+      "churnzero",
+      "company-signals",
+      "databricks",
+      "datadog",
+      "dbt",
+      "entra-id"
+    ]
+  },
+  {
+    "name": "Enterprise Saas Stack Signal Benchmark",
+    "slug": "enterprise-saas-stack-signal-benchmark",
+    "url": "https://github.com/mizcausevic-dev/enterprise-saas-stack-signal-benchmark",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Signals: Salesforce, HubSpot, Gainsight, ChurnZero, dbt, Databricks, Looker, Sigma, Entra ID, Palo Alto, Wiz, SailPoint, Saviynt, GitHub-GitLab, Terraform, Pulumi, Datadog, New Relic, ServiceNow, Workato, MuleSoft, Zapier, Workday, Rippling.",
+    "topics": [
+      "churnzero",
+      "databricks",
+      "datadog",
+      "dbt",
+      "entra-id",
+      "gainsight"
+    ]
+  },
+  {
+    "name": "AI Evidence Webflow",
+    "slug": "ai-evidence-webflow",
+    "url": "https://github.com/mizcausevic-dev/ai-evidence-webflow",
+    "platform": "Decision Intelligence",
+    "vertical": "Insurance / InsurTech",
+    "language": "JavaScript",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Drop-in client-side renderer for per-claim AI provenance on Webflow — the Webflow reference implementation of the AI Evidence Format (evidence card + schema.org JSON-LD + verifiable evidence object, bindable to CMS fields).",
+    "topics": [
+      "ai",
+      "ai-disclosure",
+      "ai-evidence-format",
+      "ai-provenance",
+      "c2pa",
+      "content-credentials"
+    ]
+  },
+  {
+    "name": "Databricks dbt Cost Quality Scorecard",
+    "slug": "databricks-dbt-cost-quality-scorecard",
+    "url": "https://github.com/mizcausevic-dev/databricks-dbt-cost-quality-scorecard",
+    "platform": "Frontend Showcase",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Kinetic Gain proof repo for Databricks and dbt cost-quality scoring.",
+    "topics": [
+      "databricks",
+      "dbt",
+      "cost-governance",
+      "data-engineering",
+      "kinetic-gain"
+    ]
+  },
+  {
+    "name": "Salesforce Servicenow Deal To Support Map",
+    "slug": "salesforce-servicenow-deal-to-support-map",
+    "url": "https://github.com/mizcausevic-dev/salesforce-servicenow-deal-to-support-map",
+    "platform": "Frontend Showcase",
+    "vertical": "Revenue Operations",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Kinetic Gain proof repo for Salesforce and ServiceNow deal-to-support handoff proof.",
+    "topics": [
+      "salesforce",
+      "servicenow",
+      "deal-to-support",
+      "revenue-operations",
+      "kinetic-gain"
+    ]
+  },
+  {
+    "name": "Zapier Hubspot Automation Hygiene Check",
+    "slug": "zapier-hubspot-automation-hygiene-check",
+    "url": "https://github.com/mizcausevic-dev/zapier-hubspot-automation-hygiene-check",
+    "platform": "Frontend Showcase",
+    "vertical": "Revenue Operations",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Kinetic Gain proof repo for Zapier and HubSpot automation hygiene.",
+    "topics": [
+      "zapier",
+      "hubspot",
+      "automation",
+      "revenue-operations",
+      "kinetic-gain"
+    ]
+  },
+  {
+    "name": "Gainsight Churnzero Retention Risk Ledger",
+    "slug": "gainsight-churnzero-retention-risk-ledger",
+    "url": "https://github.com/mizcausevic-dev/gainsight-churnzero-retention-risk-ledger",
+    "platform": "Decision Intelligence",
+    "vertical": "Revenue Operations",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Kinetic Gain proof repo for Gainsight and ChurnZero retention risk evidence.",
+    "topics": [
+      "gainsight",
+      "churnzero",
+      "customer-success",
+      "revenue-operations",
+      "kinetic-gain"
+    ]
+  },
+  {
+    "name": "Mulesoft Workato Integration Control Plane",
+    "slug": "mulesoft-workato-integration-control-plane",
+    "url": "https://github.com/mizcausevic-dev/mulesoft-workato-integration-control-plane",
+    "platform": "Frontend Showcase",
+    "vertical": "Platform Engineering",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Kinetic Gain proof repo for MuleSoft and Workato integration control.",
+    "topics": [
+      "mulesoft",
+      "workato",
+      "integration",
+      "platform-engineering",
+      "kinetic-gain"
+    ]
+  },
+  {
+    "name": "Looker Sigma Tableau Bi Trust Pack",
+    "slug": "looker-sigma-tableau-bi-trust-pack",
+    "url": "https://github.com/mizcausevic-dev/looker-sigma-tableau-bi-trust-pack",
+    "platform": "Frontend Showcase",
+    "vertical": "Data Engineering",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Kinetic Gain proof repo for Looker, Sigma, and Tableau BI trust posture.",
+    "topics": [
+      "looker",
+      "sigma",
+      "tableau",
+      "business-intelligence",
+      "kinetic-gain"
+    ]
+  },
+  {
+    "name": "GitHub Gitlab Delivery Governance Console",
+    "slug": "github-gitlab-delivery-governance-console",
+    "url": "https://github.com/mizcausevic-dev/github-gitlab-delivery-governance-console",
+    "platform": "Frontend Showcase",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Kinetic Gain proof repo for GitHub and GitLab delivery governance.",
+    "topics": [
+      "github",
+      "gitlab",
+      "delivery-governance",
+      "platform-engineering",
+      "kinetic-gain"
+    ]
+  },
+  {
+    "name": "Wiz Paloalto Cloud Exposure Brief",
+    "slug": "wiz-paloalto-cloud-exposure-brief",
+    "url": "https://github.com/mizcausevic-dev/wiz-paloalto-cloud-exposure-brief",
+    "platform": "Decision Intelligence",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Kinetic Gain proof repo for Wiz and Palo Alto cloud exposure evidence.",
+    "topics": [
+      "wiz",
+      "palo-alto",
+      "panw",
+      "cloud-security",
+      "kinetic-gain"
+    ]
+  },
+  {
+    "name": "Datadog Newrelic Observability Risk Board",
+    "slug": "datadog-newrelic-observability-risk-board",
+    "url": "https://github.com/mizcausevic-dev/datadog-newrelic-observability-risk-board",
+    "platform": "Agent Operations Suite",
+    "vertical": "AI Platform",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Kinetic Gain proof repo for Datadog and New Relic observability risk posture.",
+    "topics": [
+      "datadog",
+      "new-relic",
+      "newrelic",
+      "observability",
+      "kinetic-gain"
+    ]
+  },
+  {
+    "name": "dbt Snowflake Databricks Lineage Auditor",
+    "slug": "dbt-snowflake-databricks-lineage-auditor",
+    "url": "https://github.com/mizcausevic-dev/dbt-snowflake-databricks-lineage-auditor",
+    "platform": "Frontend Showcase",
+    "vertical": "Data Engineering",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Kinetic Gain proof repo for dbt, Snowflake, and Databricks lineage audit posture.",
+    "topics": [
+      "dbt",
+      "snowflake",
+      "databricks",
+      "data-engineering",
+      "kinetic-gain"
+    ]
+  },
+  {
+    "name": "Terraform Pulumi Platform Drift Pack",
+    "slug": "terraform-pulumi-platform-drift-pack",
+    "url": "https://github.com/mizcausevic-dev/terraform-pulumi-platform-drift-pack",
+    "platform": "Decision Intelligence",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Kinetic Gain proof repo for Terraform and Pulumi platform drift evidence.",
+    "topics": [
+      "terraform",
+      "pulumi",
+      "platform-engineering",
+      "drift",
+      "kinetic-gain"
+    ]
+  },
+  {
+    "name": "Workday Rippling UKG Lifecycle Map",
+    "slug": "workday-rippling-ukg-lifecycle-map",
+    "url": "https://github.com/mizcausevic-dev/workday-rippling-ukg-lifecycle-map",
+    "platform": "Frontend Showcase",
+    "vertical": "AI Platform",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Kinetic Gain proof repo for Workday, Rippling, and UKG workforce lifecycle risk.",
+    "topics": [
+      "workday",
+      "rippling",
+      "ukg",
+      "hrtech",
+      "kinetic-gain"
+    ]
+  },
+  {
+    "name": "Entra Sailpoint Saviynt Access Ledger",
+    "slug": "entra-sailpoint-saviynt-access-ledger",
+    "url": "https://github.com/mizcausevic-dev/entra-sailpoint-saviynt-access-ledger",
+    "platform": "Decision Intelligence",
+    "vertical": "IAM / Security",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Kinetic Gain proof repo for Microsoft Entra ID, SailPoint, and Saviynt access evidence.",
+    "topics": [
+      "microsoft-entra",
+      "entra-id",
+      "sailpoint",
+      "saviynt",
+      "identity-governance",
+      "kinetic-gain"
+    ]
+  },
+  {
+    "name": "Servicenow Workato Governance Router",
+    "slug": "servicenow-workato-governance-router",
+    "url": "https://github.com/mizcausevic-dev/servicenow-workato-governance-router",
+    "platform": "Frontend Showcase",
+    "vertical": "Compliance / Governance",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Kinetic Gain proof repo for ServiceNow and Workato governance routing.",
+    "topics": [
+      "servicenow",
+      "workato",
+      "governance",
+      "kinetic-gain",
+      "executive-intelligence"
+    ]
+  },
+  {
+    "name": "Salesforce Hubspot Revops Handoff",
+    "slug": "salesforce-hubspot-revops-handoff",
+    "url": "https://github.com/mizcausevic-dev/salesforce-hubspot-revops-handoff",
+    "platform": "Frontend Showcase",
+    "vertical": "AI Platform",
+    "language": "HTML",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "Kinetic Gain proof repo for Salesforce and HubSpot RevOps handoff risk.",
+    "topics": [
+      "salesforce",
+      "hubspot",
+      "revops",
+      "kinetic-gain",
+      "executive-intelligence"
+    ]
+  },
+  {
+    "name": "AI Evidence Format Landing",
+    "slug": "ai-evidence-format-landing",
+    "url": "https://evidence.kineticgain.com",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Compliance / Governance",
+    "language": "CSS",
+    "freshness": "24h",
+    "subdomain": "evidence.kineticgain.com",
+    "description": "Landing site for the AI Evidence Format spec. Live at evidence.kineticgain.com.",
+    "topics": []
+  },
+  {
+    "name": "Portfolio Command Center",
+    "slug": "portfolio-command-center",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "IAM / Security",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
+    "topics": [
+      "command-center",
+      "executive-dashboard",
+      "frontend",
+      "growth-systems",
+      "platform-engineering",
+      "react"
+    ]
+  },
+  {
+    "name": "Portfolio Constellation",
+    "slug": "portfolio-constellation",
+    "url": "https://portfolio.kineticgain.com/",
+    "platform": "Frontend Showcase",
+    "vertical": "AI Platform",
+    "language": "TypeScript",
+    "freshness": "24h",
+    "subdomain": "portfolio.kineticgain.com",
+    "description": "Live visual atlas of every public repo at github.com/mizcausevic-dev — 190+ repos across 20+ languages, classified into named platforms and industry verticals. Auto-refreshed every 6 hours via gh api. Deploys to portfolio.kineticgain.com.",
+    "topics": [
+      "data-viz",
+      "kinetic-gain",
+      "portfolio",
+      "react",
+      "recharts",
+      "typescript"
+    ]
+  },
+  {
+    "name": "AI Evidence Block",
+    "slug": "ai-evidence-block",
+    "url": "https://github.com/mizcausevic-dev/ai-evidence-block",
+    "platform": "Decision Intelligence",
+    "vertical": "Compliance / Governance",
+    "language": "PHP",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "A Gutenberg block and inline format for marking the AI provenance of published content — the WordPress reference implementation of the AI Evidence Format (Kinetic Gain Protocol Suite).",
+    "topics": [
+      "ai",
+      "ai-disclosure",
+      "ai-provenance",
+      "c2pa",
+      "content-credentials",
+      "gutenberg"
+    ]
+  },
+  {
+    "name": "Mizcausevic Dev",
+    "slug": "mizcausevic-dev",
+    "url": "https://mizcausevic.com/skills/",
+    "platform": "Landing Sites",
+    "vertical": "IAM / Security",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "mizcausevic.com",
+    "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
+    "topics": [
+      "enterprise-software",
+      "fullstack-development"
+    ]
+  },
+  {
+    "name": "AI Evidence Format Spec",
+    "slug": "ai-evidence-format-spec",
+    "url": "https://github.com/mizcausevic-dev/ai-evidence-format-spec",
+    "platform": "Kinetic Gain Protocol Suite",
+    "vertical": "Insurance / InsurTech",
+    "language": "Other",
+    "freshness": "24h",
+    "subdomain": "github.com",
+    "description": "AI Evidence Format v0.1 draft. JSON document format for structured citations that travel with LLM-generated claims: source identity, span selector, retrieval confidence, freshness, content hash, declared synthesis role. Part of the Kinetic Gain Protocol Suite.",
+    "topics": [
+      "ai-citations",
+      "ai-governance",
+      "answer-engine",
+      "evidence",
+      "json-schema",
+      "kinetic-gain-protocol-suite"
+    ]
+  },
+  {
     "name": "Firstup Employee Incident Narrative Pack",
     "slug": "firstup-employee-incident-narrative-pack",
     "url": "https://mizcausevic-dev.github.io/firstup-employee-incident-narrative-pack/",
@@ -221,25 +785,6 @@
       "klaviyo",
       "retention",
       "customer-recovery"
-    ]
-  },
-  {
-    "name": "Portfolio Command Center",
-    "slug": "portfolio-command-center",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "IAM / Security",
-    "language": "TypeScript",
-    "freshness": "24h",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "React + TypeScript command surface that unifies revenue, platform, growth, and security portfolio systems into one executive view.",
-    "topics": [
-      "command-center",
-      "executive-dashboard",
-      "frontend",
-      "growth-systems",
-      "platform-engineering",
-      "react"
     ]
   },
   {
@@ -699,25 +1244,6 @@
     ]
   },
   {
-    "name": "Portfolio Constellation",
-    "slug": "portfolio-constellation",
-    "url": "https://portfolio.kineticgain.com/",
-    "platform": "Frontend Showcase",
-    "vertical": "AI Platform",
-    "language": "TypeScript",
-    "freshness": "24h",
-    "subdomain": "portfolio.kineticgain.com",
-    "description": "Live visual atlas of every public repo at github.com/mizcausevic-dev — 190+ repos across 20+ languages, classified into named platforms and industry verticals. Auto-refreshed every 6 hours via gh api. Deploys to portfolio.kineticgain.com.",
-    "topics": [
-      "data-viz",
-      "kinetic-gain",
-      "portfolio",
-      "react",
-      "recharts",
-      "typescript"
-    ]
-  },
-  {
     "name": "Watermark Stress Test",
     "slug": "watermark-stress-test",
     "url": "https://provenance-lab.kineticgain.com/",
@@ -781,7 +1307,7 @@
     "platform": "Platform Reliability Stack",
     "vertical": "FinTech",
     "language": "Python",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "mizcausevic-dev.github.io",
     "description": "Rust and Python HFT latency-budget simulator for FinTech market paths, packet pressure, risk scoring, and board-readable exposure summaries.",
     "topics": [
@@ -800,7 +1326,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Platform Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "mizcausevic-dev.github.io",
     "description": "IBM z/OS batch-window risk console for mainframe modernization, dependency windows, missed SLA exposure, and board-readable remediation.",
     "topics": [
@@ -819,7 +1345,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Revenue Operations",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "mizcausevic-dev.github.io",
     "description": "Klaviyo retention signal router for consent-safe lifecycle events, revenue recovery queues, campaign risk, and operator-ready next actions.",
     "topics": [
@@ -838,7 +1364,7 @@
     "platform": "Decision Intelligence",
     "vertical": "IAM / Security",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "mizcausevic-dev.github.io",
     "description": "CyberArk session-risk console for privilege drift, checkout posture, high-risk access paths, and evidence-ready remediation routing.",
     "topics": [
@@ -857,7 +1383,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Data Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "mizcausevic-dev.github.io",
     "description": "Operator surface for BigQuery query risk, slot pressure, SQL cost exposure, and remediation routing across data engineering estates.",
     "topics": [
@@ -876,7 +1402,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Data Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -888,7 +1414,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Revenue Operations",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -900,7 +1426,7 @@
     "platform": "Decision Intelligence",
     "vertical": "Data Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "mizcausevic-dev.github.io",
     "description": "Board-readable Tableau dashboard lineage auditor for workbook trust, certified sources, extract freshness, row-level security, and executive signoff.",
     "topics": [
@@ -918,7 +1444,7 @@
     "platform": "Decision Intelligence",
     "vertical": "Data Engineering",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "mizcausevic-dev.github.io",
     "description": "Board-readable Power BI metric certifier for lineage completeness, refresh health, reconciliation, owner signoff, and executive dashboard trust.",
     "topics": [
@@ -937,7 +1463,7 @@
     "platform": "Decision Intelligence",
     "vertical": "IAM / Security",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "mizcausevic-dev.github.io",
     "description": "Board-readable Okta access policy drift monitor for MFA gaps, stale exceptions, privileged apps, and identity-risk remediation posture.",
     "topics": [
@@ -956,7 +1482,7 @@
     "platform": "Frontend Showcase",
     "vertical": "Revenue Operations",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -968,7 +1494,7 @@
     "platform": "Frontend Showcase",
     "vertical": "AI Platform",
     "language": "TypeScript",
-    "freshness": "24h",
+    "freshness": "7d",
     "subdomain": "github.com",
     "description": "Public repo in the Kinetic Gain portfolio.",
     "topics": []
@@ -1939,21 +2465,6 @@
       "kinetic-gain",
       "prompt-ops",
       "typescript"
-    ]
-  },
-  {
-    "name": "Mizcausevic Dev",
-    "slug": "mizcausevic-dev",
-    "url": "https://mizcausevic.com/skills/",
-    "platform": "Landing Sites",
-    "vertical": "IAM / Security",
-    "language": "Other",
-    "freshness": "7d",
-    "subdomain": "mizcausevic.com",
-    "description": "Two decades leading enterprise web platforms and digital ecosystems. Hands-on technical capability, AI curiosity, builder/operator mentality. I bridge the gap between complex enterprise data and the GenAI agents that consume it, ensuring brand integrity, security, and market dominance in the post-search era.",
-    "topics": [
-      "enterprise-software",
-      "fullstack-development"
     ]
   },
   {
@@ -3603,18 +4114,6 @@
       "kinetic-gain-protocol-suite",
       "operator-console"
     ]
-  },
-  {
-    "name": "AI Evidence Format Landing",
-    "slug": "ai-evidence-format-landing",
-    "url": "https://evidence.kineticgain.com",
-    "platform": "Kinetic Gain Protocol Suite",
-    "vertical": "Compliance / Governance",
-    "language": "CSS",
-    "freshness": "7d",
-    "subdomain": "evidence.kineticgain.com",
-    "description": "Landing site for the AI Evidence Format spec. Live at evidence.kineticgain.com.",
-    "topics": []
   },
   {
     "name": "Kinetic Gain Examples Gallery",
@@ -8144,7 +8643,7 @@
     "platform": "Frontend Showcase",
     "vertical": "PropTech / Real Estate",
     "language": "HTML",
-    "freshness": "7d",
+    "freshness": "30d",
     "subdomain": "style.kineticgain.com",
     "description": "CSS-first operator surface for brand governance, approved tokens, pattern approvals, and release-safe style posture.",
     "topics": [
@@ -11387,25 +11886,6 @@
       "json-schema",
       "kinetic-gain-protocol-suite",
       "llm"
-    ]
-  },
-  {
-    "name": "AI Evidence Format Spec",
-    "slug": "ai-evidence-format-spec",
-    "url": "https://github.com/mizcausevic-dev/ai-evidence-format-spec",
-    "platform": "Kinetic Gain Protocol Suite",
-    "vertical": "Insurance / InsurTech",
-    "language": "Other",
-    "freshness": "30d",
-    "subdomain": "github.com",
-    "description": "AI Evidence Format v0.1 draft. JSON document format for structured citations that travel with LLM-generated claims: source identity, span selector, retrieval confidence, freshness, content hash, declared synthesis role. Part of the Kinetic Gain Protocol Suite.",
-    "topics": [
-      "ai-citations",
-      "ai-governance",
-      "answer-engine",
-      "evidence",
-      "json-schema",
-      "kinetic-gain-protocol-suite"
     ]
   },
   {

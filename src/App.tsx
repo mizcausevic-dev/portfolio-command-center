@@ -22,7 +22,32 @@ const PRODUCT_TAG_RULES = [
   { tag: "Okta", terms: ["okta"] },
   { tag: "Snowflake", terms: ["snowflake"] },
   { tag: "Tableau", terms: ["tableau"] },
-  { tag: "Power BI", terms: ["powerbi", "power bi"] }
+  { tag: "Power BI", terms: ["powerbi", "power bi"] },
+  { tag: "Salesforce", terms: ["salesforce"] },
+  { tag: "HubSpot", terms: ["hubspot"] },
+  { tag: "Gainsight", terms: ["gainsight"] },
+  { tag: "ChurnZero", terms: ["churnzero", "churn zero"] },
+  { tag: "dbt", terms: ["dbt"] },
+  { tag: "Databricks", terms: ["databricks"] },
+  { tag: "Looker", terms: ["looker"] },
+  { tag: "Sigma", terms: ["sigma"] },
+  { tag: "Microsoft Entra ID", terms: ["microsoft entra", "entra id", "azure ad"] },
+  { tag: "Palo Alto", terms: ["palo alto", "panw"] },
+  { tag: "Wiz", terms: ["wiz"] },
+  { tag: "SailPoint", terms: ["sailpoint"] },
+  { tag: "Saviynt", terms: ["saviynt"] },
+  { tag: "GitHub", terms: ["github-gitlab", "github and gitlab", "github delivery governance"] },
+  { tag: "GitLab", terms: ["gitlab"] },
+  { tag: "Terraform", terms: ["terraform"] },
+  { tag: "Pulumi", terms: ["pulumi"] },
+  { tag: "Datadog", terms: ["datadog"] },
+  { tag: "New Relic", terms: ["new relic", "newrelic"] },
+  { tag: "ServiceNow", terms: ["servicenow", "service now"] },
+  { tag: "Workato", terms: ["workato"] },
+  { tag: "MuleSoft", terms: ["mulesoft", "mule soft"] },
+  { tag: "Zapier", terms: ["zapier"] },
+  { tag: "Workday", terms: ["workday"] },
+  { tag: "Rippling", terms: ["rippling"] }
 ] as const;
 
 const toneByVertical: Record<string, string> = {
