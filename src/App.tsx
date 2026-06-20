@@ -593,6 +593,10 @@ function App() {
           <a href="https://github.com/mizcausevic-dev">GitHub</a>
           <a href="https://www.linkedin.com/in/mirzacausevic/">LinkedIn</a>
           <a href="https://kineticgain.com/">Kinetic Gain</a>
+          <a href="https://suite.kineticgain.com/">Protocol Suite</a>
+          <a href="https://kineticgain.com/constellation/">Constellation</a>
+          <a href="https://kineticgain.com/trust/">Trust Pack</a>
+          <a href="https://docs.kineticgain.com/">Docs</a>
         </div>
         <div className="portfolio-footer-bottom">
           <span>Portfolio Constellation · live GitHub-synced repo atlas</span>
