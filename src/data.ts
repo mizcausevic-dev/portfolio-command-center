@@ -7,7 +7,7 @@ const namedPlatformDefinitions = [
   {
     name: "Kinetic Gain Protocol Suite",
     description:
-      "Eleven open JSON specs for the answer-engine and agent era. Spec text plus JSON Schema plus canonical examples per repo.",
+      "Twelve open JSON specs for the answer-engine and agent era. Spec text plus JSON Schema plus canonical examples per repo.",
     repos: [
       { name: "kinetic-gain-protocol-suite", url: "https://github.com/mizcausevic-dev/kinetic-gain-protocol-suite" },
       { name: "aeo-protocol-spec", url: "https://github.com/mizcausevic-dev/aeo-protocol-spec" },
@@ -170,6 +170,78 @@ const verticalOrder = [
 
 export const repoCatalog: RepoEntry[] = generatedRepoCatalog as RepoEntry[];
 
+// Single source of truth for platform/company signal detection. Consumed by the
+// UI (App.tsx) AND by metaSummary below, so the crawlable <head> counts can never
+// drift from what the page actually renders.
+export const PRODUCT_TAG_RULES = [
+  { tag: "Camunda", terms: ["camunda"] },
+  { tag: "IBM", terms: ["ibm", "watsonx", "app connect"] },
+  { tag: "CyberArk", terms: ["cyberark"] },
+  { tag: "UKG", terms: ["ukg"] },
+  { tag: "Azure", terms: ["azure", "entra", "intune", "m365", "microsoft 365", "purview", "powerbi", "power bi", "sentinel", "defender"] },
+  { tag: "AWS", terms: ["aws", "guardduty", "iam access analyzer"] },
+  { tag: "GCP", terms: ["gcp", "bigquery", "google cloud"] },
+  { tag: "Klaviyo", terms: ["klaviyo"] },
+  { tag: "VWO", terms: ["vwo"] },
+  { tag: "FirstUp", terms: ["firstup"] },
+  { tag: "Genesys", terms: ["genesys"] },
+  { tag: "Okta", terms: ["okta"] },
+  { tag: "Snowflake", terms: ["snowflake"] },
+  { tag: "Tableau", terms: ["tableau"] },
+  { tag: "Power BI", terms: ["powerbi", "power bi"] },
+  { tag: "Salesforce", terms: ["salesforce"] },
+  { tag: "HubSpot", terms: ["hubspot"] },
+  { tag: "Gainsight", terms: ["gainsight"] },
+  { tag: "ChurnZero", terms: ["churnzero", "churn zero"] },
+  { tag: "dbt", terms: ["dbt"] },
+  { tag: "Databricks", terms: ["databricks"] },
+  { tag: "Looker", terms: ["looker"] },
+  { tag: "Sigma", terms: ["sigma"] },
+  { tag: "Microsoft Entra ID", terms: ["microsoft entra", "entra id", "azure ad"] },
+  { tag: "Palo Alto", terms: ["palo alto", "panw"] },
+  { tag: "Wiz", terms: ["wiz"] },
+  { tag: "SailPoint", terms: ["sailpoint"] },
+  { tag: "Saviynt", terms: ["saviynt"] },
+  { tag: "GitHub", terms: ["github-gitlab", "github and gitlab", "github delivery governance"] },
+  { tag: "GitLab", terms: ["gitlab"] },
+  { tag: "Terraform", terms: ["terraform"] },
+  { tag: "Pulumi", terms: ["pulumi"] },
+  { tag: "Datadog", terms: ["datadog"] },
+  { tag: "New Relic", terms: ["new relic", "newrelic"] },
+  { tag: "ServiceNow", terms: ["servicenow", "service now"] },
+  { tag: "Workato", terms: ["workato"] },
+  { tag: "MuleSoft", terms: ["mulesoft", "mule soft"] },
+  { tag: "Zapier", terms: ["zapier"] },
+  { tag: "Workday", terms: ["workday"] },
+  { tag: "Rippling", terms: ["rippling"] }
+] as const;
+
+export function inferProductTags(entry: RepoEntry): string[] {
+  const haystack = [
+    entry.slug,
+    entry.description,
+    entry.platform,
+    entry.vertical,
+    entry.subdomain,
+    ...(entry.topics ?? [])
+  ]
+    .join(" ")
+    .toLowerCase();
+
+  return PRODUCT_TAG_RULES.filter((rule) => rule.terms.some((term) => haystack.includes(term.toLowerCase()))).map(
+    (rule) => rule.tag
+  );
+}
+
+export function productSignalCounts(entries: RepoEntry[]) {
+  return PRODUCT_TAG_RULES.map((rule) => ({
+    tag: rule.tag,
+    count: entries.filter((entry) => inferProductTags(entry).includes(rule.tag)).length
+  }))
+    .filter((entry) => entry.count > 0)
+    .sort((left, right) => right.count - left.count || left.tag.localeCompare(right.tag));
+}
+
 export const namedPlatforms: NamedPlatform[] = namedPlatformDefinitions.map((entry) => {
   const count = repoCatalog.filter((repo) => repo.platform === entry.name).length;
   const remaining = Math.max(count - entry.repos.length, 0);
@@ -226,3 +298,16 @@ export const portfolioSnapshot: {
     { value: `${industryAtlas.length}`, label: "verticals" }
   ]
 };
+
+// Crawlable-meta summary. Computed from the SAME catalog + signal rules the UI
+// renders, so the static <head> numbers injected at build (see vite.config.ts)
+// stay reconciled with the page and cannot drift on a snapshot refresh.
+export const metaSummary = {
+  totalRepos: repoCatalog.length,
+  languageCount: languageAtlas.length,
+  platformCount: namedPlatforms.length,
+  verticalCount: industryAtlas.length,
+  signalCount: productSignalCounts(repoCatalog).length,
+  pushed24h: pushed24Hours,
+  pushed7d: pushed7Days
+} as const;

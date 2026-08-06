@@ -6,23 +6,27 @@
     <title>Portfolio Command Center · Kinetic Gain operator portfolio and live system map</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.svg" />
+    <!-- Numbers below are injected at build from src/generatedRepoCatalog.json via
+         vite.config.ts (transformIndexHtml), so this crawlable <head> can never
+         drift from what the page actually renders. -->
     <meta
       name="description"
-      content="Portfolio Command Center is the crawlable Kinetic Gain portfolio surface for 77 public repos across 24 languages, 17 verticals, 12 named platforms, 15 platform and company signals, and 107 live properties."
+      content="Portfolio Command Center is the crawlable Kinetic Gain portfolio surface for %KG_TOTAL_REPOS% public repos across %KG_LANGUAGES% languages, %KG_VERTICALS% verticals, %KG_PLATFORMS% named platforms, and %KG_SIGNALS% platform and company signals."
     />
     <link rel="canonical" href="https://portfolio.kineticgain.com/" />
+    <link rel="stylesheet" href="/assets/fonts.css" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Portfolio Command Center · Kinetic Gain" />
     <meta
       property="og:description"
-      content="Executive-style map of 77 public repos across AI, platform, cloud admin, biotech, nonprofit, proptech, robotics, and platform/company signals including Azure, AWS, GCP, IBM, CyberArk, UKG, Camunda, Genesys, Okta, Snowflake, Tableau, and Power BI."
+      content="Executive-style map of %KG_TOTAL_REPOS% public repos across AI, platform, cloud admin, biotech, nonprofit, proptech, robotics, and platform/company signals including Azure, AWS, GCP, IBM, CyberArk, UKG, Camunda, Genesys, Okta, Snowflake, Tableau, and Power BI."
     />
     <meta property="og:url" content="https://portfolio.kineticgain.com/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Portfolio Command Center · Kinetic Gain" />
     <meta
       name="twitter:description"
-      content="Crawlable estate map and proof layer for 77 public repos, 24 languages, 17 verticals, 15 platform/company signals, and 107 live Kinetic Gain properties."
+      content="Crawlable estate map and proof layer for %KG_TOTAL_REPOS% public repos, %KG_LANGUAGES% languages, %KG_VERTICALS% verticals, %KG_PLATFORMS% named platforms, and %KG_SIGNALS% platform/company signals."
     />
   </head>
   <body>

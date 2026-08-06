@@ -1,54 +1,13 @@
 import { useDeferredValue, useMemo, useState } from "react";
 import {
+  inferProductTags,
   industryAtlas,
   languageAtlas,
   namedPlatforms,
   portfolioSnapshot,
+  productSignalCounts,
   repoCatalog
 } from "./data";
-
-const PRODUCT_TAG_RULES = [
-  { tag: "Camunda", terms: ["camunda"] },
-  { tag: "IBM", terms: ["ibm", "watsonx", "app connect"] },
-  { tag: "CyberArk", terms: ["cyberark"] },
-  { tag: "UKG", terms: ["ukg"] },
-  { tag: "Azure", terms: ["azure", "entra", "intune", "m365", "microsoft 365", "purview", "powerbi", "power bi", "sentinel", "defender"] },
-  { tag: "AWS", terms: ["aws", "guardduty", "iam access analyzer"] },
-  { tag: "GCP", terms: ["gcp", "bigquery", "google cloud"] },
-  { tag: "Klaviyo", terms: ["klaviyo"] },
-  { tag: "VWO", terms: ["vwo"] },
-  { tag: "FirstUp", terms: ["firstup"] },
-  { tag: "Genesys", terms: ["genesys"] },
-  { tag: "Okta", terms: ["okta"] },
-  { tag: "Snowflake", terms: ["snowflake"] },
-  { tag: "Tableau", terms: ["tableau"] },
-  { tag: "Power BI", terms: ["powerbi", "power bi"] },
-  { tag: "Salesforce", terms: ["salesforce"] },
-  { tag: "HubSpot", terms: ["hubspot"] },
-  { tag: "Gainsight", terms: ["gainsight"] },
-  { tag: "ChurnZero", terms: ["churnzero", "churn zero"] },
-  { tag: "dbt", terms: ["dbt"] },
-  { tag: "Databricks", terms: ["databricks"] },
-  { tag: "Looker", terms: ["looker"] },
-  { tag: "Sigma", terms: ["sigma"] },
-  { tag: "Microsoft Entra ID", terms: ["microsoft entra", "entra id", "azure ad"] },
-  { tag: "Palo Alto", terms: ["palo alto", "panw"] },
-  { tag: "Wiz", terms: ["wiz"] },
-  { tag: "SailPoint", terms: ["sailpoint"] },
-  { tag: "Saviynt", terms: ["saviynt"] },
-  { tag: "GitHub", terms: ["github-gitlab", "github and gitlab", "github delivery governance"] },
-  { tag: "GitLab", terms: ["gitlab"] },
-  { tag: "Terraform", terms: ["terraform"] },
-  { tag: "Pulumi", terms: ["pulumi"] },
-  { tag: "Datadog", terms: ["datadog"] },
-  { tag: "New Relic", terms: ["new relic", "newrelic"] },
-  { tag: "ServiceNow", terms: ["servicenow", "service now"] },
-  { tag: "Workato", terms: ["workato"] },
-  { tag: "MuleSoft", terms: ["mulesoft", "mule soft"] },
-  { tag: "Zapier", terms: ["zapier"] },
-  { tag: "Workday", terms: ["workday"] },
-  { tag: "Rippling", terms: ["rippling"] }
-] as const;
 
 const toneByVertical: Record<string, string> = {
   "AI Platform": "cyan",
@@ -71,23 +30,6 @@ const toneByVertical: Record<string, string> = {
   Robotics: "plum"
 };
 
-function inferProductTags(entry: (typeof repoCatalog)[number]) {
-  const haystack = [
-    entry.slug,
-    entry.description,
-    entry.platform,
-    entry.vertical,
-    entry.subdomain,
-    ...(entry.topics ?? [])
-  ]
-    .join(" ")
-    .toLowerCase();
-
-  return PRODUCT_TAG_RULES.filter((rule) => rule.terms.some((term) => haystack.includes(term.toLowerCase()))).map(
-    (rule) => rule.tag
-  );
-}
-
 function topProductTags(entries: (typeof repoCatalog), limit: number) {
   const counts = new Map<string, number>();
 
@@ -101,15 +43,6 @@ function topProductTags(entries: (typeof repoCatalog), limit: number) {
     .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]))
     .slice(0, limit)
     .map(([tag]) => tag);
-}
-
-function productSignalCounts(entries: typeof repoCatalog) {
-  return PRODUCT_TAG_RULES.map((rule) => ({
-    tag: rule.tag,
-    count: entries.filter((entry) => inferProductTags(entry).includes(rule.tag)).length
-  }))
-    .filter((entry) => entry.count > 0)
-    .sort((left, right) => right.count - left.count || left.tag.localeCompare(right.tag));
 }
 
 function App() {
@@ -281,7 +214,7 @@ function App() {
         }
       : {
           title: "Click a language or vertical to filter the full catalog",
-          body: "Both atlas panels now read from the same live repo dataset, so counts and cards stay aligned.",
+          body: "Hover or select any language or vertical to see its top repos, platforms, and product tags.",
           pills: ["language filter", "vertical filter", "live GitHub sync", "product tags"]
         };
 
