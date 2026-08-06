@@ -1,0 +1,110 @@
+/* ============================================================================
+   Kinetic Gain FX library (canonical) — BERT dark-cyan
+   Architecture (per doctrine):
+     .fx-layer         card element; establishes stacking + clips effects
+     .fx-layer::before OUTER visual layer (beams/glows/sweeps/halos/shine/motion)
+     .fx-layer::after  INNER panel (readable surface, depth, tint, contrast)
+     .fx-layer > *     content, always ABOVE both pseudo-elements
+   Rules: one primary effect per card; subtle for content-heavy, expressive for
+   hero/feature/decorative; decorative motion away from text; readable contrast
+   always; honor prefers-reduced-motion. Canonical effects:
+     fx-corner Corner Beam · fx-radial Radial Pulse · fx-glow Soft Glow
+     fx-sweep Edge Sweep · fx-grid Grid Overlay · fx-vignette Inner Vignette
+     fx-shine Diagonal Shine · fx-pulse Bass Pulse · fx-halo Halo Ring
+     fx-prism Prism Beam
+   ============================================================================ */
+
+:root{
+  --fx-accent:#66FCF1;   /* cyan  */
+  --fx-accent2:#45A29E;  /* teal  */
+  --fx-panel:#161d26;    /* inner panel base */
+  --fx-border:#2b3a46;
+}
+
+/* ---- base: stacking + clip + content lift ---- */
+.fx-layer{position:relative;isolation:isolate;overflow:hidden;
+  border:1px solid var(--fx-border);border-radius:var(--radius,14px);
+  background:var(--panel2,var(--fx-panel));transition:transform .2s ease,box-shadow .2s ease}
+.fx-layer > *{position:relative;z-index:2}
+.fx-layer::before,.fx-layer::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit}
+.fx-layer::before{z-index:0}   /* outer visual */
+.fx-layer::after{z-index:1;background:linear-gradient(180deg,rgba(255,255,255,.02),transparent 40%)} /* inner panel default */
+.fx-layer:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.32)}
+
+/* ---- fx-glow : Soft Glow (default-safe, content-heavy cards) ---- */
+.fx-glow::before{opacity:0;transition:opacity .3s ease;
+  background:radial-gradient(340px circle at var(--mx,50%) var(--my,0%),
+    color-mix(in srgb,var(--fx-accent) 14%,transparent),transparent 62%)}
+.fx-glow:hover::before{opacity:1}
+
+/* ---- fx-corner : Corner Beam ---- */
+.fx-corner::before{
+  background:
+    linear-gradient(135deg,color-mix(in srgb,var(--fx-accent) 20%,transparent),transparent 38%),
+    linear-gradient(315deg,color-mix(in srgb,var(--fx-accent2) 14%,transparent),transparent 42%);
+  opacity:.55;transition:opacity .3s ease}
+.fx-corner:hover::before{opacity:1}
+
+/* ---- fx-sweep : Edge Sweep (animated light along top edge) ---- */
+.fx-sweep::before{
+  background:linear-gradient(90deg,transparent,var(--fx-accent),transparent);
+  height:2px;bottom:auto;background-size:200% 100%;opacity:.85;
+  animation:fx-sweep-a 3.6s linear infinite}
+@keyframes fx-sweep-a{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* ---- fx-radial : Radial Pulse ---- */
+.fx-radial::before{
+  background:radial-gradient(120px circle at 50% 50%,
+    color-mix(in srgb,var(--fx-accent) 16%,transparent),transparent 60%);
+  animation:fx-radial-a 4.5s ease-in-out infinite}
+@keyframes fx-radial-a{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.7;transform:scale(1.12)}}
+
+/* ---- fx-vignette : Inner Vignette (quiet, great behind text) ---- */
+.fx-vignette::after{
+  background:
+    radial-gradient(120% 120% at 50% 0%,transparent 55%,rgba(0,0,0,.28)),
+    linear-gradient(180deg,rgba(255,255,255,.02),transparent 40%)}
+
+/* ---- fx-shine : Diagonal Shine (hover sweep) ---- */
+.fx-shine::before{
+  background:linear-gradient(115deg,transparent 30%,color-mix(in srgb,var(--fx-accent) 22%,transparent) 46%,transparent 62%);
+  background-size:250% 250%;background-position:150% 150%;transition:background-position .6s ease}
+.fx-shine:hover::before{background-position:-30% -30%}
+
+/* ---- fx-grid : Grid Overlay (technical texture) ---- */
+.fx-grid::before{
+  background-image:
+    linear-gradient(color-mix(in srgb,var(--fx-accent) 8%,transparent) 1px,transparent 1px),
+    linear-gradient(90deg,color-mix(in srgb,var(--fx-accent) 8%,transparent) 1px,transparent 1px);
+  background-size:26px 26px;opacity:.5;
+  -webkit-mask-image:radial-gradient(120% 90% at 50% 0%,#000,transparent 75%);
+          mask-image:radial-gradient(120% 90% at 50% 0%,#000,transparent 75%)}
+
+/* ---- fx-halo : Halo Ring (glowing border) ---- */
+.fx-halo::before{
+  padding:1.5px;
+  background:linear-gradient(120deg,transparent 20%,var(--fx-accent),var(--fx-accent2),transparent 80%);
+  background-size:200% 100%;animation:fx-halo-a 5s linear infinite;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude}
+@keyframes fx-halo-a{0%{background-position:0 0}100%{background-position:200% 0}}
+
+/* ---- fx-pulse : Bass Pulse (subtle breathing lift) ---- */
+.fx-pulse{animation:fx-pulse-a 5s ease-in-out infinite}
+@keyframes fx-pulse-a{0%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--fx-accent) 22%,transparent)}
+  60%{box-shadow:0 0 0 6px transparent}}
+
+/* ---- fx-prism : Prism Beam (expressive — hero/feature only) ---- */
+.fx-prism::before{
+  background:linear-gradient(120deg,
+    color-mix(in srgb,var(--fx-accent) 22%,transparent),
+    color-mix(in srgb,#7c5cff 16%,transparent),
+    color-mix(in srgb,var(--fx-accent2) 20%,transparent),transparent 75%);
+  background-size:220% 100%;opacity:.6;animation:fx-prism-a 7s ease-in-out infinite}
+@keyframes fx-prism-a{0%,100%{background-position:0 0;opacity:.45}50%{background-position:120% 0;opacity:.75}}
+
+/* ---- accessibility: kill motion, keep the static tint ---- */
+@media (prefers-reduced-motion: reduce){
+  .fx-sweep::before,.fx-radial::before,.fx-halo::before,.fx-prism::before,.fx-pulse{animation:none !important}
+  .fx-shine::before{transition:none !important}
+}

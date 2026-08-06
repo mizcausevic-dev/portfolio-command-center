@@ -1,4 +1,5 @@
-import { useDeferredValue, useMemo, useState } from "react";
+import type { MouseEvent as ReactMouseEvent, PointerEvent as ReactPointerEvent } from "react";
+import { useCallback, useDeferredValue, useEffect, useMemo, useState } from "react";
 import {
   inferProductTags,
   industryAtlas,
@@ -8,6 +9,36 @@ import {
   productSignalCounts,
   repoCatalog
 } from "./data";
+
+// Sticky in-page navigation. Each id maps to a section id below; the scrollspy
+// highlights whichever is crossing the active band. Verticals sits beside Languages
+// in the same atlas row, so on a tie the earlier nav entry wins the highlight.
+const NAV_SECTIONS = [
+  { id: "overview", label: "Overview" },
+  { id: "platforms", label: "Platforms" },
+  { id: "languages", label: "Languages" },
+  { id: "verticals", label: "Verticals" },
+  { id: "repos", label: "Repos" }
+] as const;
+
+// Repo grid pagination. 706 rows rendered at once is the "endless scroll" the owner
+// flagged; we render a page at a time and let the user load more or reveal all.
+const REPO_PAGE_SIZE = 24;
+
+// Real, non-fabricated sort keys. The catalog ships pre-sorted by GitHub pushedAt
+// descending (see scripts/sync-repo-catalog.mjs), so "last pushed" is the original
+// array order. There is no stars/precise-date field in the dataset, so no stars sort
+// is offered rather than inventing one.
+const SORT_OPTIONS = [
+  { value: "last-pushed", label: "last pushed" },
+  { value: "name-asc", label: "name A–Z" },
+  { value: "name-desc", label: "name Z–A" },
+  { value: "language", label: "language" },
+  { value: "platform", label: "platform" },
+  { value: "freshness", label: "freshness" }
+] as const;
+
+const FRESHNESS_RANK: Record<string, number> = { "24h": 0, "7d": 1, "30d": 2, older: 3 };
 
 const toneByVertical: Record<string, string> = {
   "AI Platform": "cyan",
@@ -51,15 +82,24 @@ function App() {
   const [vertical, setVertical] = useState("all verticals");
   const [language, setLanguage] = useState("all languages");
   const [freshness, setFreshness] = useState("any freshness");
+  const [sort, setSort] = useState<(typeof SORT_OPTIONS)[number]["value"]>("last-pushed");
   const [hoveredVertical, setHoveredVertical] = useState<string | null>(null);
   const [hoveredLanguage, setHoveredLanguage] = useState<string | null>(null);
   const [showAllPlatforms, setShowAllPlatforms] = useState(false);
   const [showAllLanguages, setShowAllLanguages] = useState(false);
   const [showAllVerticals, setShowAllVerticals] = useState(false);
   const [showAllSignals, setShowAllSignals] = useState(false);
-  const [showAllRepos, setShowAllRepos] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(REPO_PAGE_SIZE);
+  const [activeSection, setActiveSection] = useState<string>("overview");
 
   const deferredQuery = useDeferredValue(query);
+
+  // Original catalog order = GitHub pushedAt descending. Cached slug->index map so the
+  // "last pushed" sort is O(1) per comparison and never re-derives the order.
+  const originalOrder = useMemo(
+    () => new Map(repoCatalog.map((entry, index) => [entry.slug, index] as const)),
+    []
+  );
 
   const maxLanguageRepos = Math.max(...languageAtlas.map((entry) => entry.repos));
 
@@ -125,6 +165,111 @@ function App() {
       return haystack.includes(needle);
     });
   }, [deferredQuery, freshness, language, platform, vertical]);
+
+  const sortedRepos = useMemo(() => {
+    const list = [...filteredRepos];
+
+    switch (sort) {
+      case "name-asc":
+        return list.sort((left, right) => left.slug.localeCompare(right.slug));
+      case "name-desc":
+        return list.sort((left, right) => right.slug.localeCompare(left.slug));
+      case "language":
+        return list.sort(
+          (left, right) => left.language.localeCompare(right.language) || left.slug.localeCompare(right.slug)
+        );
+      case "platform":
+        return list.sort(
+          (left, right) => left.platform.localeCompare(right.platform) || left.slug.localeCompare(right.slug)
+        );
+      case "freshness":
+        return list.sort(
+          (left, right) =>
+            (FRESHNESS_RANK[left.freshness] ?? 9) - (FRESHNESS_RANK[right.freshness] ?? 9) ||
+            left.slug.localeCompare(right.slug)
+        );
+      case "last-pushed":
+      default:
+        return list.sort(
+          (left, right) => (originalOrder.get(left.slug) ?? 0) - (originalOrder.get(right.slug) ?? 0)
+        );
+    }
+  }, [filteredRepos, sort, originalOrder]);
+
+  const visibleRepos = useMemo(() => sortedRepos.slice(0, visibleCount), [sortedRepos, visibleCount]);
+  const hasMoreRepos = visibleCount < sortedRepos.length;
+
+  // Any change to the filter/search/sort inputs resets the page window so the user
+  // always starts a new result set from the top rather than deep in a stale page.
+  useEffect(() => {
+    setVisibleCount(REPO_PAGE_SIZE);
+  }, [deferredQuery, freshness, language, platform, vertical, sort]);
+
+  // Scrollspy: highlight the nav entry whose section crosses a thin band ~45% down
+  // the viewport. Guarded so the jsdom test environment (no IntersectionObserver) is a no-op.
+  useEffect(() => {
+    if (typeof IntersectionObserver === "undefined") {
+      return;
+    }
+
+    const ids = NAV_SECTIONS.map((entry) => entry.id);
+    const elements = ids
+      .map((id) => document.getElementById(id))
+      .filter((element): element is HTMLElement => element !== null);
+
+    if (elements.length === 0) {
+      return;
+    }
+
+    const visible = new Set<string>();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visible.add(entry.target.id);
+          } else {
+            visible.delete(entry.target.id);
+          }
+        });
+
+        const active = ids.find((id) => visible.has(id));
+        if (active) {
+          setActiveSection(active);
+        }
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+    );
+
+    elements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, []);
+
+  const handleNavClick = useCallback((event: ReactMouseEvent<HTMLAnchorElement>, id: string) => {
+    event.preventDefault();
+    const target = document.getElementById(id);
+    if (!target) {
+      return;
+    }
+
+    setActiveSection(id);
+    const prefersReduced =
+      typeof window !== "undefined" &&
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (typeof target.scrollIntoView === "function") {
+      target.scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth", block: "start" });
+    }
+  }, []);
+
+  // fx-glow pointer follow: write the cursor position into --mx/--my so the soft glow
+  // tracks the mouse across the card (see fx-Claude.css .fx-glow).
+  const handleGlowMove = useCallback((event: ReactPointerEvent<HTMLElement>) => {
+    const card = event.currentTarget;
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty("--mx", `${((event.clientX - rect.left) / rect.width) * 100}%`);
+    card.style.setProperty("--my", `${((event.clientY - rect.top) / rect.height) * 100}%`);
+  }, []);
 
   const getRepoTone = (verticalName: string) => toneByVertical[verticalName] ?? "bert";
 
@@ -220,7 +365,30 @@ function App() {
 
   return (
     <main className="page-shell">
-      <section className="hero-shell">
+      <nav className="section-nav" aria-label="Section navigation">
+        <a
+          className="section-nav-brand"
+          href="#overview"
+          onClick={(event) => handleNavClick(event, "overview")}
+        >
+          Portfolio Command Center
+        </a>
+        <div className="section-nav-links">
+          {NAV_SECTIONS.map((entry) => (
+            <a
+              key={entry.id}
+              href={`#${entry.id}`}
+              className={`section-nav-link ${activeSection === entry.id ? "is-active" : ""}`}
+              aria-current={activeSection === entry.id ? "true" : undefined}
+              onClick={(event) => handleNavClick(event, entry.id)}
+            >
+              {entry.label}
+            </a>
+          ))}
+        </div>
+      </nav>
+
+      <section id="overview" className="hero-shell fx-layer fx-prism">
         <div className="hero-copy">
           <p className="snapshot-pill">{portfolioSnapshot.snapshotLabel}</p>
           <h1>
@@ -251,7 +419,7 @@ function App() {
 
         <div className="hero-stats">
           {portfolioSnapshot.stats.map((entry) => (
-            <article key={entry.label} className="stat-card">
+            <article key={entry.label} className="stat-card fx-layer fx-shine">
               <strong>{entry.value}</strong>
               <span>{entry.label}</span>
             </article>
@@ -259,7 +427,7 @@ function App() {
         </div>
       </section>
 
-      <section className="section-shell">
+      <section id="platforms" className="section-shell">
         <div className="section-heading">
           <h2>Named platforms</h2>
           <p>
@@ -269,7 +437,11 @@ function App() {
         </div>
         <div className={`platform-grid ${showAllPlatforms ? "mobile-expanded" : ""}`}>
           {namedPlatforms.map((entry) => (
-            <article key={entry.name} className={`platform-card tone-${entry.tone}`}>
+            <article
+              key={entry.name}
+              className={`platform-card fx-layer fx-glow tone-${entry.tone}`}
+              onPointerMove={handleGlowMove}
+            >
               <div className="platform-card-head">
                 <h3>{entry.name}</h3>
                 <strong>{entry.count}</strong>
@@ -293,7 +465,7 @@ function App() {
       </section>
 
       <section className="atlas-row">
-        <article className="atlas-panel">
+        <article id="languages" className="atlas-panel">
           <div className="atlas-heading">
             <div>
               <h2>Language atlas</h2>
@@ -339,7 +511,7 @@ function App() {
           </button>
         </article>
 
-        <article className="atlas-panel">
+        <article id="verticals" className="atlas-panel">
           <div className="atlas-heading">
             <div>
               <h2>Industry atlas</h2>
@@ -417,12 +589,12 @@ function App() {
         </div>
       </section>
 
-      <section className="section-shell repo-shell">
+      <section id="repos" className="section-shell repo-shell">
         <div className="section-heading">
           <h2>Every repo</h2>
           <p>
-            Filterable atlas of every public repo. Search by name / description / topic, or drill into a
-            single platform, vertical, language, or freshness window.
+            Filterable atlas of every public repo. Search by name / description / topic, sort the results, or drill
+            into a single platform, vertical, language, or freshness window.
           </p>
         </div>
 
@@ -469,14 +641,27 @@ function App() {
             <option>30d</option>
             <option>older</option>
           </select>
+
+          <select
+            aria-label="Sort repos"
+            className="sort-select"
+            value={sort}
+            onChange={(event) => setSort(event.target.value as (typeof SORT_OPTIONS)[number]["value"])}
+          >
+            {SORT_OPTIONS.map((entry) => (
+              <option key={entry.value} value={entry.value}>
+                sort: {entry.label}
+              </option>
+            ))}
+          </select>
         </div>
 
         <p className="results-copy">
           showing {filteredRepos.length} of {repoCatalog.length} repos
         </p>
 
-        <div className={`repo-grid ${showAllRepos ? "mobile-expanded" : ""}`}>
-          {filteredRepos.map((entry) => (
+        <div className="repo-grid">
+          {visibleRepos.map((entry) => (
             <article
               key={entry.slug}
               className={`repo-card tone-${getRepoTone(entry.vertical)} ${
@@ -516,9 +701,47 @@ function App() {
             </article>
           ))}
         </div>
-        <button className="mobile-show-more repo-show-more" type="button" onClick={() => setShowAllRepos((current) => !current)}>
-          {showAllRepos ? "Show fewer repos" : `Show more repos (${filteredRepos.length})`}
-        </button>
+
+        {sortedRepos.length === 0 ? (
+          <p className="repo-empty">No repos match these filters. Clear a filter or broaden the search.</p>
+        ) : hasMoreRepos ? (
+          <div className="repo-pagination">
+            <span className="repo-pagination-count">
+              showing {visibleRepos.length} of {sortedRepos.length}
+            </span>
+            <div className="repo-pagination-actions">
+              <button
+                className="repo-load-more"
+                type="button"
+                onClick={() => setVisibleCount((current) => current + REPO_PAGE_SIZE)}
+              >
+                Load more repos
+              </button>
+              <button
+                className="repo-show-all"
+                type="button"
+                onClick={() => setVisibleCount(sortedRepos.length)}
+              >
+                Show all {sortedRepos.length} repos
+              </button>
+            </div>
+          </div>
+        ) : (
+          sortedRepos.length > REPO_PAGE_SIZE && (
+            <div className="repo-pagination">
+              <span className="repo-pagination-count">
+                showing all {sortedRepos.length}
+              </span>
+              <button
+                className="repo-load-more"
+                type="button"
+                onClick={() => setVisibleCount(REPO_PAGE_SIZE)}
+              >
+                Collapse repos
+              </button>
+            </div>
+          )
+        )}
       </section>
 
       <footer className="portfolio-footer">

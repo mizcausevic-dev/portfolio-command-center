@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, within } from "@testing-library/react";
 import App from "./App";
 import { repoCatalog } from "./data";
 
@@ -21,7 +21,12 @@ describe("App", () => {
     render(<App />);
     expect(screen.getAllByText(/biotech \/ diagnostics/i).length).toBeGreaterThan(0);
     expect(screen.getAllByText(/shell \/ bash/i).length).toBeGreaterThan(0);
-    expect(screen.getByText(/diagnostic-qc-evidence-router/i)).toBeInTheDocument();
+
+    // diagnostic-qc-evidence-router sits past the first page of the Biotech set, so
+    // filter to Biotech and reveal all repos before asserting the card renders.
+    fireEvent.click(screen.getByRole("button", { name: /biotech \/ diagnostics/i }));
+    fireEvent.click(screen.getByRole("button", { name: /show all \d+ repos/i }));
+    expect(screen.getAllByText(/diagnostic-qc-evidence-router/i).length).toBeGreaterThan(0);
   });
 
   it("clicking atlas items drives the repo explorer filters", () => {
@@ -30,6 +35,8 @@ describe("App", () => {
     const biotechButton = screen.getByRole("button", { name: /biotech \/ diagnostics/i });
     fireEvent.click(biotechButton);
     expect(screen.getByDisplayValue(/biotech \/ diagnostics/i)).toBeInTheDocument();
+    // Biotech spans more than one page; reveal all to reach the deep entry.
+    fireEvent.click(screen.getByRole("button", { name: /show all \d+ repos/i }));
     expect(screen.getAllByText(/diagnostic-qc-evidence-router/i).length).toBeGreaterThan(0);
 
     fireEvent.click(biotechButton);
@@ -91,5 +98,38 @@ describe("App", () => {
     expect(screen.getByDisplayValue(/all verticals/i)).toBeInTheDocument();
     expect(screen.getByDisplayValue(/all platforms/i)).toBeInTheDocument();
     expect(screen.getAllByText(/gcp/i).length).toBeGreaterThan(0);
+  });
+
+  it("renders sticky section navigation with jump links to every section", () => {
+    render(<App />);
+
+    const nav = screen.getByRole("navigation", { name: /section navigation/i });
+    ["Overview", "Platforms", "Languages", "Verticals", "Repos"].forEach((label) => {
+      const link = within(nav).getByRole("link", { name: label });
+      expect(link).toBeInTheDocument();
+    });
+    expect(within(nav).getByRole("link", { name: "Repos" })).toHaveAttribute("href", "#repos");
+  });
+
+  it("paginates the repo grid and reveals every repo on demand", () => {
+    render(<App />);
+
+    // Default view is bounded to one page, not the full 706-row wall.
+    expect(document.querySelectorAll(".repo-card").length).toBe(24);
+
+    fireEvent.click(screen.getByRole("button", { name: /show all \d+ repos/i }));
+    expect(document.querySelectorAll(".repo-card").length).toBe(repoCatalog.length);
+  });
+
+  it("sorts the repo grid by name", () => {
+    render(<App />);
+
+    fireEvent.change(screen.getByLabelText(/sort repos/i), { target: { value: "name-asc" } });
+
+    const expectedFirst = [...repoCatalog]
+      .map((repo) => repo.slug)
+      .sort((left, right) => left.localeCompare(right))[0];
+    const firstCard = document.querySelector(".repo-grid .repo-head a");
+    expect(firstCard?.textContent).toBe(expectedFirst);
   });
 });
