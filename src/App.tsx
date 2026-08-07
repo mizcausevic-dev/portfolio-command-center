@@ -1,6 +1,7 @@
-import type { MouseEvent as ReactMouseEvent, PointerEvent as ReactPointerEvent } from "react";
+import type { MouseEvent as ReactMouseEvent } from "react";
 import { useCallback, useDeferredValue, useEffect, useMemo, useState } from "react";
 import {
+  featuredPlatforms,
   inferProductTags,
   industryAtlas,
   languageAtlas,
@@ -9,6 +10,11 @@ import {
   productSignalCounts,
   repoCatalog
 } from "./data";
+
+// Single real contact destination for the primary CTA (hero + sticky header +
+// footer). Direct mailto so it can never 404; the platform links stay secondary.
+const CONTACT_EMAIL = "causevic.miz@gmail.com";
+const CONTACT_HREF = `mailto:${CONTACT_EMAIL}`;
 
 // Sticky in-page navigation. Each id maps to a section id below; the scrollspy
 // highlights whichever is crossing the active band. Verticals sits beside Languages
@@ -24,6 +30,10 @@ const NAV_SECTIONS = [
 // Repo grid pagination. 706 rows rendered at once is the "endless scroll" the owner
 // flagged; we render a page at a time and let the user load more or reveal all.
 const REPO_PAGE_SIZE = 24;
+
+// The industry atlas ran too long (owner note): cap the platform/company signal
+// list to a preview and let it expand, instead of dumping every signal inline.
+const SIGNAL_PREVIEW = 12;
 
 // Real, non-fabricated sort keys. The catalog ships pre-sorted by GitHub pushedAt
 // descending (see scripts/sync-repo-catalog.mjs), so "last pushed" is the original
@@ -85,10 +95,14 @@ function App() {
   const [sort, setSort] = useState<(typeof SORT_OPTIONS)[number]["value"]>("last-pushed");
   const [hoveredVertical, setHoveredVertical] = useState<string | null>(null);
   const [hoveredLanguage, setHoveredLanguage] = useState<string | null>(null);
-  const [showAllPlatforms, setShowAllPlatforms] = useState(false);
+  // false = curated Featured view (default), true = all namedPlatforms lanes.
+  const [platformsExpanded, setPlatformsExpanded] = useState(false);
   const [showAllLanguages, setShowAllLanguages] = useState(false);
   const [showAllVerticals, setShowAllVerticals] = useState(false);
   const [showAllSignals, setShowAllSignals] = useState(false);
+  // The full 706-repo explorer is an opt-in deep-dive, not the default firehose.
+  // Any atlas/nav interaction that needs the grid opens it (see openArchive).
+  const [showArchive, setShowArchive] = useState(false);
   const [visibleCount, setVisibleCount] = useState(REPO_PAGE_SIZE);
   const [activeSection, setActiveSection] = useState<string>("overview");
 
@@ -119,6 +133,34 @@ function App() {
   );
 
   const platformCompanySignals = useMemo(() => productSignalCounts(repoCatalog), []);
+
+  // Preview the signal list rather than dump all of it (owner: industry atlas ran
+  // too long). The full set expands on demand — on desktop and mobile alike.
+  const visibleSignals = showAllSignals
+    ? platformCompanySignals
+    : platformCompanySignals.slice(0, SIGNAL_PREVIEW);
+
+  const platformsToShow = platformsExpanded ? namedPlatforms : featuredPlatforms;
+
+  // Faceted filter counts, sourced from the real catalog: show how many repos each
+  // filter value resolves to before the user commits to it (e.g. "Data Engineering (60)").
+  const facetCounts = useMemo(() => {
+    const tally = (key: keyof (typeof repoCatalog)[number]) => {
+      const counts: Record<string, number> = {};
+      repoCatalog.forEach((entry) => {
+        const value = String(entry[key]);
+        counts[value] = (counts[value] ?? 0) + 1;
+      });
+      return counts;
+    };
+
+    return {
+      platform: tally("platform"),
+      vertical: tally("vertical"),
+      language: tally("language"),
+      freshness: tally("freshness")
+    };
+  }, []);
 
   const languageColorMap = useMemo(
     () =>
@@ -246,6 +288,10 @@ function App() {
 
   const handleNavClick = useCallback((event: ReactMouseEvent<HTMLAnchorElement>, id: string) => {
     event.preventDefault();
+    // Jumping to Repos reveals the deep-dive so the grid is on screen when we land.
+    if (id === "repos") {
+      setShowArchive(true);
+    }
     const target = document.getElementById(id);
     if (!target) {
       return;
@@ -262,14 +308,10 @@ function App() {
     }
   }, []);
 
-  // fx-glow pointer follow: write the cursor position into --mx/--my so the soft glow
-  // tracks the mouse across the card (see fx-Claude.css .fx-glow).
-  const handleGlowMove = useCallback((event: ReactPointerEvent<HTMLElement>) => {
-    const card = event.currentTarget;
-    const rect = card.getBoundingClientRect();
-    card.style.setProperty("--mx", `${((event.clientX - rect.left) / rect.width) * 100}%`);
-    card.style.setProperty("--my", `${((event.clientY - rect.top) / rect.height) * 100}%`);
-  }, []);
+  // Opening the deep-dive archive is idempotent and used by every path that needs
+  // the repo grid on screen (the explicit button, a nav "Repos" jump, and any atlas
+  // chip that drives a filter). Kept in one place so those paths can never diverge.
+  const openArchive = useCallback(() => setShowArchive(true), []);
 
   const getRepoTone = (verticalName: string) => toneByVertical[verticalName] ?? "bert";
 
@@ -373,18 +415,23 @@ function App() {
         >
           Portfolio Command Center
         </a>
-        <div className="section-nav-links">
-          {NAV_SECTIONS.map((entry) => (
-            <a
-              key={entry.id}
-              href={`#${entry.id}`}
-              className={`section-nav-link ${activeSection === entry.id ? "is-active" : ""}`}
-              aria-current={activeSection === entry.id ? "true" : undefined}
-              onClick={(event) => handleNavClick(event, entry.id)}
-            >
-              {entry.label}
-            </a>
-          ))}
+        <div className="section-nav-right">
+          <div className="section-nav-links">
+            {NAV_SECTIONS.map((entry) => (
+              <a
+                key={entry.id}
+                href={`#${entry.id}`}
+                className={`section-nav-link ${activeSection === entry.id ? "is-active" : ""}`}
+                aria-current={activeSection === entry.id ? "true" : undefined}
+                onClick={(event) => handleNavClick(event, entry.id)}
+              >
+                {entry.label}
+              </a>
+            ))}
+          </div>
+          <a className="section-nav-cta" href={CONTACT_HREF}>
+            Get in touch
+          </a>
         </div>
       </nav>
 
@@ -399,17 +446,24 @@ function App() {
               <span className="accent-plum">{portfolioSnapshot.platformCount} named platforms.</span>
             </span>
           </h1>
+          <p className="hero-intro">
+            I build platform and AI-governance engineering: open protocol specs for the answer-engine era,
+            agent-fleet operations, and the reliability and decision systems that keep them accountable.
+          </p>
           <p className="hero-lede">
             A live map of every public project at{" "}
             <a href="https://github.com/mizcausevic-dev">github.com/mizcausevic-dev</a>, classified into the named
             platforms that organise the work and the industry verticals it covers.
           </p>
           <div className="hero-actions">
-            <a className="primary-action" href="https://github.com/mizcausevic-dev">
-              github.com/mizcausevic-dev
+            <a className="primary-action" href={CONTACT_HREF}>
+              Get in touch
+            </a>
+            <a className="secondary-action" href="https://github.com/mizcausevic-dev">
+              GitHub
             </a>
             <a className="secondary-action" href="https://www.linkedin.com/in/mirzacausevic/">
-              linkedin.com/in/mirzacausevic
+              LinkedIn
             </a>
             <a className="secondary-action" href="https://kineticgain.com/">
               kineticgain.com
@@ -418,12 +472,29 @@ function App() {
         </div>
 
         <div className="hero-stats">
-          {portfolioSnapshot.stats.map((entry) => (
-            <article key={entry.label} className="stat-card fx-layer fx-shine">
-              <strong>{entry.value}</strong>
-              <span>{entry.label}</span>
-            </article>
-          ))}
+          <div className="hero-metric-lead">
+            {portfolioSnapshot.heroMetrics.map((entry) => (
+              <article key={entry.label} className="metric-hero fx-layer fx-radial">
+                <strong>{entry.value}</strong>
+                <span>{entry.label}</span>
+              </article>
+            ))}
+          </div>
+          <div className="metric-strip">
+            {portfolioSnapshot.metricClusters.map((cluster) => (
+              <div key={cluster.group} className="metric-cluster">
+                <p className="metric-cluster-label">{cluster.group}</p>
+                <div className="metric-cluster-items">
+                  {cluster.stats.map((entry) => (
+                    <div key={entry.label} className="metric-mini">
+                      <strong>{entry.value}</strong>
+                      <span>{entry.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -431,16 +502,18 @@ function App() {
         <div className="section-heading">
           <h2>Named platforms</h2>
           <p>
-            The repos grouped into the platforms that organise the work. Order is by where the named cluster sits in
-            the architecture, not by repo count.
+            {platformsExpanded
+              ? "Every named platform that organises the work. Order is by where the named cluster sits in the architecture, not by repo count."
+              : `Start with the ${featuredPlatforms.length} flagship platforms — the largest, load-bearing clusters. Expand to see all ${namedPlatforms.length}.`}
           </p>
         </div>
-        <div className={`platform-grid ${showAllPlatforms ? "mobile-expanded" : ""}`}>
-          {namedPlatforms.map((entry) => (
+        <div className={`platform-grid ${platformsExpanded ? "is-all" : "is-featured"}`}>
+          {platformsToShow.map((entry) => (
             <article
               key={entry.name}
-              className={`platform-card fx-layer fx-glow tone-${entry.tone}`}
-              onPointerMove={handleGlowMove}
+              className={`platform-card fx-layer fx-corner tone-${entry.tone} ${
+                platformsExpanded ? "" : "platform-card-featured"
+              }`}
             >
               <div className="platform-card-head">
                 <h3>{entry.name}</h3>
@@ -455,12 +528,26 @@ function App() {
                   </a>
                 ))}
               </div>
-              <p className="platform-footer">{entry.footer}</p>
+              <div className="platform-card-foot">
+                <p className="platform-footer">{entry.footer}</p>
+                {entry.liveSurface ? (
+                  <a className="platform-live" href={entry.liveSurface.url}>
+                    Live: {entry.liveSurface.label} ↗
+                  </a>
+                ) : null}
+              </div>
             </article>
           ))}
         </div>
-        <button className="mobile-show-more" type="button" onClick={() => setShowAllPlatforms((current) => !current)}>
-          {showAllPlatforms ? "Show fewer platforms" : `Show all ${namedPlatforms.length} platforms`}
+        <button
+          className="platform-toggle"
+          type="button"
+          aria-expanded={platformsExpanded}
+          onClick={() => setPlatformsExpanded((current) => !current)}
+        >
+          {platformsExpanded
+            ? `Show featured ${featuredPlatforms.length} platforms`
+            : `Browse all ${namedPlatforms.length} platforms`}
         </button>
       </section>
 
@@ -486,6 +573,7 @@ function App() {
                 onClick={() => {
                   setVertical("all verticals");
                   setLanguage((current) => (current === entry.language ? "all languages" : entry.language));
+                  openArchive();
                 }}
               >
                 <div className="language-chip-head">
@@ -537,6 +625,7 @@ function App() {
                 onClick={() => {
                   setLanguage("all languages");
                   setVertical((current) => (current === entry.vertical ? "all verticals" : entry.vertical));
+                  openArchive();
                 }}
               >
                 <span>{entry.vertical}</span>
@@ -553,8 +642,8 @@ function App() {
               <span>Platform and company signals</span>
               <strong>{platformCompanySignals.length}</strong>
             </div>
-            <div className={`signal-chip-grid ${showAllSignals ? "mobile-expanded" : ""}`}>
-              {platformCompanySignals.map((entry) => (
+            <div className="signal-chip-grid">
+              {visibleSignals.map((entry) => (
                 <button
                   key={entry.tag}
                   className="signal-chip"
@@ -565,6 +654,7 @@ function App() {
                     setVertical("all verticals");
                     setPlatform("all platforms");
                     setQuery(entry.tag);
+                    openArchive();
                   }}
                 >
                   <span>{entry.tag}</span>
@@ -572,9 +662,18 @@ function App() {
                 </button>
               ))}
             </div>
-            <button className="mobile-show-more" type="button" onClick={() => setShowAllSignals((current) => !current)}>
-              {showAllSignals ? "Show fewer signals" : `Show all ${platformCompanySignals.length} signals`}
-            </button>
+            {platformCompanySignals.length > SIGNAL_PREVIEW ? (
+              <button
+                className="atlas-toggle"
+                type="button"
+                aria-expanded={showAllSignals}
+                onClick={() => setShowAllSignals((current) => !current)}
+              >
+                {showAllSignals
+                  ? "Show fewer signals"
+                  : `Show all ${platformCompanySignals.length} signals`}
+              </button>
+            ) : null}
           </div>
         </article>
       </section>
@@ -591,84 +690,90 @@ function App() {
 
       <section id="repos" className="section-shell repo-shell">
         <div className="section-heading">
-          <h2>Every repo</h2>
+          <h2>Browse the full technical archive</h2>
           <p>
-            Filterable atlas of every public repo. Search by name / description / topic, sort the results, or drill
-            into a single platform, vertical, language, or freshness window.
+            The complete {repoCatalog.length}-repo explorer — an opt-in deep-dive, not the default firehose. Search by
+            name / description / topic, sort, or drill into a single platform, vertical, language, or freshness window.
           </p>
         </div>
 
-        <div className="filter-bar">
-          <label className="search-shell">
-            <span className="search-icon">⌕</span>
-            <input
-              aria-label="Search repos"
-              type="search"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="search repos by name, description, topic..."
-            />
-          </label>
+        {showArchive ? (
+          <>
+            <div className="filter-bar">
+              <label className="search-shell">
+                <span className="search-icon">⌕</span>
+                <input
+                  aria-label="Search repos"
+                  type="search"
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                  placeholder="search repos by name, description, topic..."
+                />
+              </label>
 
-          <select aria-label="Filter by platform" value={platform} onChange={(event) => setPlatform(event.target.value)}>
-            {platformOptions.map((entry) => (
-              <option key={entry} value={entry}>
-                {entry}
-              </option>
-            ))}
-          </select>
+              <select aria-label="Filter by platform" value={platform} onChange={(event) => setPlatform(event.target.value)}>
+                {platformOptions.map((entry) => (
+                  <option key={entry} value={entry}>
+                    {entry} ({entry === "all platforms" ? repoCatalog.length : facetCounts.platform[entry] ?? 0})
+                  </option>
+                ))}
+              </select>
 
-          <select aria-label="Filter by vertical" value={vertical} onChange={(event) => setVertical(event.target.value)}>
-            {verticalOptions.map((entry) => (
-              <option key={entry} value={entry}>
-                {entry}
-              </option>
-            ))}
-          </select>
+              <select aria-label="Filter by vertical" value={vertical} onChange={(event) => setVertical(event.target.value)}>
+                {verticalOptions.map((entry) => (
+                  <option key={entry} value={entry}>
+                    {entry} ({entry === "all verticals" ? repoCatalog.length : facetCounts.vertical[entry] ?? 0})
+                  </option>
+                ))}
+              </select>
 
-          <select aria-label="Filter by language" value={language} onChange={(event) => setLanguage(event.target.value)}>
-            {languageOptions.map((entry) => (
-              <option key={entry} value={entry}>
-                {entry}
-              </option>
-            ))}
-          </select>
+              <select aria-label="Filter by language" value={language} onChange={(event) => setLanguage(event.target.value)}>
+                {languageOptions.map((entry) => (
+                  <option key={entry} value={entry}>
+                    {entry} ({entry === "all languages" ? repoCatalog.length : facetCounts.language[entry] ?? 0})
+                  </option>
+                ))}
+              </select>
 
-          <select aria-label="Filter by freshness" value={freshness} onChange={(event) => setFreshness(event.target.value)}>
-            <option>any freshness</option>
-            <option>24h</option>
-            <option>7d</option>
-            <option>30d</option>
-            <option>older</option>
-          </select>
+              <select
+                aria-label="Filter by freshness"
+                value={freshness}
+                onChange={(event) => setFreshness(event.target.value)}
+              >
+                <option value="any freshness">any freshness ({repoCatalog.length})</option>
+                <option value="24h">24h ({facetCounts.freshness["24h"] ?? 0})</option>
+                <option value="7d">7d ({facetCounts.freshness["7d"] ?? 0})</option>
+                <option value="30d">30d ({facetCounts.freshness["30d"] ?? 0})</option>
+                <option value="older">older ({facetCounts.freshness["older"] ?? 0})</option>
+              </select>
 
-          <select
-            aria-label="Sort repos"
-            className="sort-select"
-            value={sort}
-            onChange={(event) => setSort(event.target.value as (typeof SORT_OPTIONS)[number]["value"])}
-          >
-            {SORT_OPTIONS.map((entry) => (
-              <option key={entry.value} value={entry.value}>
-                sort: {entry.label}
-              </option>
-            ))}
-          </select>
-        </div>
+              <select
+                aria-label="Sort repos"
+                className="sort-select"
+                value={sort}
+                onChange={(event) => setSort(event.target.value as (typeof SORT_OPTIONS)[number]["value"])}
+              >
+                {SORT_OPTIONS.map((entry) => (
+                  <option key={entry.value} value={entry.value}>
+                    sort: {entry.label}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-        <p className="results-copy">
-          showing {filteredRepos.length} of {repoCatalog.length} repos
-        </p>
+            <p className="results-copy">
+              showing {filteredRepos.length} of {repoCatalog.length} repos
+            </p>
 
-        <div className="repo-grid">
-          {visibleRepos.map((entry) => (
-            <article
-              key={entry.slug}
-              className={`repo-card tone-${getRepoTone(entry.vertical)} ${
-                isRepoHighlighted(entry) ? "repo-card-highlighted" : "repo-card-muted"
-              }`}
-            >
-              <div className="repo-head">
+            <div className="repo-grid">
+              {visibleRepos.map((entry) => (
+                <article
+                  key={entry.slug}
+                  className={`repo-card fx-layer fx-corner tone-${getRepoTone(entry.vertical)} ${
+                    isRepoHighlighted(entry) ? "repo-card-highlighted" : "repo-card-muted"
+                  }`}
+                >
+                  <div className="repo-head">
                 <a href={entry.url}>{entry.slug}</a>
                 <span className="repo-open" aria-hidden="true">
                   ↗
@@ -742,9 +847,44 @@ function App() {
             </div>
           )
         )}
+
+            <button className="archive-collapse" type="button" onClick={() => setShowArchive(false)}>
+              Collapse the archive
+            </button>
+          </>
+        ) : (
+          <div className="archive-gate fx-layer fx-corner">
+            <div className="archive-gate-copy">
+              <p>
+                The full {repoCatalog.length}-repo explorer — search, sort, and filter across{" "}
+                {portfolioSnapshot.platformCount} platforms, {portfolioSnapshot.languageCount} languages, and{" "}
+                {portfolioSnapshot.verticalCount} verticals.
+              </p>
+            </div>
+            <button className="archive-open" type="button" onClick={openArchive}>
+              Browse the full technical archive →
+            </button>
+          </div>
+        )}
       </section>
 
       <footer className="portfolio-footer">
+        <div className="portfolio-footer-contact">
+          <div className="portfolio-footer-pitch">
+            <p className="portfolio-footer-kicker">Let's build something accountable</p>
+            <p className="portfolio-footer-lede">
+              Platform and AI-governance engineering, open specs, and operator tooling. Reach out and let's talk.
+            </p>
+          </div>
+          <div className="portfolio-footer-actions">
+            <a className="primary-action" href={CONTACT_HREF}>
+              Get in touch
+            </a>
+            <a className="footer-email" href={CONTACT_HREF}>
+              {CONTACT_EMAIL}
+            </a>
+          </div>
+        </div>
         <div className="portfolio-footer-top">
           <a href="https://github.com/mizcausevic-dev">GitHub</a>
           <a href="https://www.linkedin.com/in/mirzacausevic/">LinkedIn</a>

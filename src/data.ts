@@ -1,5 +1,13 @@
 import generatedRepoCatalog from "./generatedRepoCatalog.json";
-import { IndustryVerticalEntry, LanguageAtlasEntry, NamedPlatform, RepoEntry, SnapshotStat } from "./types";
+import {
+  IndustryVerticalEntry,
+  LanguageAtlasEntry,
+  MetricCluster,
+  MetricStat,
+  NamedPlatform,
+  RepoEntry,
+  SnapshotStat
+} from "./types";
 
 const SNAPSHOT_LABEL = "Portfolio Constellation · Live GitHub sync";
 
@@ -15,6 +23,9 @@ const namedPlatformDefinitions = [
       { name: "ai-incident-card-spec", url: "https://github.com/mizcausevic-dev/ai-incident-card-spec" },
       { name: "clinical-ai-disclosure-spec", url: "https://github.com/mizcausevic-dev/clinical-ai-disclosure-spec" }
     ],
+    // Real, owned live surface (also linked from the footer). Only this platform
+    // gets a live link — no per-platform URLs are invented for the rest.
+    liveSurface: { label: "suite.kineticgain.com", url: "https://suite.kineticgain.com/" },
     tone: "bert" as const
   },
   {
@@ -253,6 +264,20 @@ export const namedPlatforms: NamedPlatform[] = namedPlatformDefinitions.map((ent
   };
 });
 
+// Curated "Featured" default view: the five platforms with the largest real repo
+// counts, re-ordered so the two flagship lanes lead. Data-driven (top-5 by count),
+// not hand-picked vanity — the toggle still reveals all namedPlatforms.length lanes.
+const FLAGSHIP_FIRST = ["Kinetic Gain Protocol Suite", "Agent Operations Suite"];
+
+export const featuredPlatforms: NamedPlatform[] = (() => {
+  const topFive = [...namedPlatforms].sort((left, right) => right.count - left.count).slice(0, 5);
+  const flagships = FLAGSHIP_FIRST.map((name) => topFive.find((entry) => entry.name === name)).filter(
+    (entry): entry is NamedPlatform => Boolean(entry)
+  );
+  const rest = topFive.filter((entry) => !FLAGSHIP_FIRST.includes(entry.name));
+  return [...flagships, ...rest];
+})();
+
 export const languageAtlas: LanguageAtlasEntry[] = Object.entries(
   repoCatalog.reduce<Record<string, number>>((accumulator, repo) => {
     accumulator[repo.language] = (accumulator[repo.language] ?? 0) + 1;
@@ -283,6 +308,11 @@ export const portfolioSnapshot: {
   platformCount: number;
   verticalCount: number;
   stats: SnapshotStat[];
+  // Metric hierarchy: two large hero numbers, the rest demoted into two labelled
+  // supporting clusters. Every value is derived from the same catalog counts as
+  // `stats`, so nothing here is a new/independent number.
+  heroMetrics: MetricStat[];
+  metricClusters: MetricCluster[];
 } = {
   snapshotLabel: SNAPSHOT_LABEL,
   totalRepos: repoCatalog.length,
@@ -296,6 +326,26 @@ export const portfolioSnapshot: {
     { value: `${pushed7Days}`, label: "pushed in 7d" },
     { value: `${namedPlatforms.length}`, label: "platforms" },
     { value: `${industryAtlas.length}`, label: "verticals" }
+  ],
+  heroMetrics: [
+    { value: `${repoCatalog.length}`, label: "public repos" },
+    { value: `${namedPlatforms.length}`, label: "named platforms" }
+  ],
+  metricClusters: [
+    {
+      group: "Core Engine",
+      stats: [
+        { value: `${languageAtlas.length}`, label: "languages" },
+        { value: `${industryAtlas.length}`, label: "verticals" }
+      ]
+    },
+    {
+      group: "Velocity",
+      stats: [
+        { value: `${pushed24Hours}`, label: "pushed in 24h" },
+        { value: `${pushed7Days}`, label: "pushed in 7d" }
+      ]
+    }
   ]
 };
 

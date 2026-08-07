@@ -1,6 +1,12 @@
 import { fireEvent, render, screen, within } from "@testing-library/react";
 import App from "./App";
-import { repoCatalog } from "./data";
+import { featuredPlatforms, namedPlatforms, repoCatalog } from "./data";
+
+// The full repo explorer is an opt-in deep-dive now; open it before asserting on
+// the filter bar / grid. Atlas chip clicks open it implicitly, so this is only
+// needed for tests that go straight to the grid without touching an atlas chip.
+const openArchive = () =>
+  fireEvent.click(screen.getByRole("button", { name: /^browse the full technical archive/i }));
 
 describe("App", () => {
   it("renders the constellation hero", () => {
@@ -11,10 +17,47 @@ describe("App", () => {
 
   it("renders named platforms and atlas sections", () => {
     render(<App />);
-    expect(screen.getByText(/^Named platforms$/i)).toBeInTheDocument();
-    expect(screen.getByText(/^Language atlas$/i)).toBeInTheDocument();
-    expect(screen.getByText(/^Industry atlas$/i)).toBeInTheDocument();
+    // Use headings — the metric labels ("named platforms") intentionally share the
+    // section-heading wording, so a bare getByText would be ambiguous.
+    expect(screen.getByRole("heading", { name: /^Named platforms$/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /^Language atlas$/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /^Industry atlas$/i })).toBeInTheDocument();
     expect(screen.getByText(/^Platform and company signals$/i)).toBeInTheDocument();
+  });
+
+  it("exposes a real contact CTA in the hero and sticky nav", () => {
+    render(<App />);
+    const ctas = screen.getAllByRole("link", { name: /get in touch/i });
+    expect(ctas.length).toBeGreaterThanOrEqual(2);
+    ctas.forEach((cta) => expect(cta).toHaveAttribute("href", "mailto:causevic.miz@gmail.com"));
+  });
+
+  it("defaults the platforms view to the curated featured set, expandable to all", () => {
+    render(<App />);
+    expect(document.querySelectorAll(".platform-card").length).toBe(featuredPlatforms.length);
+
+    fireEvent.click(screen.getByRole("button", { name: /browse all \d+ platforms/i }));
+    expect(document.querySelectorAll(".platform-card").length).toBe(namedPlatforms.length);
+  });
+
+  it("keeps the repo explorer gated behind an opt-in archive", () => {
+    render(<App />);
+    // Firehose is not the default — no repo cards until the archive is opened.
+    expect(document.querySelectorAll(".repo-card").length).toBe(0);
+
+    openArchive();
+    expect(document.querySelectorAll(".repo-card").length).toBe(24);
+  });
+
+  it("shows faceted repo counts inline in the filter options", () => {
+    render(<App />);
+    openArchive();
+
+    const protocolCount = repoCatalog.filter((repo) => repo.platform === "Kinetic Gain Protocol Suite").length;
+    expect(
+      screen.getByRole("option", { name: new RegExp(`Kinetic Gain Protocol Suite \\(${protocolCount}\\)`, "i") })
+    ).toBeInTheDocument();
+    expect(screen.getByRole("option", { name: new RegExp(`all platforms \\(${repoCatalog.length}\\)`, "i") })).toBeInTheDocument();
   });
 
   it("renders the refreshed biotech and polyglot entries", () => {
@@ -23,7 +66,7 @@ describe("App", () => {
     expect(screen.getAllByText(/shell \/ bash/i).length).toBeGreaterThan(0);
 
     // diagnostic-qc-evidence-router sits past the first page of the Biotech set, so
-    // filter to Biotech and reveal all repos before asserting the card renders.
+    // filter to Biotech (which opens the archive) and reveal all repos before asserting.
     fireEvent.click(screen.getByRole("button", { name: /biotech \/ diagnostics/i }));
     fireEvent.click(screen.getByRole("button", { name: /show all \d+ repos/i }));
     expect(screen.getAllByText(/diagnostic-qc-evidence-router/i).length).toBeGreaterThan(0);
@@ -49,17 +92,17 @@ describe("App", () => {
     render(<App />);
 
     fireEvent.click(screen.getByRole("button", { name: /kotlin/i }));
-    expect(screen.getByDisplayValue(/^kotlin$/i)).toBeInTheDocument();
+    expect(screen.getByDisplayValue(/^kotlin \(\d+\)$/i)).toBeInTheDocument();
     expect(screen.getAllByText(/field-audit-mobile/i).length).toBeGreaterThan(0);
 
     fireEvent.click(screen.getByRole("button", { name: /kotlin/i }));
     fireEvent.click(screen.getByRole("button", { name: /julia/i }));
-    expect(screen.getByDisplayValue(/^julia$/i)).toBeInTheDocument();
+    expect(screen.getByDisplayValue(/^julia \(\d+\)$/i)).toBeInTheDocument();
     expect(screen.getAllByText(/yield-forecast-studio/i).length).toBeGreaterThan(0);
 
     fireEvent.click(screen.getByRole("button", { name: /julia/i }));
     fireEvent.click(screen.getByRole("button", { name: /c#/i }));
-    expect(screen.getByDisplayValue(/^c#$/i)).toBeInTheDocument();
+    expect(screen.getByDisplayValue(/^c# \(\d+\)$/i)).toBeInTheDocument();
     expect(screen.getAllByText(/access-certification-api-dotnet/i).length).toBeGreaterThan(0);
   });
 
@@ -70,7 +113,7 @@ describe("App", () => {
     expect(screen.getByDisplayValue(/biotech \/ diagnostics/i)).toBeInTheDocument();
 
     fireEvent.click(screen.getByRole("button", { name: /kotlin/i }));
-    expect(screen.getByDisplayValue(/^kotlin$/i)).toBeInTheDocument();
+    expect(screen.getByDisplayValue(/^kotlin \(\d+\)$/i)).toBeInTheDocument();
     expect(screen.getByDisplayValue(/all verticals/i)).toBeInTheDocument();
     expect(screen.getAllByText(/field-audit-mobile/i).length).toBeGreaterThan(0);
   });
@@ -80,13 +123,13 @@ describe("App", () => {
 
     const expectedPython = repoCatalog.filter((repo) => repo.language === "Python").length;
     fireEvent.click(screen.getByRole("button", { name: /python/i }));
-    expect(screen.getByDisplayValue(/^python$/i)).toBeInTheDocument();
+    expect(screen.getByDisplayValue(/^python \(\d+\)$/i)).toBeInTheDocument();
     expect(screen.getByText(new RegExp(`showing ${expectedPython} of ${repoCatalog.length} repos`, "i"))).toBeInTheDocument();
 
     const expectedPhp = repoCatalog.filter((repo) => repo.language === "PHP").length;
     fireEvent.click(screen.getByRole("button", { name: /python/i }));
     fireEvent.click(screen.getByRole("button", { name: /php/i }));
-    expect(screen.getByDisplayValue(/^php$/i)).toBeInTheDocument();
+    expect(screen.getByDisplayValue(/^php \(\d+\)$/i)).toBeInTheDocument();
     expect(screen.getByText(new RegExp(`showing ${expectedPhp} of ${repoCatalog.length} repos`, "i"))).toBeInTheDocument();
   });
 
@@ -113,6 +156,7 @@ describe("App", () => {
 
   it("paginates the repo grid and reveals every repo on demand", () => {
     render(<App />);
+    openArchive();
 
     // Default view is bounded to one page, not the full 706-row wall.
     expect(document.querySelectorAll(".repo-card").length).toBe(24);
@@ -123,6 +167,7 @@ describe("App", () => {
 
   it("sorts the repo grid by name", () => {
     render(<App />);
+    openArchive();
 
     fireEvent.change(screen.getByLabelText(/sort repos/i), { target: { value: "name-asc" } });
 
