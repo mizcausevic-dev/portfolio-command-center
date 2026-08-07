@@ -29,7 +29,7 @@ describe("App", () => {
     render(<App />);
     const ctas = screen.getAllByRole("link", { name: /get in touch/i });
     expect(ctas.length).toBeGreaterThanOrEqual(2);
-    ctas.forEach((cta) => expect(cta).toHaveAttribute("href", "mailto:causevic.miz@gmail.com"));
+    ctas.forEach((cta) => expect(cta).toHaveAttribute("href", "mailto:miz@kineticgain.com"));
   });
 
   it("defaults the platforms view to the curated featured set, expandable to all", () => {

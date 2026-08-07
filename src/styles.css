@@ -641,15 +641,17 @@ select {
 .atlas-row {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  /* Right-size each panel to its own content instead of stretching the shorter
-     language panel to match the taller industry panel (the ~65% dead space). */
-  align-items: start;
+  /* Equal-height panels; the language grid below stretches its rows to fill the
+     taller industry panel so there is no dead cell under the shorter atlas. */
+  align-items: stretch;
   gap: 28px;
   margin-bottom: 34px;
 }
 
 .atlas-panel {
   padding: 28px 26px 24px;
+  display: flex;
+  flex-direction: column;
 }
 
 .atlas-heading {
@@ -679,9 +681,13 @@ select {
 
 .language-chip-grid {
   display: grid;
-  /* Denser auto-fill grid (was a fixed 3-up): more columns on wide panels, fewer
-     rows, no dead space (owner: language atlas was ~65% empty). */
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  /* Wider columns cap the column count (2-3 up), so 24 languages form enough rows
+     to approach the industry panel's height. flex:1 + row stretch then fill any
+     remaining height evenly, killing the dead space under the shorter atlas. */
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-auto-rows: minmax(56px, 1fr);
+  align-content: stretch;
+  flex: 1 1 auto;
   gap: 10px;
 }
 
@@ -693,6 +699,10 @@ select {
   background: rgba(14, 20, 34, 0.82);
   text-align: left;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
   transition:
     transform 160ms ease,
     border-color 160ms ease,

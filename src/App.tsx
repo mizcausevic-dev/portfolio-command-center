@@ -13,7 +13,7 @@ import {
 
 // Single real contact destination for the primary CTA (hero + sticky header +
 // footer). Direct mailto so it can never 404; the platform links stay secondary.
-const CONTACT_EMAIL = "causevic.miz@gmail.com";
+const CONTACT_EMAIL = "miz@kineticgain.com";
 const CONTACT_HREF = `mailto:${CONTACT_EMAIL}`;
 
 // Sticky in-page navigation. Each id maps to a section id below; the scrollspy
