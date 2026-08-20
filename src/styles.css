@@ -2164,3 +2164,416 @@ select {
     margin-top: 14px;
   }
 }
+
+/* ---- Platform constellation: radial hub/leaf map of namedPlatforms ----
+   Same geometry/interaction pattern as the diagrams already shipped on
+   suite.kineticgain.com (mcp-constellation.js et al.), retokenized onto this
+   repo's own BERT dark-cyan palette (:root above) instead of that site's
+   slate/emerald tokens. Sits between the "Named platforms" heading and the
+   platform-grid (see App.tsx) — additive, not a replacement for the grid. */
+.constellation {
+  margin: 30px 0 6px;
+  padding: 28px 26px 26px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(102, 252, 241, 0.06), transparent 30%),
+    rgba(12, 18, 34, 0.7);
+  box-shadow: var(--shadow);
+}
+
+.constellation-head h3 {
+  margin: 0;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  color: var(--head);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.constellation-head p {
+  margin: 10px 0 0;
+  max-width: 780px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.constellation-pillbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px auto 14px;
+  max-width: 920px;
+}
+
+.constellation-pill {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(31, 40, 51, 0.55);
+  color: var(--muted);
+  cursor: pointer;
+  transition:
+    transform 120ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    background 150ms ease;
+}
+
+.constellation-pill:hover {
+  transform: translateY(-1px);
+  color: var(--head);
+}
+
+.constellation-pill.active {
+  color: var(--bg);
+  font-weight: 700;
+  border-color: transparent;
+}
+
+.constellation-pill:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.constellation-stage {
+  position: relative;
+  margin: 0 auto;
+  max-width: 620px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.constellation-stage svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.constellation-sweep {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(102, 252, 241, 0.08) 12deg,
+    transparent 26deg,
+    transparent 360deg
+  );
+  animation: constellation-spin 20s linear infinite;
+  mix-blend-mode: screen;
+}
+
+@keyframes constellation-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.constellation .node-hub circle.ring {
+  fill: none;
+  stroke-width: 1.3;
+  transition: opacity 250ms ease;
+}
+
+.constellation .node-hub circle.core {
+  stroke-width: 1.5;
+  transition:
+    opacity 250ms ease,
+    r 150ms ease;
+}
+
+.constellation .node-leaf circle {
+  stroke-width: 1.1;
+  transition:
+    opacity 250ms ease,
+    r 150ms ease;
+}
+
+.constellation .node-leaf circle.beacon {
+  animation: constellation-pulse 2.4s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes constellation-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.constellation .spoke,
+.constellation .branch {
+  fill: none;
+  stroke-width: 1;
+  transition:
+    opacity 250ms ease,
+    stroke-width 150ms ease;
+}
+
+.constellation .arc {
+  fill: none;
+  stroke-width: 1.6;
+  opacity: 0.5;
+}
+
+.constellation .lbl-hub {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: opacity 250ms ease;
+}
+
+.constellation .lbl-leaf {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  transition: opacity 250ms ease;
+}
+
+.constellation-group.dim {
+  opacity: 0.16;
+}
+
+.constellation .center-core {
+  fill: var(--bg);
+  stroke: var(--accent);
+  stroke-width: 1.8;
+}
+
+.constellation .center-ring {
+  fill: none;
+  stroke: var(--accent2);
+  stroke-width: 1;
+  stroke-dasharray: 3 5;
+  opacity: 0.6;
+}
+
+.constellation .center-lbl {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-weight: 800;
+  fill: var(--head);
+  letter-spacing: 0.04em;
+}
+
+.constellation .center-sub {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  fill: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.constellation .hoverable {
+  cursor: pointer;
+}
+
+.constellation .hoverable:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.constellation-dossier {
+  max-width: 620px;
+  margin: 16px auto 0;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel-strong);
+  display: none;
+  max-height: 320px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.constellation-dossier.show {
+  display: block;
+}
+
+.constellation-dossier-kind {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted2);
+  margin-bottom: 6px;
+}
+
+.constellation-dossier h4 {
+  margin: 0 0 8px;
+  color: var(--head);
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.constellation-dossier p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.constellation-dossier-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.constellation-dossier-fields .field {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.constellation-dossier-fields .field span {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted2);
+  min-width: 110px;
+  padding-top: 2px;
+}
+
+.constellation-dossier-fields .field strong {
+  color: var(--head);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.constellation-dossier-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 13px;
+  transition:
+    background 150ms ease,
+    color 150ms ease;
+}
+
+.constellation-dossier-link:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.constellation-dossier-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  color: var(--muted2);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 16px;
+}
+
+.constellation-dossier-close:focus-visible,
+.constellation-dossier-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---- Send-to-LLM deep-link buttons (components/SendToLlm.tsx) ----
+   Same proven pattern already live on suite.kineticgain.com
+   (send-to-llm.js); retokenized onto this repo's own palette. */
+.send-to-llm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.send-to-llm-label {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted2);
+  margin-right: 2px;
+}
+
+.send-to-llm-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--panel2);
+  color: var(--muted2);
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    transform 120ms ease;
+}
+
+.send-to-llm-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.send-to-llm-btn:hover {
+  color: var(--head);
+  border-color: var(--accent2);
+  transform: translateY(-1px);
+}
+
+.send-to-llm-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---- Reduced motion: kill the new diagram/beacon/button animations ---- */
+@media (prefers-reduced-motion: reduce) {
+  .constellation-sweep,
+  .constellation .node-leaf circle.beacon {
+    animation: none;
+  }
+
+  .send-to-llm-btn {
+    transition: none;
+  }
+
+  .send-to-llm-btn:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .constellation {
+    padding: 20px 16px;
+  }
+
+  .constellation-dossier-fields .field span {
+    min-width: 100%;
+  }
+}

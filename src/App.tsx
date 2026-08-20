@@ -10,6 +10,7 @@ import {
   productSignalCounts,
   repoCatalog
 } from "./data";
+import { PortfolioConstellation } from "./components/PortfolioConstellation";
 
 // Single real contact destination for the primary CTA (hero + sticky header +
 // footer). Direct mailto so it can never 404; the platform links stay secondary.
@@ -313,6 +314,19 @@ function App() {
   // chip that drives a filter). Kept in one place so those paths can never diverge.
   const openArchive = useCallback(() => setShowArchive(true), []);
 
+  // Same cross-atlas reset pattern as the vertical/language chip handlers below:
+  // picking a platform from the constellation clears the opposing dimensions so
+  // the drill-in can never collapse the grid to zero, then opens the archive.
+  const selectPlatform = useCallback(
+    (name: string) => {
+      setVertical("all verticals");
+      setLanguage("all languages");
+      setPlatform(name);
+      setShowArchive(true);
+    },
+    []
+  );
+
   const getRepoTone = (verticalName: string) => toneByVertical[verticalName] ?? "bert";
 
   const deriveKeywords = (entry: (typeof repoCatalog)[number]) => {
@@ -507,6 +521,13 @@ function App() {
               : `Start with the ${featuredPlatforms.length} flagship platforms — the largest, load-bearing clusters. Expand to see all ${namedPlatforms.length}.`}
           </p>
         </div>
+
+        <PortfolioConstellation
+          platforms={namedPlatforms}
+          totalRepos={portfolioSnapshot.totalRepos}
+          onSelectPlatform={selectPlatform}
+        />
+
         <div className={`platform-grid ${platformsExpanded ? "is-all" : "is-featured"}`}>
           {platformsToShow.map((entry) => (
             <article
