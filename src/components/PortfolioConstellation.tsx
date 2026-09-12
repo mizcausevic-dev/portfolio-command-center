@@ -187,7 +187,7 @@ export function PortfolioConstellation({ platforms, totalRepos, onSelectPlatform
 
             const spokeStart = polar(CX, CY, CENTER_R, angle);
             const hubR = hubRadius(p.count);
-            const lblPos = polar(CX, CY, HUB_R + hubR + 24, angle);
+            const lblPos = polar(CX, CY, HUB_R + hubR + 42, angle);
             const hubAnchor = textAnchor(lblPos.x);
 
             const extra = moreCount(p.count, p.repos.length);
@@ -322,7 +322,7 @@ export function PortfolioConstellation({ platforms, totalRepos, onSelectPlatform
                   <circle cx={hubPos.x} cy={hubPos.y} r={3.2} fill={col} />
                 </g>
                 <text className="lbl-hub" x={lblPos.x} y={lblPos.y} fill={col} textAnchor={hubAnchor}>
-                  {truncate(p.name.toUpperCase(), 26)} &middot; {p.count}
+                  {truncate(p.name.toUpperCase(), 20)} &middot; {p.count}
                 </text>
               </g>
             );

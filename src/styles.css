@@ -17,12 +17,17 @@
   --muted2: #8b98a2;
   --accent: #66fcf1;
   --accent2: #45a29e;
-  /* Category tone accents collapsed onto the two BERT accents (cyan + teal). */
+  /* Category tone accents. bert/cyan are the two BERT-doctrine anchors;
+     plum/amber/rose were aliased onto those same two values, which collapses
+     a 5-tone categorical palette to 2 hues -- fine for a UI accent, not
+     enough to tell 9 platform hubs apart on the constellation map (confirmed
+     regression 2026-09-12: every hub rendered near-identical cyan/teal).
+     Distinct hues, same dark-theme brightness/saturation register as bert/cyan. */
   --bert: #66fcf1;
   --cyan: #45a29e;
-  --plum: #66fcf1;
-  --amber: #45a29e;
-  --rose: #66fcf1;
+  --plum: #a78bfa;
+  --amber: #fbbf24;
+  --rose: #fb7185;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
   font-family: "Inter", "Segoe UI", sans-serif;
   background:
@@ -2331,13 +2336,23 @@ select {
 .constellation .lbl-hub {
   font-family: "JetBrains Mono", ui-monospace, monospace;
   font-weight: 700;
+  font-size: 15px;
   letter-spacing: 0.02em;
   transition: opacity 250ms ease;
+  paint-order: stroke;
+  stroke: var(--bg);
+  stroke-width: 4px;
+  stroke-linejoin: round;
 }
 
 .constellation .lbl-leaf {
   font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
   transition: opacity 250ms ease;
+  paint-order: stroke;
+  stroke: var(--bg);
+  stroke-width: 3px;
+  stroke-linejoin: round;
 }
 
 .constellation-group.dim {
