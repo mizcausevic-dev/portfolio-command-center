@@ -322,8 +322,8 @@ export const portfolioSnapshot: {
   stats: [
     { value: `${repoCatalog.length}`, label: "total repos" },
     { value: `${languageAtlas.length}`, label: "languages" },
-    { value: `${pushed24Hours}`, label: "pushed in 24h" },
-    { value: `${pushed7Days}`, label: "pushed in 7d" },
+    { value: `${pushed24Hours}`, label: "pushed in 24h at snapshot" },
+    { value: `${pushed7Days}`, label: "pushed in 7d at snapshot" },
     { value: `${namedPlatforms.length}`, label: "platforms" },
     { value: `${industryAtlas.length}`, label: "verticals" }
   ],
@@ -340,10 +340,10 @@ export const portfolioSnapshot: {
       ]
     },
     {
-      group: "Velocity",
+      group: "Activity at snapshot",
       stats: [
-        { value: `${pushed24Hours}`, label: "pushed in 24h" },
-        { value: `${pushed7Days}`, label: "pushed in 7d" }
+        { value: `${pushed24Hours}`, label: "pushed in 24h then" },
+        { value: `${pushed7Days}`, label: "pushed in 7d then" }
       ]
     }
   ]

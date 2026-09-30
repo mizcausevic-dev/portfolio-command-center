@@ -12,6 +12,7 @@ describe("App", () => {
   it("renders the constellation hero", () => {
     render(<App />);
     expect(screen.getByText(/portfolio constellation · github catalog snapshot/i, { selector: "p" })).toBeInTheDocument();
+    expect(screen.getByText(/do not describe current GitHub activity/i)).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /one engineer\./i })).toBeInTheDocument();
   });
 

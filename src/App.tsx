@@ -41,12 +41,12 @@ const SIGNAL_PREVIEW = 12;
 // array order. There is no stars/precise-date field in the dataset, so no stars sort
 // is offered rather than inventing one.
 const SORT_OPTIONS = [
-  { value: "last-pushed", label: "last pushed" },
+  { value: "last-pushed", label: "saved push" },
   { value: "name-asc", label: "name A–Z" },
   { value: "name-desc", label: "name Z–A" },
   { value: "language", label: "language" },
   { value: "platform", label: "platform" },
-  { value: "freshness", label: "freshness" }
+  { value: "freshness", label: "activity at snapshot" }
 ] as const;
 
 const FRESHNESS_RANK: Record<string, number> = { "24h": 0, "7d": 1, "30d": 2, older: 3 };
@@ -467,7 +467,8 @@ function App() {
           <p className="hero-lede">
             A snapshot of public projects at{" "}
             <a href="https://github.com/mizcausevic-dev">github.com/mizcausevic-dev</a>, classified into the named
-            platforms that organise the work and the industry verticals it covers.
+            platforms that organise the work and the industry verticals it covers. Activity windows were calculated
+            when this catalog was generated; they do not describe current GitHub activity.
           </p>
           <div className="hero-actions">
             <a className="primary-action" href={CONTACT_HREF}>
@@ -714,7 +715,7 @@ function App() {
           <h2>Browse the full technical archive</h2>
           <p>
             The complete {repoCatalog.length}-repo explorer — an opt-in deep-dive, not the default firehose. Search by
-            name / description / topic, sort, or drill into a single platform, vertical, language, or freshness window.
+            name / description / topic, sort, or drill into a single platform, vertical, language, or historical activity window.
           </p>
         </div>
 
@@ -757,15 +758,15 @@ function App() {
               </select>
 
               <select
-                aria-label="Filter by freshness"
+                aria-label="Filter by historical activity"
                 value={freshness}
                 onChange={(event) => setFreshness(event.target.value)}
               >
-                <option value="any freshness">any freshness ({repoCatalog.length})</option>
-                <option value="24h">24h ({facetCounts.freshness["24h"] ?? 0})</option>
-                <option value="7d">7d ({facetCounts.freshness["7d"] ?? 0})</option>
-                <option value="30d">30d ({facetCounts.freshness["30d"] ?? 0})</option>
-                <option value="older">older ({facetCounts.freshness["older"] ?? 0})</option>
+                <option value="any freshness">activity: any ({repoCatalog.length})</option>
+                <option value="24h">24h at sync ({facetCounts.freshness["24h"] ?? 0})</option>
+                <option value="7d">7d at sync ({facetCounts.freshness["7d"] ?? 0})</option>
+                <option value="30d">30d at sync ({facetCounts.freshness["30d"] ?? 0})</option>
+                <option value="older">older at sync ({facetCounts.freshness["older"] ?? 0})</option>
               </select>
 
               <select
@@ -805,7 +806,7 @@ function App() {
 
               <div className="repo-pill-row">
                 <span className={`repo-pill repo-pill-${getRepoTone(entry.vertical)}`}>{entry.vertical}</span>
-                <span className="repo-pill repo-pill-muted">{entry.freshness}</span>
+                <span className="repo-pill repo-pill-muted">{entry.freshness} at snapshot</span>
                 <span className="repo-pill repo-pill-muted">{entry.subdomain}</span>
               </div>
 
@@ -822,7 +823,7 @@ function App() {
                   <i style={{ background: languageColorMap[entry.language] ?? "#ffffff" }} />
                   {entry.language}
                 </span>
-                <span className="repo-age">{entry.freshness}</span>
+                    <span className="repo-age">{entry.freshness} at snapshot</span>
               </div>
             </article>
           ))}
