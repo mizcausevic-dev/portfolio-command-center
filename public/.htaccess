@@ -1,8 +1,8 @@
 # portfolio.kineticgain.com — security response headers (Apache / Hostinger).
 #
 # Lives in public/ so Vite copies it into dist/ on build. The apex
-# workflow_dispatch `deploy_portfolio` job FTP-syncs dist/ to /portfolio/,
-# putting this at /portfolio/.htaccess.
+# Hostinger deploy workflow copies dist/ to /portfolio/,
+# putting this at /portfolio/.htaccess when Hostinger serves the domain.
 #
 # Same rubric as kineticgain-com-apex/.htaccess, tightened: Vite production
 # build has NO inline <script>, so script-src is 'self' only. React's

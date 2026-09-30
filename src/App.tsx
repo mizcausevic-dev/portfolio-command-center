@@ -416,7 +416,7 @@ function App() {
       : {
           title: "Click a language or vertical to filter the full catalog",
           body: "Hover or select any language or vertical to see its top repos, platforms, and product tags.",
-          pills: ["language filter", "vertical filter", "live GitHub sync", "product tags"]
+          pills: ["language filter", "vertical filter", "catalog snapshot", "product tags"]
         };
 
   return (
@@ -465,7 +465,7 @@ function App() {
             agent-fleet operations, and the reliability and decision systems that keep them accountable.
           </p>
           <p className="hero-lede">
-            A live map of every public project at{" "}
+            A snapshot of public projects at{" "}
             <a href="https://github.com/mizcausevic-dev">github.com/mizcausevic-dev</a>, classified into the named
             platforms that organise the work and the industry verticals it covers.
           </p>
@@ -916,7 +916,7 @@ function App() {
           <a href="https://docs.kineticgain.com/">Docs</a>
         </div>
         <div className="portfolio-footer-bottom">
-          <span>Portfolio Constellation · live GitHub-synced repo atlas</span>
+          <span>Portfolio Constellation · GitHub catalog snapshot</span>
           <span>
             Product tags surface operator work across GCP, CyberArk, Camunda, Klaviyo, IBM, Snowflake, Genesys, Okta,
             Power BI, Tableau, VWO, and adjacent platform lanes.

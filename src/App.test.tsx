@@ -11,7 +11,7 @@ const openArchive = () =>
 describe("App", () => {
   it("renders the constellation hero", () => {
     render(<App />);
-    expect(screen.getByText(/portfolio constellation · live github sync/i, { selector: "p" })).toBeInTheDocument();
+    expect(screen.getByText(/portfolio constellation · github catalog snapshot/i, { selector: "p" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /one engineer\./i })).toBeInTheDocument();
   });
 

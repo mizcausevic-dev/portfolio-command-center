@@ -1,11 +1,9 @@
-import { useEffect, useState } from "react";
-
 /**
  * "Send to LLM" deep-linking. Opens the visitor's preferred AI chat client in
- * a new tab with a prompt pre-filled (page URL + a short instruction), using
+ * a new tab with a prompt pre-filled (canonical public URL + a short instruction), using
  * each platform's documented query-param deep-link. No page content is read
- * or transmitted by this component — the target LLM fetches the URL itself
- * via its own browsing/retrieval, same as a human pasting a link.
+ * by this component. Clicking sends the public URL and prompt to the chosen
+ * provider. Using the canonical URL avoids sharing visitor query parameters.
  *
  * Same proven pattern already live on suite.kineticgain.com (send-to-llm.js,
  * shipped on the homepage, /specs/, /mcp/, and /verticals/), ported to a
@@ -36,9 +34,7 @@ const LINKS: Array<{ key: keyof typeof ICONS; label: string; build: (q: string) 
   { key: "gemini", label: "Gemini", build: (q) => `https://gemini.google.com/app?text=${q}` }
 ];
 
-/** The site's own canonical URL (matches index.html's <link rel="canonical">),
- * used as the fallback before the client mounts (window.location isn't
- * available at module-eval time). Upgrades to the exact live URL on mount. */
+/** The site's public canonical URL (matches index.html's <link rel="canonical">). */
 const CANONICAL_URL = "https://portfolio.kineticgain.com/";
 
 interface Props {
@@ -48,13 +44,7 @@ interface Props {
 export function SendToLlm({
   prompt = "Please explain and summarize the key takeaways of this portfolio, including its named platforms and industry verticals:"
 }: Props) {
-  const [pageUrl, setPageUrl] = useState(CANONICAL_URL);
-
-  useEffect(() => {
-    setPageUrl(window.location.href);
-  }, []);
-
-  const q = encodeURIComponent(`${prompt} ${pageUrl}`);
+  const q = encodeURIComponent(`${prompt} ${CANONICAL_URL}`);
 
   return (
     <div className="send-to-llm">
@@ -74,6 +64,7 @@ export function SendToLlm({
           <span>{link.label}</span>
         </a>
       ))}
+      <span className="send-to-llm-note">Opens an external AI site and shares this public page URL in the prompt.</span>
     </div>
   );
 }

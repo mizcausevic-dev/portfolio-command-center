@@ -9,7 +9,7 @@ import {
   SnapshotStat
 } from "./types";
 
-const SNAPSHOT_LABEL = "Portfolio Constellation · Live GitHub sync";
+const SNAPSHOT_LABEL = "Portfolio Constellation · GitHub catalog snapshot";
 
 const namedPlatformDefinitions = [
   {

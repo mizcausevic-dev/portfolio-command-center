@@ -30,14 +30,12 @@ describe("SendToLlm", () => {
     );
   });
 
-  it("carries the real live page URL in the encoded query (upgrades from the canonical fallback on mount)", () => {
+  it("shares only the public canonical URL, not the visitor's query or hash", () => {
     render(<SendToLlm />);
     const href = screen.getByRole("link", { name: /^Send this page to Claude$/i }).getAttribute("href") ?? "";
-    // jsdom's default location stands in for the real browser URL in this test
-    // environment; the component reads window.location.href the same way in
-    // both places, so asserting against it (rather than a hardcoded domain)
-    // is what actually proves the wiring instead of a coincidental match.
-    expect(decodeURIComponent(href)).toContain(window.location.href);
+    expect(decodeURIComponent(href)).toContain("https://portfolio.kineticgain.com/");
+    expect(decodeURIComponent(href)).not.toContain(window.location.href);
+    expect(screen.getByText(/shares this public page URL/i)).toBeInTheDocument();
   });
 
   it("marks every brand icon aria-hidden so it never depends on icon recognition alone", () => {

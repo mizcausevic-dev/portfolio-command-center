@@ -2529,6 +2529,12 @@ select {
   margin-right: 2px;
 }
 
+.send-to-llm-note {
+  flex-basis: 100%;
+  color: var(--muted2);
+  font-size: 11px;
+}
+
 .send-to-llm-btn {
   display: inline-flex;
   align-items: center;
