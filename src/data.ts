@@ -1,4 +1,5 @@
 import generatedRepoCatalog from "./generatedRepoCatalog.json";
+import catalogSnapshot from "./catalogSnapshot.json";
 import {
   IndustryVerticalEntry,
   LanguageAtlasEntry,
@@ -9,7 +10,7 @@ import {
   SnapshotStat
 } from "./types";
 
-const SNAPSHOT_LABEL = "Portfolio Constellation · GitHub catalog snapshot";
+const SNAPSHOT_LABEL = `Portfolio Constellation · GitHub catalog snapshot ${catalogSnapshot.generatedOn}`;
 
 const namedPlatformDefinitions = [
   {
@@ -303,6 +304,7 @@ const pushed7Days = repoCatalog.filter((repo) => repo.freshness === "24h" || rep
 
 export const portfolioSnapshot: {
   snapshotLabel: string;
+  generatedOn: string;
   totalRepos: number;
   languageCount: number;
   platformCount: number;
@@ -315,6 +317,7 @@ export const portfolioSnapshot: {
   metricClusters: MetricCluster[];
 } = {
   snapshotLabel: SNAPSHOT_LABEL,
+  generatedOn: catalogSnapshot.generatedOn,
   totalRepos: repoCatalog.length,
   languageCount: languageAtlas.length,
   platformCount: namedPlatforms.length,

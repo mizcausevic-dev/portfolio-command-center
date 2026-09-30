@@ -28,8 +28,8 @@ const NAV_SECTIONS = [
   { id: "repos", label: "Repos" }
 ] as const;
 
-// Repo grid pagination. 706 rows rendered at once is the "endless scroll" the owner
-// flagged; we render a page at a time and let the user load more or reveal all.
+// Repo grid pagination. Rendering the full catalog at once is the "endless scroll"
+// the owner flagged; show one page at a time with an explicit reveal-all option.
 const REPO_PAGE_SIZE = 24;
 
 // The industry atlas ran too long (owner note): cap the platform/company signal
@@ -101,7 +101,7 @@ function App() {
   const [showAllLanguages, setShowAllLanguages] = useState(false);
   const [showAllVerticals, setShowAllVerticals] = useState(false);
   const [showAllSignals, setShowAllSignals] = useState(false);
-  // The full 706-repo explorer is an opt-in deep-dive, not the default firehose.
+  // The full catalog explorer is an opt-in deep-dive, not the default firehose.
   // Any atlas/nav interaction that needs the grid opens it (see openArchive).
   const [showArchive, setShowArchive] = useState(false);
   const [visibleCount, setVisibleCount] = useState(REPO_PAGE_SIZE);
@@ -467,8 +467,9 @@ function App() {
           <p className="hero-lede">
             A snapshot of public projects at{" "}
             <a href="https://github.com/mizcausevic-dev">github.com/mizcausevic-dev</a>, classified into the named
-            platforms that organise the work and the industry verticals it covers. Activity windows were calculated
-            when this catalog was generated; they do not describe current GitHub activity.
+            platforms that organise the work and the industry verticals it covers. Catalog generated on{" "}
+            {portfolioSnapshot.generatedOn}. Activity windows were calculated then and do not describe current
+            GitHub activity.
           </p>
           <div className="hero-actions">
             <a className="primary-action" href={CONTACT_HREF}>

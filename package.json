@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:pages": "tsc -b && vite build --base=/portfolio-command-center/",
     "test": "vitest run",
     "sync:catalog": "node scripts/sync-repo-catalog.mjs"
   },

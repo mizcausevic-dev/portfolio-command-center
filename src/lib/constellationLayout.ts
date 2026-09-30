@@ -35,9 +35,8 @@ export function textAnchor(px: number, cx: number = CX): "start" | "middle" | "e
 /**
  * Hub circle radius, scaled from a real per-platform repo count (never
  * invented — see src/data.ts namedPlatforms[].count, derived from
- * repoCatalog). Defaults are tuned for this portfolio's real range (roughly
- * 19-181 repos per named platform as of the 726-repo catalog) rather than a
- * small tool-count scale: a formula tuned for single-digit counts would
+ * repoCatalog). Defaults are tuned for this portfolio's multi-repo platforms,
+ * rather than a small tool-count scale: a formula tuned for single-digit counts would
  * saturate its cap almost immediately at this magnitude, and the size
  * differences between platforms would stop meaning anything.
  */
