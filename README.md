@@ -159,6 +159,12 @@ npm run build
 
 The Pages workflow requires **Settings → Pages → Build and deployment → Source: GitHub Actions**. The legacy `main`/`/` source serves raw Vite source files. The workflow checks this setting before attempting deployment and does not change it automatically. After an authorized merge and source change, run the `pages` workflow and verify that its URL serves compiled `/portfolio-command-center/assets/` files with no `%KG_*%` tokens or `/src/main.tsx` reference. The `public/CNAME` file is ignored when Pages uses a custom Actions workflow; `portfolio.kineticgain.com` remains the canonical Hostinger URL.
 
+### Hostinger release and rollback
+
+A `main` push also runs `hostinger-deploy.yml` for the canonical Hostinger site. It builds and tests the app, uploads over SSH to a staging directory, then moves the previous and new `portfolio` directories into place. SSH failure stops the release; there is no FTP fallback. The previous directory is retained as `.portfolio-backup-<release SHA>`. The workflow writes a public `release.json` containing only the commit SHA and checks that the live HTML SHA-256, built JS path, and marker match the intended artifact, using a cache-busting URL. If live verification fails, it restores the prior directory and keeps the failed release in a separate directory.
+
+An authorized repository operator can run **Actions → Deploy to Hostinger → Run workflow**, choose `rollback`, and enter the full 40-character SHA of the *currently deployed* release. This only works when its matching backup exists and the live `release.json` matches that SHA. The rollback checks the old HTML at the live URL and retains the displaced newer directory. After a planned rollback drill, choose `deploy` on `main` to put the reviewed version back; verify the live marker and Pages URL again. The same workflow will attempt to undo a rollback whose live verification fails. A runner termination or host outage can still interrupt automatic recovery, so inspect the workflow result and live URL before considering the release complete.
+
 To refresh the checked-in catalog, run `npm run sync:catalog`, inspect the generated diff and `src/catalogSnapshot.json`, then recapture screenshots and rerun tests and both builds. A fresh snapshot changes the saved activity windows even when a repository's metadata is otherwise unchanged.
 
 ---
