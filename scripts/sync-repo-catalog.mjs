@@ -7,6 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const repoRoot = path.resolve(__dirname, "..");
 const outputPath = path.join(repoRoot, "src", "generatedRepoCatalog.json");
+const metadataPath = path.join(repoRoot, "src", "catalogSnapshot.json");
 
 const PLATFORM_NAMES = [
   "Kinetic Gain Protocol Suite",
@@ -73,6 +74,17 @@ const homepageOverrides = {
 };
 
 const verticalOverrides = {
+  "ai-finops-radar": "AI Platform",
+  "shadow-ai-detector": "IAM / Security",
+  "agent-router": "AI Platform",
+  "agent-eval-arena": "AI Platform",
+  "agent-codex": "AI Platform",
+  "board-decision-path-failure-forecast": "Compliance / Governance",
+  "board-game-cafes-directory": "Media / Publishing",
+  "codebase-bloat-tax": "Platform Engineering",
+  "evidence-labeling-protocol": "Compliance / Governance",
+  "tic-tac-toe-2026": "Media / Publishing",
+  "vinyl-record-stores-directory": "Media / Publishing",
   "diagnostic-qc-evidence-router": "Biotech / Diagnostics",
   "trial-protocol-deviation-monitor": "Biotech / Diagnostics",
   "assay-release-readiness-board": "Biotech / Diagnostics",
@@ -543,5 +555,6 @@ function buildCatalog() {
 
 const catalog = buildCatalog();
 writeFileSync(outputPath, `${JSON.stringify(catalog, null, 2)}\n`, "utf8");
+writeFileSync(metadataPath, `${JSON.stringify({ generatedOn: new Date().toISOString().slice(0, 10) }, null, 2)}\n`, "utf8");
 
 console.log(`Wrote ${catalog.length} repos to ${outputPath}`);

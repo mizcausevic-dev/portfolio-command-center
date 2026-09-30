@@ -28,8 +28,8 @@ const NAV_SECTIONS = [
   { id: "repos", label: "Repos" }
 ] as const;
 
-// Repo grid pagination. 706 rows rendered at once is the "endless scroll" the owner
-// flagged; we render a page at a time and let the user load more or reveal all.
+// Repo grid pagination. Rendering the full catalog at once is the "endless scroll"
+// the owner flagged; show one page at a time with an explicit reveal-all option.
 const REPO_PAGE_SIZE = 24;
 
 // The industry atlas ran too long (owner note): cap the platform/company signal
@@ -41,12 +41,12 @@ const SIGNAL_PREVIEW = 12;
 // array order. There is no stars/precise-date field in the dataset, so no stars sort
 // is offered rather than inventing one.
 const SORT_OPTIONS = [
-  { value: "last-pushed", label: "last pushed" },
+  { value: "last-pushed", label: "saved push" },
   { value: "name-asc", label: "name A–Z" },
   { value: "name-desc", label: "name Z–A" },
   { value: "language", label: "language" },
   { value: "platform", label: "platform" },
-  { value: "freshness", label: "freshness" }
+  { value: "freshness", label: "activity at snapshot" }
 ] as const;
 
 const FRESHNESS_RANK: Record<string, number> = { "24h": 0, "7d": 1, "30d": 2, older: 3 };
@@ -101,7 +101,7 @@ function App() {
   const [showAllLanguages, setShowAllLanguages] = useState(false);
   const [showAllVerticals, setShowAllVerticals] = useState(false);
   const [showAllSignals, setShowAllSignals] = useState(false);
-  // The full 706-repo explorer is an opt-in deep-dive, not the default firehose.
+  // The full catalog explorer is an opt-in deep-dive, not the default firehose.
   // Any atlas/nav interaction that needs the grid opens it (see openArchive).
   const [showArchive, setShowArchive] = useState(false);
   const [visibleCount, setVisibleCount] = useState(REPO_PAGE_SIZE);
@@ -416,7 +416,7 @@ function App() {
       : {
           title: "Click a language or vertical to filter the full catalog",
           body: "Hover or select any language or vertical to see its top repos, platforms, and product tags.",
-          pills: ["language filter", "vertical filter", "live GitHub sync", "product tags"]
+          pills: ["language filter", "vertical filter", "catalog snapshot", "product tags"]
         };
 
   return (
@@ -465,9 +465,11 @@ function App() {
             agent-fleet operations, and the reliability and decision systems that keep them accountable.
           </p>
           <p className="hero-lede">
-            A live map of every public project at{" "}
+            A snapshot of public projects at{" "}
             <a href="https://github.com/mizcausevic-dev">github.com/mizcausevic-dev</a>, classified into the named
-            platforms that organise the work and the industry verticals it covers.
+            platforms that organise the work and the industry verticals it covers. Catalog generated on{" "}
+            {portfolioSnapshot.generatedOn}. Activity windows were calculated then and do not describe current
+            GitHub activity.
           </p>
           <div className="hero-actions">
             <a className="primary-action" href={CONTACT_HREF}>
@@ -714,7 +716,7 @@ function App() {
           <h2>Browse the full technical archive</h2>
           <p>
             The complete {repoCatalog.length}-repo explorer — an opt-in deep-dive, not the default firehose. Search by
-            name / description / topic, sort, or drill into a single platform, vertical, language, or freshness window.
+            name / description / topic, sort, or drill into a single platform, vertical, language, or historical activity window.
           </p>
         </div>
 
@@ -757,15 +759,15 @@ function App() {
               </select>
 
               <select
-                aria-label="Filter by freshness"
+                aria-label="Filter by historical activity"
                 value={freshness}
                 onChange={(event) => setFreshness(event.target.value)}
               >
-                <option value="any freshness">any freshness ({repoCatalog.length})</option>
-                <option value="24h">24h ({facetCounts.freshness["24h"] ?? 0})</option>
-                <option value="7d">7d ({facetCounts.freshness["7d"] ?? 0})</option>
-                <option value="30d">30d ({facetCounts.freshness["30d"] ?? 0})</option>
-                <option value="older">older ({facetCounts.freshness["older"] ?? 0})</option>
+                <option value="any freshness">activity: any ({repoCatalog.length})</option>
+                <option value="24h">24h at sync ({facetCounts.freshness["24h"] ?? 0})</option>
+                <option value="7d">7d at sync ({facetCounts.freshness["7d"] ?? 0})</option>
+                <option value="30d">30d at sync ({facetCounts.freshness["30d"] ?? 0})</option>
+                <option value="older">older at sync ({facetCounts.freshness["older"] ?? 0})</option>
               </select>
 
               <select
@@ -805,7 +807,7 @@ function App() {
 
               <div className="repo-pill-row">
                 <span className={`repo-pill repo-pill-${getRepoTone(entry.vertical)}`}>{entry.vertical}</span>
-                <span className="repo-pill repo-pill-muted">{entry.freshness}</span>
+                <span className="repo-pill repo-pill-muted">{entry.freshness} at snapshot</span>
                 <span className="repo-pill repo-pill-muted">{entry.subdomain}</span>
               </div>
 
@@ -822,7 +824,7 @@ function App() {
                   <i style={{ background: languageColorMap[entry.language] ?? "#ffffff" }} />
                   {entry.language}
                 </span>
-                <span className="repo-age">{entry.freshness}</span>
+                    <span className="repo-age">{entry.freshness} at snapshot</span>
               </div>
             </article>
           ))}
@@ -916,7 +918,7 @@ function App() {
           <a href="https://docs.kineticgain.com/">Docs</a>
         </div>
         <div className="portfolio-footer-bottom">
-          <span>Portfolio Constellation · live GitHub-synced repo atlas</span>
+          <span>Portfolio Constellation · GitHub catalog snapshot</span>
           <span>
             Product tags surface operator work across GCP, CyberArk, Camunda, Klaviyo, IBM, Snowflake, Genesys, Okta,
             Power BI, Tableau, VWO, and adjacent platform lanes.

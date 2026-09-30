@@ -4,120 +4,194 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      operation:
+        description: Deploy current main, or roll back the specified deployed release
+        type: choice
+        options: [deploy, rollback]
+        default: deploy
+        required: true
+      release_sha:
+        description: Full 40-character commit SHA of the release to roll back
+        type: string
+        required: false
 
 permissions:
   contents: read
 
+# Never interrupt a swap or its verification/automatic restore. Later runs queue.
 concurrency:
   group: hostinger-portfolio-deploy
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
+    if: github.event_name == 'push' || inputs.operation == 'deploy'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SSH_HOST: ${{ vars.SSH_HOST }}
+      SSH_PORT: ${{ vars.SSH_PORT }}
+      SSH_USER: ${{ vars.SSH_USER }}
+      LIVE_URL: https://portfolio.kineticgain.com/
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: bash tests/hostinger-deploy.test.sh
+      - run: npm run build
+
+      - name: Mark exact release artifact
+        id: release_artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf '{"commit":"%s"}\n' "$GITHUB_SHA" > dist/release.json
+          echo "html_sha=$(sha256sum dist/index.html | cut -d ' ' -f 1)" >> "$GITHUB_OUTPUT"
+
+      - name: Configure SSH
+        shell: bash
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          [[ "$SSH_USER" =~ ^[A-Za-z0-9_-]+$ ]]
+          [[ "$SSH_HOST" =~ ^[A-Za-z0-9.-]+$ ]]
+          [[ "$SSH_PORT" =~ ^[0-9]{1,5}$ ]]
+          test -n "$SSH_PRIVATE_KEY"
+          test -n "$SSH_KNOWN_HOSTS"
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/hostinger_deploy_key
+          chmod 600 ~/.ssh/hostinger_deploy_key
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Check release target and backup vacancy
+        shell: bash
+        run: |
+          set -euo pipefail
+          target_parent="/home/${SSH_USER}/domains/kineticgain.com/public_html"
+          ssh -i ~/.ssh/hostinger_deploy_key -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+            "bash -s -- '$target_parent' preflight '$GITHUB_SHA' '$GITHUB_RUN_ID'" \
+            < scripts/hostinger-portfolio-remote.sh
+
+      - name: Upload build to SSH staging
+        shell: bash
+        run: |
+          set -euo pipefail
+          target_parent="/home/${SSH_USER}/domains/kineticgain.com/public_html"
+          release_dir="${target_parent}/.portfolio-release-${GITHUB_SHA}"
+          ssh -i ~/.ssh/hostinger_deploy_key -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+            "mkdir -- '$release_dir'"
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/hostinger_deploy_key -p ${SSH_PORT}" \
+            dist/ "$SSH_USER@$SSH_HOST:$release_dir/"
+
+      - name: Swap staged release into production
+        id: ssh_swap
+        shell: bash
+        run: |
+          set -euo pipefail
+          target_parent="/home/${SSH_USER}/domains/kineticgain.com/public_html"
+          ssh -i ~/.ssh/hostinger_deploy_key -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+            "bash -s -- '$target_parent' swap '$GITHUB_SHA' '$GITHUB_RUN_ID'" \
+            < scripts/hostinger-portfolio-remote.sh
+
+      - name: Verify exact live release
+        id: live_verify
+        shell: bash
+        run: bash scripts/verify-portfolio-live.sh "$LIVE_URL" "${{ steps.release_artifact.outputs.html_sha }}" "$GITHUB_SHA"
+
+      - name: Restore previous site if live verification failed
+        if: always() && steps.ssh_swap.outcome == 'success' && steps.live_verify.outcome != 'success'
+        shell: bash
+        run: |
+          set -euo pipefail
+          target_parent="/home/${SSH_USER}/domains/kineticgain.com/public_html"
+          expected_old_sha=$(ssh -i ~/.ssh/hostinger_deploy_key -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+            "bash -s -- '$target_parent' backup-hash '$GITHUB_SHA' '$GITHUB_RUN_ID'" \
+            < scripts/hostinger-portfolio-remote.sh)
+          ssh -i ~/.ssh/hostinger_deploy_key -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+            "bash -s -- '$target_parent' restore-failed '$GITHUB_SHA' '$GITHUB_RUN_ID'" \
+            < scripts/hostinger-portfolio-remote.sh
+          bash scripts/verify-portfolio-live.sh "$LIVE_URL" "$expected_old_sha"
+
+  rollback:
+    if: github.event_name == 'workflow_dispatch' && inputs.operation == 'rollback'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
       SSH_HOST: ${{ vars.SSH_HOST }}
       SSH_PORT: ${{ vars.SSH_PORT }}
       SSH_USER: ${{ vars.SSH_USER }}
-      TARGET_NAME: portfolio
       LIVE_URL: https://portfolio.kineticgain.com/
+      ROLLBACK_SHA: ${{ inputs.release_sha }}
     steps:
       - uses: actions/checkout@v6
 
-      - uses: actions/setup-node@v6
-        with:
-          node-version: "22"
-          cache: npm
-
-      - run: npm ci
-      - run: npm test
-      - run: npm run build
-
-      - name: Configure SSH
+      - name: Validate rollback request and configure SSH
         shell: bash
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
         run: |
           set -euo pipefail
-          test -n "${SSH_HOST}"
-          test -n "${SSH_PORT}"
-          test -n "${SSH_USER}"
+          [[ "$ROLLBACK_SHA" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$SSH_USER" =~ ^[A-Za-z0-9_-]+$ ]]
+          [[ "$SSH_HOST" =~ ^[A-Za-z0-9.-]+$ ]]
+          [[ "$SSH_PORT" =~ ^[0-9]{1,5}$ ]]
+          test -n "$SSH_PRIVATE_KEY"
+          test -n "$SSH_KNOWN_HOSTS"
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
-          printf '%s\n' "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/hostinger_deploy_key
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/hostinger_deploy_key
           chmod 600 ~/.ssh/hostinger_deploy_key
-          printf '%s\n' "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
-          test -s ~/.ssh/known_hosts
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
 
-      - name: Upload build to staging
-        id: ssh_upload
-        continue-on-error: true
+      - name: Fingerprint current and backup sites
+        id: site_hashes
         shell: bash
         run: |
           set -euo pipefail
           target_parent="/home/${SSH_USER}/domains/kineticgain.com/public_html"
-          release_dir="${target_parent}/.${TARGET_NAME}-release-${GITHUB_SHA}"
-          ssh -i ~/.ssh/hostinger_deploy_key -p "${SSH_PORT}" "${SSH_USER}@${SSH_HOST}" \
-            "mkdir -p '${release_dir}'"
-          rsync -az --delete \
-            -e "ssh -i ~/.ssh/hostinger_deploy_key -p ${SSH_PORT}" \
-            dist/ "${SSH_USER}@${SSH_HOST}:${release_dir}/"
+          current_sha=$(ssh -i ~/.ssh/hostinger_deploy_key -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+            "bash -s -- '$target_parent' target-hash '$ROLLBACK_SHA' '$GITHUB_RUN_ID'" \
+            < scripts/hostinger-portfolio-remote.sh)
+          backup_sha=$(ssh -i ~/.ssh/hostinger_deploy_key -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+            "bash -s -- '$target_parent' backup-hash '$ROLLBACK_SHA' '$GITHUB_RUN_ID'" \
+            < scripts/hostinger-portfolio-remote.sh)
+          echo "current_sha=$current_sha" >> "$GITHUB_OUTPUT"
+          echo "backup_sha=$backup_sha" >> "$GITHUB_OUTPUT"
 
-      - name: Validate staging and swap live folder
-        id: ssh_swap
-        if: steps.ssh_upload.outcome == 'success'
+      - name: Restore backup for requested release
+        id: rollback_swap
         shell: bash
         run: |
           set -euo pipefail
           target_parent="/home/${SSH_USER}/domains/kineticgain.com/public_html"
-          release_dir="${target_parent}/.${TARGET_NAME}-release-${GITHUB_SHA}"
-          target_dir="${target_parent}/${TARGET_NAME}"
-          backup_dir="${target_parent}/.${TARGET_NAME}-backup-${GITHUB_SHA}"
-          ssh -i ~/.ssh/hostinger_deploy_key -p "${SSH_PORT}" "${SSH_USER}@${SSH_HOST}" "
-            set -e
-            test -f '${release_dir}/index.html'
-            grep -q 'Portfolio Command Center' '${release_dir}/index.html'
-            if [ -d '${target_dir}' ]; then
-              mv '${target_dir}' '${backup_dir}'
-            fi
-            if mv '${release_dir}' '${target_dir}'; then
-              echo 'Portfolio deploy swap complete.'
-            else
-              if [ -d '${backup_dir}' ]; then
-                mv '${backup_dir}' '${target_dir}'
-              fi
-              exit 1
-            fi
-          "
+          ssh -i ~/.ssh/hostinger_deploy_key -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+            "bash -s -- '$target_parent' rollback '$ROLLBACK_SHA' '$GITHUB_RUN_ID'" \
+            < scripts/hostinger-portfolio-remote.sh
 
-      - name: FTP fallback when SSH is unreachable
-        id: ftp_fallback
-        if: steps.ssh_upload.outcome == 'failure'
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASS }}
-          protocol: ftps
-          port: 21
-          timeout: 90000
-          local-dir: ./dist/
-          server-dir: /portfolio/
-          dangerous-clean-slate: false
-          log-level: standard
-          exclude: |
-            **/.DS_Store
+      - name: Verify rollback at live boundary
+        id: rollback_verify
+        shell: bash
+        run: bash scripts/verify-portfolio-live.sh "$LIVE_URL" "${{ steps.site_hashes.outputs.backup_sha }}"
 
-      - name: Verify live portfolio
+      - name: Undo rollback if live verification failed
+        if: always() && steps.rollback_swap.outcome == 'success' && steps.rollback_verify.outcome != 'success'
         shell: bash
         run: |
           set -euo pipefail
-          html="$(curl -fsSL --retry 5 --retry-delay 3 "${LIVE_URL}")"
-          asset="$(printf '%s' "${html}" | grep -oE '/assets/[^"]+\.js' | head -n 1)"
-          test -n "${asset}"
-          bundle="$(curl -fsSL --retry 5 --retry-delay 3 "${LIVE_URL%/}${asset}")"
-          printf '%s' "${bundle}" | grep -q 'gcp-bigquery-slot-commitment-advisor'
-          printf '%s' "${bundle}" | grep -q 'snowflake-query-credit-guardrail'
-          printf '%s' "${bundle}" | grep -q 'ibm-watsonx-model-risk-register'
-          printf '%s' "${bundle}" | grep -q 'okta-access-policy-drift-monitor'
-          printf '%s' "${bundle}" | grep -q 'tableau-dashboard-lineage-auditor'
-          printf '%s' "${bundle}" | grep -q 'powerbi-board-metric-certifier'
+          target_parent="/home/${SSH_USER}/domains/kineticgain.com/public_html"
+          ssh -i ~/.ssh/hostinger_deploy_key -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+            "bash -s -- '$target_parent' undo-rollback '$ROLLBACK_SHA' '$GITHUB_RUN_ID'" \
+            < scripts/hostinger-portfolio-remote.sh
+          bash scripts/verify-portfolio-live.sh "$LIVE_URL" "${{ steps.site_hashes.outputs.current_sha }}" "$ROLLBACK_SHA"

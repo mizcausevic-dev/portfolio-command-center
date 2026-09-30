@@ -11,7 +11,8 @@ const openArchive = () =>
 describe("App", () => {
   it("renders the constellation hero", () => {
     render(<App />);
-    expect(screen.getByText(/portfolio constellation · live github sync/i, { selector: "p" })).toBeInTheDocument();
+    expect(screen.getByText(/portfolio constellation · github catalog snapshot \d{4}-\d{2}-\d{2}/i, { selector: "p" })).toBeInTheDocument();
+    expect(screen.getByText(/do not describe current GitHub activity/i)).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /one engineer\./i })).toBeInTheDocument();
   });
 
@@ -158,7 +159,7 @@ describe("App", () => {
     render(<App />);
     openArchive();
 
-    // Default view is bounded to one page, not the full 706-row wall.
+    // Default view is bounded to one page, not the full catalog wall.
     expect(document.querySelectorAll(".repo-card").length).toBe(24);
 
     fireEvent.click(screen.getByRole("button", { name: /show all \d+ repos/i }));
