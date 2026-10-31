@@ -178,4 +178,20 @@ describe("App", () => {
     const firstCard = document.querySelector(".repo-grid .repo-head a");
     expect(firstCard?.textContent).toBe(expectedFirst);
   });
+
+  it("labels unavailable demo destinations as GitHub source links", () => {
+    render(<App />);
+    openArchive();
+
+    for (const slug of [
+      "incident-handoff-runbook-kit",
+      "backup-restore-drill-runner",
+      "kyc-refresh-case-router"
+    ]) {
+      fireEvent.change(screen.getByLabelText(/search repos/i), { target: { value: slug } });
+      const link = screen.getByRole("link", { name: slug });
+      expect(link).toHaveAttribute("href", `https://github.com/mizcausevic-dev/${slug}`);
+      expect(link.closest(".repo-card")).toHaveTextContent("GitHub source");
+    }
+  });
 });
