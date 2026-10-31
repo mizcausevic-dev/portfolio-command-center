@@ -12849,12 +12849,12 @@
   {
     "name": "Incident Handoff Runbook Kit",
     "slug": "incident-handoff-runbook-kit",
-    "url": "https://runbook.kineticgain.com/",
+    "url": "https://github.com/mizcausevic-dev/incident-handoff-runbook-kit",
     "platform": "Platform Reliability Stack",
     "vertical": "Platform Engineering",
     "language": "Shell / Bash",
     "freshness": "older",
-    "subdomain": "runbook.kineticgain.com",
+    "subdomain": "GitHub source",
     "description": "Bash-native incident turnover operator surface for owner gaps, SLA drift, and evidence-complete handoffs.",
     "topics": [
       "handoff",
@@ -12868,12 +12868,12 @@
   {
     "name": "Backup Restore Drill Runner",
     "slug": "backup-restore-drill-runner",
-    "url": "https://backup.kineticgain.com/",
+    "url": "https://github.com/mizcausevic-dev/backup-restore-drill-runner",
     "platform": "Platform Reliability Stack",
     "vertical": "Platform Engineering",
     "language": "Shell / Bash",
     "freshness": "older",
-    "subdomain": "backup.kineticgain.com",
+    "subdomain": "GitHub source",
     "description": "Bash-native operator surface for backup drills, restore timing, and recovery evidence posture.",
     "topics": [
       "backup",
@@ -12886,12 +12886,12 @@
   {
     "name": "Kyc Refresh Case Router",
     "slug": "kyc-refresh-case-router",
-    "url": "https://kyc.kineticgain.com/",
+    "url": "https://github.com/mizcausevic-dev/kyc-refresh-case-router",
     "platform": "Decision Intelligence",
     "vertical": "FinTech",
     "language": "PHP",
     "freshness": "older",
-    "subdomain": "kyc.kineticgain.com",
+    "subdomain": "GitHub source",
     "description": "WordPress and FinTech operator surface for KYC refresh routing, beneficial-owner drift, review evidence, and account-safe remediation posture.",
     "topics": [
       "aml",

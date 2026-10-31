@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -72,6 +72,15 @@ const homepageOverrides = {
   "kinetic-gain-examples-gallery": "https://examples.kineticgain.com/",
   "procurement-pulse-landing": "https://pulse.kineticgain.com/"
 };
+
+// These configured demo hosts returned NXDOMAIN on 2026-10-30. Keep each
+// repository in the catalog, but direct its card to readable public source
+// until the custom route is restored and checked from the live site.
+const sourceFallbacks = new Map([
+  ["incident-handoff-runbook-kit", "https://runbook.kineticgain.com/"],
+  ["backup-restore-drill-runner", "https://backup.kineticgain.com/"],
+  ["kyc-refresh-case-router", "https://kyc.kineticgain.com/"]
+]);
 
 const verticalOverrides = {
   "ai-finops-radar": "AI Platform",
@@ -418,6 +427,10 @@ function inferVertical(repo, topics, homepage) {
 }
 
 function cleanHomepage(repo) {
+  if (sourceFallbacks.has(repo.name)) {
+    return "";
+  }
+
   if (homepageOverrides[repo.name]) {
     return homepageOverrides[repo.name];
   }
@@ -455,6 +468,13 @@ function inferSubdomain(homepage, githubUrl) {
   } catch {
     return homepage.replace(/^https?:\/\//, "").replace(/\/.*$/, "");
   }
+}
+
+function catalogDestination(repo, homepage) {
+  if (sourceFallbacks.has(repo.name)) {
+    return { url: repo.url, label: "GitHub source" };
+  }
+  return { url: homepage || repo.url, label: inferSubdomain(homepage, repo.url) };
 }
 
 function titleCaseRepo(name) {
@@ -528,6 +548,7 @@ function buildCatalog() {
     .map((repo) => {
       const topics = (repo.repositoryTopics ?? []).map((entry) => entry.name);
       const homepage = cleanHomepage(repo);
+      const destination = catalogDestination(repo, homepage);
       const language = normalizeLanguage(repo);
       const platform = inferPlatform(repo, homepage, topics.map((entry) => entry.toLowerCase()), language);
       const vertical = inferVertical(repo, topics.map((entry) => entry.toLowerCase()), homepage);
@@ -535,12 +556,12 @@ function buildCatalog() {
       return {
         name: titleCaseRepo(repo.name),
         slug: repo.name,
-        url: homepage || repo.url,
+        url: destination.url,
         platform,
         vertical,
         language,
         freshness: freshnessFor(repo.pushedAt),
-        subdomain: inferSubdomain(homepage, repo.url),
+        subdomain: destination.label,
         description: (repo.description || "Public repo in the Kinetic Gain portfolio.").trim(),
         topics: topics.slice(0, 6),
         pushedAt: repo.pushedAt,
@@ -553,8 +574,27 @@ function buildCatalog() {
   return repos.map(({ pushedAt, homepageUrl, githubUrl, ...repo }) => repo);
 }
 
-const catalog = buildCatalog();
-writeFileSync(outputPath, `${JSON.stringify(catalog, null, 2)}\n`, "utf8");
-writeFileSync(metadataPath, `${JSON.stringify({ generatedOn: new Date().toISOString().slice(0, 10) }, null, 2)}\n`, "utf8");
-
-console.log(`Wrote ${catalog.length} repos to ${outputPath}`);
+if (process.argv.includes("--check-source-fallbacks")) {
+  const saved = JSON.parse(readFileSync(outputPath, "utf8"));
+  for (const [slug, deadHomepage] of sourceFallbacks) {
+    const repo = {
+      name: slug,
+      url: `https://github.com/mizcausevic-dev/${slug}`,
+      homepageUrl: deadHomepage,
+      description: ""
+    };
+    const homepage = cleanHomepage(repo);
+    const destination = catalogDestination(repo, homepage);
+    const matches = saved.filter((entry) => entry.slug === slug);
+    if (homepage !== "" || destination.url !== repo.url || destination.label !== "GitHub source" ||
+        matches.length !== 1 || matches[0].url !== destination.url || matches[0].subdomain !== destination.label) {
+      throw new Error(`Source fallback does not match the checked-in catalog for ${slug}`);
+    }
+  }
+  console.log(`Verified ${sourceFallbacks.size} source fallbacks without refreshing the catalog`);
+} else {
+  const catalog = buildCatalog();
+  writeFileSync(outputPath, `${JSON.stringify(catalog, null, 2)}\n`, "utf8");
+  writeFileSync(metadataPath, `${JSON.stringify({ generatedOn: new Date().toISOString().slice(0, 10) }, null, 2)}\n`, "utf8");
+  console.log(`Wrote ${catalog.length} repos to ${outputPath}`);
+}
