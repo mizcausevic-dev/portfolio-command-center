@@ -426,8 +426,13 @@ function inferVertical(repo, topics, homepage) {
   return "Platform Engineering";
 }
 
+function hasUnavailableDemoHomepage(repo) {
+  const unavailableHomepage = sourceFallbacks.get(repo.name);
+  return unavailableHomepage !== undefined && repo.homepageUrl?.trim() === unavailableHomepage;
+}
+
 function cleanHomepage(repo) {
-  if (sourceFallbacks.has(repo.name)) {
+  if (hasUnavailableDemoHomepage(repo)) {
     return "";
   }
 
@@ -471,7 +476,7 @@ function inferSubdomain(homepage, githubUrl) {
 }
 
 function catalogDestination(repo, homepage) {
-  if (sourceFallbacks.has(repo.name)) {
+  if (hasUnavailableDemoHomepage(repo)) {
     return { url: repo.url, label: "GitHub source" };
   }
   return { url: homepage || repo.url, label: inferSubdomain(homepage, repo.url) };
@@ -589,6 +594,12 @@ if (process.argv.includes("--check-source-fallbacks")) {
     if (homepage !== "" || destination.url !== repo.url || destination.label !== "GitHub source" ||
         matches.length !== 1 || matches[0].url !== destination.url || matches[0].subdomain !== destination.label) {
       throw new Error(`Source fallback does not match the checked-in catalog for ${slug}`);
+    }
+    const updatedRepo = { ...repo, homepageUrl: "https://example.org/recovered-demo" };
+    const updatedHomepage = cleanHomepage(updatedRepo);
+    if (updatedHomepage !== updatedRepo.homepageUrl ||
+        catalogDestination(updatedRepo, updatedHomepage).url !== updatedRepo.homepageUrl) {
+      throw new Error(`Source fallback masks a new homepage for ${slug}`);
     }
   }
   console.log(`Verified ${sourceFallbacks.size} source fallbacks without refreshing the catalog`);
